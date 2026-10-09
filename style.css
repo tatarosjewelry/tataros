@@ -581,3 +581,49 @@ color: var(–royal-light-gold);
     font-size: 15px;
   }
 }
+  /* FIX HERO TEXT AND SPACING */
+
+.hero {
+  min-height: 500px;
+  height: auto;
+  padding: 150px 8% 80px;
+  overflow: visible;
+  box-sizing: border-box;
+}
+
+.hero h1,
+.hero p {
+  width: 100%;
+  max-width: 650px;
+  height: auto;
+  overflow: visible;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+.hero h1 {
+  font-size: clamp(28px, 4vw, 46px);
+  line-height: 1.8;
+}
+
+.hero p {
+  font-size: 16px;
+  line-height: 2;
+}
+
+@media (max-width: 700px) {
+  .hero {
+    min-height: 420px;
+    padding: 125px 7% 60px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+    line-height: 1.8;
+  }
+
+  .hero p {
+    font-size: 15px;
+    line-height: 2;
+  }
+}
