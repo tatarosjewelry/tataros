@@ -518,3 +518,66 @@ color: var(–royal-light-gold);
   .header-social {
     display: none;
   }
+  /* TATAROS ROYAL HERO */
+
+.hero {
+  min-height: 620px;
+  padding: 150px 8% 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: right;
+  direction: rtl;
+  background:
+    radial-gradient(ellipse at 80% 40%, rgba(28, 61, 91, 0.55), transparent 50%),
+    linear-gradient(120deg, #061a30, #020914 75%);
+  border-bottom: 1px solid rgba(212, 173, 98, 0.35);
+}
+
+.hero h1 {
+  max-width: 650px;
+  color: #f0d49a;
+  font-size: clamp(32px, 5vw, 58px);
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+.hero p {
+  max-width: 520px;
+  color: #d5d8df;
+  font-size: 17px;
+  line-height: 2.2;
+  margin-bottom: 30px;
+}
+
+.hero .button {
+  display: inline-block;
+  padding: 14px 34px;
+  color: #f0d49a;
+  border: 1px solid #c6a15b;
+  background: transparent;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: 0.3s ease;
+}
+
+.hero .button:hover {
+  color: #061629;
+  background: #d4ad62;
+}
+
+@media (max-width: 700px) {
+  .hero {
+    min-height: 540px;
+    padding: 150px 7% 75px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+}
