@@ -317,7 +317,6 @@ footer {
     font-size: 16px;
   }
 }
-/* TATAROS ROYAL NAVY & GOLD */
 :root {
 –royal-navy: #061629;
 –royal-deep: #020b16;
@@ -383,8 +382,6 @@ background: var(–royal-deep);
 border-top: 1px solid var(–royal-gold);
 color: var(–royal-light-gold);
 }
-/* TATAROS COLLECTION NAVY FIX */
-
 #collection,
 .collection,
 #products,
