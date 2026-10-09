@@ -460,3 +460,29 @@ img {
     font-size: 13px;
   }
 }
+/* Fix mobile horizontal overflow */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container,
+header,
+section,
+footer {
+  max-width: 100%;
+}
