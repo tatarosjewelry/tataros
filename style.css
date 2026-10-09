@@ -318,7 +318,6 @@ footer {
   }
 }
 /* TATAROS ROYAL NAVY & GOLD */
-/* TATAROS ROYAL NAVY & GOLD */
 :root {
 –royal-navy: #061629;
 –royal-deep: #020b16;
@@ -340,19 +339,14 @@ nav a {
 color: #f4e7c7;
 }
 
-nav a:hover {
-color: var(–royal-light-gold);
-}
-
+nav a:hover,
 .logo,
 .eyebrow {
 color: var(–royal-light-gold);
 }
 
 .hero {
-background:
-radial-gradient(circle at 75% 40%, rgba(212, 173, 98, 0.18), transparent 30%),
-linear-gradient(135deg, #0b2340 0%, #020b16 75%);
+background: linear-gradient(135deg, #0b2340, #020b16 75%);
 }
 
 h1, h2, h3 {
@@ -369,16 +363,14 @@ background: var(–royal-gold);
 color: var(–royal-deep);
 }
 
-.products .product {
+.product {
 background: var(–royal-navy);
 border-color: rgba(212, 173, 98, 0.4);
 border-radius: 10px;
 }
 
 .product-image {
-background:
-radial-gradient(circle, rgba(212, 173, 98, 0.12), transparent 45%),
-#081a2d;
+background: #081a2d;
 }
 
 .about {
@@ -387,8 +379,7 @@ border-color: rgba(212, 173, 98, 0.2);
 }
 
 footer {
-background: #020b16;
-border-top: 1px solid rgba(212, 173, 98, 0.45);
-color: #d4ad62;
+background: var(–royal-deep);
+border-top: 1px solid var(–royal-gold);
+color: var(–royal-light-gold);
 }
-
