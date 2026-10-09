@@ -317,6 +317,8 @@ footer {
     font-size: 16px;
   }
 }
+/* TATAROS ROYAL NAVY & GOLD */
+
 :root {
 –royal-navy: #061629;
 –royal-deep: #020b16;
@@ -325,12 +327,12 @@ footer {
 }
 
 body {
-background: var(–royal-deep) !important;
+background: var(–royal-deep);
 color: #f4e7c7;
 }
 
 header {
-background: rgba(4, 19, 36, 0.97) !important;
+background: rgba(4, 19, 36, 0.97);
 border-bottom: 1px solid var(–royal-gold);
 }
 
@@ -348,7 +350,14 @@ color: var(–royal-light-gold);
 background: linear-gradient(135deg, #0b2340, #020b16 75%);
 }
 
-h1, h2, h3 {
+.section {
+background: #020b16;
+color: #f4e7c7;
+}
+
+h1,
+h2,
+h3 {
 color: var(–royal-light-gold);
 }
 
@@ -364,7 +373,7 @@ color: var(–royal-deep);
 
 .product {
 background: var(–royal-navy);
-border-color: rgba(212, 173, 98, 0.4);
+border: 1px solid rgba(212, 173, 98, 0.4);
 border-radius: 10px;
 }
 
@@ -377,30 +386,12 @@ background: linear-gradient(180deg, #061629, #0a1d32, #061629);
 border-color: rgba(212, 173, 98, 0.2);
 }
 
+.contact {
+background: #020b16;
+}
+
 footer {
 background: var(–royal-deep);
 border-top: 1px solid var(–royal-gold);
 color: var(–royal-light-gold);
-}
-#collection,
-.collection,
-#products,
-.products,
-.collection-section {
-background: #020b16 !important;
-color: #f4e7c7;
-}
-
-#collection h2,
-.collection h2,
-#products h2,
-.products h2,
-.collection-section h2 {
-color: #f3d99a !important;
-}
-
-.product,
-.product-card {
-background: #061629 !important;
-border-color: rgba(212, 173, 98, 0.4) !important;
 }
