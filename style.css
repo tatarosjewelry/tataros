@@ -383,3 +383,27 @@ background: var(–royal-deep);
 border-top: 1px solid var(–royal-gold);
 color: var(–royal-light-gold);
 }
+/* TATAROS COLLECTION NAVY FIX */
+
+#collection,
+.collection,
+#products,
+.products,
+.collection-section {
+background: #020b16 !important;
+color: #f4e7c7;
+}
+
+#collection h2,
+.collection h2,
+#products h2,
+.products h2,
+.collection-section h2 {
+color: #f3d99a !important;
+}
+
+.product,
+.product-card {
+background: #061629 !important;
+border-color: rgba(212, 173, 98, 0.4) !important;
+}
