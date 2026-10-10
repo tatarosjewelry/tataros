@@ -75,6 +75,15 @@ a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
 footer{text-align:center;padding:30px 5%;background:radial-gradient(ellipse at top,#15385d,transparent 70%),#061426;border-top:1px solid var(--gold)}
 .footer-brand{display:block;color:var(--gold);font:bold 23px Georgia,serif;letter-spacing:3px}
 footer p{color:var(--muted);font-size:13px}footer small{color:#9ca9b8;font-size:11px}
+
+/* Floating quick-access controls */
+.quick-actions{position:fixed;left:18px;bottom:18px;z-index:30;display:flex;flex-direction:column;gap:10px;align-items:center}
+.quick-action{display:grid;place-items:center;width:46px;height:46px;border:1px solid var(--gold);border-radius:50%;background:linear-gradient(145deg,#12365d,#061426);color:var(--light-gold);box-shadow:0 5px 18px #0006,inset 0 0 0 2px #d4ad6210;transition:transform .25s,background .25s,box-shadow .25s}
+.quick-action:hover,.quick-action:focus-visible{transform:translateY(-3px);background:linear-gradient(145deg,#d4ad62,#f3d99a);color:#061426;box-shadow:0 7px 22px #0007,0 0 16px #d4ad6230;outline:none}
+.quick-action.instagram{font-size:23px}.quick-action.top{font-size:20px;font-family:Arial,sans-serif}
+@media(max-width:480px){.quick-actions{left:12px;bottom:12px;gap:8px}.quick-action{width:42px;height:42px}}
+@media(prefers-reduced-motion:reduce){.quick-action{transition:none}}
+
 ::selection{background:var(--gold);color:var(--navy)}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.product,.product:before,.product-image img{transition:none}}
 @media(max-width:850px){
@@ -163,5 +172,9 @@ footer p{color:var(--muted);font-size:13px}footer small{color:#9ca9b8;font-size:
   <p>تاتاروس جواهری | زیبایی در ظرافت است</p>
   <small>© TATAROS JEWELRY</small>
 </footer>
+<div class="quick-actions" aria-label="دسترسی سریع">
+  <a class="quick-action instagram" href="https://www.instagram.com/tatarusjewelry/" target="_blank" rel="noopener noreferrer" aria-label="رفتن به اینستاگرام تاتاروس" title="اینستاگرام تاتاروس">◎</a>
+  <a class="quick-action top" href="#home" aria-label="بازگشت به بالای صفحه" title="بازگشت به بالا">↑</a>
+</div>
 </body>
 </html>
