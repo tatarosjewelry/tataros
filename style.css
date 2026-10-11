@@ -1,113 +1,85 @@
-:root{–navy:#071426;–blue:#102b50;–gold:#c6a96b;–light-gold:#f3d99a;–white:#f7f4ed;–muted:#c0c8d3}
+:root{--navy:#071426;--deep:#020b16;--blue:#102b50;--gold:#c6a96b;--light:#f3d99a;--white:#f7f4ed;--muted:#b8c3d1}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:100px;overflow-x:hidden}
-body{margin:0;background:linear-gradient(145deg,#040b15,#071426 50%,#102b50);color:var(–white);font-family:Tahoma,Arial,sans-serif;line-height:1.9;overflow-x:hidden}
-img{display:block;max-width:100%;height:auto}
-a{color:inherit;text-decoration:none;transition:color .25s}
-a:hover{color:var(–light-gold)}
-header,.royal-header{position:sticky;top:0;z-index:20;background:rgba(5,15,31,.95);border-bottom:1px solid #c6a96b66;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
-.royal-header{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:12px 5%}
-nav,.royal-nav{display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap}
-nav a,.royal-nav a{font-size:13px}
-.logo,.brand,.brand-name{color:var(–gold);letter-spacing:3px;font-weight:bold}
-.royal-logo{display:flex;flex-direction:column;align-items:center;color:var(–gold);line-height:1.3}
-.logo-crown{font-size:27px}
-.brand-name{font:bold 22px Georgia,serif}
-.brand-subtitle{font-size:9px;letter-spacing:3px}
-.header-social{display:flex;align-items:center;gap:15px;color:var(–gold);font-size:22px}
-section{scroll-margin-top:100px}
-h1,h2,h3{line-height:1.6}
-h1{font-size:clamp(28px,5vw,48px);color:var(–white)}
-h1 span,h2,.section h2,.about h2,.contact h2{color:var(–gold)}
-p{color:var(–muted)}
-.eyebrow{color:var(–gold);letter-spacing:2px;font-size:12px}
-.button,.btn,button{display:inline-block;padding:11px 25px;border:1px solid var(–light-gold);border-radius:4px;background:linear-gradient(135deg,var(–gold),var(–light-gold));color:var(–navy);font-weight:bold;cursor:pointer;transition:transform .25s,box-shadow .25s}
-.button:hover,.btn:hover,button:hover{color:var(–navy);transform:translateY(-2px);box-shadow:0 8px 24px #c6a96b33}
-.hero{position:relative;min-height:520px;display:flex;align-items:center;justify-content:center;text-align:center;padding:70px 6%;overflow:hidden;background:radial-gradient(ellipse at 50% 0,#1d416b,#102b50 35%,#071426 78%)}
-.hero-content{max-width:720px}
-.hero-description,.section-intro{max-width:600px;margin:15px auto 25px;color:var(–muted)}
-.hero-seal{position:absolute;bottom:20px;left:4%;width:85px;height:85px;border:1px solid #c6a96b88;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(–gold)}
-.seal-crown{font-size:20px;line-height:1}
-.seal-letter{font:26px Georgia,serif}
-.hero-seal small{font-size:7px}
-.section{padding:62px 5%;text-align:center}
-.section h2,.about h2,.contact h2{font-size:clamp(25px,4vw,36px);margin:5px 0}
-.products,.collection-grid,.product-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));align-items:stretch;gap:14px;width:100%;max-width:1120px;margin:30px auto 0}
-.product,.product-card,.card{min-width:0;overflow:hidden;background:linear-gradient(155deg,#122b4c,#051121);border:1px solid #c6a96b80;padding:9px;border-radius:4px;transition:transform .25s,border-color .25s,box-shadow .25s}
-.product:hover,.product-card:hover,.card:hover{transform:translateY(-3px);border-color:var(–light-gold);box-shadow:0 8px 24px #0005}
-.product-image{width:100%;aspect-ratio:4/3;overflow:hidden;display:flex;align-items:center;justify-content:center;background:linear-gradient(145deg,#16365d,#08172b);border:1px solid #c6a96b44;color:var(–gold);letter-spacing:2px;font:12px Georgia,serif}
-.product img,.product-card img,.card img{width:100%;height:155px;object-fit:cover;border:1px solid #c6a96b44;transition:transform .35s}
-.product:hover img,.product-card:hover img,.card:hover img{transform:scale(1.025)}
-.product h3,.product-card h3,.card h3{color:var(–gold);font-size:15px;line-height:1.6;margin:9px 0 4px}
-.product-number{color:var(–gold);font:12px Georgia,serif}
-.product-info{padding:5px 3px}
-.product p{font-size:12px;color:var(–muted);margin:4px 0 8px}
-.price{color:var(–light-gold);font-weight:bold;font-size:12px}
-.product .button,.product .btn,.product-card .button,.product-card .btn{padding:7px 10px;font-size:11px;margin-top:6px}
-.about{padding:62px 8%;text-align:center;background:linear-gradient(130deg,#102b50,#071426);border-block:1px solid #c6a96b44}
-.about>p:not(.eyebrow){max-width:720px;margin:18px auto}
-.about-line{display:block;width:70px;height:1px;background:var(–gold);margin:25px auto}
-.about-signature{color:var(–gold);font:13px Georgia,serif;letter-spacing:3px}
-.benefits,.benefits-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;padding:38px 5%;max-width:1120px;margin:auto}
-.benefit{min-width:0;text-align:center;padding:16px 10px;background:linear-gradient(150deg,#112b4c,#09182c);border:1px solid #c6a96b55}
-.benefit-icon{font-size:26px;color:var(–gold)}
-.benefit h3{color:var(–gold);font-size:15px}
-.benefit p{font-size:12px;color:var(–muted)}
-.contact{text-align:center;background:radial-gradient(ellipse at top,#16375b,#071426 70%)}
-.contact>p:not(.eyebrow){margin:12px 0 22px}
-.contact-links{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
-footer,.royal-footer{padding:28px 5%;text-align:center;background:#040b15;border-top:1px solid #c6a96b66}
-.footer-brand{display:block;color:var(–gold);font:bold 22px Georgia,serif;letter-spacing:3px}
-footer p{font-size:13px}
-footer small{font-size:11px;color:#a5afbd}
-::selection{background:var(–gold);color:var(–navy)}
-@media(max-width:850px){
-.royal-header{flex-wrap:wrap;justify-content:center}
-.royal-nav{width:100%;gap:16px}
-.products,.collection-grid,.product-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}
-.benefits,.benefits-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-.product img,.product-card img,.card img{height:135px}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:var(--navy);color:var(--white);font-family:"Vazirmatn",Tahoma,sans-serif;line-height:1.9}
+a{color:inherit;text-decoration:none}
+.top-line{height:3px;background:linear-gradient(90deg,var(--blue),var(--light),var(--gold),var(--blue))}
+.header{min-height:94px;padding:15px 6%;display:flex;align-items:center;justify-content:space-between;gap:24px;background:#061222;border-bottom:1px solid #c6a96b44}
+.brand{display:flex;flex-direction:column;align-items:center;line-height:1.2;color:var(--gold);min-width:125px}
+.brand span{font-size:23px}
+.brand b{font-family:Georgia,serif;font-size:24px;letter-spacing:4px}
+.brand small{font-size:9px;letter-spacing:3px;margin-top:5px}
+nav{display:flex;gap:26px;flex-wrap:wrap;justify-content:center}
+nav a{font-size:13px;color:#e4e7ec;transition:.25s}
+nav a:hover,.product a:hover{color:var(--light)}
+.insta{border:1px solid #c6a96b88;padding:8px 15px;color:var(--light);font-size:12px;white-space:nowrap}
+.hero{position:relative;min-height:540px;padding:65px 8%;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:55px;overflow:hidden;background:radial-gradient(ellipse at 75% 45%,#17355a 0,transparent 48%),linear-gradient(125deg,#071426,#0c2040 65%,#061222)}
+.hero:before{content:"";position:absolute;inset:18px;border:1px solid #c6a96b22;pointer-events:none}
+.hero-copy{position:relative;z-index:1;max-width:480px}
+.eyebrow,.section-title>small,.featured>small,.about>small,.contact>small{color:var(--gold);font-size:11px;letter-spacing:2px}
+h1{font-size:clamp(40px,5vw,65px);line-height:1.5;font-weight:400;margin:20px 0}
+h1 span,h2 span{color:var(--light)}
+.ornament{color:var(--gold);font-size:13px;margin:10px 0 20px}
+.hero-copy p,.section-title p,.featured p,.about p,.contact p{color:var(--muted);font-size:14px;line-height:2.3}
+.gold-btn{display:inline-flex;align-items:center;gap:18px;margin-top:20px;padding:11px 22px;background:linear-gradient(110deg,#b18a48,var(--light),#c19a56);color:#071426;font-size:13px;font-weight:600;transition:.25s}
+.gold-btn:hover{filter:brightness(1.12);transform:translateY(-2px)}
+.signature{display:block;margin-top:35px;color:#c6a96b99;font-size:11px}
+.hero-art{max-width:400px;width:100%;margin:auto;text-align:center;position:relative}
+.ring-frame{position:relative;padding:12px;border:1px solid var(--gold);background:linear-gradient(145deg,#163355,#061222);box-shadow:0 20px 60px #0005}
+.ring-frame:before{content:"";position:absolute;inset:6px;border:1px solid #c6a96b66;pointer-events:none;z-index:1}
+.ring-frame img{display:block;width:100%;height:330px;object-fit:cover;background:#102b50}
+.ring-caption{color:var(--light);font-family:Georgia,serif;font-size:14px;letter-spacing:3px;margin-top:18px}
+.ring-caption small{display:block;font-size:9px;letter-spacing:3px;color:var(--muted);margin-top:5px}
+.section{padding:85px 7%}
+.section-title{text-align:center;margin-bottom:45px}
+.section-title h2,.about h2,.contact h2,.featured h2{font-size:30px;font-weight:400;margin:10px 0}
+.section-title p{margin:5px 0}
+.section-title>b{display:block;color:var(--gold);margin-top:14px}
+.products{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:25px}
+.product{background:linear-gradient(145deg,#102746,#071426);border:1px solid #c6a96b66;padding:10px;transition:.3s;min-width:0}
+.product:hover{transform:translateY(-5px);border-color:var(--gold);box-shadow:0 14px 30px #0003}
+.product>img{width:100%;height:260px;display:block;object-fit:cover;background:#102b50}
+.product>div{padding:15px 9px 12px;border-top:1px solid #c6a96b33;margin-top:10px}
+.product small{font-size:9px;letter-spacing:1.5px;color:var(--gold)}
+.product h3{font-size:16px;font-weight:400;margin:5px 0 10px}
+.product a{font-size:12px;color:var(--light)}
+.featured{text-align:center;padding:75px 8%;background:linear-gradient(120deg,#102b50,#071426 70%);border-top:1px solid #c6a96b44;border-bottom:1px solid #c6a96b44}
+.featured p{max-width:550px;margin:10px auto 20px}
+.outline-btn{display:inline-block;border:1px solid var(--gold);color:var(--light);padding:9px 20px;font-size:13px}
+.about{text-align:center;max-width:800px;margin:auto}
+.about p{max-width:650px;margin:10px auto}
+.contact{text-align:center;padding:65px 7%;background:#040e1c;border-top:1px solid #c6a96b33}
+.contact p{max-width:600px;margin:10px auto}
+footer{text-align:center;padding:28px 15px;background:#020914;border-top:1px solid #c6a96b55}
+footer>span{color:var(--light);font-family:Georgia,serif;letter-spacing:4px;font-size:19px}
+footer p{font-family:Georgia,serif;letter-spacing:3px;font-size:9px;color:var(--muted);margin:5px}
+footer small{font-size:11px;color:#c6a96b99}
+@media(max-width:800px){
+.header{padding:15px 4%;flex-wrap:wrap;justify-content:center;gap:15px}
+nav{order:3;width:100%;gap:20px}
+.hero{grid-template-columns:1fr;gap:38px;padding:55px 8%}
+.hero-copy{text-align:center;margin:auto}
+.hero-art{max-width:360px}
+.products{grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+.product>img{height:220px}
+.section{padding:65px 5%}
 }
-@media(max-width:520px){
-.royal-header{gap:10px;padding:10px 3%}
-.royal-nav{gap:13px}
-.royal-nav a,nav a{font-size:12px}
-.brand-name{font-size:20px}
-.hero{min-height:450px;padding:55px 5%}
-.hero-seal{width:65px;height:65px;bottom:10px;left:10px}
-.section{padding:42px 4%}
-.products,.collection-grid,.product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-top:22px}
-.product,.product-card,.card{padding:6px}
-.product img,.product-card img,.card img{height:112px}
-.product h3,.product-card h3,.card h3{font-size:13px}
-.product p{font-size:11px;line-height:1.7}
-.product .button,.product .btn,.product-card .button,.product-card .btn{padding:6px 8px;font-size:10px}
-.benefits,.benefits-grid{gap:9px;padding:26px 4%}
-.benefit{padding:12px 7px}
-.about{padding:42px 6%}
-.contact{padding:42px 5%}
-footer,.royal-footer{padding:24px 4%}
-}
-@media(max-width:360px){
-.royal-nav{gap:9px}
-.royal-nav a,nav a{font-size:11px}
-.products,.collection-grid,.product-grid{gap:7px}
-.product img,.product-card img,.card img{height:98px}
-}
-.royal-ring {
-  width: min(100%, 520px);
-  margin: 25px auto;
-  padding: 14px;
-  border: 1px solid #d4ad62;
-  border-radius: 18px;
-  background: linear-gradient(145deg, #102b50, #020b16);
-  box-shadow: 0 0 35px rgba(212, 173, 98, 0.13);
-}
-
-.royal-ring img {
-  display: block;
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  border-radius: 10px;
+@media(max-width:460px){
+.header{gap:12px}
+.brand{min-width:100px}
+.brand b{font-size:21px}
+.insta{padding:6px 10px}
+nav{gap:15px}
+nav a{font-size:11px}
+.hero{padding:45px 7%}
+h1{font-size:43px}
+.ring-frame img{height:280px}
+.products{gap:10px}
+.product{padding:7px}
+.product>img{height:175px}
+.product>div{padding:10px 5px}
+.product h3{font-size:13px}
+.product a{font-size:10px}
+.product small{font-size:8px;letter-spacing:.5px}
+.section-title h2,.about h2,.contact h2,.featured h2{font-size:25px}
 }
