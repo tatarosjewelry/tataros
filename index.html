@@ -3,57 +3,269 @@
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>تاتاروس جواهری | TATAROS JEWELRY</title>
 <meta name="description" content="جواهرات، نقره و سنگ‌های طبیعی تاتاروس">
+
 <style>
-:root{--n:#081d36;--b:#12365d;--g:#d4ad62;--l:#f3d99a;--w:#f7f0e2;--m:#c2cdd9}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--n);color:var(--w);font:14px Tahoma,Arial;line-height:1.9}
-a{color:inherit;text-decoration:none}
-header{position:sticky;top:0;z-index:5;display:flex;align-items:center;justify-content:space-around;flex-wrap:wrap;gap:10px;padding:10px;background:#061426;border-bottom:1px solid var(--g)}
-.logo{text-align:center;color:var(--g);font:bold 22px Georgia}
-.logo small{display:block;font-size:9px;letter-spacing:3px}
-nav{display:flex;gap:15px;flex-wrap:wrap}
-nav a{font-size:12px}
-.social{color:var(--g);font-size:22px}
-.hero{text-align:center;padding:35px 6%;background:radial-gradient(ellipse at top,var(--b),var(--n) 75%);border-bottom:1px solid #d4ad6266}
-.hero h1{color:var(--l);font-size:clamp(25px,5vw,40px)}
-.hero p{color:var(--m)}
-.ring{width:min(100%,280px);height:230px;object-fit:contain}
-.btn,.action{display:inline-block;border:1px solid var(--g);border-radius:6px;padding:7px 12px;color:var(--l);background:#061426}
-section{padding:30px 4%;text-align:center}
-.section-title{color:var(--l);font-size:24px}
-.products{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;max-width:1100px;margin:20px auto}
-.product{min-width:0;padding:6px;border:1px solid var(--g);border-radius:8px;background:linear-gradient(150deg,#173f68,#06172a)}
-.product img{width:100%;height:140px;object-fit:cover;border-radius:5px}
-.num{color:var(--g);font:12px Georgia}
-.product h3{color:var(--l);font-size:13px;margin:5px 0}
-.product p{color:var(--m);font-size:11px;margin:4px 0}
-.action{font-size:10px;padding:5px 3px;width:100%;margin-top:7px}
-.about{background:linear-gradient(130deg,#12365d,#061426)}
-.about p,.contact p{max-width:650px;margin:12px auto;color:var(--m)}
-.benefits{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
-.benefit{border:1px solid #d4ad6270;border-radius:7px;padding:10px;color:var(--l)}
-footer{text-align:center;padding:20px;background:#061426;border-top:1px solid var(--g);color:var(--m)}
-footer strong{color:var(--g);font:22px Georgia}
-@media(max-width:700px){.products{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.product img{height:120px}header{justify-content:center}nav{justify-content:center}.benefits{grid-template-columns:repeat(2,1fr)}}
+:root {
+  --n:#081d36;
+  --b:#12365d;
+  --g:#d4ad62;
+  --l:#f3d99a;
+  --w:#f7f0e2;
+  --m:#c2cdd9;
+}
+
+* { box-sizing:border-box; }
+
+html { scroll-behavior:smooth; }
+
+body {
+  margin:0;
+  background:var(--n);
+  color:var(--w);
+  font:14px Tahoma,Arial,sans-serif;
+  line-height:1.9;
+}
+
+a {
+  color:inherit;
+  text-decoration:none;
+}
+
+header {
+  position:sticky;
+  top:0;
+  z-index:5;
+  display:flex;
+  align-items:center;
+  justify-content:space-around;
+  flex-wrap:wrap;
+  gap:10px;
+  padding:10px;
+  background:#061426;
+  border-bottom:1px solid var(--g);
+}
+
+.logo {
+  text-align:center;
+  color:var(--g);
+  font:bold 22px Georgia,serif;
+}
+
+.logo small {
+  display:block;
+  font-size:9px;
+  letter-spacing:3px;
+}
+
+nav {
+  display:flex;
+  align-items:center;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+nav a { font-size:12px; }
+
+.social {
+  color:var(--g);
+  font-size:22px;
+}
+
+.hero {
+  text-align:center;
+  padding:35px 6%;
+  background:radial-gradient(ellipse at top,var(--b),var(--n) 75%);
+  border-bottom:1px solid #d4ad6266;
+}
+
+.hero h1 {
+  color:var(--l);
+  font-size:clamp(25px,5vw,40px);
+  line-height:1.8;
+}
+
+.hero p { color:var(--m); }
+
+.ring {
+  display:block;
+  width:min(100%,280px);
+  height:230px;
+  object-fit:contain;
+  margin:0 auto;
+}
+
+.btn, .action {
+  display:inline-block;
+  border:1px solid var(--g);
+  border-radius:6px;
+  padding:7px 12px;
+  color:var(--l);
+  background:#061426;
+}
+
+section {
+  padding:30px 4%;
+  text-align:center;
+  scroll-margin-top:90px;
+}
+
+.section-title {
+  color:var(--l);
+  font-size:24px;
+}
+
+/* چیدمان محصولات: چهار کارت در هر ردیف */
+.products {
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:12px;
+  width:100%;
+  max-width:1200px;
+  margin:20px auto;
+}
+
+.product {
+  min-width:0;
+  padding:8px;
+  border:1px solid var(--g);
+  border-radius:8px;
+  background:linear-gradient(150deg,#173f68,#06172a);
+  box-shadow:0 4px 14px #0002;
+}
+
+.product img {
+  display:block;
+  width:100%;
+  height:160px;
+  object-fit:cover;
+  border-radius:5px;
+}
+
+.num {
+  display:block;
+  color:var(--g);
+  font:12px Georgia,serif;
+  margin-top:5px;
+}
+
+.product h3 {
+  color:var(--l);
+  font-size:13px;
+  margin:5px 0;
+}
+
+.product p {
+  color:var(--m);
+  font-size:11px;
+  margin:4px 0;
+}
+
+.action {
+  display:block;
+  width:100%;
+  font-size:10px;
+  padding:5px 3px;
+  margin-top:7px;
+}
+
+.about {
+  background:linear-gradient(130deg,#12365d,#061426);
+}
+
+.about p, .contact p {
+  max-width:650px;
+  margin:12px auto;
+  color:var(--m);
+}
+
+.benefits {
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:8px;
+  max-width:1000px;
+  margin:20px auto;
+}
+
+.benefit {
+  border:1px solid #d4ad6270;
+  border-radius:7px;
+  padding:10px;
+  color:var(--l);
+  background:#102b46;
+}
+
+footer {
+  text-align:center;
+  padding:20px;
+  background:#061426;
+  border-top:1px solid var(--g);
+  color:var(--m);
+}
+
+footer strong {
+  color:var(--g);
+  font:22px Georgia,serif;
+}
+
+/* نمایش مرتب در موبایل */
+@media(max-width:700px) {
+  header { justify-content:center; }
+  nav { justify-content:center; gap:12px; }
+
+  .products {
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:8px;
+  }
+
+  .product { padding:6px; }
+  .product img { height:130px; }
+
+  .benefits {
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+
+  .section-title { font-size:21px; }
+}
 </style>
 </head>
+
 <body>
+
 <header>
-<a class="social" href="https://www.instagram.com/tatarusjewelry/" target="_blank">◎</a>
-<nav><a href="#home">خانه</a><a href="#collection">کالکشن</a><a href="#about">درباره ما</a><a href="#contact">تماس</a></nav>
-<a href="#home" class="logo">♛ TATAROS<small>J E W E L R Y</small></a>
+  <a class="social"
+     href="https://www.instagram.com/tatarusjewelry/"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="اینستاگرام تاتاروس">◎</a>
+
+  <nav>
+    <a href="#home">خانه</a>
+    <a href="#collection">کالکشن</a>
+    <a href="#about">درباره ما</a>
+    <a href="#contact">تماس</a>
+  </nav>
+
+  <a href="#home" class="logo">
+    ♛ TATAROS
+    <small>J E W E L R Y</small>
+  </a>
 </header>
+
 <main>
+
 <section class="hero" id="home">
-<p>TATAROS JEWELRY</p>
-<h1>زیبایی در ظرافت است<br>اصالت در انتخاب</h1>
-<p>مجموعه‌ای منتخب از جواهرات، نقره و سنگ‌های طبیعی</p>
-<img class="ring" src="tataros-turquoise-ring.jpg" alt="انگشتر فیروزه‌ای و طلایی">
-<br><a class="btn" href="#collection">مشاهده کالکشن ←</a>
+  <p>TATAROS JEWELRY</p>
+  <h1>زیبایی در ظرافت است<br>اصالت در انتخاب</h1>
+  <p>مجموعه‌ای منتخب از جواهرات، نقره و سنگ‌های طبیعی</p>
+
+  <img class="ring"
+       src="tataros-turquoise-ring.jpg"
+       alt="انگشتر فیروزه‌ای و طلایی">
+
+  <a class="btn" href="#collection">مشاهده کالکشن ←</a>
 </section>
 
 <section id="collection">
@@ -61,107 +273,100 @@ footer strong{color:var(--g);font:22px Georgia}
   <p>انتخابی از جواهرات و سنگ‌های طبیعی</p>
 
   <div class="products">
+
     <article class="product">
-      <img src="IMG_2967.jpeg" alt="محصول تاتاروس">
+      <img src="IMG_2967.jpeg" alt="محصول اول تاتاروس">
       <span class="num">TATAROS 01</span>
       <h3>ظرافت طلایی</h3>
       <p>انتخابی خاص و ماندگار</p>
-      <a class="action" href="https://www.instagram.com/tatarusjewelry/" target="_blank">مشاهده در اینستاگرام</a>
+      <a class="action" href="https://www.instagram.com/tatarusjewelry/" target="_blank" rel="noopener noreferrer">مشاهده در اینستاگرام</a>
     </article>
 
     <article class="product">
-      <img src="IMG_2985.jpeg" alt="محصول تاتاروس">
+      <img src="IMG_2985.jpeg" alt="محصول دوم تاتاروس">
       <span class="num">TATAROS 02</span>
       <h3>درخشش اصیل</h3>
       <p>زیبایی در جزئیات</p>
-      <a class="action" href="https://www.instagram.com/tatarusjewelry/" target="_blank">مشاهده در اینستاگرام</a>
+      <a class="action" href="https://www.instagram.com/tatarusjewelry/" target="_blank" rel="noopener noreferrer">مشاهده در اینستاگرام</a>
     </article>
 
     <article class="product">
-      <img src="IMG_2986.jpeg" alt="محصول تاتاروس">
+      <img src="IMG_2986.jpeg" alt="محصول سوم تاتاروس">
       <span class="num">TATAROS 03</span>
       <h3>انتخاب سلطنتی</h3>
       <p>ترکیبی از اصالت و ظرافت</p>
-      <a class="action" href="https://www.instagram.com/tatarusjewelry/" target="_blank">مشاهده در اینستاگرام</a>
+      <a class="action" href="https://www.instagram.com/tatarusjewelry/" target="_blank" rel="noopener noreferrer">مشاهده در اینستاگرام</a>
     </article>
 
     <article class="product">
-      <img src="IMG_2987.jpeg" alt="محصول تاتاروس">
+      <img src="IMG_2987.jpeg" alt="محصول چهارم تاتاروس">
       <span class="num">TATAROS 04</span>
       <h3>زیبایی ماندگار</h3>
       <p>برای سلیقه‌های متفاوت</p>
-      <a class="action" href="https://www.instagram.com/tatarusjewelry/" target="_blank">مشاهده در اینستاگرام</a>
+      <a class="action" href="https://www.instagram.com/tatarusjewelry/" target="_blank" rel="noopener noreferrer">مشاهده در اینستاگرام</a>
     </article>
 
     <article class="product">
-      <img src="IMG_3143.jpeg" alt="محصول تاتاروس">
+      <img src="IMG_3143.jpeg" alt="محصول پنجم تاتاروس">
       <span class="num">TATAROS 05</span>
       <h3>سنگ‌های طبیعی</h3>
       <p>زیبایی با جلوه‌ای طبیعی</p>
-      <a class="action" href="https://www.instagram.com/tatarusjewelry/" target="_blank">مشاهده در اینستاگرام</a>
+      <a class="action" href="https://www.instagram.com/tatarusjewelry/" target="_blank" rel="noopener noreferrer">مشاهده در اینستاگرام</a>
     </article>
 
     <article class="product">
-      <img src="IMG_3144.jpeg" alt="محصول تاتاروس">
+      <img src="IMG_3144.jpeg" alt="محصول ششم تاتاروس">
       <span class="num">TATAROS 06</span>
       <h3>مجموعه ویژه</h3>
       <p>جزئیاتی برای متمایز بودن</p>
-      <a class="action" href="https://www.instagram.com/tatarusjewelry/" target="_blank">مشاهده در اینستاگرام</a>
+      <a class="action" href="https://www.instagram.com/tatarusjewelry/" target="_blank" rel="noopener noreferrer">مشاهده در اینستاگرام</a>
     </article>
+
   </div>
 </section>
 
-<section id="collection">
-  <h2 class="section-title">کالکشن تاتاروس</h2>
-  <p>انتخابی از جواهرات و سنگ‌های طبیعی</p>
+<section class="about" id="about">
+  <h2 class="section-title">داستان تاتاروس</h2>
+  <p>
+    تاتاروس جواهری، مجموعه‌ای از جواهرات، نقره و سنگ‌های طبیعی
+    با تمرکز بر ظرافت، اصالت و انتخابی متفاوت است.
+  </p>
+</section>
 
-  <div class="products">
-    <article class="product">
-      <img src="IMG_2967.jpeg" alt="محصول تاتاروس">
-      <span class="num">TATAROS 01</span>
-      <h3>ظرافت طلایی</h3>
-      <p>انتخابی خاص و ماندگار</p>
-      <a class="action" href="https://www.instagram.com/tatarusjewelry/" target="_blank">مشاهده در اینستاگرام</a>
-    </article>
+<section>
+  <h2 class="section-title">منتخب تاتاروس</h2>
 
-    <article class="product">
-      <img src="IMG_2985.jpeg" alt="محصول تاتاروس">
-      <span class="num">TATAROS 02</span>
-      <h3>درخشش اصیل</h3>
-      <p>زیبایی در جزئیات</p>
-      <a class="action" href="https://www.instagram.com/tatarusjewelry/" target="_blank">مشاهده در اینستاگرام</a>
-    </article>
-
-    <article class="product">
-      <img src="IMG_2986.jpeg" alt="محصول تاتاروس">
-      <span class="num">TATAROS 03</span>
-      <h3>انتخاب سلطنتی</h3>
-      <p>ترکیبی از اصالت و ظرافت</p>
-      <a class="action" href="https://www.instagram.com/tatarusjewelry/" target="_blank">مشاهده در اینستاگرام</a>
-    </article>
-
-    <article class="product">
-      <img src="IMG_2987.jpeg" alt="محصول تاتاروس">
-      <span class="num">TATAROS 04</span>
-      <h3>زیبایی ماندگار</h3>
-      <p>برای سلیقه‌های متفاوت</p>
-      <a class="action" href="https://www.instagram.com/tatarusjewelry/" target="_blank">مشاهده در اینستاگرام</a>
-    </article>
-
-    <article class="product">
-      <img src="IMG_3143.jpeg" alt="محصول تاتاروس">
-      <span class="num">TATAROS 05</span>
-      <h3>سنگ‌های طبیعی</h3>
-      <p>زیبایی با جلوه‌ای طبیعی</p>
-      <a class="action" href="https://www.instagram.com/tatarusjewelry/" target="_blank">مشاهده در اینستاگرام</a>
-    </article>
-
-    <article class="product">
-      <img src="IMG_3144.jpeg" alt="محصول تاتاروس">
-      <span class="num">TATAROS 06</span>
-      <h3>مجموعه ویژه</h3>
-      <p>جزئیاتی برای متمایز بودن</p>
-      <a class="action" href="https://www.instagram.com/tatarusjewelry/" target="_blank">مشاهده در اینستاگرام</a>
-    </article>
+  <div class="benefits">
+    <div class="benefit">✧ انتخاب خاص</div>
+    <div class="benefit">♛ طراحی باوقار</div>
+    <div class="benefit">◇ توجه به جزئیات</div>
+    <div class="benefit">✦ زیبایی ماندگار</div>
   </div>
 </section>
+
+<section class="contact" id="contact">
+  <h2 class="section-title">ارتباط با تاتاروس</h2>
+  <p>برای مشاهده محصولات و اطلاع از جزئیات، به صفحه اینستاگرام ما سر بزنید.</p>
+
+  <a class="btn"
+     href="https://www.instagram.com/tatarusjewelry/"
+     target="_blank"
+     rel="noopener noreferrer">
+    Instagram | تاتاروس
+  </a>
+</section>
+
+</main>
+
+<footer>
+  <strong>TATAROS</strong>
+  <p>JEWELRY</p>
+  <p>ظرافت، اصالت، انتخاب</p>
+  <a href="https://www.instagram.com/tatarusjewelry/"
+     target="_blank"
+     rel="noopener noreferrer">اینستاگرام تاتاروس</a>
+  <p>© Tataros Jewelry</p>
+</footer>
+
+</body>
+</html>
