@@ -5,8 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#061629">
 <title>تاتاروس جواهری | TATAROS JEWELRY</title>
-<meta name="description" content="جواهرات، نقره و سنگ‌های طبیعی؛ انتخابی متفاوت و خاص از تاتاروس جواهری.">
-
+<meta name="description" content="تاتاروس جواهری؛ مجموعه‌ای از جواهرات، نقره و سنگ‌های طبیعی با انتخابی ظریف و خاص.">
 <style>
 :root {
   --navy: #061629;
@@ -15,40 +14,43 @@
   --gold: #d4ad62;
   --light-gold: #f3d99a;
   --cream: #f7f1e5;
+  --muted: #c7d3e1;
 }
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-
 html {
   scroll-behavior: smooth;
 }
-
 body {
   font-family: Tahoma, Arial, sans-serif;
   color: var(--cream);
   background: var(--navy);
   line-height: 1.9;
 }
-
 a {
   color: inherit;
   text-decoration: none;
 }
-
+img {
+  max-width: 100%;
+}
 .top-line {
   height: 3px;
-  background: linear-gradient(90deg, transparent, var(--light-gold), var(--gold), transparent);
+  background: linear-gradient(
+    90deg, transparent, var(--light-gold),
+    var(--gold), var(--light-gold), transparent
+  );
 }
-
+/* Header */
 header {
-  background: rgba(2, 11, 22, .96);
-  border-bottom: 1px solid rgba(212, 173, 98, .45);
+  position: relative;
+  z-index: 5;
+  background: rgba(2, 11, 22, .97);
+  border-bottom: 1px solid rgba(212, 173, 98, .5);
 }
-
 .nav {
   max-width: 1200px;
   margin: auto;
@@ -58,93 +60,88 @@ header {
   justify-content: space-between;
   gap: 20px;
 }
-
 .logo {
   color: var(--light-gold);
-  font-size: 25px;
+  font-size: 24px;
   font-weight: bold;
   white-space: nowrap;
 }
-
 .nav-links {
   display: flex;
+  align-items: center;
   gap: 24px;
   font-size: 13px;
   color: #e7dcc5;
 }
-
-.nav-links a:hover {
-  color: white;
+.nav-links a {
+  transition: color .25s;
 }
-
-/* بخش سلطنتی بالای سایت */
+.nav-links a:hover {
+  color: var(--light-gold);
+}
+/* Royal hero */
 .hero {
   position: relative;
   overflow: hidden;
   background:
-    radial-gradient(ellipse at 25% 45%, rgba(35, 83, 128, .72), transparent 42%),
-    radial-gradient(ellipse at 85% 15%, rgba(27, 65, 106, .6), transparent 38%),
+    radial-gradient(ellipse at 20% 40%,
+      rgba(35, 83, 128, .72), transparent 43%),
+    radial-gradient(ellipse at 85% 12%,
+      rgba(27, 65, 106, .55), transparent 38%),
     linear-gradient(125deg, #102e50, #061629 60%, #020b16);
   border-bottom: 1px solid rgba(212, 173, 98, .55);
 }
-
 .hero::before,
 .hero::after {
   position: absolute;
-  color: rgba(243, 217, 154, .7);
-  font-size: 34px;
+  color: rgba(243, 217, 154, .8);
   pointer-events: none;
+  line-height: 1;
 }
-
 .hero::before {
-  content: "✦";
-  top: 22px;
-  right: 5%;
-}
-
-.hero::after {
   content: "✧";
-  bottom: 20px;
-  left: 5%;
+  top: 28px;
+  right: 4%;
+  font-size: 42px;
 }
-
+.hero::after {
+  content: "✦";
+  bottom: 25px;
+  left: 4%;
+  font-size: 32px;
+}
 .hero-inner {
   max-width: 1200px;
-  min-height: 540px;
+  min-height: 570px;
   margin: auto;
   padding: 55px 30px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  gap: 40px;
+  gap: 42px;
 }
-
 .hero-copy {
   text-align: center;
   position: relative;
   z-index: 1;
 }
-
 .eyebrow {
   color: var(--gold);
   font-size: 12px;
-  letter-spacing: 3px;
-  margin-bottom: 10px;
-}
-
-h1 {
-  font-size: clamp(30px, 4vw, 46px);
-  line-height: 1.6;
-  color: var(--light-gold);
+  letter-spacing: 4px;
   margin-bottom: 12px;
 }
-
+h1 {
+  color: var(--light-gold);
+  font-size: clamp(30px, 4vw, 46px);
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
 .hero-subtitle {
   font-size: 20px;
   color: #fff4df;
   margin-bottom: 10px;
 }
-
 .hero-description {
   max-width: 440px;
   margin: 0 auto 25px;
@@ -152,7 +149,6 @@ h1 {
   font-size: 14px;
   line-height: 2.2;
 }
-
 .collection-button {
   display: inline-block;
   min-width: 180px;
@@ -163,86 +159,79 @@ h1 {
   transition: .25s;
   font-size: 14px;
 }
-
 .collection-button:hover {
   color: var(--deep);
   background: var(--gold);
 }
-  /* قاب انگشتر فیروزه */
+/* Turquoise ring image and royal frame */
 .hero-art {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 12px;
 }
 .art-frame {
   position: relative;
-  width: min(100%, 420px);
-  aspect-ratio: 1 / 1;
+  width: min(100%, 440px);
   padding: 11px;
   border: 1px solid var(--gold);
-  background: rgba(2, 11, 22, .35);
-  box-shadow: 0 18px 50px rgba(0, 0, 0, .35);
+  outline: 1px solid rgba(243, 217, 154, .35);
+  outline-offset: 5px;
+  background: linear-gradient(145deg, #183b5d, #020b16);
+  box-shadow:
+    0 20px 55px rgba(0, 0, 0, .4),
+    0 0 32px rgba(212, 173, 98, .13);
+}
+.art-frame::before,
+.art-frame::after {
+  content: "✦";
+  position: absolute;
+  z-index: 2;
+  color: var(--light-gold);
+  font-size: 19px;
+  pointer-events: none;
 }
 .art-frame::before {
-  content: "";
-  position: absolute;
-  inset: 6px;
-  border: 1px solid rgba(243, 217, 154, .32);
-  pointer-events: none;
-  z-index: 1;
+  top: 12px;
+  right: 14px;
+}
+.art-frame::after {
+  bottom: 12px;
+  left: 14px;
 }
 .art-placeholder {
-  width: 100%;
-  height: 100%;
-  min-height: 280px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
+  overflow: hidden;
+  padding: 10px;
   text-align: center;
-  padding: 20px;
   background:
-    radial-gradient(ellipse at center, #204765, #0b223b 55%, #030d1a);
+    radial-gradient(ellipse at center, #183b59, #07182b 75%);
 }
-.ring-symbol {
-  width: 112px;
-  height: 112px;
-  position: relative;
-  border: 10px solid #d9b66e;
-  border-right-color: #f5df9f;
-  border-bottom-color: #9b7136;
-  border-radius: 50%;
-  transform: rotate(-25deg);
-  box-shadow: 0 0 24px rgba(212, 173, 98, .2);
-}
-.ring-symbol::before {
-  content: "";
-  position: absolute;
-  top: -27px;
-  left: 27px;
-  width: 35px;
-  height: 35px;
-  background: linear-gradient(135deg, #7ce7db, #168d98, #075b69);
-  border: 3px solid var(--light-gold);
-  transform: rotate(45deg);
-  box-shadow: 0 0 18px rgba(66, 207, 203, .3);
+.turquoise-ring-photo {
+  display: block;
+  width: 100%;
+  height: 350px;
+  object-fit: contain;
+  border: 1px solid rgba(212, 173, 98, .4);
+  background: #07182b;
 }
 .art-caption {
   color: var(--light-gold);
-  font-size: 13px;
+  font-size: 11px;
+  letter-spacing: 3px;
+  margin-top: 10px;
+  padding: 4px;
 }
-/* کالکشن محصولات */
+/* Collection */
 .section {
   max-width: 1200px;
   margin: auto;
-  padding: 58px 24px;
+  padding: 65px 24px;
 }
 .section-heading {
   text-align: center;
-  margin-bottom: 32px;
+  margin-bottom: 34px;
 }
-.section-heading .small-title {
+.small-title {
   color: var(--gold);
   font-size: 11px;
   letter-spacing: 4px;
@@ -254,7 +243,7 @@ h1 {
   margin-bottom: 10px;
 }
 .section-heading p {
-  color: #bdc9d8;
+  color: var(--muted);
   font-size: 13px;
 }
 .products {
@@ -263,11 +252,13 @@ h1 {
   gap: 18px;
 }
 .product-card {
+  min-width: 0;
   overflow: hidden;
   padding: 9px;
   background: linear-gradient(145deg, #102844, #071525);
   border: 1px solid rgba(212, 173, 98, .4);
-  transition: .25s;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, .14);
+  transition: transform .25s, border-color .25s;
 }
 .product-card:hover {
   transform: translateY(-4px);
@@ -292,14 +283,19 @@ h1 {
 .product-info p {
   color: var(--gold);
   font-size: 11px;
+  margin-top: 4px;
 }
-/* درباره تاتاروس */
+/* About */
 .about {
-  padding: 55px 24px;
+  position: relative;
+  padding: 60px 24px;
   text-align: center;
-  background: linear-gradient(120deg, #081a2d, #102b49, #061629);
-  border-top: 1px solid rgba(212, 173, 98, .3);
-  border-bottom: 1px solid rgba(212, 173, 98, .3);
+  background:
+    radial-gradient(ellipse at center,
+      rgba(18, 54, 92, .8), transparent 75%),
+    linear-gradient(120deg, #081a2d, #102b49, #061629);
+  border-top: 1px solid rgba(212, 173, 98, .35);
+  border-bottom: 1px solid rgba(212, 173, 98, .35);
 }
 .about h2,
 .contact h2 {
@@ -314,14 +310,14 @@ h1 {
   font-size: 14px;
   line-height: 2.3;
 }
-/* تماس */
+/* Contact */
 .contact {
-  padding: 48px 20px;
+  padding: 52px 20px;
   text-align: center;
   background: var(--deep);
 }
 .contact p {
-  color: #c3cdd9;
+  color: var(--muted);
   font-size: 13px;
   margin-bottom: 18px;
 }
@@ -331,11 +327,13 @@ h1 {
   color: var(--light-gold);
   padding: 9px 25px;
   transition: .25s;
+  font-size: 13px;
 }
 .instagram-button:hover {
   background: var(--gold);
   color: var(--deep);
 }
+/* Footer */
 footer {
   padding: 18px;
   text-align: center;
@@ -344,21 +342,21 @@ footer {
   font-size: 11px;
   border-top: 1px solid rgba(212, 173, 98, .3);
 }
-/* نمایش در موبایل */
+/* Mobile */
 @media (max-width: 800px) {
   .nav {
     padding: 14px 16px;
     flex-direction: column;
     gap: 8px;
   }
+  .logo {
+    font-size: 21px;
+  }
   .nav-links {
     justify-content: center;
     flex-wrap: wrap;
     gap: 15px;
     font-size: 11px;
-  }
-  .logo {
-    font-size: 21px;
   }
   .hero-inner {
     grid-template-columns: 1fr;
@@ -370,6 +368,7 @@ footer {
   }
   .hero-art {
     order: 2;
+    padding: 8px;
   }
   .hero-subtitle {
     font-size: 18px;
@@ -378,17 +377,28 @@ footer {
     font-size: 13px;
   }
   .art-frame {
-    max-width: 330px;
+    max-width: 360px;
+  }
+  .turquoise-ring-photo {
+    height: 290px;
   }
   .products {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 12px;
   }
   .section {
-    padding: 42px 13px;
+    padding: 44px 13px;
   }
   .product-card {
     padding: 7px;
+  }
+}
+@media (max-width: 360px) {
+  .nav-links {
+    gap: 10px;
+  }
+  .turquoise-ring-photo {
+    height: 240px;
   }
 }
 </style>
@@ -412,17 +422,28 @@ footer {
       <div class="hero-copy">
         <div class="eyebrow">TATAROS JEWELRY</div>
         <h1>تاتاروس جواهری</h1>
-        <div class="hero-subtitle">جواهرات، نقره و سنگ‌های طبیعی</div>
+        <div class="hero-subtitle">
+          جواهرات، نقره و سنگ‌های طبیعی
+        </div>
         <p class="hero-description">
           انتخابی متفاوت و خاص برای کسانی که زیبایی را در جزئیات می‌بینند
         </p>
-        <a class="collection-button" href="#collection">مشاهده کالکشن</a>
+        <a class="collection-button" href="#collection">
+          مشاهده کالکشن
+        </a>
       </div>
       <div class="hero-art">
         <div class="art-frame">
           <div class="art-placeholder">
-            <div class="ring-symbol"></div>
-            <div class="art-caption">TATAROS • TURQUOISE</div>
+            <img
+              class="turquoise-ring-photo"
+              src="tataros-turquoise-ring.jpg"
+              alt="انگشتر فیروزه و طلای تاتاروس"
+              fetchpriority="high"
+            >
+            <div class="art-caption">
+              TATAROS • TURQUOISE
+            </div>
           </div>
         </div>
       </div>
@@ -443,35 +464,35 @@ footer {
         </div>
       </article>
       <article class="product-card">
-        <img src="IMG_2985.jpeg" alt="محصول تاتاروس" loading="lazy">
+        <img src="IMG_2985.jpeg" alt="سنگ طبیعی" loading="lazy">
         <div class="product-info">
           <h3>سنگ‌های طبیعی</h3>
           <p>برای اطلاع از قیمت تماس بگیرید</p>
         </div>
       </article>
       <article class="product-card">
-        <img src="IMG_2986.jpeg" alt="محصول تاتاروس" loading="lazy">
+        <img src="IMG_2986.jpeg" alt="زیورآلات تاتاروس" loading="lazy">
         <div class="product-info">
           <h3>زیورآلات خاص</h3>
           <p>برای اطلاع از قیمت تماس بگیرید</p>
         </div>
       </article>
       <article class="product-card">
-        <img src="IMG_2987.jpeg" alt="محصول تاتاروس" loading="lazy">
+        <img src="IMG_2987.jpeg" alt="محصول ویژه تاتاروس" loading="lazy">
         <div class="product-info">
           <h3>انتخابی متفاوت</h3>
           <p>برای اطلاع از قیمت تماس بگیرید</p>
         </div>
       </article>
       <article class="product-card">
-        <img src="IMG_3143.jpeg" alt="محصول تاتاروس" loading="lazy">
+        <img src="IMG_3143.jpeg" alt="کالکشن ویژه تاتاروس" loading="lazy">
         <div class="product-info">
           <h3>کالکشن ویژه</h3>
           <p>برای اطلاع از قیمت تماس بگیرید</p>
         </div>
       </article>
       <article class="product-card">
-        <img src="IMG_3144.jpeg" alt="محصول تاتاروس" loading="lazy">
+        <img src="IMG_3144.jpeg" alt="جزئیات جواهرات تاتاروس" loading="lazy">
         <div class="product-info">
           <h3>جزئیات ماندگار</h3>
           <p>برای اطلاع از قیمت تماس بگیرید</p>
@@ -488,18 +509,21 @@ footer {
   </section>
   <section class="contact" id="contact">
     <h2>با تاتاروس همراه باشید</h2>
-    <p>برای مشاهده محصولات و ارتباط با ما، صفحه اینستاگرام تاتاروس را دنبال کنید.</p>
-    <a class="instagram-button"
-       href="https://www.instagram.com/tatarusjewelry/"
-       target="_blank"
-       rel="noopener noreferrer">
+    <p>
+      برای مشاهده محصولات و ارتباط با ما، صفحه اینستاگرام تاتاروس را دنبال کنید.
+    </p>
+    <a
+      class="instagram-button"
+      href="https://www.instagram.com/tatarusjewelry/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       مشاهده صفحه اینستاگرام
     </a>
   </section>
 </main>
 <footer>
-  <p>© تاتاروس جواهری | <span>TATAROS JEWELRY</span></p>
+  <p>© تاتاروس جواهری | TATAROS JEWELRY</p>
 </footer>
 </body>
 </html>
-  
