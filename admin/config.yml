@@ -1,1 +1,40 @@
 
+backend:
+  name: github
+  repo: tatarosjewelry/tataros
+  branch: main
+
+media_folder: ""
+public_folder: "/tataros/"
+
+locale: fa
+
+collections:
+  - name: catalog
+    label: محصولات تاتاروس
+    files:
+      - name: products
+        label: محصولات و قیمت‌ها
+        file: data/products.json
+        format: json
+        fields:
+          - label: فهرست محصولات
+            name: products
+            widget: list
+            fields:
+              - label: نام محصول
+                name: name
+                widget: string
+              - label: قیمت به تومان
+                name: price
+                widget: number
+                value_type: int
+                min: 0
+              - label: عکس محصول
+                name: image
+                widget: string
+              - label: توضیحات
+                name: description
+                widget: string
+                required: false
+
