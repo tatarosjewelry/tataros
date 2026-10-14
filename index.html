@@ -2,64 +2,208 @@
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#03101e">
 <title>تاتاروس جواهری | TATAROS JEWELRY</title>
-<meta name="description" content="تاتاروس جواهری؛ جواهرات، نقره و سنگ‌های طبیعی">
+<meta name="description" content="تاتاروس جواهری؛ مجموعه‌ای منتخب از جواهرات، نقره و سنگ‌های طبیعی.">
 <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* استایل تکمیلی؛ هماهنگ با تم سلطنتی سایت */
+.collection { padding: 70px 5%; }
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 22px;
+}
+.product {
+  overflow: hidden;
+  border: 1px solid rgba(198,169,107,.4);
+  border-radius: 12px;
+  background: linear-gradient(160deg,#102640,#06111f);
+  box-shadow: 0 8px 24px rgba(0,0,0,.2);
+}
+.product > img {
+  display: block;
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  background: #0a1929;
+}
+.product-info { padding: 18px; text-align: center; }
+.product-info h3 { line-height: 1.9; }
+.product-info p { line-height: 1.9; }
+.product-info .price {
+  color: #d7b879;
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 12px 0;
+}
+.product-info .btn { display: inline-block; }
+.product-error {
+  color: #f7f4ed;
+  text-align: center;
+  padding: 24px;
+}
+</style>
 </head>
+
 <body>
 <header class="header" id="home">
-<div class="social">
-<a href="https://www.instagram.com/tatarusjewelry/" aria-label="Instagram">◎</a>
-<a href="https://www.instagram.com/tatarusjewelry/" aria-label="Instagram">♧</a>
-<a href="#collection" aria-label="Search">⌕</a>
-</div>
-<nav><a class="active" href="#home">خانه</a><a href="#collection">کالکشن</a><a href="#about">درباره ما</a><a href="#contact">تماس</a></nav>
-<a class="brand" href="#home"><span class="crown">♛</span><strong>𝕋</strong><b>TATAROS</b><small>J E W E L R Y</small></a>
+  <div class="social">
+    <a href="https://www.instagram.com/tatarusjewelry/" aria-label="Instagram">◎</a>
+    <a href="#collection" aria-label="کالکشن">♧</a>
+    <a href="#collection" aria-label="مشاهده محصولات">⌕</a>
+  </div>
+  <nav>
+    <a class="active" href="#home">خانه</a>
+    <a href="#collection">کالکشن</a>
+    <a href="#about">درباره ما</a>
+    <a href="#contact">تماس</a>
+  </nav>
+  <a class="brand" href="#home">
+    <span class="crown">♛</span>
+    <strong>𝕋</strong>
+    <b>TATAROS</b>
+    <small>J E W E L R Y</small>
+  </a>
 </header>
+
 <main>
-<section class="hero">
-<div class="hero-bg"></div>
-<div class="hero-copy">
-<h1>تاتاروس جواهری</h1>
-<h2>جواهرات، نقره و سنگ‌های طبیعی</h2>
-<p>انتخابی متفاوت و خاص برای کسانی که<br>زیبایی را در جزئیات می‌بینند.</p>
-<a class="btn" href="#collection">← مشاهده کالکشن</a>
-</div>
-<div class="hero-ring"><img src="tataros-turquoise-ring.jpg" alt="انگشتر فیروزه تاتاروس"></div>
-<div class="hero-bottom-line"></div>
-</section>
-<section class="collection" id="collection">
-<div class="section-title"><span>❧</span><h2>کالکشن جواهرات، نقره و سنگ‌های طبیعی تاتاروس</h2></div>
-<div class="products">
-<article class="product"><img src="IMG_2967.jpeg" alt="نقره تاتاروس"><div class="product-info"><h3>نقره تاتاروس</h3><p>طراحی اصیل، کیفیت ماندگار</p><a class="btn small" href="https://www.instagram.com/tatarusjewelry/" target="_blank" rel="noopener">‹ مشاهده محصول</a></div></article>
-<article class="product"><img src="IMG_2985.jpeg" alt="جواهرات تاتاروس"><div class="product-info"><h3>جواهرات تاتاروس</h3><p>زیبایی در هر نگاه</p><a class="btn small" href="https://www.instagram.com/tatarusjewelry/" target="_blank" rel="noopener">‹ مشاهده محصول</a></div></article>
-<article class="product"><img src="IMG_2986.jpeg" alt="نقره و فیروزه"><div class="product-info"><h3>نقره تاتاروس</h3><p>ترکیب اصالت و هنر</p><a class="btn small" href="https://www.instagram.com/tatarusjewelry/" target="_blank" rel="noopener">‹ مشاهده محصول</a></div></article>
-<article class="product"><img src="IMG_2987.jpeg" alt="سنگ‌های طبیعی"><div class="product-info"><h3>سنگ‌های طبیعی</h3><p>هدیه‌ای از دل طبیعت</p><a class="btn small" href="https://www.instagram.com/tatarusjewelry/" target="_blank" rel="noopener">‹ مشاهده محصول</a></div></article>
-</div>
-</section>
-<section class="benefits">
-<div class="benefit"><span>♢</span><h3>تضمین اصالت کالا</h3><p>همراه با شناسنامه معتبر</p></div>
-<div class="benefit"><span>◇</span><h3>کیفیت بالا</h3><p>انتخاب دقیق و حرفه‌ای</p></div>
-<div class="benefit"><span>♧</span><h3>ارسال سریع</h3><p>به سراسر کشور</p></div>
-<div class="benefit"><span>♧</span><h3>پشتیبانی مشتریان</h3><p>پاسخگویی در کوتاه‌ترین زمان</p></div>
-</section>
-<section class="about" id="about">
-<div class="about-mark">♛<b>𝕋</b></div>
-<h2>درباره تاتاروس</h2>
-<p>جواهرات، نقره و سنگ‌های طبیعی؛ انتخابی متفاوت برای سلیقه‌ای خاص.</p>
-</section>
-<section class="contact" id="contact">
-<h2>ارتباط با تاتاروس</h2>
-<a class="btn" href="https://www.instagram.com/tatarusjewelry/" target="_blank" rel="noopener">صفحه اینستاگرام ↗</a>
-</section>
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-copy">
+      <h1>تاتاروس جواهری</h1>
+      <h2>جواهرات، نقره و سنگ‌های طبیعی</h2>
+      <p>انتخابی متفاوت و خاص برای کسانی که<br>زیبایی را در جزئیات می‌بینند.</p>
+      <a class="btn" href="#collection">← مشاهده کالکشن</a>
+    </div>
+    <div class="hero-ring">
+      <img src="tataros-turquoise-ring.jpg" alt="انگشتر فیروزه تاتاروس">
+    </div>
+    <div class="hero-bottom-line"></div>
+  </section>
+
+  <section class="collection" id="collection">
+    <div class="section-title">
+      <span>❧</span>
+      <h2>کالکشن جواهرات، نقره و سنگ‌های طبیعی تاتاروس</h2>
+    </div>
+    <div class="products" id="products-list">
+      <p class="product-error">در حال بارگذاری کالکشن تاتاروس...</p>
+    </div>
+  </section>
+
+  <section class="benefits">
+    <div class="benefit">
+      <span>♢</span>
+      <h3>تضمین اصالت کالا</h3>
+      <p>انتخاب با دقت و توجه به جزئیات</p>
+    </div>
+    <div class="benefit">
+      <span>◇</span>
+      <h3>کیفیت بالا</h3>
+      <p>انتخاب دقیق و حرفه‌ای</p>
+    </div>
+    <div class="benefit">
+      <span>♧</span>
+      <h3>ارسال سریع</h3>
+      <p>به سراسر کشور</p>
+    </div>
+    <div class="benefit">
+      <span>♧</span>
+      <h3>پشتیبانی مشتریان</h3>
+      <p>پاسخگویی در کوتاه‌ترین زمان</p>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="about-mark">♛<b>𝕋</b></div>
+    <h2>درباره تاتاروس</h2>
+    <p>جواهرات، نقره و سنگ‌های طبیعی؛ انتخابی متفاوت برای سلیقه‌ای خاص.</p>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>ارتباط با تاتاروس</h2>
+    <a class="btn" href="https://www.instagram.com/tatarusjewelry/" target="_blank" rel="noopener">صفحه اینستاگرام ↗</a>
+  </section>
 </main>
+
 <footer>
-<div class="footer-social"><a href="https://www.instagram.com/tatarusjewelry/">◎</a><a href="https://www.instagram.com/tatarusjewelry/">♧</a><a href="https://www.instagram.com/tatarusjewelry/">➤</a></div>
-<div class="footer-brand"><span>♛</span><b>TATAROS</b><small>J E W E L R Y</small><p>زیبایی، ماندگار است ...</p></div>
-<div class="footer-ornament">━━━━ ❧ ━━━━</div>
+  <div class="footer-social">
+    <a href="https://www.instagram.com/tatarusjewelry/">◎</a>
+    <a href="#collection">♧</a>
+    <a href="https://www.instagram.com/tatarusjewelry/">➤</a>
+  </div>
+  <div class="footer-brand">
+    <span>♛</span>
+    <b>TATAROS</b>
+    <small>J E W E L R Y</small>
+    <p>زیبایی، ماندگار است ...</p>
+  </div>
+  <div class="footer-ornament">━━━━ ❧ ━━━━</div>
 </footer>
+
+<script>
+(function () {
+  const container = document.getElementById("products-list");
+  const instagram = "https://www.instagram.com/tatarusjewelry/";
+
+  function escapeHTML(value) {
+    return String(value ?? "").replace(/[&<>"']/g, function (char) {
+      return {
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#39;"
+      }[char];
+    });
+  }
+
+  async function loadProducts() {
+    try {
+      const response = await fetch("data/products.json");
+      if (!response.ok) throw new Error("فایل محصولات بارگذاری نشد");
+
+      const data = await response.json();
+      if (!Array.isArray(data.products) || data.products.length === 0) {
+        throw new Error("فهرست محصولات خالی است");
+      }
+
+      container.innerHTML = data.products.map(function (product) {
+        const name = escapeHTML(product.name || "محصول تاتاروس");
+        const description = escapeHTML(
+          product.description || "انتخابی ظریف از تاتاروس"
+        );
+        const image = escapeHTML(product.image || "");
+        const price = Number(product.price);
+
+        const priceHTML = Number.isFinite(price) && price >= 0
+          ? '<p class="price">' + price.toLocaleString("fa-IR") + ' تومان</p>'
+          : "";
+
+        return `
+          <article class="product">
+            <img src="${image}" alt="${name}" loading="lazy">
+            <div class="product-info">
+              <h3>${name}</h3>
+              <p>${description}</p>
+              ${priceHTML}
+              <a class="btn small" href="${instagram}" target="_blank" rel="noopener">مشاهده محصول ↗</a>
+            </div>
+          </article>
+        `;
+      }).join("");
+    } catch (error) {
+      container.innerHTML =
+        '<p class="product-error">نمایش محصولات ممکن نیست. فایل data/products.json و مسیر عکس‌ها را بررسی کنید.</p>';
+      console.error(error);
+    }
+  }
+
+  loadProducts();
+})();
+</script>
 </body>
 </html>
