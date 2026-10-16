@@ -1,4 +1,3 @@
-
 media:
   input: .
   output: /tataros
@@ -38,6 +37,7 @@ content:
                 - jpeg
                 - png
                 - webp
+              rename: false
 
           - name: description
             label: توضیحات
