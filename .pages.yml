@@ -26,7 +26,11 @@ content:
             type: image
             options:
             path: assets
-            extensions: [jpg, jpeg, png, webp]
+            extensions:
+            - jpg
+            - jpeg
+            - png
+            - webp
         * name: description
             label: توضیحات
             type: string
