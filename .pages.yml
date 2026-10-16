@@ -1,36 +1,36 @@
+
 media:
-input: assets
-output: /tataros/assets
+  input: .
+  output: /tataros
 
 content:
-
-* name: catalog
+  - name: catalog
     label: محصولات تاتاروس
     type: file
     path: data/products.json
     format: json
     fields:
-    * name: products
+      - name: products
         label: فهرست محصولات
         type: object
         list: true
         fields:
-        * name: name
+          - name: name
             label: نام محصول
             type: string
-        * name: price
+          - name: price
             label: قیمت به تومان
             type: number
-        * name: image
+          - name: image
             label: عکس محصول
             type: image
             options:
-            path: assets
-            extensions:
-            - jpg
-            - jpeg
-            - png
-            - webp
-        * name: description
+              path: .
+              extensions:
+                - jpg
+                - jpeg
+                - png
+                - webp
+          - name: description
             label: توضیحات
             type: string
