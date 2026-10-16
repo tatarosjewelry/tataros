@@ -1,11 +1,13 @@
 media:
-  input: .
-  output: /tataros
-  extensions:
-    - jpg
-    - jpeg
-    - png
-    - webp
+  - name: images
+    label: عکس‌های تاتاروس
+    input: .
+    output: /tataros
+    extensions:
+      - jpg
+      - jpeg
+      - png
+      - webp
 
 content:
   - name: catalog
@@ -31,13 +33,13 @@ content:
             label: عکس محصول
             type: image
             options:
+              media: images
               path: .
               extensions:
                 - jpg
                 - jpeg
                 - png
                 - webp
-              rename: false
 
           - name: description
             label: توضیحات
