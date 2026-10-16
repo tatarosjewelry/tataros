@@ -1,0 +1,29 @@
+media:
+input: assets
+output: assets
+
+content:
+
+* name: catalog
+    label: محصولات تاتاروس
+    type: file
+    path: data/products.json
+    format: json
+    fields:
+    * name: products
+        label: فهرست محصولات
+        type: object
+        list: true
+        fields:
+        * name: name
+            label: نام محصول
+            type: string
+        * name: price
+            label: قیمت به تومان
+            type: number
+        * name: image
+            label: عکس محصول
+            type: string
+        * name: description
+            label: توضیحات
+            type: string
