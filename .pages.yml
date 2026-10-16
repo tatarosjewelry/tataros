@@ -30,16 +30,8 @@ content:
             type: number
 
           - name: image
-            label: عکس محصول
-            type: image
-            options:
-              media: images
-              path: .
-              extensions:
-                - jpg
-                - jpeg
-                - png
-                - webp
+            label: مسیر عکس محصول
+            type: string
 
           - name: description
             label: توضیحات
