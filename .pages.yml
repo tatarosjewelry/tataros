@@ -2,6 +2,11 @@
 media:
   input: .
   output: /tataros
+  extensions:
+    - jpg
+    - jpeg
+    - png
+    - webp
 
 content:
   - name: catalog
@@ -18,9 +23,11 @@ content:
           - name: name
             label: نام محصول
             type: string
+
           - name: price
             label: قیمت به تومان
             type: number
+
           - name: image
             label: عکس محصول
             type: image
@@ -31,6 +38,7 @@ content:
                 - jpeg
                 - png
                 - webp
+
           - name: description
             label: توضیحات
             type: string
