@@ -1,208 +1,218 @@
+
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#03101e">
 <title>تاتاروس جواهری | TATAROS JEWELRY</title>
-<meta name="description" content="تاتاروس جواهری؛ مجموعه‌ای منتخب از جواهرات، نقره و سنگ‌های طبیعی.">
+<meta name="description" content="تاتاروس؛ جواهرات، نقره و سنگ‌های طبیعی">
 <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-/* استایل تکمیلی؛ هماهنگ با تم سلطنتی سایت */
-.collection { padding: 70px 5%; }
-.products {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 22px;
-}
-.product {
-  overflow: hidden;
-  border: 1px solid rgba(198,169,107,.4);
-  border-radius: 12px;
-  background: linear-gradient(160deg,#102640,#06111f);
-  box-shadow: 0 8px 24px rgba(0,0,0,.2);
-}
-.product > img {
-  display: block;
-  width: 100%;
-  height: 260px;
-  object-fit: cover;
-  background: #0a1929;
-}
-.product-info { padding: 18px; text-align: center; }
-.product-info h3 { line-height: 1.9; }
-.product-info p { line-height: 1.9; }
-.product-info .price {
-  color: #d7b879;
-  font-size: 1.05rem;
-  font-weight: 700;
-  margin: 12px 0;
-}
-.product-info .btn { display: inline-block; }
-.product-error {
-  color: #f7f4ed;
-  text-align: center;
-  padding: 24px;
-}
+:root{--n:#03101e;--b:#0b2340;--g:#d4b16a;--lg:#f3dda0;--w:#f8f5ed}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Vazirmatn,sans-serif;background:var(--n);color:var(--w)}
+a{color:inherit}
+.header{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:18px 5%;background:linear-gradient(135deg,#102944,#030d19);border-bottom:1px solid #80683d}
+.header nav,.social,.footer-social{display:flex;align-items:center;justify-content:center;gap:14px}
+.header nav a{text-decoration:none;font-size:14px;color:#d1d8df}
+.header nav a:hover{color:var(--lg)}
+.social a,.footer-social a{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border:1px solid #80683d;border-radius:50%;color:var(--lg);text-decoration:none}
+.icon-svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.brand{display:flex;flex-direction:column;align-items:center;gap:4px;color:var(--lg);text-decoration:none;line-height:1.2;min-width:130px}
+.crown-svg{width:34px;height:27px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.brand .monogram{font:24px Georgia,serif}
+.brand b{font:19px Georgia,serif;letter-spacing:3px;direction:ltr}
+.brand small{font:9px Georgia,serif;letter-spacing:3px;direction:ltr}
+.hero{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:30px;padding:55px 8%;background:radial-gradient(ellipse at 75% 45%,#17435c80,transparent 55%),linear-gradient(135deg,#0b2340,#03101e 75%)}
+.hero-copy h1{color:var(--lg);font-size:clamp(30px,4vw,46px);line-height:1.6;margin:0}
+.hero-copy h2{font-size:21px;font-weight:400;line-height:1.9}
+.hero-copy p{color:#d7dce3;line-height:2.2}
+.btn{display:inline-block;padding:12px 22px;border:1px solid var(--g);border-radius:4px;background:linear-gradient(135deg,#f3dda0,#b68a3d);color:#071424;font-family:inherit;font-weight:600;text-decoration:none}
+.hero-ring{display:flex;align-items:center;justify-content:center}
+.hero-ring img{width:min(100%,360px);height:330px;object-fit:contain;border:1px solid #80683d;border-radius:50%;background:radial-gradient(circle,#17435c,#061629 70%);box-shadow:0 0 0 10px #d4b16a0d}
+.collection{padding:60px 5%;background:linear-gradient(#061629,#030c17)}
+.section-title{text-align:center;margin-bottom:32px}
+.section-title h2{color:var(--lg);font-size:clamp(23px,3vw,32px);font-weight:500}
+.section-title p{color:#c3cbd4;line-height:2}
+.title-ornament{color:var(--g);margin:18px auto}
+.title-ornament:before,.title-ornament:after{content:"";display:inline-block;width:55px;height:1px;background:var(--g);vertical-align:middle;margin:0 12px}
+.products{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;max-width:1400px;margin:auto}
+.product{overflow:hidden;border:1px solid #80683d;border-radius:6px;background:linear-gradient(#102943,#06111f)}
+.product>img{display:block;width:100%;height:250px;padding:6px;object-fit:contain;background:#f7f4ed;border-bottom:1px solid #80683d}
+.product-info{padding:16px;text-align:center}
+.product-info h3{color:var(--lg);font-size:16px;font-weight:500;line-height:1.9}
+.product-info p{color:#d1d7df;font-size:13px;line-height:2}
+.price{color:var(--lg);font-size:15px;font-weight:600}
+.product-error{grid-column:1/-1;text-align:center;color:var(--lg);padding:24px;line-height:2}
 </style>
 </head>
-
 <body>
-<header class="header" id="home">
-  <div class="social">
-    <a href="https://www.instagram.com/tatarusjewelry/" aria-label="Instagram">◎</a>
-    <a href="#collection" aria-label="کالکشن">♧</a>
-    <a href="#collection" aria-label="مشاهده محصولات">⌕</a>
-  </div>
-  <nav>
-    <a class="active" href="#home">خانه</a>
-    <a href="#collection">کالکشن</a>
-    <a href="#about">درباره ما</a>
-    <a href="#contact">تماس</a>
-  </nav>
-  <a class="brand" href="#home">
-    <span class="crown">♛</span>
-    <strong>𝕋</strong>
-    <b>TATAROS</b>
-    <small>J E W E L R Y</small>
-  </a>
+<header class="header">
+<div class="social">
+<a href="https://www.instagram.com/tatarosjewelry/" target="_blank" rel="noopener" aria-label="Instagram">
+<svg class="icon-svg" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8"/></svg>
+</a>
+</div>
+<nav>
+<a href="#home">خانه</a><a href="#collection">کالکشن</a><a href="#about">درباره ما</a><a href="#contact">تماس</a>
+</nav>
+<a class="brand" href="#home">
+<svg class="crown-svg" viewBox="0 0 40 32"><path d="M5 9 12 17 20 5 28 17 35 9 31 26 9 26Z"/><path d="M9 29H31"/><circle cx="5" cy="7" r="2"/><circle cx="20" cy="4" r="2"/><circle cx="35" cy="7" r="2"/></svg>
+<span class="monogram">T</span><b>TATAROS</b><small>J E W E L R Y</small>
+</a>
 </header>
-
 <main>
-  <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-copy">
-      <h1>تاتاروس جواهری</h1>
-      <h2>جواهرات، نقره و سنگ‌های طبیعی</h2>
-      <p>انتخابی متفاوت و خاص برای کسانی که<br>زیبایی را در جزئیات می‌بینند.</p>
-      <a class="btn" href="#collection">← مشاهده کالکشن</a>
-    </div>
-    <div class="hero-ring">
-      <img src="tataros-turquoise-ring.jpg" alt="انگشتر فیروزه تاتاروس">
-    </div>
-    <div class="hero-bottom-line"></div>
-  </section>
-
-  <section class="collection" id="collection">
-    <div class="section-title">
-      <span>❧</span>
-      <h2>کالکشن جواهرات، نقره و سنگ‌های طبیعی تاتاروس</h2>
-    </div>
-    <div class="products" id="products-list">
-      <p class="product-error">در حال بارگذاری کالکشن تاتاروس...</p>
-    </div>
-  </section>
-
-  <section class="benefits">
-    <div class="benefit">
-      <span>♢</span>
-      <h3>تضمین اصالت کالا</h3>
-      <p>انتخاب با دقت و توجه به جزئیات</p>
-    </div>
-    <div class="benefit">
-      <span>◇</span>
-      <h3>کیفیت بالا</h3>
-      <p>انتخاب دقیق و حرفه‌ای</p>
-    </div>
-    <div class="benefit">
-      <span>♧</span>
-      <h3>ارسال سریع</h3>
-      <p>به سراسر کشور</p>
-    </div>
-    <div class="benefit">
-      <span>♧</span>
-      <h3>پشتیبانی مشتریان</h3>
-      <p>پاسخگویی در کوتاه‌ترین زمان</p>
-    </div>
-  </section>
-
-  <section class="about" id="about">
-    <div class="about-mark">♛<b>𝕋</b></div>
-    <h2>درباره تاتاروس</h2>
-    <p>جواهرات، نقره و سنگ‌های طبیعی؛ انتخابی متفاوت برای سلیقه‌ای خاص.</p>
-  </section>
-
-  <section class="contact" id="contact">
-    <h2>ارتباط با تاتاروس</h2>
-    <a class="btn" href="https://www.instagram.com/tatarusjewelry/" target="_blank" rel="noopener">صفحه اینستاگرام ↗</a>
-  </section>
+<section class="hero" id="home">
+<div class="hero-copy">
+<h1>تاتاروس جواهری</h1>
+<h2>جواهرات، نقره و سنگ‌های طبیعی</h2>
+<p>زیبایی در جزئیات است؛ انتخابی برای سلیقه‌هایی که اصالت و ظرافت را ارزشمند می‌دانند.</p>
+<a class="btn" href="#collection">مشاهده کالکشن</a>
+</div>
+<div class="hero-ring"><img src="/tataros/IMG_2967.jpeg" alt="انگشتر تاتاروس"></div>
+</section>
+<section class="collection" id="collection">
+<div class="section-title">
+<h2>کالکشن تاتاروس</h2>
+<p>جواهرات، نقره و سنگ‌های طبیعی</p>
+<div class="title-ornament">✦</div>
+</div>
+<div class="products" id="products">
+<p class="product-error">در حال بارگذاری محصولات...</p>
+</div>
+</section>
 </main>
 
-<footer>
-  <div class="footer-social">
-    <a href="https://www.instagram.com/tatarusjewelry/">◎</a>
-    <a href="#collection">♧</a>
-    <a href="https://www.instagram.com/tatarusjewelry/">➤</a>
-  </div>
-  <div class="footer-brand">
-    <span>♛</span>
-    <b>TATAROS</b>
-    <small>J E W E L R Y</small>
-    <p>زیبایی، ماندگار است ...</p>
-  </div>
-  <div class="footer-ornament">━━━━ ❧ ━━━━</div>
+<style>
+.benefits{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;padding:45px 6%;background:#081a2d;border-block:1px solid #80683d}
+.benefit{text-align:center;padding:12px 6px}
+.benefit-icon{display:flex;align-items:center;justify-content:center;width:48px;height:48px;margin:0 auto 12px;border:1px solid var(--g);border-radius:50%;color:var(--lg)}
+.benefit-icon svg{width:23px;height:23px;fill:none;stroke:currentColor;stroke-width:1.5}
+.benefit h3{color:var(--lg);font-size:15px;font-weight:500}
+.benefit p{color:#c3cbd4;font-size:12px;line-height:2}
+.about{padding:55px 8%;text-align:center;background:linear-gradient(135deg,#0b2340,#030c17)}
+.about-mark{color:var(--lg);font:28px Georgia,serif;margin-bottom:15px}
+.about h2{color:var(--lg);font-weight:500}
+.about p{max-width:750px;margin:auto;color:#d1d8df;line-height:2.4}
+.footer{padding:35px 5% 20px;background:#020913;border-top:1px solid #80683d}
+.footer-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px}
+.footer-brand{display:flex;flex-direction:column;gap:5px;color:var(--lg);font-family:Georgia,serif;direction:ltr}
+.footer-brand strong{font-size:21px;letter-spacing:3px}
+.footer-brand small{font-size:9px;letter-spacing:3px}
+.footer-links{display:flex;flex-wrap:wrap;gap:16px}
+.footer-links a{font-size:13px;text-decoration:none;color:#d1d8df}
+.copyright{margin-top:25px;padding-top:16px;border-top:1px solid #ffffff20;color:#aeb8c4;font-size:12px;text-align:center;line-height:2}
+@media(max-width:850px){
+.header{flex-wrap:wrap;justify-content:center}
+.brand{order:-1;width:100%}
+.header nav{flex-wrap:wrap}
+.products{grid-template-columns:repeat(2,minmax(0,1fr))}
+.benefits{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:520px){
+.header{padding:14px 3%;gap:14px}
+.header nav{gap:10px}
+.header nav a{font-size:12px}
+.hero{grid-template-columns:1fr;text-align:center;padding:35px 6%;gap:22px}
+.hero-ring img{width:min(80vw,280px);height:250px}
+.collection{padding:40px 4%}
+.products{gap:12px}
+.product>img{height:175px}
+.product-info{padding:10px 7px}
+.product-info h3{font-size:13px}
+.product-info p{font-size:11px}
+.price{font-size:12px}
+.benefits{padding:30px 4%;gap:10px}
+.benefit h3{font-size:13px}
+.benefit p{font-size:11px}
+.footer-inner{flex-direction:column;text-align:center}
+.footer-links{justify-content:center}
+}
+</style>
+
+<section class="benefits">
+<div class="benefit">
+<span class="benefit-icon">
+<svg viewBox="0 0 24 24"><path d="m12 3 8 4v5c0 5-4 8-8 9-4-1-8-4-8-9V7z"/><path d="m8 12 3 3 5-6"/></svg>
+</span>
+<h3>انتخاب با دقت</h3><p>توجه به جزئیات و کیفیت</p>
+</div>
+<div class="benefit">
+<span class="benefit-icon">
+<svg viewBox="0 0 24 24"><path d="M3 7h18v13H3z"/><path d="M7 7V4h10v3M3 12h18"/></svg>
+</span>
+<h3>بسته‌بندی شیک</h3><p>تجربه‌ای زیبا برای هدیه</p>
+</div>
+<div class="benefit">
+<span class="benefit-icon">
+<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l4 2"/></svg>
+</span>
+<h3>پاسخ‌گویی</h3><p>همراه شما برای انتخاب بهتر</p>
+</div>
+<div class="benefit">
+<span class="benefit-icon">
+<svg viewBox="0 0 24 24"><path d="M12 3 15 9l6 1-4.5 4.5 1 6.5-5.5-3-5.5 3 1-6.5L3 10l6-1z"/></svg>
+</span>
+<h3>ظرافت ماندگار</h3><p>زیبایی در طراحی و جزئیات</p>
+</div>
+</section>
+
+<section class="about" id="about">
+<div class="about-mark">♛ T</div>
+<h2>درباره تاتاروس</h2>
+<p>تاتاروس جواهری با نگاهی به اصالت، ظرافت و زیبایی ماندگار شکل گرفته است؛ مجموعه‌ای برای کسانی که جزئیات را می‌بینند و انتخاب متفاوت را دوست دارند.</p>
+</section>
+
+<footer class="footer" id="contact">
+<div class="footer-inner">
+<div class="footer-brand">
+<strong>TATAROS</strong><small>J E W E L R Y</small>
+</div>
+<div class="footer-links">
+<a href="#home">خانه</a>
+<a href="#collection">کالکشن</a>
+<a href="#about">درباره ما</a>
+<a href="https://www.instagram.com/tatarosjewelry/" target="_blank" rel="noopener">اینستاگرام</a>
+</div>
+<div class="footer-social">
+<a href="https://www.instagram.com/tatarosjewelry/" target="_blank" rel="noopener" aria-label="Instagram">
+<svg class="icon-svg" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8"/></svg>
+</a>
+</div>
+</div>
+<div class="copyright">© تاتاروس جواهری — تمامی حقوق محفوظ است.</div>
 </footer>
 
 <script>
-(function () {
-  const container = document.getElementById("products-list");
-  const instagram = "https://www.instagram.com/tatarusjewelry/";
-
-  function escapeHTML(value) {
-    return String(value ?? "").replace(/[&<>"']/g, function (char) {
-      return {
-        "&": "&amp;",
-        "<": "&lt;",
-        ">": "&gt;",
-        '"': "&quot;",
-        "'": "&#39;"
-      }[char];
-    });
+(async function(){
+  const box=document.getElementById("products");
+  try{
+    const response=await fetch("data/products.json");
+    if(!response.ok) throw new Error("products.json");
+    const data=await response.json();
+    const items=Array.isArray(data)?data:data.products;
+    if(!Array.isArray(items)||!items.length) throw new Error("empty");
+    box.innerHTML=items.map(p=>{
+      const name=p.name||p.title||"محصول تاتاروس";
+      const image=p.image||p.image_url||"";
+      const description=p.description||"انتخابی ظریف با امضای تاتاروس.";
+      const price=p.price;
+      return `<article class="product">
+        <img src="${image}" alt="${name}" loading="lazy">
+        <div class="product-info">
+          <h3>${name}</h3>
+          <p>${description}</p>
+          ${price!==undefined&&price!==""?`<div class="price">${price}</div>`:""}
+        </div>
+      </article>`;
+    }).join("");
+  }catch(error){
+    box.innerHTML='<p class="product-error">نمایش محصولات ممکن نشد. فایل data/products.json و مسیر تصاویر را بررسی کنید.</p>';
+    console.error(error);
   }
-
-  async function loadProducts() {
-    try {
-      const response = await fetch("data/products.json");
-      if (!response.ok) throw new Error("فایل محصولات بارگذاری نشد");
-
-      const data = await response.json();
-      if (!Array.isArray(data.products) || data.products.length === 0) {
-        throw new Error("فهرست محصولات خالی است");
-      }
-
-      container.innerHTML = data.products.map(function (product) {
-        const name = escapeHTML(product.name || "محصول تاتاروس");
-        const description = escapeHTML(
-          product.description || "انتخابی ظریف از تاتاروس"
-        );
-        const image = escapeHTML(product.image || "");
-        const price = Number(product.price);
-
-        const priceHTML = Number.isFinite(price) && price >= 0
-          ? '<p class="price">' + price.toLocaleString("fa-IR") + ' تومان</p>'
-          : "";
-
-        return `
-          <article class="product">
-            <img src="${image}" alt="${name}" loading="lazy">
-            <div class="product-info">
-              <h3>${name}</h3>
-              <p>${description}</p>
-              ${priceHTML}
-              <a class="btn small" href="${instagram}" target="_blank" rel="noopener">مشاهده محصول ↗</a>
-            </div>
-          </article>
-        `;
-      }).join("");
-    } catch (error) {
-      container.innerHTML =
-        '<p class="product-error">نمایش محصولات ممکن نیست. فایل data/products.json و مسیر عکس‌ها را بررسی کنید.</p>';
-      console.error(error);
-    }
-  }
-
-  loadProducts();
 })();
 </script>
 </body>
