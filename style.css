@@ -782,3 +782,11 @@ footer {
     justify-content: center;
   }
 }
+.brand .crown {
+  display: block;
+  width: 43px;
+  height: 25px;
+  color: #e8c780;
+  margin-bottom: 5px;
+  filter: drop-shadow(0 0 3px rgba(216, 173, 98, 0.16));
+}
