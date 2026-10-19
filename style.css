@@ -34,7 +34,7 @@ body {
       rgba(4, 15, 29, 0.64) 45%,
       rgba(3, 11, 23, 0.84) 100%
     ),
-    url("royal-background.jpg");
+    url("royal-background.jpg.PNG")
   background-position: center top, center top;
   background-size: cover, cover;
   background-repeat: no-repeat, no-repeat;
@@ -255,7 +255,7 @@ input {
       rgba(3, 12, 25, 0.22),
       rgba(3, 12, 25, 0.60)
     ),
-    url("royal-background.jpg");
+    url("royal-background.jpg.PNG")
   background-position: center, center 48%;
   background-size: cover, cover;
   background-repeat: no-repeat;
@@ -415,7 +415,7 @@ input {
       rgba(3, 12, 25, 0.64),
       rgba(5, 19, 35, 0.82)
     ),
-    url("royal-background.jpg") center 52% / cover no-repeat;
+    url("royal-background.jpg.PNG") center 52% / cover no-repeat;
 }
 
 .section-title {
@@ -611,7 +611,7 @@ input {
       rgba(3, 12, 25, 0.74),
       rgba(4, 15, 29, 0.87)
     ),
-    url("royal-background.jpg") center / cover no-repeat;
+    url("royal-background.jpg.PNG") center / cover no-repeat;
   text-align: center;
 }
 
