@@ -34,7 +34,7 @@ body {
       rgba(4, 15, 29, 0.64) 45%,
       rgba(3, 11, 23, 0.84) 100%
     ),
-    url("royal-background.jpg.PNG")
+    url("royal-background.jpg.PNG");
   background-position: center top, center top;
   background-size: cover, cover;
   background-repeat: no-repeat, no-repeat;
