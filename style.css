@@ -255,7 +255,7 @@ input {
       rgba(3, 12, 25, 0.22),
       rgba(3, 12, 25, 0.60)
     ),
-    url("royal-background.jpg.PNG")
+    url("royal-background.jpg.PNG");
   background-position: center, center 48%;
   background-size: cover, cover;
   background-repeat: no-repeat;
