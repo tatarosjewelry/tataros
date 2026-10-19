@@ -247,7 +247,7 @@ input {
 
 .hero-bg {
   position: absolute;
-  z-index: -2;
+  z-index: 0;
   inset: 0;
   background-image:
     linear-gradient(
