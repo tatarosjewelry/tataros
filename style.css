@@ -1,14 +1,12 @@
-
 :root {
-  --navy: #07182d;
-  --navy-deep: #030b17;
-  --navy-light: #102b49;
-  --navy-card: rgba(7, 22, 40, 0.94);
+  --navy: #061629;
+  --navy-deep: #020b16;
+  --navy-mid: #0b2038;
   --gold: #d8b36a;
-  --gold-light: #f5e2b0;
+  --gold-light: #f4dca4;
   --white: #f8f3e9;
-  --muted: #c2cbd6;
-  --gold-line: rgba(216, 179, 106, 0.55);
+  --muted: #c7cbd0;
+  --line: rgba(216,179,106,.62);
   --font: "Vazirmatn", Tahoma, sans-serif;
 }
 
@@ -26,20 +24,8 @@ body {
   min-width: 320px;
   color: var(--white);
   font-family: var(--font);
-  background-color: var(--navy-deep);
-  background-image:
-    linear-gradient(
-      180deg,
-      rgba(3, 11, 23, 0.48) 0%,
-      rgba(4, 15, 29, 0.64) 45%,
-      rgba(3, 11, 23, 0.84) 100%
-    ),
-    url("royal-background.jpg.PNG");
-  background-position: center top, center top;
-  background-size: cover, cover;
-  background-repeat: no-repeat, no-repeat;
-  background-attachment: scroll, scroll;
   line-height: 1.9;
+  background: linear-gradient(180deg, #041225, #020914 70%, #030b16);
 }
 
 body,
@@ -72,43 +58,31 @@ input {
   background: var(--gold-light);
 }
 
-/* Header */
+/* هدر سلطنتی */
 
 .header {
   position: relative;
-  z-index: 20;
+  z-index: 5;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
   gap: 24px;
   width: 100%;
-  padding: 15px clamp(18px, 5vw, 76px);
-  background:
-    linear-gradient(
-      135deg,
-      rgba(15, 39, 65, 0.97),
-      rgba(3, 12, 25, 0.97)
-    );
-  border-bottom: 1px solid rgba(216, 179, 106, 0.65);
-  box-shadow:
-    0 8px 28px rgba(0, 0, 0, 0.3),
-    inset 0 -1px 0 rgba(245, 226, 176, 0.08);
+  min-height: 103px;
+  padding: 12px clamp(18px, 5vw, 72px);
+  background: linear-gradient(110deg, rgba(3,14,29,.99), rgba(5,24,44,.99));
+  border-bottom: 1px solid var(--gold);
+  box-shadow: 0 8px 26px #0005;
 }
 
 .header::after {
+  content: "";
   position: absolute;
-  right: 4%;
   bottom: -4px;
   left: 4%;
+  right: 4%;
   height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(216, 179, 106, 0.48),
-    transparent
-  );
-  content: "";
-  pointer-events: none;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
 }
 
 .social,
@@ -116,7 +90,7 @@ input {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 17px;
+  gap: 14px;
 }
 
 .social a,
@@ -124,64 +98,51 @@ input {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 38px;
-  height: 38px;
+  width: 34px;
+  height: 34px;
   color: var(--gold-light);
-  border: 1px solid rgba(216, 179, 106, 0.32);
-  border-radius: 50%;
-  transition:
-    color 0.25s ease,
-    background 0.25s ease,
-    border-color 0.25s ease,
-    transform 0.25s ease;
+  font-size: 20px;
+  border: 1px solid transparent;
+  transition: .2s;
 }
 
 .social a:hover,
 .footer-social a:hover {
-  color: var(--navy-deep);
-  background: var(--gold-light);
-  border-color: var(--gold-light);
+  color: #fff;
   transform: translateY(-2px);
 }
 
 .social svg,
 .footer-social svg {
-  width: 19px;
-  height: 19px;
+  width: 20px;
+  height: 20px;
 }
 
 .header nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(13px, 2.3vw, 32px);
+  gap: clamp(14px, 2.5vw, 32px);
   white-space: nowrap;
 }
 
 .header nav a {
   position: relative;
   padding: 8px 0;
-  color: #e2e5e9;
+  color: #e8d8b5;
   font-size: 13px;
-  transition: color 0.2s ease;
 }
 
 .header nav a::after {
+  content: "";
   position: absolute;
-  right: 0;
-  bottom: 2px;
+  bottom: 1px;
   left: 0;
+  right: 0;
   height: 1px;
   background: var(--gold);
-  content: "";
   transform: scaleX(0);
-  transform-origin: center;
-  transition: transform 0.25s ease;
-}
-
-.header nav a:hover,
-.header nav a.active {
-  color: var(--gold-light);
+  transition: transform .2s;
 }
 
 .header nav a:hover::after,
@@ -194,15 +155,15 @@ input {
   flex-direction: column;
   align-items: center;
   justify-self: end;
-  min-width: 140px;
+  min-width: 145px;
   color: var(--gold-light);
-  line-height: 1.1;
+  line-height: 1.05;
 }
 
 .brand .crown {
-  width: 43px;
-  height: 25px;
-  margin-bottom: 3px;
+  width: 40px;
+  height: 24px;
+  margin-bottom: 2px;
   color: var(--gold);
 }
 
@@ -210,14 +171,13 @@ input {
   font-family: Georgia, serif;
   font-size: 22px;
   font-weight: 400;
-  line-height: 1.05;
 }
 
 .brand b {
-  margin-top: 4px;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 19px;
-  font-weight: 500;
+  margin-top: 3px;
+  font-family: Georgia, serif;
+  font-size: 21px;
+  font-weight: 400;
   letter-spacing: 3px;
 }
 
@@ -229,7 +189,7 @@ input {
   letter-spacing: 4px;
 }
 
-/* Hero */
+/* بخش اصلی و انگشتر */
 
 .hero {
   position: relative;
@@ -237,77 +197,63 @@ input {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  gap: clamp(24px, 5vw, 75px);
-  min-height: 570px;
-  padding: 65px clamp(24px, 8vw, 120px) 76px;
+  gap: clamp(25px, 5vw, 70px);
+  min-height: 535px;
+  padding: 58px clamp(24px, 8vw, 115px) 65px;
   overflow: hidden;
-  background-color: #07182d;
-  border-bottom: 1px solid rgba(216, 179, 106, 0.5);
-}
-
-.hero-bg {
-  position: absolute;
- z-index: -2;
-  inset: 0;
-  background-image:
-    linear-gradient(
-      90deg,
-      rgba(3, 12, 25, 0.22),
-      rgba(3, 12, 25, 0.60)
-    ),
-    url("royal-background.jpg.PNG");
-  background-position: center, center 48%;
-  background-size: cover, cover;
-  background-repeat: no-repeat;
-  transform: scale(1.015);
+  background:
+    radial-gradient(ellipse at 76% 85%, rgba(8,38,77,.85), transparent 40%),
+    linear-gradient(110deg, #020913 0%, #06172a 58%, #0a1d34 100%);
+  border-bottom: 1px solid var(--line);
 }
 
 .hero::before {
+  content: "";
   position: absolute;
   z-index: -1;
   inset: 0;
-  background:
-    radial-gradient(
-      ellipse at 25% 50%,
-      rgba(17, 63, 96, 0.25),
-      transparent 58%
-    ),
-    linear-gradient(
-      180deg,
-      rgba(3, 11, 23, 0.04),
-      rgba(3, 11, 23, 0.34)
-    );
-  content: "";
+  opacity: .42;
+  background: repeating-linear-gradient(
+    115deg,
+    transparent 0 90px,
+    rgba(216,179,106,.035) 91px 92px
+  );
   pointer-events: none;
 }
 
 .hero-copy {
   position: relative;
-  z-index: 2;
-  max-width: 540px;
+  z-index: 1;
+  max-width: 520px;
   justify-self: center;
   text-align: center;
 }
 
-.hero-copy h1 {
-  margin: 0 0 10px;
-  color: var(--gold-light);
-  font-size: clamp(28px, 3.4vw, 46px);
-  font-weight: 500;
-  letter-spacing: -0.7px;
-  text-shadow: 0 3px 18px rgba(0, 0, 0, 0.55);
+.eyebrow {
+  margin: 0 0 7px;
+  color: var(--gold);
+  font: 10px Georgia, serif;
+  letter-spacing: 4px;
 }
 
-.hero-copy h2 {
-  margin: 0 0 19px;
-  color: #f7f1e5;
-  font-size: clamp(16px, 1.7vw, 22px);
+.hero-copy h1 {
+  margin: 0 0 6px;
+  color: var(--gold-light);
+  font-size: clamp(30px, 4vw, 49px);
   font-weight: 400;
 }
 
-.hero-copy p {
-  margin: 0 auto 26px;
-  color: #e0e5eb;
+.hero-copy h2 {
+  margin: 0 0 15px;
+  color: #f7f0e3;
+  font-size: clamp(17px, 2vw, 24px);
+  font-weight: 400;
+}
+
+.hero-copy > p:not(.eyebrow) {
+  max-width: 430px;
+  margin: 0 auto 25px;
+  color: #d9d4c9;
   font-size: 14px;
   line-height: 2.2;
 }
@@ -317,31 +263,20 @@ input {
   align-items: center;
   justify-content: center;
   gap: 12px;
-  min-height: 46px;
-  padding: 10px 27px;
+  min-height: 44px;
+  padding: 9px 24px;
   color: #071426;
-  background: linear-gradient(
-    135deg,
-    #f3dfa8 0%,
-    #d8b36a 52%,
-    #b78c43 100%
-  );
-  border: 1px solid #f4dfaa;
-  border-radius: 2px;
-  box-shadow:
-    0 5px 18px rgba(0, 0, 0, 0.22),
-    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  background: linear-gradient(135deg, #f4dfa7, #d8b36a 55%, #b88d46);
+  border: 1px solid #f2d99b;
+  border-radius: 3px;
+  box-shadow: inset 0 1px #fff5, 0 5px 18px #0004;
   font-size: 13px;
   font-weight: 600;
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    filter 0.25s ease;
+  transition: transform .22s, filter .22s;
 }
 
 .btn:hover {
   filter: brightness(1.07);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.32);
   transform: translateY(-2px);
 }
 
@@ -350,244 +285,232 @@ input {
   line-height: 1;
 }
 
-.hero-ring {
+.hero-art {
+  justify-self: center;
+  width: min(100%, 390px);
+  text-align: center;
+}
+
+.hero-frame {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  justify-self: center;
-  width: min(100%, 420px);
-  min-height: 360px;
+  min-height: 340px;
   padding: 18px;
-  background:
-    radial-gradient(
-      circle,
-      rgba(21, 57, 78, 0.4),
-      rgba(4, 15, 29, 0.16) 65%,
-      transparent 72%
-    );
-  border: 1px solid rgba(216, 179, 106, 0.76);
+  background: radial-gradient(circle, #123251 0%, #07182b 63%, #030b16 100%);
+  border: 1px solid rgba(216,179,106,.86);
   box-shadow:
-    0 0 0 6px rgba(216, 179, 106, 0.09),
-    0 0 0 7px rgba(216, 179, 106, 0.34),
-    0 18px 55px rgba(0, 0, 0, 0.35);
+    0 0 0 6px rgba(216,179,106,.08),
+    0 0 0 7px rgba(216,179,106,.28),
+    0 20px 55px #0008;
 }
 
-.hero-ring::before {
+.hero-frame::before {
+  content: "";
   position: absolute;
   inset: 7px;
-  border: 1px solid rgba(245, 226, 176, 0.5);
-  content: "";
+  border: 1px solid rgba(244,220,164,.45);
   pointer-events: none;
 }
 
-.hero-ring img {
+.hero-frame img {
   position: relative;
   z-index: 1;
   width: 100%;
-  height: 330px;
+  height: 305px;
   object-fit: contain;
-  filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.4));
+  filter: drop-shadow(0 12px 20px #0009);
 }
 
-.hero-bottom-line {
+.hero-caption {
+  display: block;
+  margin-top: 15px;
+  color: var(--gold);
+  font: 9px Georgia, serif;
+  letter-spacing: 4px;
+}
+
+.hero-ornament {
   position: absolute;
-  right: 8%;
-  bottom: 20px;
-  left: 8%;
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(216, 179, 106, 0.55),
-    transparent
-  );
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  color: var(--gold);
+  text-align: center;
+  font-size: 25px;
 }
 
-/* Collection */
+/* کالکشن محصولات */
 
 .collection {
-  position: relative;
-  padding: 72px clamp(18px, 5vw, 72px) 82px;
-  background:
-    linear-gradient(
-      180deg,
-      rgba(3, 12, 25, 0.64),
-      rgba(5, 19, 35, 0.82)
-    ),
-    url("royal-background.jpg.PNG") center 52% / cover no-repeat;
+  padding: 54px clamp(18px, 3.2vw, 48px) 48px;
+  background: linear-gradient(180deg, #031020, #020b16);
 }
 
 .section-title {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 9px;
-  margin: 0 auto 39px;
+  gap: 7px;
+  margin: 0 auto 30px;
   text-align: center;
 }
 
 .section-title > span {
   color: var(--gold);
-  font-size: 28px;
+  font-size: 26px;
   line-height: 1;
 }
 
 .section-title h2 {
-  max-width: 760px;
+  max-width: 800px;
   margin: 0;
   color: var(--gold-light);
   font-size: clamp(19px, 2.3vw, 27px);
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .section-title::after {
+  content: "";
   display: block;
   width: 110px;
   height: 1px;
-  margin-top: 10px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    var(--gold),
-    transparent
-  );
-  content: "";
+  margin-top: 9px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
 }
 
 .products {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: clamp(14px, 2.3vw, 30px);
+  gap: clamp(12px, 1.7vw, 22px);
   width: 100%;
-  max-width: 1320px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
 .product {
   position: relative;
   min-width: 0;
-  padding: 9px;
+  padding: 8px;
   overflow: hidden;
-  background: linear-gradient(
-    145deg,
-    rgba(15, 39, 63, 0.96),
-    rgba(3, 13, 26, 0.97)
-  );
-  border: 1px solid rgba(216, 179, 106, 0.74);
-  box-shadow:
-    0 12px 28px rgba(0, 0, 0, 0.28),
-    inset 0 1px 0 rgba(255, 255, 255, 0.035);
-  transition:
-    transform 0.28s ease,
-    border-color 0.28s ease,
-    box-shadow 0.28s ease;
+  background: linear-gradient(145deg, rgba(10,29,49,.98), rgba(2,10,20,.99));
+  border: 1px solid rgba(216,179,106,.82);
+  box-shadow: 0 12px 28px #0005;
+  transition: transform .25s, border-color .25s, box-shadow .25s;
 }
 
 .product::before {
+  content: "";
   position: absolute;
   z-index: 2;
-  inset: 5px;
-  border: 1px solid rgba(245, 226, 176, 0.36);
-  content: "";
+  inset: 4px;
+  border: 1px solid rgba(244,220,164,.36);
   pointer-events: none;
 }
 
 .product:hover {
+  transform: translateY(-4px);
   border-color: var(--gold-light);
-  box-shadow:
-    0 18px 36px rgba(0, 0, 0, 0.36),
-    0 0 18px rgba(216, 179, 106, 0.1);
-  transform: translateY(-5px);
+  box-shadow: 0 17px 34px #0007;
 }
 
-.product > img {
+.product-image {
+  overflow: hidden;
+  border: 1px solid rgba(216,179,106,.25);
+  background: #08182a;
+}
+
+.product-image img {
   width: 100%;
-  height: clamp(190px, 23vw, 300px);
+  height: clamp(175px, 23vw, 285px);
   object-fit: cover;
-  background: #0b1a2a;
-  border: 1px solid rgba(216, 179, 106, 0.2);
 }
 
 .product-info {
-  padding: 16px 11px 13px;
+  padding: 12px 8px 11px;
   text-align: center;
 }
 
 .product-info h3 {
-  margin: 0 0 7px;
+  margin: 0 0 5px;
   color: var(--gold-light);
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
+  line-height: 1.8;
 }
 
 .product-info p {
-  margin: 0 0 12px;
+  margin: 0 0 8px;
   color: var(--muted);
-  font-size: 12px;
-  line-height: 2;
+  font-size: 11px;
+  line-height: 1.9;
 }
 
 .product-info .price {
-  margin: 8px 0 14px;
+  margin: 8px 0 11px;
   color: var(--gold-light);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
 }
 
 .btn.small {
-  min-height: 37px;
-  padding: 7px 15px;
+  min-height: 34px;
+  padding: 5px 12px;
+  gap: 7px;
   font-size: 11px;
 }
 
 .product-error {
   grid-column: 1 / -1;
-  margin: 0;
-  padding: 22px;
+  padding: 20px;
   color: var(--gold-light);
-  background: rgba(5, 17, 32, 0.86);
-  border: 1px solid var(--gold-line);
+  background: #061629;
+  border: 1px solid var(--line);
   text-align: center;
 }
 
-/* Benefits */
+/* مزایای تاتاروس */
 
 .benefits {
-  position: relative;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 20px;
-  padding: 48px clamp(18px, 5vw, 76px);
-  background: linear-gradient(
-    135deg,
-    rgba(13, 36, 59, 0.97),
-    rgba(3, 12, 25, 0.98)
-  );
-  border-top: 1px solid var(--gold-line);
-  border-bottom: 1px solid var(--gold-line);
+  gap: 16px;
+  padding: 34px clamp(18px, 5vw, 75px);
+  background: linear-gradient(120deg, #071a30, #020b16);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
 }
 
 .benefit {
-  padding: 10px 12px;
+  position: relative;
+  padding: 7px 10px;
   text-align: center;
+}
+
+.benefit:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 10%;
+  bottom: 10%;
+  left: -8px;
+  width: 1px;
+  background: rgba(216,179,106,.32);
 }
 
 .benefit > span {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 43px;
-  height: 43px;
-  margin-bottom: 9px;
-  color: var(--gold-light);
-  border: 1px solid rgba(216, 179, 106, 0.56);
-  border-radius: 50%;
-  font-size: 22px;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 7px;
+  color: var(--gold);
+  font-size: 25px;
 }
 
 .benefit h3 {
-  margin: 0 0 5px;
+  margin: 0 0 4px;
   color: var(--gold-light);
   font-size: 14px;
   font-weight: 500;
@@ -596,56 +519,59 @@ input {
 .benefit p {
   margin: 0;
   color: var(--muted);
-  font-size: 12px;
+  font-size: 11px;
 }
 
-/* About and contact */
+/* درباره ما و تماس */
 
 .about,
 .contact {
-  position: relative;
-  padding: 62px 20px;
-  background:
-    linear-gradient(
-      180deg,
-      rgba(3, 12, 25, 0.74),
-      rgba(4, 15, 29, 0.87)
-    ),
-    url("royal-background.jpg.PNG") center / cover no-repeat;
+  padding: 42px 20px;
+  background: linear-gradient(180deg, #041225, #020914);
   text-align: center;
 }
 
 .about {
-  border-bottom: 1px solid rgba(216, 179, 106, 0.24);
+  border-bottom: 1px solid rgba(216,179,106,.22);
 }
 
 .about-mark {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
   color: var(--gold-light);
 }
 
 .about-mark .crown {
-  width: 48px;
-  height: 27px;
+  width: 43px;
+  height: 24px;
   color: var(--gold);
 }
 
 .about-mark b {
-  font-family: Georgia, serif;
-  font-size: 34px;
-  font-weight: 400;
-  line-height: 1.1;
+  font: 32px/1.1 Georgia, serif;
+}
+
+.about-mark strong {
+  margin-top: 3px;
+  font: 20px Georgia, serif;
+  letter-spacing: 3px;
+}
+
+.about-mark small {
+  margin-top: 5px;
+  color: var(--gold);
+  font: 9px Georgia, serif;
+  letter-spacing: 4px;
 }
 
 .about h2,
 .contact h2 {
-  margin: 0 0 12px;
+  margin: 0 0 10px;
   color: var(--gold-light);
   font-size: clamp(21px, 2.5vw, 28px);
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .about p {
@@ -657,30 +583,35 @@ input {
 }
 
 .contact {
-  padding-top: 48px;
-  padding-bottom: 55px;
+  padding-top: 32px;
+  padding-bottom: 42px;
 }
 
 .contact .btn {
-  margin-top: 7px;
+  margin-top: 5px;
 }
 
-/* Footer */
+/* فوتر */
 
 footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
-  padding: 33px 20px 24px;
-  background: #030b16;
-  border-top: 1px solid rgba(216, 179, 106, 0.64);
+  gap: 15px;
+  padding: 25px 20px 22px;
+  background: linear-gradient(120deg, #061629, #020914);
+  border-top: 1px solid var(--line);
   text-align: center;
 }
 
 .footer-social {
   justify-content: center;
   gap: 12px;
+}
+
+.footer-social a {
+  color: var(--gold);
+  font-size: 20px;
 }
 
 .footer-brand {
@@ -692,44 +623,41 @@ footer {
 }
 
 .footer-brand .crown {
-  width: 43px;
-  height: 24px;
-  margin-bottom: 4px;
+  width: 40px;
+  height: 23px;
+  margin-bottom: 3px;
   color: var(--gold);
 }
 
 .footer-brand b {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 20px;
-  font-weight: 500;
+  font: 20px Georgia, serif;
   letter-spacing: 4px;
 }
 
 .footer-brand small {
   margin-top: 5px;
   color: var(--gold);
-  font-family: Georgia, serif;
-  font-size: 9px;
+  font: 9px Georgia, serif;
   letter-spacing: 4px;
 }
 
 .footer-brand p {
-  margin: 13px 0 0;
+  margin: 10px 0 0;
   color: var(--muted);
-  font-size: 12px;
+  font-size: 11px;
 }
 
 .footer-ornament {
-  color: rgba(216, 179, 106, 0.65);
+  color: rgba(216,179,106,.7);
   font-size: 13px;
   letter-spacing: 3px;
 }
 
-/* Tablet */
+/* تبلت */
 
 @media (max-width: 1000px) {
   .header {
-    gap: 16px;
+    gap: 14px;
     padding-right: 22px;
     padding-left: 22px;
   }
@@ -752,40 +680,35 @@ footer {
   }
 
   .social {
-    gap: 8px;
-  }
-
-  .social a {
-    width: 34px;
-    height: 34px;
+    gap: 7px;
   }
 
   .hero {
-    min-height: 490px;
+    min-height: 440px;
     padding-right: 5vw;
     padding-left: 5vw;
   }
 
-  .hero-ring {
-    min-height: 310px;
+  .hero-frame {
+    min-height: 290px;
   }
 
-  .hero-ring img {
-    height: 280px;
+  .hero-frame img {
+    height: 260px;
   }
 
   .products {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     max-width: 760px;
-    gap: 22px;
+    gap: 18px;
   }
 
-  .product > img {
-    height: clamp(230px, 34vw, 340px);
+  .product-image img {
+    height: clamp(220px, 34vw, 330px);
   }
 }
 
-/* Mobile */
+/* موبایل */
 
 @media (max-width: 650px) {
   html {
@@ -794,8 +717,8 @@ footer {
 
   .header {
     grid-template-columns: 1fr auto;
-    gap: 12px;
-    padding: 12px 15px 10px;
+    gap: 10px;
+    padding: 10px 13px;
   }
 
   .brand {
@@ -805,8 +728,8 @@ footer {
   }
 
   .brand .crown {
-    width: 37px;
-    height: 21px;
+    width: 34px;
+    height: 20px;
   }
 
   .brand strong {
@@ -814,7 +737,7 @@ footer {
   }
 
   .brand b {
-    font-size: 16px;
+    font-size: 15px;
     letter-spacing: 2px;
   }
 
@@ -826,43 +749,33 @@ footer {
   .social {
     grid-column: 1;
     grid-row: 1;
-    gap: 7px;
+    gap: 4px;
   }
 
   .social a {
-    width: 33px;
-    height: 33px;
-  }
-
-  .social svg {
-    width: 17px;
-    height: 17px;
+    width: 29px;
+    height: 30px;
   }
 
   .header nav {
     grid-column: 1 / -1;
     grid-row: 2;
-    display: flex;
     justify-content: center;
-    gap: clamp(15px, 5vw, 29px);
-    padding-top: 8px;
-    border-top: 1px solid rgba(216, 179, 106, 0.2);
+    gap: clamp(13px, 4vw, 24px);
+    padding-top: 7px;
+    border-top: 1px solid rgba(216,179,106,.2);
   }
 
   .header nav a {
-    padding: 4px 0;
-    font-size: 12px;
+    font-size: 11px;
+    padding: 3px 0;
   }
 
   .hero {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 20px;
     min-height: 0;
-    padding: 42px 20px 48px;
-  }
-
-  .hero-bg {
-    background-position: center, center;
+    padding: 34px 20px 40px;
   }
 
   .hero-copy {
@@ -871,49 +784,51 @@ footer {
   }
 
   .hero-copy h1 {
-    font-size: clamp(27px, 7vw, 35px);
+    font-size: clamp(28px, 7vw, 36px);
   }
 
   .hero-copy h2 {
     font-size: 16px;
   }
 
-  .hero-copy p {
+  .hero-copy > p:not(.eyebrow) {
     font-size: 13px;
   }
 
-  .hero-ring {
+  .hero-art {
     grid-row: 1;
-    width: min(82vw, 320px);
+    width: min(75vw, 300px);
+  }
+
+  .hero-frame {
     min-height: 0;
     padding: 12px;
   }
 
-  .hero-ring img {
-    height: clamp(220px, 65vw, 290px);
+  .hero-frame img {
+    height: clamp(200px, 60vw, 270px);
   }
 
-  .hero-bottom-line {
-    bottom: 13px;
+  .hero-ornament {
+    bottom: 4px;
   }
 
   .collection {
-    padding: 45px 14px 50px;
-    background-position: center, center;
+    padding: 38px 12px 40px;
   }
 
   .section-title {
-    margin-bottom: 26px;
+    margin-bottom: 23px;
   }
 
   .section-title h2 {
-    font-size: 18px;
+    font-size: 17px;
     line-height: 1.9;
   }
 
   .products {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
+    gap: 10px;
   }
 
   .product {
@@ -924,113 +839,115 @@ footer {
     inset: 4px;
   }
 
-  .product > img {
-    height: clamp(145px, 48vw, 230px);
-    object-fit: cover;
+  .product-image img {
+    height: clamp(135px, 43vw, 220px);
   }
 
   .product-info {
-    padding: 11px 5px 9px;
+    padding: 9px 4px 8px;
   }
 
   .product-info h3 {
-    font-size: 13px;
-    line-height: 1.8;
-  }
-
-  .product-info p {
-    font-size: 11px;
-    line-height: 1.9;
-  }
-
-  .product-info .price {
     font-size: 12px;
   }
 
-  .btn.small {
-    gap: 6px;
-    min-height: 34px;
-    padding: 6px 9px;
+  .product-info p {
     font-size: 10px;
+    line-height: 1.8;
+  }
+
+  .product-info .price {
+    font-size: 11px;
+  }
+
+  .btn.small {
+    min-height: 31px;
+    padding: 4px 7px;
+    font-size: 10px;
+    gap: 5px;
   }
 
   .benefits {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 14px 8px;
-    padding: 34px 13px;
+    gap: 12px 7px;
+    padding: 28px 10px;
   }
 
   .benefit {
-    padding: 8px 5px;
+    padding: 7px 4px;
+  }
+
+  .benefit:nth-child(2)::after {
+    display: none;
   }
 
   .benefit > span {
-    width: 38px;
-    height: 38px;
-    font-size: 20px;
+    height: 35px;
+    margin-bottom: 4px;
+    font-size: 22px;
   }
 
   .benefit h3 {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .benefit p {
-    font-size: 11px;
+    font-size: 10px;
   }
 
   .about,
   .contact {
-    padding: 43px 18px;
-    background-position: center, center;
+    padding: 34px 16px;
   }
 
   .about p {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   footer {
-    gap: 17px;
-    padding: 28px 15px 22px;
+    gap: 12px;
+    padding: 22px 12px;
   }
 }
 
-/* Small phones */
+/* موبایل‌های کوچک */
 
 @media (max-width: 380px) {
   .header {
-    padding-right: 10px;
-    padding-left: 10px;
+    padding-right: 8px;
+    padding-left: 8px;
   }
 
   .header nav {
-    gap: 12px;
+    gap: 10px;
   }
 
   .header nav a {
-    font-size: 11px;
+    font-size: 10px;
   }
 
   .social {
-    gap: 5px;
+    gap: 2px;
   }
 
   .social a {
-    width: 30px;
-    height: 30px;
+    width: 26px;
   }
 
   .brand b {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .products {
-    gap: 9px;
+    gap: 8px;
   }
 
-  .product > img {
-    height: 145px;
+  .product-image img {
+    height: 132px;
   }
 }
+
+/* کاهش حرکت برای دسترسی‌پذیری */
 
 @media (prefers-reduced-motion: reduce) {
   html {
@@ -1040,37 +957,7 @@ footer {
   *,
   *::before,
   *::after {
-    transition-duration: 0.01ms !important;
-    animation-duration: 0.01ms !important;
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
   }
-}
-
-/* Tataros — fix repeated background layers */
-body {
-  background-color: #030b17;
-  background-image: linear-gradient(180deg, #07182d 0%, #030b17 100%);
-  background-position: initial;
-  background-size: auto;
-  background-repeat: repeat;
-  background-attachment: scroll;
-}
-
-.collection,
-.about,
-.contact {
-  background-color: #07182d;
-  background-image: linear-gradient(180deg, #07182d 0%, #030b17 100%);
-  background-position: initial;
-  background-size: auto;
-  background-repeat: repeat;
-}
-
-/* The large hero section has already been removed */
-.hero,
-.hero-bg,
-.hero::before,
-.hero-copy,
-.hero-ring,
-.hero-bottom-line {
-  display: none !important;
 }
