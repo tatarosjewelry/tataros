@@ -1044,3 +1044,33 @@ footer {
     animation-duration: 0.01ms !important;
   }
 }
+
+/* Tataros — fix repeated background layers */
+body {
+  background-color: #030b17;
+  background-image: linear-gradient(180deg, #07182d 0%, #030b17 100%);
+  background-position: initial;
+  background-size: auto;
+  background-repeat: repeat;
+  background-attachment: scroll;
+}
+
+.collection,
+.about,
+.contact {
+  background-color: #07182d;
+  background-image: linear-gradient(180deg, #07182d 0%, #030b17 100%);
+  background-position: initial;
+  background-size: auto;
+  background-repeat: repeat;
+}
+
+/* The large hero section has already been removed */
+.hero,
+.hero-bg,
+.hero::before,
+.hero-copy,
+.hero-ring,
+.hero-bottom-line {
+  display: none !important;
+}
