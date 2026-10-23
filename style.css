@@ -961,3 +961,74 @@ footer {
     animation-duration: .01ms !important;
   }
 }
+/* TATAROS — Royal Luxury */
+.hero {
+  background:
+    radial-gradient(ellipse at 80% 70%, #102b4b 0%, transparent 38%),
+    radial-gradient(ellipse at 10% 40%, #49301a55 0%, transparent 25%),
+    linear-gradient(115deg, #020813, #07182c 52%, #020914);
+  border-bottom: 1px solid #d8b36a;
+}
+
+.hero-copy h1,
+.section-title h2 {
+  color: #f4dca4;
+  text-shadow: 0 2px 18px #d8b36a20;
+}
+
+.hero-frame {
+  padding: 9px;
+  background: #061326;
+  border: 1px solid #d8b36a;
+  box-shadow:
+    0 0 0 5px #d8b36a12,
+    0 0 0 6px #d8b36a55,
+    0 24px 60px #0009;
+}
+
+.hero-frame img {
+  object-fit: cover;
+}
+
+.collection {
+  background:
+    radial-gradient(ellipse at 50% 0%, #0c254066, transparent 60%),
+    linear-gradient(180deg, #031020, #020914 80%, #041225);
+}
+
+.product {
+  background: linear-gradient(155deg, #081b2f, #020912);
+  border: 1px solid #d8b36a;
+  box-shadow: 0 12px 28px #0006;
+}
+
+.product::before {
+  inset: 4px;
+  border: 1px solid #f4dca45c;
+}
+
+.benefits,
+footer {
+  background: linear-gradient(110deg, #06182b, #020914);
+  border-color: #d8b36a77;
+}
+
+@media (max-width: 650px) {
+  .hero {
+    padding: 34px 18px 48px;
+    gap: 25px;
+  }
+
+  .hero-frame {
+    min-height: 0;
+  }
+
+  .hero-frame img {
+    height: min(72vw, 320px);
+    object-fit: cover;
+  }
+
+  .collection {
+    padding-top: 38px;
+  }
+}
