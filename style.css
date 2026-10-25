@@ -1174,3 +1174,47 @@ footer {
     background-attachment: scroll;
   }
 }
+/* TATAROS — Logo Position */
+
+.header {
+  grid-template-columns: 1fr auto 1fr;
+}
+
+.brand {
+  grid-column: 3;
+  justify-self: end;
+  text-align: center;
+}
+
+.header nav {
+  grid-column: 2;
+  justify-self: center;
+}
+
+.social {
+  grid-column: 1;
+  justify-self: start;
+}
+
+@media (max-width: 650px) {
+  .header {
+    grid-template-columns: 1fr auto;
+  }
+
+  .brand {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+  }
+
+  .social {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .header nav {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    justify-self: center;
+  }
+}
