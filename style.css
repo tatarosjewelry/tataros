@@ -1032,3 +1032,68 @@ footer {
     padding-top: 38px;
   }
 }
+/* TATAROS — Royal Luxury Theme */
+
+body {
+  background-color: #020b16;
+  background-image:
+    linear-gradient(
+      rgba(2, 9, 20, 0.62),
+      rgba(2, 9, 20, 0.78)
+    ),
+    url("royal-background.jpg.PNG");
+  background-position: center top;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #f8f3e9;
+}
+
+.royal-header {
+  background: linear-gradient(120deg, #020b16, #0b2542, #020b16);
+  border-bottom: 1px solid #d4ad62;
+}
+
+.royal-logo,
+.brand-name,
+.royal-nav a {
+  color: #f3d99a;
+}
+
+.hero {
+  background:
+    linear-gradient(rgba(2, 9, 20, 0.48), rgba(2, 9, 20, 0.68)),
+    url("royal-background.jpg.PNG") center / cover no-repeat;
+}
+
+.hero h1,
+.section-title h2,
+.about h2,
+.contact h2 {
+  color: #f3d99a;
+  text-shadow: 0 2px 15px rgba(212, 173, 98, 0.2);
+}
+
+.product {
+  background: linear-gradient(145deg, #0b2542, #020b16);
+  border: 1px solid #d4ad62;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+}
+
+.product::before {
+  border: 1px solid rgba(243, 217, 154, 0.4);
+}
+
+.benefits,
+.about,
+.contact,
+footer {
+  background-color: rgba(2, 11, 22, 0.94);
+  border-color: rgba(212, 173, 98, 0.45);
+}
+
+@media (max-width: 650px) {
+  body,
+  .hero {
+    background-attachment: scroll;
+  }
+}
