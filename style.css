@@ -1097,3 +1097,80 @@ footer {
     background-attachment: scroll;
   }
 }
+/* TATAROS — Royal Background Fix */
+
+body {
+  background-color: #020914 !important;
+  background-image:
+    linear-gradient(
+      rgba(2, 9, 20, 0.40),
+      rgba(2, 9, 20, 0.58)
+    ),
+    url("royal-background.jpg.PNG") !important;
+  background-position: center top;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* Royal header */
+.royal-header {
+  background: rgba(2, 11, 22, 0.94) !important;
+  border-bottom: 1px solid #d4ad62;
+}
+
+/* Hero background */
+.hero {
+  background:
+    linear-gradient(
+      rgba(2, 9, 20, 0.42),
+      rgba(2, 9, 20, 0.58)
+    ),
+    url("royal-background.jpg.PNG") center / cover no-repeat !important;
+}
+
+/* Preserve the jewelry image */
+.ring-photo,
+.hero-art img {
+  object-fit: contain;
+}
+
+/* Royal collection */
+.section,
+.collection {
+  background: rgba(2, 11, 22, 0.70) !important;
+}
+
+/* Gold product frames */
+.product {
+  background: rgba(4, 18, 35, 0.94) !important;
+  border: 1px solid #d4ad62 !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.38);
+}
+
+.product::before {
+  border: 1px solid rgba(243, 217, 154, 0.45);
+}
+
+/* Royal gold headings */
+.hero h1,
+.section-title h2,
+.about h2,
+.contact h2 {
+  color: #f3d99a;
+  text-shadow: 0 2px 15px rgba(212, 173, 98, 0.22);
+}
+
+/* Lower sections */
+.benefits,
+.about,
+.contact,
+footer {
+  background-color: rgba(2, 11, 22, 0.88);
+  border-color: rgba(212, 173, 98, 0.45);
+}
+
+@media (max-width: 650px) {
+  body {
+    background-attachment: scroll;
+  }
+}
