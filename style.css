@@ -1218,3 +1218,61 @@ footer {
     justify-self: center;
   }
 }
+/* کادر سلطنتی متن اصلی تاتاروس */
+.hero-copy {
+  position: relative;
+  z-index: 2;
+  width: min(90%, 620px);
+  margin: 30px auto;
+  padding: 38px 28px;
+  text-align: center;
+  background: rgba(3, 15, 30, 0.96);
+  border: 1px solid #d4ad62;
+  border-radius: 4px;
+  box-shadow:
+    0 0 0 5px rgba(212, 173, 98, 0.08),
+    0 15px 40px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+}
+
+.hero-copy h1 {
+  color: #f3d99a;
+  margin: 12px 0;
+}
+
+.hero-copy h2 {
+  color: #ffffff;
+  line-height: 1.9;
+}
+
+.hero-copy p {
+  color: #e0d8c8;
+  line-height: 2;
+}
+
+.hero-copy .eyebrow {
+  color: #d4ad62;
+  letter-spacing: 3px;
+}
+
+.hero-copy .btn {
+  display: inline-flex;
+  margin-top: 16px;
+}
+
+@media (max-width: 600px) {
+  .hero-copy {
+    width: 92%;
+    padding: 28px 18px;
+    margin: 22px auto;
+  }
+
+  .hero-copy h1 {
+    font-size: 1.7rem;
+  }
+
+  .hero-copy h2 {
+    font-size: 1.05rem;
+  }
+}
+
