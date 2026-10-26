@@ -1354,3 +1354,16 @@ footer {
     font-size: 13px !important;
   }
 }
+/* حذف کادر وسط و نمایان شدن تصویر زیر آن */
+.hero-copy {
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  margin: 0 auto !important;
+}
+
+.hero-copy::before,
+.hero-copy::after {
+  display: none !important;
+}
