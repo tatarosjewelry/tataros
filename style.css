@@ -1,3 +1,4 @@
+/* TATAROS JEWELRY — Royal Navy & Gold */
 :root {
   --navy: #061629;
   --navy-deep: #020b16;
@@ -25,12 +26,16 @@ body {
   color: var(--white);
   font-family: var(--font);
   line-height: 1.9;
-  background: linear-gradient(180deg, #041225, #020914 70%, #030b16);
+  background-color: var(--navy-deep);
+  background-image:
+    linear-gradient(rgba(2,9,20,.34),rgba(2,9,20,.48)),
+    url("royal-background.jpg.PNG");
+  background-position: center top;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
-body,
-button,
-a {
+body, button, a {
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -39,8 +44,7 @@ a {
   text-decoration: none;
 }
 
-img,
-svg {
+img, svg {
   max-width: 100%;
 }
 
@@ -48,8 +52,7 @@ img {
   display: block;
 }
 
-button,
-input {
+button, input {
   font: inherit;
 }
 
@@ -58,8 +61,7 @@ input {
   background: var(--gold-light);
 }
 
-/* هدر سلطنتی */
-
+/* Header */
 .header {
   position: relative;
   z-index: 5;
@@ -69,8 +71,12 @@ input {
   gap: 24px;
   width: 100%;
   min-height: 103px;
-  padding: 12px clamp(18px, 5vw, 72px);
-  background: linear-gradient(110deg, rgba(3,14,29,.99), rgba(5,24,44,.99));
+  padding: 12px clamp(18px,5vw,72px);
+  background: linear-gradient(
+    110deg,
+    rgba(3,14,29,.97),
+    rgba(5,24,44,.94)
+  );
   border-bottom: 1px solid var(--gold);
   box-shadow: 0 8px 26px #0005;
 }
@@ -78,11 +84,16 @@ input {
 .header::after {
   content: "";
   position: absolute;
+  right: 4%;
   bottom: -4px;
   left: 4%;
-  right: 4%;
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--gold),
+    transparent
+  );
 }
 
 .social,
@@ -91,6 +102,21 @@ input {
   align-items: center;
   justify-content: flex-start;
   gap: 14px;
+}
+
+.social {
+  grid-column: 1;
+  justify-self: start;
+}
+
+.header nav {
+  grid-column: 2;
+  justify-self: center;
+}
+
+.brand {
+  grid-column: 3;
+  justify-self: end;
 }
 
 .social a,
@@ -103,7 +129,7 @@ input {
   color: var(--gold-light);
   font-size: 20px;
   border: 1px solid transparent;
-  transition: .2s;
+  transition: color .2s, transform .2s;
 }
 
 .social a:hover,
@@ -122,7 +148,7 @@ input {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(14px, 2.5vw, 32px);
+  gap: clamp(14px,2.5vw,32px);
   white-space: nowrap;
 }
 
@@ -136,9 +162,9 @@ input {
 .header nav a::after {
   content: "";
   position: absolute;
+  right: 0;
   bottom: 1px;
   left: 0;
-  right: 0;
   height: 1px;
   background: var(--gold);
   transform: scaleX(0);
@@ -154,10 +180,10 @@ input {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-self: end;
   min-width: 145px;
   color: var(--gold-light);
   line-height: 1.05;
+  text-align: center;
 }
 
 .brand .crown {
@@ -168,42 +194,39 @@ input {
 }
 
 .brand strong {
-  font-family: Georgia, serif;
-  font-size: 22px;
-  font-weight: 400;
+  font: 400 22px Georgia, serif;
 }
 
 .brand b {
   margin-top: 3px;
-  font-family: Georgia, serif;
-  font-size: 21px;
-  font-weight: 400;
+  font: 400 21px Georgia, serif;
   letter-spacing: 3px;
 }
 
 .brand small {
   margin-top: 5px;
   color: var(--gold);
-  font-family: Georgia, serif;
-  font-size: 9px;
+  font: 9px Georgia, serif;
   letter-spacing: 4px;
 }
 
-/* بخش اصلی و انگشتر */
-
+/* Hero — text box removed so the image stays visible */
 .hero {
   position: relative;
   isolation: isolate;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: clamp(25px, 5vw, 70px);
+  justify-content: center;
   min-height: 535px;
-  padding: 58px clamp(24px, 8vw, 115px) 65px;
+  padding: 58px clamp(20px,6vw,80px) 65px;
   overflow: hidden;
   background:
-    radial-gradient(ellipse at 76% 85%, rgba(8,38,77,.85), transparent 40%),
-    linear-gradient(110deg, #020913 0%, #06172a 58%, #0a1d34 100%);
+    linear-gradient(
+      rgba(2,9,20,.18),
+      rgba(2,9,20,.30)
+    ),
+    url("royal-background.jpg.PNG") center 45%/cover no-repeat;
   border-bottom: 1px solid var(--line);
 }
 
@@ -212,7 +235,6 @@ input {
   position: absolute;
   z-index: -1;
   inset: 0;
-  opacity: .42;
   background: repeating-linear-gradient(
     115deg,
     transparent 0 90px,
@@ -224,8 +246,14 @@ input {
 .hero-copy {
   position: relative;
   z-index: 1;
-  max-width: 520px;
-  justify-self: center;
+  width: min(100%,620px);
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
   text-align: center;
 }
 
@@ -237,25 +265,30 @@ input {
 }
 
 .hero-copy h1 {
-  margin: 0 0 6px;
+  margin: 8px 0 12px;
   color: var(--gold-light);
-  font-size: clamp(30px, 4vw, 49px);
+  font-size: clamp(30px,4vw,49px);
   font-weight: 400;
+  line-height: 1.7;
+  text-shadow: 0 2px 18px #0009;
 }
 
 .hero-copy h2 {
   margin: 0 0 15px;
-  color: #f7f0e3;
-  font-size: clamp(17px, 2vw, 24px);
+  color: #fff;
+  font-size: clamp(17px,2vw,24px);
   font-weight: 400;
+  line-height: 1.9;
+  text-shadow: 0 2px 12px #000b;
 }
 
 .hero-copy > p:not(.eyebrow) {
   max-width: 430px;
   margin: 0 auto 25px;
-  color: #d9d4c9;
+  color: #f0e9dc;
   font-size: 14px;
   line-height: 2.2;
+  text-shadow: 0 2px 12px #000e;
 }
 
 .btn {
@@ -266,10 +299,15 @@ input {
   min-height: 44px;
   padding: 9px 24px;
   color: #071426;
-  background: linear-gradient(135deg, #f4dfa7, #d8b36a 55%, #b88d46);
+  background: linear-gradient(
+    135deg,
+    #f4dfa7,
+    #d8b36a 55%,
+    #b88d46
+  );
   border: 1px solid #f2d99b;
   border-radius: 3px;
-  box-shadow: inset 0 1px #fff5, 0 5px 18px #0004;
+  box-shadow: inset 0 1px #fff5, 0 5px 18px #0005;
   font-size: 13px;
   font-weight: 600;
   transition: transform .22s, filter .22s;
@@ -285,926 +323,342 @@ input {
   line-height: 1;
 }
 
-.hero-art {
-  justify-self: center;
-  width: min(100%, 390px);
-  text-align: center;
-}
-
-.hero-frame {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 340px;
-  padding: 18px;
-  background: radial-gradient(circle, #123251 0%, #07182b 63%, #030b16 100%);
-  border: 1px solid rgba(216,179,106,.86);
-  box-shadow:
-    0 0 0 6px rgba(216,179,106,.08),
-    0 0 0 7px rgba(216,179,106,.28),
-    0 20px 55px #0008;
-}
-
-.hero-frame::before {
-  content: "";
-  position: absolute;
-  inset: 7px;
-  border: 1px solid rgba(244,220,164,.45);
-  pointer-events: none;
-}
-
-.hero-frame img {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  height: 305px;
-  object-fit: contain;
-  filter: drop-shadow(0 12px 20px #0009);
-}
-
-.hero-caption {
-  display: block;
-  margin-top: 15px;
-  color: var(--gold);
-  font: 9px Georgia, serif;
-  letter-spacing: 4px;
-}
-
 .hero-ornament {
   position: absolute;
+  right: 0;
   bottom: 10px;
   left: 0;
-  right: 0;
   color: var(--gold);
   text-align: center;
   font-size: 25px;
-}
-
-/* کالکشن محصولات */
-
-.collection {
-  padding: 54px clamp(18px, 3.2vw, 48px) 48px;
-  background: linear-gradient(180deg, #031020, #020b16);
-}
-
-.section-title {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 7px;
-  margin: 0 auto 30px;
-  text-align: center;
-}
-
-.section-title > span {
-  color: var(--gold);
-  font-size: 26px;
-  line-height: 1;
-}
-
-.section-title h2 {
-  max-width: 800px;
-  margin: 0;
-  color: var(--gold-light);
-  font-size: clamp(19px, 2.3vw, 27px);
-  font-weight: 400;
-}
-
-.section-title::after {
-  content: "";
-  display: block;
-  width: 110px;
-  height: 1px;
-  margin-top: 9px;
-  background: linear-gradient(90deg, transparent, var(--gold), transparent);
-}
-
-.products {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: clamp(12px, 1.7vw, 22px);
-  width: 100%;
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-.product {
-  position: relative;
-  min-width: 0;
-  padding: 8px;
-  overflow: hidden;
-  background: linear-gradient(145deg, rgba(10,29,49,.98), rgba(2,10,20,.99));
-  border: 1px solid rgba(216,179,106,.82);
-  box-shadow: 0 12px 28px #0005;
-  transition: transform .25s, border-color .25s, box-shadow .25s;
-}
-
-.product::before {
-  content: "";
-  position: absolute;
-  z-index: 2;
-  inset: 4px;
-  border: 1px solid rgba(244,220,164,.36);
   pointer-events: none;
 }
-
-.product:hover {
-  transform: translateY(-4px);
-  border-color: var(--gold-light);
-  box-shadow: 0 17px 34px #0007;
+/* Section headings */
+section[id] {
+  scroll-margin-top: 105px;
 }
 
-.product-image {
-  overflow: hidden;
-  border: 1px solid rgba(216,179,106,.25);
-  background: #08182a;
-}
-
-.product-image img {
-  width: 100%;
-  height: clamp(175px, 23vw, 285px);
-  object-fit: cover;
-}
-
-.product-info {
-  padding: 12px 8px 11px;
-  text-align: center;
-}
-
-.product-info h3 {
-  margin: 0 0 5px;
-  color: var(--gold-light);
-  font-size: 15px;
-  font-weight: 500;
-  line-height: 1.8;
-}
-
-.product-info p {
-  margin: 0 0 8px;
-  color: var(--muted);
-  font-size: 11px;
-  line-height: 1.9;
-}
-
-.product-info .price {
-  margin: 8px 0 11px;
-  color: var(--gold-light);
-  font-size: 13px;
-  font-weight: 600;
-}
-
-.btn.small {
-  min-height: 34px;
-  padding: 5px 12px;
-  gap: 7px;
-  font-size: 11px;
-}
-
-.product-error {
-  grid-column: 1 / -1;
-  padding: 20px;
-  color: var(--gold-light);
-  background: #061629;
-  border: 1px solid var(--line);
-  text-align: center;
-}
-
-/* مزایای تاتاروس */
-
-.benefits {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 16px;
-  padding: 34px clamp(18px, 5vw, 75px);
-  background: linear-gradient(120deg, #071a30, #020b16);
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-}
-
-.benefit {
+.section {
   position: relative;
-  padding: 7px 10px;
-  text-align: center;
-}
-
-.benefit:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  top: 10%;
-  bottom: 10%;
-  left: -8px;
-  width: 1px;
-  background: rgba(216,179,106,.32);
-}
-
-.benefit > span {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 42px;
-  height: 42px;
-  margin-bottom: 7px;
-  color: var(--gold);
-  font-size: 25px;
-}
-
-.benefit h3 {
-  margin: 0 0 4px;
-  color: var(--gold-light);
-  font-size: 14px;
-  font-weight: 500;
-}
-
-.benefit p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 11px;
-}
-
-/* درباره ما و تماس */
-
-.about,
-.contact {
-  padding: 42px 20px;
-  background: linear-gradient(180deg, #041225, #020914);
-  text-align: center;
-}
-
-.about {
+  padding: 65px clamp(18px,5vw,70px);
+  background: rgba(3,14,29,.72);
   border-bottom: 1px solid rgba(216,179,106,.22);
 }
 
-.about-mark {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 12px;
+.section-heading {
+  max-width: 700px;
+  margin: 0 auto 34px;
+  text-align: center;
+}
+
+.section-heading .eyebrow {
+  margin-bottom: 6px;
+}
+
+.section-heading h2 {
+  margin: 0;
   color: var(--gold-light);
-}
-
-.about-mark .crown {
-  width: 43px;
-  height: 24px;
-  color: var(--gold);
-}
-
-.about-mark b {
-  font: 32px/1.1 Georgia, serif;
-}
-
-.about-mark strong {
-  margin-top: 3px;
-  font: 20px Georgia, serif;
-  letter-spacing: 3px;
-}
-
-.about-mark small {
-  margin-top: 5px;
-  color: var(--gold);
-  font: 9px Georgia, serif;
-  letter-spacing: 4px;
-}
-
-.about h2,
-.contact h2 {
-  margin: 0 0 10px;
-  color: var(--gold-light);
-  font-size: clamp(21px, 2.5vw, 28px);
+  font-size: clamp(23px,3vw,34px);
   font-weight: 400;
 }
 
-.about p {
-  max-width: 600px;
+.section-heading p {
+  margin: 10px auto 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 2;
+}
+
+.section-heading::after {
+  content: "";
+  display: block;
+  width: 75px;
+  height: 1px;
+  margin: 18px auto 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--gold),
+    transparent
+  );
+}
+
+/* Collection */
+.collection {
+  background: rgba(3,14,29,.82);
+}
+
+#products-list,
+.products-list {
+  display: grid;
+  grid-template-columns: repeat(4,minmax(0,1fr));
+  gap: 20px;
+  max-width: 1300px;
   margin: 0 auto;
-  color: #e0e5eb;
-  font-size: 14px;
-  line-height: 2.2;
 }
 
-.contact {
-  padding-top: 32px;
-  padding-bottom: 42px;
-}
-
-.contact .btn {
-  margin-top: 5px;
-}
-
-/* فوتر */
-
-footer {
+.product-card {
+  position: relative;
   display: flex;
   flex-direction: column;
+  min-width: 0;
+  padding: 9px;
+  overflow: hidden;
+  background: linear-gradient(
+    145deg,
+    rgba(14,38,62,.97),
+    rgba(3,14,28,.98)
+  );
+  border: 1px solid rgba(216,179,106,.65);
+  box-shadow: 0 12px 28px #0004;
+  transition: transform .25s, box-shadow .25s;
+}
+
+.product-card::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  inset: 4px;
+  border: 1px solid rgba(216,179,106,.18);
+  pointer-events: none;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 32px #0007;
+}
+
+.product-image,
+.product-card .image-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: #07182a;
+}
+
+.product-image img,
+.product-card .image-wrap img,
+.product-card > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .45s;
+}
+
+.product-card:hover img {
+  transform: scale(1.035);
+}
+
+.product-info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
   align-items: center;
-  gap: 15px;
-  padding: 25px 20px 22px;
-  background: linear-gradient(120deg, #061629, #020914);
-  border-top: 1px solid var(--line);
+  padding: 16px 8px 12px;
   text-align: center;
 }
 
-.footer-social {
+.product-info h3,
+.product-card h3 {
+  margin: 0 0 6px;
+  color: var(--gold-light);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.product-info p,
+.product-card p {
+  margin: 0 0 12px;
+  color: #d0d5dc;
+  font-size: 12px;
+  line-height: 2;
+}
+
+.product-price {
+  margin-top: auto;
+  margin-bottom: 12px;
+  color: var(--gold);
+  font-size: 14px;
+}
+
+.product-card .btn {
+  width: 100%;
+  min-height: 39px;
+  padding: 7px 10px;
+  font-size: 12px;
+}
+
+/* General buttons */
+button,
+input,
+textarea,
+select {
+  max-width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 8px 22px;
+  color: var(--gold-light);
+  background: transparent;
+  border: 1px solid var(--gold);
+  border-radius: 3px;
+  transition: background .2s, color .2s;
+}
+
+.btn-outline:hover {
+  color: var(--navy-deep);
+  background: var(--gold);
+}
+
+.section-action {
+  margin-top: 30px;
+  text-align: center;
+}
+
+/* Benefits */
+.benefits {
+  background: linear-gradient(
+    120deg,
+    rgba(5,23,42,.96),
+    rgba(2,11,22,.96)
+  );
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.benefit-card {
+  padding: 25px 18px;
+  text-align: center;
+  background: rgba(11,32,56,.68);
+  border: 1px solid rgba(216,179,106,.4);
+}
+
+.benefit-icon {
+  display: block;
+  margin-bottom: 9px;
+  color: var(--gold);
+  font-size: 30px;
+}
+
+.benefit-card h3 {
+  margin: 0 0 8px;
+  color: var(--gold-light);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.benefit-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 2;
+}
+
+/* About */
+.about {
+  background: rgba(2,11,22,.84);
+}
+
+.about-content {
+  max-width: 820px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-content p {
+  color: #e0e2e5;
+  font-size: 14px;
+  line-height: 2.5;
+}
+
+/* Contact */
+.contact {
+  background: rgba(5,20,37,.94);
+}
+
+.contact-content {
+  max-width: 750px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-content p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 12px;
+  margin-top: 20px;
 }
 
-.footer-social a {
-  color: var(--gold);
-  font-size: 20px;
-}
-
-.footer-brand {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: var(--gold-light);
-  line-height: 1.2;
-}
-
-.footer-brand .crown {
-  width: 40px;
-  height: 23px;
-  margin-bottom: 3px;
-  color: var(--gold);
-}
-
-.footer-brand b {
-  font: 20px Georgia, serif;
-  letter-spacing: 4px;
-}
-
-.footer-brand small {
-  margin-top: 5px;
-  color: var(--gold);
-  font: 9px Georgia, serif;
-  letter-spacing: 4px;
-}
-
-.footer-brand p {
-  margin: 10px 0 0;
+/* Footer */
+.footer {
+  padding: 28px 20px;
   color: var(--muted);
-  font-size: 11px;
-}
-
-.footer-ornament {
-  color: rgba(216,179,106,.7);
-  font-size: 13px;
-  letter-spacing: 3px;
-}
-
-/* تبلت */
-
-@media (max-width: 1000px) {
-  .header {
-    gap: 14px;
-    padding-right: 22px;
-    padding-left: 22px;
-  }
-
-  .header nav {
-    gap: 14px;
-  }
-
-  .header nav a {
-    font-size: 12px;
-  }
-
-  .brand {
-    min-width: 115px;
-  }
-
-  .brand b {
-    font-size: 17px;
-    letter-spacing: 2px;
-  }
-
-  .social {
-    gap: 7px;
-  }
-
-  .hero {
-    min-height: 440px;
-    padding-right: 5vw;
-    padding-left: 5vw;
-  }
-
-  .hero-frame {
-    min-height: 290px;
-  }
-
-  .hero-frame img {
-    height: 260px;
-  }
-
-  .products {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    max-width: 760px;
-    gap: 18px;
-  }
-
-  .product-image img {
-    height: clamp(220px, 34vw, 330px);
-  }
-}
-
-/* موبایل */
-
-@media (max-width: 650px) {
-  html {
-    scroll-padding-top: 20px;
-  }
-
-  .header {
-    grid-template-columns: 1fr auto;
-    gap: 10px;
-    padding: 10px 13px;
-  }
-
-  .brand {
-    grid-column: 2;
-    grid-row: 1;
-    min-width: 0;
-  }
-
-  .brand .crown {
-    width: 34px;
-    height: 20px;
-  }
-
-  .brand strong {
-    font-size: 18px;
-  }
-
-  .brand b {
-    font-size: 15px;
-    letter-spacing: 2px;
-  }
-
-  .brand small {
-    font-size: 8px;
-    letter-spacing: 3px;
-  }
-
-  .social {
-    grid-column: 1;
-    grid-row: 1;
-    gap: 4px;
-  }
-
-  .social a {
-    width: 29px;
-    height: 30px;
-  }
-
-  .header nav {
-    grid-column: 1 / -1;
-    grid-row: 2;
-    justify-content: center;
-    gap: clamp(13px, 4vw, 24px);
-    padding-top: 7px;
-    border-top: 1px solid rgba(216,179,106,.2);
-  }
-
-  .header nav a {
-    font-size: 11px;
-    padding: 3px 0;
-  }
-
-  .hero {
-    grid-template-columns: 1fr;
-    gap: 20px;
-    min-height: 0;
-    padding: 34px 20px 40px;
-  }
-
-  .hero-copy {
-    grid-row: 2;
-    width: 100%;
-  }
-
-  .hero-copy h1 {
-    font-size: clamp(28px, 7vw, 36px);
-  }
-
-  .hero-copy h2 {
-    font-size: 16px;
-  }
-
-  .hero-copy > p:not(.eyebrow) {
-    font-size: 13px;
-  }
-
-  .hero-art {
-    grid-row: 1;
-    width: min(75vw, 300px);
-  }
-
-  .hero-frame {
-    min-height: 0;
-    padding: 12px;
-  }
-
-  .hero-frame img {
-    height: clamp(200px, 60vw, 270px);
-  }
-
-  .hero-ornament {
-    bottom: 4px;
-  }
-
-  .collection {
-    padding: 38px 12px 40px;
-  }
-
-  .section-title {
-    margin-bottom: 23px;
-  }
-
-  .section-title h2 {
-    font-size: 17px;
-    line-height: 1.9;
-  }
-
-  .products {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 10px;
-  }
-
-  .product {
-    padding: 6px;
-  }
-
-  .product::before {
-    inset: 4px;
-  }
-
-  .product-image img {
-    height: clamp(135px, 43vw, 220px);
-  }
-
-  .product-info {
-    padding: 9px 4px 8px;
-  }
-
-  .product-info h3 {
-    font-size: 12px;
-  }
-
-  .product-info p {
-    font-size: 10px;
-    line-height: 1.8;
-  }
-
-  .product-info .price {
-    font-size: 11px;
-  }
-
-  .btn.small {
-    min-height: 31px;
-    padding: 4px 7px;
-    font-size: 10px;
-    gap: 5px;
-  }
-
-  .benefits {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px 7px;
-    padding: 28px 10px;
-  }
-
-  .benefit {
-    padding: 7px 4px;
-  }
-
-  .benefit:nth-child(2)::after {
-    display: none;
-  }
-
-  .benefit > span {
-    height: 35px;
-    margin-bottom: 4px;
-    font-size: 22px;
-  }
-
-  .benefit h3 {
-    font-size: 12px;
-  }
-
-  .benefit p {
-    font-size: 10px;
-  }
-
-  .about,
-  .contact {
-    padding: 34px 16px;
-  }
-
-  .about p {
-    font-size: 12px;
-  }
-
-  footer {
-    gap: 12px;
-    padding: 22px 12px;
-  }
-}
-
-/* موبایل‌های کوچک */
-
-@media (max-width: 380px) {
-  .header {
-    padding-right: 8px;
-    padding-left: 8px;
-  }
-
-  .header nav {
-    gap: 10px;
-  }
-
-  .header nav a {
-    font-size: 10px;
-  }
-
-  .social {
-    gap: 2px;
-  }
-
-  .social a {
-    width: 26px;
-  }
-
-  .brand b {
-    font-size: 13px;
-  }
-
-  .products {
-    gap: 8px;
-  }
-
-  .product-image img {
-    height: 132px;
-  }
-}
-
-/* کاهش حرکت برای دسترسی‌پذیری */
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    transition-duration: .01ms !important;
-    animation-duration: .01ms !important;
-  }
-}
-/* TATAROS — Royal Luxury */
-.hero {
-  background:
-    radial-gradient(ellipse at 80% 70%, #102b4b 0%, transparent 38%),
-    radial-gradient(ellipse at 10% 40%, #49301a55 0%, transparent 25%),
-    linear-gradient(115deg, #020813, #07182c 52%, #020914);
-  border-bottom: 1px solid #d8b36a;
-}
-
-.hero-copy h1,
-.section-title h2 {
-  color: #f4dca4;
-  text-shadow: 0 2px 18px #d8b36a20;
-}
-
-.hero-frame {
-  padding: 9px;
-  background: #061326;
-  border: 1px solid #d8b36a;
-  box-shadow:
-    0 0 0 5px #d8b36a12,
-    0 0 0 6px #d8b36a55,
-    0 24px 60px #0009;
-}
-
-.hero-frame img {
-  object-fit: cover;
-}
-
-.collection {
-  background:
-    radial-gradient(ellipse at 50% 0%, #0c254066, transparent 60%),
-    linear-gradient(180deg, #031020, #020914 80%, #041225);
-}
-
-.product {
-  background: linear-gradient(155deg, #081b2f, #020912);
-  border: 1px solid #d8b36a;
-  box-shadow: 0 12px 28px #0006;
-}
-
-.product::before {
-  inset: 4px;
-  border: 1px solid #f4dca45c;
-}
-
-.benefits,
-footer {
-  background: linear-gradient(110deg, #06182b, #020914);
-  border-color: #d8b36a77;
-}
-
-@media (max-width: 650px) {
-  .hero {
-    padding: 34px 18px 48px;
-    gap: 25px;
-  }
-
-  .hero-frame {
-    min-height: 0;
-  }
-
-  .hero-frame img {
-    height: min(72vw, 320px);
-    object-fit: cover;
-  }
-
-  .collection {
-    padding-top: 38px;
-  }
-}
-/* TATAROS — Royal Luxury Theme */
-
-body {
-  background-color: #020b16;
-  background-image:
-    linear-gradient(
-      rgba(2, 9, 20, 0.62),
-      rgba(2, 9, 20, 0.78)
-    ),
-    url("royal-background.jpg.PNG");
-  background-position: center top;
-  background-size: cover;
-  background-attachment: fixed;
-  color: #f8f3e9;
-}
-
-.royal-header {
-  background: linear-gradient(120deg, #020b16, #0b2542, #020b16);
-  border-bottom: 1px solid #d4ad62;
-}
-
-.royal-logo,
-.brand-name,
-.royal-nav a {
-  color: #f3d99a;
-}
-
-.hero {
-  background:
-    linear-gradient(rgba(2, 9, 20, 0.48), rgba(2, 9, 20, 0.68)),
-    url("royal-background.jpg.PNG") center / cover no-repeat;
-}
-
-.hero h1,
-.section-title h2,
-.about h2,
-.contact h2 {
-  color: #f3d99a;
-  text-shadow: 0 2px 15px rgba(212, 173, 98, 0.2);
-}
-
-.product {
-  background: linear-gradient(145deg, #0b2542, #020b16);
-  border: 1px solid #d4ad62;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
-}
-
-.product::before {
-  border: 1px solid rgba(243, 217, 154, 0.4);
-}
-
-.benefits,
-.about,
-.contact,
-footer {
-  background-color: rgba(2, 11, 22, 0.94);
-  border-color: rgba(212, 173, 98, 0.45);
-}
-
-@media (max-width: 650px) {
-  body,
-  .hero {
-    background-attachment: scroll;
-  }
-}
-/* TATAROS — Royal Background Fix */
-
-body {
-  background-color: #020914 !important;
-  background-image:
-    linear-gradient(
-      rgba(2, 9, 20, 0.40),
-      rgba(2, 9, 20, 0.58)
-    ),
-    url("royal-background.jpg.PNG") !important;
-  background-position: center top;
-  background-size: cover;
-  background-attachment: fixed;
-}
-
-/* Royal header */
-.royal-header {
-  background: rgba(2, 11, 22, 0.94) !important;
-  border-bottom: 1px solid #d4ad62;
-}
-
-/* Hero background */
-.hero {
-  background:
-    linear-gradient(
-      rgba(2, 9, 20, 0.42),
-      rgba(2, 9, 20, 0.58)
-    ),
-    url("royal-background.jpg.PNG") center / cover no-repeat !important;
-}
-
-/* Preserve the jewelry image */
-.ring-photo,
-.hero-art img {
-  object-fit: contain;
-}
-
-/* Royal collection */
-.section,
-.collection {
-  background: rgba(2, 11, 22, 0.70) !important;
-}
-
-/* Gold product frames */
-.product {
-  background: rgba(4, 18, 35, 0.94) !important;
-  border: 1px solid #d4ad62 !important;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.38);
-}
-
-.product::before {
-  border: 1px solid rgba(243, 217, 154, 0.45);
-}
-
-/* Royal gold headings */
-.hero h1,
-.section-title h2,
-.about h2,
-.contact h2 {
-  color: #f3d99a;
-  text-shadow: 0 2px 15px rgba(212, 173, 98, 0.22);
-}
-
-/* Lower sections */
-.benefits,
-.about,
-.contact,
-footer {
-  background-color: rgba(2, 11, 22, 0.88);
-  border-color: rgba(212, 173, 98, 0.45);
-}
-
-@media (max-width: 650px) {
-  body {
-    background-attachment: scroll;
-  }
-}
-/* TATAROS — Logo Position */
-
-.header {
-  grid-template-columns: 1fr auto 1fr;
-}
-
-.brand {
-  grid-column: 3;
-  justify-self: end;
   text-align: center;
+  background: #020914;
+  border-top: 1px solid var(--gold);
 }
 
-.header nav {
-  grid-column: 2;
-  justify-self: center;
+.footer .brand {
+  margin: 0 auto 15px;
 }
 
-.social {
-  grid-column: 1;
-  justify-self: start;
+.footer p {
+  margin: 6px 0;
+  font-size: 12px;
 }
 
-@media (max-width: 650px) {
+.footer a {
+  color: var(--gold-light);
+}
+
+.footer a:hover {
+  color: white;
+}
+
+/* Empty/loading states */
+.loading,
+.empty-state,
+.error-message {
+  grid-column: 1 / -1;
+  padding: 28px 15px;
+  color: var(--gold-light);
+  text-align: center;
+  border: 1px solid rgba(216,179,106,.4);
+  background: rgba(3,14,29,.85);
+}
+
+/* Tablet */
+@media (max-width: 900px) {
   .header {
     grid-template-columns: 1fr auto;
+    gap: 10px;
+    padding: 12px 20px;
   }
 
   .brand {
     grid-column: 2;
     grid-row: 1;
-    justify-self: end;
   }
 
   .social {
@@ -1216,154 +670,180 @@ footer {
     grid-column: 1 / -1;
     grid-row: 2;
     justify-self: center;
-  }
-}
-/* کادر سلطنتی متن اصلی تاتاروس */
-.hero-copy {
-  position: relative;
-  z-index: 2;
-  width: min(90%, 620px);
-  margin: 30px auto;
-  padding: 38px 28px;
-  text-align: center;
-  background: rgba(3, 15, 30, 0.96);
-  border: 1px solid #d4ad62;
-  border-radius: 4px;
-  box-shadow:
-    0 0 0 5px rgba(212, 173, 98, 0.08),
-    0 15px 40px rgba(0, 0, 0, 0.3);
-  box-sizing: border-box;
-}
-
-.hero-copy h1 {
-  color: #f3d99a;
-  margin: 12px 0;
-}
-
-.hero-copy h2 {
-  color: #ffffff;
-  line-height: 1.9;
-}
-
-.hero-copy p {
-  color: #e0d8c8;
-  line-height: 2;
-}
-
-.hero-copy .eyebrow {
-  color: #d4ad62;
-  letter-spacing: 3px;
-}
-
-.hero-copy .btn {
-  display: inline-flex;
-  margin-top: 16px;
-}
-
-@media (max-width: 600px) {
-  .hero-copy {
-    width: 92%;
-    padding: 28px 18px;
-    margin: 22px auto;
+    flex-wrap: wrap;
+    gap: 20px;
   }
 
-  .hero-copy h1 {
-    font-size: 1.7rem;
+  #products-list,
+  .products-list {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 16px;
   }
 
-  .hero-copy h2 {
-    font-size: 1.05rem;
-  }
-}
-
-/* TATAROS — Final Hero Text Frame Fix */
-
-.hero {
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: center !important;
-  align-items: center !important;
-  gap: 24px !important;
-  min-height: 520px;
-  padding: 48px 20px 58px !important;
-  overflow: hidden;
-}
-
-.hero-copy {
-  grid-column: auto !important;
-  grid-row: auto !important;
-  justify-self: auto !important;
-  align-self: center !important;
-  width: min(100%, 620px) !important;
-  max-width: 620px !important;
-  margin: 0 auto !important;
-  padding: 32px 26px !important;
-  background: rgba(2, 11, 22, 0.96) !important;
-  border: 1px solid #d4ad62 !important;
-  border-radius: 4px !important;
-  box-shadow:
-    0 0 0 5px rgba(212, 173, 98, 0.10),
-    0 18px 45px rgba(0, 0, 0, 0.48) !important;
-  text-align: center !important;
-}
-
-.hero-copy h1 {
-  margin: 8px 0 12px !important;
-  line-height: 1.7 !important;
-}
-
-.hero-copy h2 {
-  margin: 0 0 14px !important;
-  line-height: 1.9 !important;
-}
-
-.hero-copy > p:not(.eyebrow) {
-  margin: 0 auto 22px !important;
-  line-height: 2 !important;
-}
-
-.hero-copy .btn {
-  margin-top: 8px !important;
-}
-
-.hero-ornament {
-  pointer-events: none;
-}
-
-@media (max-width: 650px) {
   .hero {
-    min-height: 0 !important;
-    padding: 32px 16px 46px !important;
+    min-height: 470px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 520px) {
+  body {
+    background-attachment: scroll;
+  }
+
+  .header {
+    min-height: auto;
+    padding: 12px 14px;
+    gap: 8px;
+  }
+
+  .brand {
+    min-width: 120px;
+  }
+
+  .brand .crown {
+    width: 32px;
+    height: 20px;
+  }
+
+  .brand strong {
+    font-size: 18px;
+  }
+
+  .brand b {
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+
+  .brand small {
+    font-size: 8px;
+    letter-spacing: 3px;
+  }
+
+  .social {
+    gap: 4px;
+  }
+
+  .social a {
+    width: 30px;
+    height: 30px;
+    font-size: 17px;
+  }
+
+  .header nav {
+    width: 100%;
+    gap: 17px;
+    padding-top: 4px;
+  }
+
+  .header nav a {
+    font-size: 12px;
+  }
+
+  .hero {
+    min-height: 440px;
+    padding: 48px 20px 58px;
+    background-position: center center;
   }
 
   .hero-copy {
-    width: 100% !important;
-    padding: 25px 17px !important;
-    margin: 0 auto !important;
+    width: 100%;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
   }
 
   .hero-copy h1 {
-    font-size: 28px !important;
+    font-size: 29px;
+    line-height: 1.8;
   }
 
   .hero-copy h2 {
-    font-size: 16px !important;
+    font-size: 17px;
   }
 
   .hero-copy > p:not(.eyebrow) {
-    font-size: 13px !important;
+    font-size: 13px;
+  }
+
+  .section {
+    padding: 44px 14px;
+  }
+
+  .section-heading {
+    margin-bottom: 25px;
+  }
+
+  .section-heading h2 {
+    font-size: 24px;
+  }
+
+  #products-list,
+  .products-list {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 10px;
+  }
+
+  .product-card {
+    padding: 5px;
+  }
+
+  .product-card::before {
+    inset: 3px;
+  }
+
+  .product-info {
+    padding: 11px 5px 8px;
+  }
+
+  .product-info h3,
+  .product-card h3 {
+    font-size: 13px;
+  }
+
+  .product-info p,
+  .product-card p {
+    font-size: 11px;
+  }
+
+  .product-price {
+    font-size: 12px;
+  }
+
+  .product-card .btn {
+    min-height: 36px;
+    padding: 6px 5px;
+    font-size: 11px;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .benefit-card {
+    padding: 19px 14px;
+  }
+
+  .contact-links {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .contact-links .btn,
+  .contact-links .btn-outline {
+    width: 100%;
   }
 }
-/* حذف کادر وسط و نمایان شدن تصویر زیر آن */
-.hero-copy {
-  background: transparent !important;
-  border: none !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  margin: 0 auto !important;
-}
 
-.hero-copy::before,
-.hero-copy::after {
-  display: none !important;
+/* Accessibility and motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+  }
 }
