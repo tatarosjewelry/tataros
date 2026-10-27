@@ -847,3 +847,69 @@ button {
     animation-duration: .01ms !important;
   }
 }
+/* TATAROS — Separate Hero Image and Text Panel */
+
+/* تصویر در بخش مستقل */
+.hero {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  gap: 0 !important;
+  min-height: auto !important;
+  padding: 0 !important;
+  overflow: hidden;
+  background: transparent !important;
+  border: none !important;
+}
+
+/* تصویر پس‌زمینه در بخش بالایی */
+.hero::before {
+  display: none !important;
+}
+
+/* کادر نوشته‌ها در زیر تصویر */
+.hero-copy {
+  position: relative !important;
+  z-index: 1;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 32px 20px 38px !important;
+  background: linear-gradient(
+    145deg,
+    #0b2038,
+    #020b16
+  ) !important;
+  border: 1px solid #d8b36a !important;
+  border-radius: 0 !important;
+  box-shadow: 0 8px 25px rgba(0,0,0,.35) !important;
+  text-align: center;
+}
+
+/* نوشته‌های داخل کادر */
+.hero-copy h1 {
+  color: #f4dca4;
+  text-shadow: none !important;
+}
+
+.hero-copy h2 {
+  color: #ffffff;
+  text-shadow: none !important;
+}
+
+.hero-copy > p:not(.eyebrow) {
+  color: #e1e5ea;
+  text-shadow: none !important;
+}
+
+/* تزئین اضافه روی تصویر حذف شود */
+.hero-ornament {
+  display: none !important;
+}
+
+/* نمایش مناسب در موبایل */
+@media (max-width: 520px) {
+  .hero-copy {
+    padding: 25px 16px 30px !important;
+  }
+}
