@@ -387,3 +387,201 @@ a{color:inherit;text-decoration:none}
     background-position: 60% center;
   }
 }
+
+/* TATAROS - DARK ROYAL PALACE HERO */
+
+.royal-hero {
+  position: relative;
+  min-height: 650px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  isolation: isolate;
+  background:
+    radial-gradient(ellipse at 50% 35%, #26394a 0%, transparent 36%),
+    radial-gradient(ellipse at 50% 100%, #17283a 0%, transparent 55%),
+    linear-gradient(90deg, #01050b, #0b1b2b 50%, #01050b);
+  border-bottom: 1px solid #b68b4b;
+}
+
+.royal-hero::before,
+.royal-hero::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -100px;
+  bottom: -80px;
+  width: 24%;
+  opacity: .55;
+  border: 2px solid #b68b4b55;
+  border-top: 0;
+  border-radius: 50% 50% 0 0;
+  box-shadow:
+    inset 0 0 35px #000,
+    0 0 35px #000;
+}
+
+.royal-hero::before {
+  left: 4%;
+}
+
+.royal-hero::after {
+  right: 4%;
+}
+
+.palace-light {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(90deg, #01050b 0%, transparent 35%, transparent 65%, #01050b 100%),
+    radial-gradient(ellipse at 50% 20%, #d5a65a22, transparent 45%);
+}
+
+.palace-frame {
+  position: absolute;
+  inset: 22px;
+  border: 1px solid #d8ad624d;
+  pointer-events: none;
+}
+
+.palace-frame::before {
+  content: "✦";
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #d8ad62;
+  font-size: 20px;
+}
+
+.hero-content {
+  width: 100%;
+  max-width: 700px;
+  padding: 55px 20px;
+  text-align: center;
+  color: #f5dfad;
+}
+
+.hero-eyebrow {
+  display: block;
+  font-family: Georgia, serif;
+  font-size: 12px;
+  letter-spacing: 6px;
+  color: #d8ad62;
+}
+
+.hero-emblem {
+  width: 145px;
+  margin: 32px auto 12px;
+  filter: drop-shadow(0 0 18px #d8ad6266);
+}
+
+.hero-emblem svg {
+  display: block;
+  width: 100%;
+}
+
+.royal-hero h1 {
+  margin: 10px 0;
+  color: #f1d39a;
+  font-family: Georgia, serif;
+  font-size: clamp(42px, 7vw, 76px);
+  font-weight: 500;
+  letter-spacing: 8px;
+  text-shadow: 0 3px 22px #d8ad6244;
+}
+
+.royal-hero h2 {
+  margin: 15px 0;
+  color: #d8ad62;
+  font-family: Georgia, serif;
+  font-size: 15px;
+  letter-spacing: 7px;
+  font-weight: 400;
+}
+
+.hero-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin: 25px auto;
+  color: #d8ad62;
+}
+
+.hero-divider span {
+  width: 65px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #d8ad62);
+}
+
+.hero-divider span:last-child {
+  transform: rotate(180deg);
+}
+
+.royal-hero p {
+  color: #e5d4b4;
+  font-size: 17px;
+  margin: 22px 0 30px;
+}
+
+.royal-hero .gold-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  padding: 14px 30px;
+  border: 1px solid #e0bd79;
+  background: linear-gradient(135deg, #e7c987, #98703b);
+  color: #10101a;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 0 25px #d8ad6233;
+  transition: .3s ease;
+}
+
+.royal-hero .gold-button:hover {
+  box-shadow: 0 0 35px #d8ad6277;
+  transform: translateY(-3px);
+}
+
+.hero-bottom-label {
+  position: absolute;
+  bottom: 28px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-family: Georgia, serif;
+  font-size: 9px;
+  letter-spacing: 7px;
+  color: #d8ad6288;
+}
+
+@media (max-width: 600px) {
+  .royal-hero {
+    min-height: 540px;
+  }
+
+  .palace-frame {
+    inset: 12px;
+  }
+
+  .hero-emblem {
+    width: 115px;
+  }
+
+  .royal-hero h1 {
+    font-size: 48px;
+    letter-spacing: 5px;
+  }
+
+  .royal-hero h2 {
+    font-size: 11px;
+    letter-spacing: 4px;
+  }
+
+  .royal-hero p {
+    font-size: 14px;
+  }
+}
