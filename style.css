@@ -772,3 +772,40 @@ a {
     transition: none !important;
   }
 }
+/* FINAL MOBILE LOGO FIX */
+
+@media (max-width: 600px) {
+  .site-header > .brand {
+    position: absolute !important;
+    left: 0 !important;
+    right: 0 !important;
+    top: 2px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    transform: none !important;
+    width: 125px !important;
+    height: 66px !important;
+    padding: 3px !important;
+    z-index: 10 !important;
+  }
+
+  .site-header > .brand .crown {
+    font-size: 14px !important;
+  }
+
+  .site-header > .brand .monogram {
+    font-size: 18px !important;
+    height: 18px !important;
+  }
+
+  .site-header > .brand .brand-name {
+    font-size: 14px !important;
+    letter-spacing: 2px !important;
+  }
+
+  .site-header > .brand .brand-subtitle {
+    font-size: 6px !important;
+    letter-spacing: 2px !important;
+    margin-top: 3px !important;
+  }
+}
