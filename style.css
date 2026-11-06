@@ -250,21 +250,38 @@ a {
   pointer-events: none;
 }
 
-/* COLLECTION */
+/* COLLECTION - ROYAL FRAME */
 
 .collection {
-  padding: 38px clamp(16px,3.2vw,48px) 46px;
-  background: linear-gradient(#031326,#020d1a);
+  position: relative;
+  padding: 42px clamp(16px,4vw,58px) 48px;
+  background:
+    radial-gradient(ellipse at 50% 0%, #102b46 0%, transparent 65%),
+    linear-gradient(180deg,#031326 0%,#020b16 100%);
+  border-bottom: 1px solid #bd965855;
+}
+
+.collection:before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 18px;
+  right: 18px;
+  bottom: 12px;
+  border: 1px solid rgba(216,173,98,.22);
+  pointer-events: none;
 }
 
 .section-heading {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 15px;
-  max-width: 950px;
-  margin: 0 auto 28px;
+  gap: 16px;
+  max-width: 850px;
+  margin: 0 auto 30px;
+  padding: 8px 15px 16px;
   text-align: center;
+  position: relative;
 }
 
 .section-heading span {
@@ -279,80 +296,89 @@ a {
 
 .section-heading b {
   color: var(--gold);
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 400;
 }
 
 .section-heading h2 {
-  font-size: clamp(17px,2.4vw,26px);
+  font-size: clamp(17px,2.4vw,25px);
   font-weight: 400;
   color: var(--light-gold);
   margin: 0;
+  letter-spacing: .3px;
 }
+
+/* PRODUCT GRID */
 
 .products {
   display: grid;
   grid-template-columns: repeat(4,minmax(0,1fr));
-  gap: 17px;
-  max-width: 1320px;
+  gap: 20px;
+  max-width: 1120px;
   margin: auto;
+  position: relative;
+  z-index: 1;
 }
 
 .product-card {
   min-width: 0;
-  padding: 7px;
-  background: linear-gradient(145deg,#0a2037,#020b16);
-  border: 1px solid #bd9658;
-  border-radius: 9px;
-  box-shadow: 0 8px 22px #0005;
-  transition: transform .25s;
+  padding: 6px;
+  background: linear-gradient(145deg,#102943,#031326 70%);
+  border: 1px solid rgba(216,173,98,.65);
+  border-radius: 5px;
+  box-shadow:
+    0 8px 22px #0005,
+    inset 0 0 12px rgba(216,173,98,.04);
+  transition: transform .25s, border-color .25s;
 }
 
 .product-card:hover {
   transform: translateY(-4px);
+  border-color: var(--light-gold);
 }
 
 .product-card img {
   display: block;
   width: 100%;
-  aspect-ratio: 1/1;
+  aspect-ratio: 4 / 4.5;
   object-fit: cover;
-  border-radius: 5px;
+  border-radius: 2px;
   background: #0b1b2b;
 }
 
 .product-info {
-  min-height: 124px;
+  min-height: 112px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 9px 6px 6px;
+  padding: 9px 5px 5px;
 }
 
 .product-info h3 {
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 13px;
+  font-weight: 400;
   color: var(--light-gold);
-  margin: 0 0 2px;
+  margin: 0 0 3px;
 }
 
 .product-info p {
-  font-size: 11px;
+  font-size: 10px;
   color: #d6c6a9;
-  margin: 0 0 9px;
+  margin: 0 0 8px;
 }
 
 .product-info a {
   margin-top: auto;
-  min-height: 34px;
-  padding: 4px 14px;
-  font-size: 11px;
-  gap: 12px;
+  min-height: 31px;
+  padding: 3px 13px;
+  font-size: 10px;
+  gap: 10px;
+  border-radius: 9px 2px 9px 2px;
 }
 
 .product-info a b {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 /* BENEFITS */
@@ -502,7 +528,8 @@ a {
 
   .products {
     grid-template-columns: repeat(2,minmax(0,1fr));
-    max-width: 650px;
+    max-width: 600px;
+    gap: 14px;
   }
 }
 
@@ -614,50 +641,65 @@ a {
     gap: 8px;
   }
 
+  /* MOBILE COLLECTION */
+
   .collection {
-    padding: 30px 11px 34px;
+    padding: 30px 14px 35px;
+  }
+
+  .collection:before {
+    top: 9px;
+    left: 8px;
+    right: 8px;
+    bottom: 9px;
   }
 
   .section-heading {
     gap: 7px;
-    margin-bottom: 20px;
+    margin-bottom: 19px;
+    padding: 5px 4px 12px;
   }
 
   .section-heading h2 {
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.9;
   }
 
   .section-heading b {
-    font-size: 18px;
+    font-size: 17px;
   }
 
   .products {
     grid-template-columns: repeat(2,minmax(0,1fr));
-    gap: 9px;
+    gap: 10px;
   }
 
   .product-card {
     padding: 5px;
-    border-radius: 7px;
+    border-radius: 4px;
+  }
+
+  .product-card img {
+    aspect-ratio: 1 / 1.08;
   }
 
   .product-info {
-    min-height: 119px;
+    min-height: 105px;
     padding: 7px 3px 5px;
   }
 
   .product-info h3 {
-    font-size: 12px;
+    font-size: 11px;
   }
 
   .product-info p {
-    font-size: 10px;
+    font-size: 9px;
   }
 
   .product-info a {
-    font-size: 10px;
-    padding: 4px 8px;
+    font-size: 9px;
+    min-height: 29px;
+    padding: 3px 8px;
     gap: 7px;
   }
 
@@ -727,7 +769,4 @@ a {
   *:after {
     transition: none !important;
   }
-}
-.hero {
-  background: #020b16 url("https://tatarosjewelry.github.io/tataros/tataros-hero.PNG") center center / cover no-repeat !important;
 }
