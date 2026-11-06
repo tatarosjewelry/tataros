@@ -728,3 +728,6 @@ a {
     transition: none !important;
   }
 }
+.hero {
+  background: #020b16 url("https://tatarosjewelry.github.io/tataros/tataros-hero.PNG") center center / cover no-repeat !important;
+}
