@@ -1,4 +1,3 @@
-
 :root {
   --navy: #031326;
   --deep: #020b16;
@@ -160,7 +159,7 @@ a {
       rgba(2,10,20,.02) 55%,
       rgba(2,10,20,.08) 100%
     ),
-    url("tataros-hero.png");
+    url("tataros-hero.PNG");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
