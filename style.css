@@ -748,3 +748,167 @@ a {
     transition: none !important;
   }
 }
+
+/* ===== TATAROS ROYAL HEADER REDESIGN ===== */
+
+.site-header {
+  min-height: 172px;
+  height: 172px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 8px 20px 12px;
+  direction: ltr;
+  background:
+    radial-gradient(ellipse at 50% 0%, #26364b 0%, #0b1524 48%, #020711 100%);
+  border-bottom: 1px solid #d8ad62;
+  box-shadow: 0 8px 28px #000b;
+}
+
+.site-header::before {
+  inset: 8px 18px;
+  border: 1px solid #d8ad6245;
+}
+
+.site-header > .brand {
+  position: relative;
+  left: auto;
+  top: auto;
+  transform: none;
+  width: 220px;
+  height: 112px;
+  padding: 0;
+  gap: 2px;
+}
+
+.site-header > .brand .dragon-logo {
+  width: 64px;
+  height: 58px;
+  filter: drop-shadow(0 0 12px #d8ad6288);
+}
+
+.site-header > .brand .brand-name {
+  font-size: 27px;
+  letter-spacing: 7px;
+}
+
+.site-header > .brand .brand-subtitle {
+  font-size: 9px;
+  letter-spacing: 5px;
+  margin-top: 5px;
+}
+
+.header-social {
+  position: absolute;
+  left: 5%;
+  top: 38px;
+  gap: 14px;
+  z-index: 3;
+}
+
+.icon-link {
+  width: 30px;
+  height: 30px;
+  color: #f5dfad;
+  font-size: 23px;
+  text-shadow: 0 0 10px #d8ad6255;
+}
+
+.main-nav {
+  position: absolute;
+  bottom: 13px;
+  left: 50%;
+  transform: translateX(-50%);
+  justify-self: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(25px, 4vw, 48px);
+  direction: rtl;
+  z-index: 3;
+}
+
+.main-nav a {
+  color: #f5dfad;
+  font-size: 14px;
+  padding: 7px 0;
+  transition: color .3s;
+}
+
+.main-nav a:hover {
+  color: #fff;
+}
+
+.main-nav a::after {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #f5dfad, transparent);
+}
+
+@media (max-width: 600px) {
+  .site-header {
+    height: 148px;
+    min-height: 148px;
+    padding: 5px 10px;
+  }
+
+  .site-header::before {
+    inset: 7px 9px;
+  }
+
+  .site-header > .brand {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    width: 145px;
+    height: 93px;
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .site-header > .brand .dragon-logo {
+    width: 48px;
+    height: 46px;
+  }
+
+  .site-header > .brand .brand-name {
+    font-size: 19px;
+    letter-spacing: 5px;
+  }
+
+  .site-header > .brand .brand-subtitle {
+    font-size: 7px;
+    letter-spacing: 3px;
+    margin-top: 4px;
+  }
+
+  .header-social {
+    left: 18px;
+    top: 25px;
+    gap: 5px;
+  }
+
+  .icon-link {
+    width: 25px;
+    height: 27px;
+    font-size: 19px;
+  }
+
+  .main-nav {
+    position: absolute;
+    left: 50%;
+    bottom: 9px;
+    width: calc(100% - 35px);
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: clamp(17px, 5vw, 28px);
+  }
+
+  .main-nav a {
+    font-size: 12px;
+    padding: 4px 0;
+  }
+}
