@@ -1,7 +1,6 @@
-
 :root {
   --navy: #020914;
-  --deep: #01050c;
+  --deep: #010308;
   --blue: #102943;
   --gold: #d8ad62;
   --light-gold: #f5dfad;
@@ -9,9 +8,7 @@
   --font: "Vazirmatn", Tahoma, sans-serif;
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 html {
   scroll-behavior: smooth;
@@ -32,12 +29,10 @@ a {
   text-decoration: none;
 }
 
-/* =========================
-   HEADER - ROYAL IDENTITY
-========================= */
+/* HEADER */
 
 .site-header {
-  height: 145px;
+  min-height: 145px;
   position: relative;
   z-index: 5;
   display: grid;
@@ -46,9 +41,9 @@ a {
   padding: 8px 5%;
   direction: ltr;
   background:
-    radial-gradient(ellipse at center, #18334b, #061629 55%, #010711);
+    linear-gradient(110deg, #030711, #101b29 50%, #030711);
   border-bottom: 1px solid var(--gold);
-  box-shadow: 0 8px 30px #0009;
+  box-shadow: 0 8px 30px #000b;
 }
 
 .site-header::before {
@@ -155,13 +150,11 @@ a {
   transform: scaleX(1);
 }
 
-/* =========================
-   HERO - DARK ROYAL PALACE
-========================= */
+/* ROYAL PALACE HERO */
 
 .royal-hero {
   position: relative;
-  min-height: 650px;
+  min-height: 680px;
   padding: 55px 20px 70px;
   display: flex;
   align-items: center;
@@ -172,36 +165,41 @@ a {
   direction: rtl;
 
   background:
-    radial-gradient(ellipse at 50% 25%, #5a452733, transparent 35%),
-    radial-gradient(ellipse at 50% 100%, #17283a, transparent 55%),
-    linear-gradient(90deg, #01050b, #0b1b2b 50%, #01050b);
+    linear-gradient(
+      90deg,
+      rgba(1, 3, 8, .78),
+      rgba(1, 3, 8, .30) 50%,
+      rgba(1, 3, 8, .78)
+    ),
+    linear-gradient(
+      0deg,
+      rgba(1, 3, 8, .82),
+      rgba(1, 3, 8, .12) 48%,
+      rgba(1, 3, 8, .58)
+    ),
+    url("deragon-jewel.PNG") center center / cover no-repeat,
+    #010308;
 
   border-bottom: 1px solid var(--gold);
 }
 
-.royal-hero::before,
+.royal-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(ellipse at 50% 35%, transparent 10%, #0008 100%);
+  pointer-events: none;
+}
+
 .royal-hero::after {
   content: "";
   position: absolute;
+  inset: 18px;
   z-index: -1;
-  top: 35px;
-  bottom: 0;
-  width: 22%;
-  opacity: .5;
-  border: 2px solid #b68b4b66;
-  border-bottom: 0;
-  border-radius: 48% 48% 0 0;
-  box-shadow:
-    inset 0 0 45px #000,
-    0 0 35px #000;
-}
-
-.royal-hero::before {
-  left: 4%;
-}
-
-.royal-hero::after {
-  right: 4%;
+  border: 1px solid #d8ad6255;
+  pointer-events: none;
 }
 
 .palace-light {
@@ -211,22 +209,23 @@ a {
   background:
     linear-gradient(
       90deg,
-      #01050b 0%,
-      transparent 28%,
-      transparent 72%,
-      #01050b 100%
+      #010308 0%,
+      transparent 25%,
+      transparent 75%,
+      #010308 100%
     ),
     radial-gradient(
-      ellipse at 50% 18%,
-      #e7c98725,
-      transparent 45%
+      ellipse at 50% 15%,
+      #e7c98722,
+      transparent 48%
     );
+  pointer-events: none;
 }
 
 .palace-frame {
   position: absolute;
-  inset: 22px;
-  border: 1px solid #d8ad624d;
+  inset: 30px;
+  border: 1px solid #d8ad6238;
   pointer-events: none;
 }
 
@@ -246,6 +245,7 @@ a {
   padding: 35px 20px;
   text-align: center;
   color: var(--light-gold);
+  text-shadow: 0 3px 18px #000;
 }
 
 .hero-eyebrow {
@@ -258,7 +258,7 @@ a {
 .hero-emblem {
   width: 145px;
   margin: 28px auto 10px;
-  filter: drop-shadow(0 0 18px #d8ad6266);
+  filter: drop-shadow(0 0 18px #d8ad6299);
 }
 
 .hero-emblem svg {
@@ -272,7 +272,7 @@ a {
   font-size: clamp(42px, 7vw, 76px);
   font-weight: 500;
   letter-spacing: 5px;
-  text-shadow: 0 3px 22px #d8ad6244;
+  text-shadow: 0 3px 22px #000, 0 0 22px #d8ad6266;
 }
 
 .royal-hero h2 {
@@ -303,7 +303,7 @@ a {
 }
 
 .royal-hero p {
-  color: #e5d4b4;
+  color: #f0dfc0;
   font-size: 17px;
   margin: 20px 0 28px;
 }
@@ -334,21 +334,19 @@ a {
   left: 0;
   right: 0;
   text-align: center;
-  color: #d8ad6288;
+  color: #f0d59a;
   font: 9px Georgia, serif;
   letter-spacing: 7px;
 }
 
-/* =========================
-   COLLECTION
-========================= */
+/* COLLECTION */
 
 .collection {
   position: relative;
   padding: 48px clamp(16px, 4vw, 58px);
   background:
-    radial-gradient(ellipse at 50% 0%, #173653, transparent 65%),
-    linear-gradient(#031326, #01050c);
+    radial-gradient(ellipse at 50% 0%, #263347, transparent 65%),
+    linear-gradient(#080d15, #010308);
   border-bottom: 1px solid #bd965855;
 }
 
@@ -402,9 +400,7 @@ a {
   font-size: 13px;
 }
 
-/* =========================
-   PRODUCT DISPLAY
-========================= */
+/* PRODUCTS */
 
 .products {
   display: grid;
@@ -419,12 +415,10 @@ a {
 .product-card {
   min-width: 0;
   padding: 6px;
-  background: linear-gradient(145deg, #142c43, #020914 70%);
+  background: linear-gradient(145deg, #202a37, #030711 70%);
   border: 1px solid rgba(216, 173, 98, .75);
   border-radius: 3px;
-  box-shadow:
-    0 8px 22px #0007,
-    inset 0 0 12px #d8ad620a;
+  box-shadow: 0 8px 22px #0009, inset 0 0 12px #d8ad620a;
   transition: transform .3s, border-color .3s;
 }
 
@@ -488,15 +482,13 @@ a {
   font-size: 16px;
 }
 
-/* =========================
-   BENEFITS
-========================= */
+/* BENEFITS */
 
 .benefits {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   padding: 28px clamp(15px, 5vw, 70px);
-  background: linear-gradient(100deg, #04172b, #020d1a);
+  background: linear-gradient(100deg, #101b29, #030711);
   border-block: 1px solid var(--gold);
 }
 
@@ -540,17 +532,15 @@ a {
   margin: 0;
 }
 
-/* =========================
-   ABOUT
-========================= */
+/* ABOUT */
 
 .about {
   padding: 65px 22px;
   text-align: center;
   color: #e5d4b4;
   background:
-    radial-gradient(ellipse at center, #142d43, transparent 70%),
-    linear-gradient(#020914, #01050c);
+    radial-gradient(ellipse at center, #202b39, transparent 70%),
+    linear-gradient(#030711, #010308);
   border-top: 1px solid #d8ad6244;
 }
 
@@ -579,9 +569,7 @@ a {
   font-size: 14px;
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 .footer {
   min-height: 230px;
@@ -591,7 +579,7 @@ a {
   gap: 15px;
   padding: 25px clamp(20px, 5vw, 70px);
   background:
-    radial-gradient(ellipse at 50% 0%, #18334b, #061629 48%, #010711);
+    radial-gradient(ellipse at 50% 0%, #182536, #080d16 48%, #010308);
   border-top: 1px solid #bd965855;
 }
 
@@ -654,9 +642,7 @@ a {
   margin: 0;
 }
 
-/* =========================
-   TABLET
-========================= */
+/* TABLET */
 
 @media (max-width: 900px) {
   .site-header {
@@ -683,14 +669,12 @@ a {
   }
 }
 
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
 @media (max-width: 600px) {
-
   .site-header {
     height: 118px;
+    min-height: 118px;
     grid-template-columns: 1fr 125px 1fr;
     grid-template-rows: 68px 35px;
     padding: 5px 13px 7px;
@@ -753,12 +737,17 @@ a {
   }
 
   .royal-hero {
-    min-height: 540px;
+    min-height: 590px;
     padding: 35px 12px 55px;
+    background-position: center center;
+  }
+
+  .royal-hero::after {
+    inset: 10px;
   }
 
   .palace-frame {
-    inset: 12px;
+    inset: 18px;
   }
 
   .hero-content {
@@ -900,7 +889,7 @@ a {
   .footer {
     min-height: 205px;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto auto auto;
     padding: 16px;
     gap: 10px;
   }
@@ -932,12 +921,10 @@ a {
   }
 }
 
-/* REDUCED MOTION */
+/* ACCESSIBILITY */
 
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
+  html { scroll-behavior: auto; }
 
   *,
   *::before,
