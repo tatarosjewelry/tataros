@@ -1,3 +1,4 @@
+
 :root {
   --navy: #020914;
   --deep: #010308;
@@ -8,7 +9,9 @@
   --font: "Vazirmatn", Tahoma, sans-serif;
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
 html {
   scroll-behavior: smooth;
@@ -40,8 +43,7 @@ a {
   align-items: center;
   padding: 8px 5%;
   direction: ltr;
-  background:
-    linear-gradient(110deg, #030711, #101b29 50%, #030711);
+  background: linear-gradient(110deg, #030711, #101b29 50%, #030711);
   border-bottom: 1px solid var(--gold);
   box-shadow: 0 8px 30px #000b;
 }
@@ -150,7 +152,7 @@ a {
   transform: scaleX(1);
 }
 
-/* ROYAL PALACE HERO */
+/* ROYAL HERO */
 
 .royal-hero {
   position: relative;
@@ -164,22 +166,26 @@ a {
   text-align: center;
   direction: rtl;
 
-  background:
+  /* فقط یک تصویر پس‌زمینه؛ بدون تصویر اژدهای تکراری */
+  background-image:
     linear-gradient(
       90deg,
-      rgba(1, 3, 8, .78),
-      rgba(1, 3, 8, .30) 50%,
-      rgba(1, 3, 8, .78)
+      rgba(1, 3, 8, .68),
+      rgba(1, 3, 8, .18) 50%,
+      rgba(1, 3, 8, .68)
     ),
     linear-gradient(
       0deg,
-      rgba(1, 3, 8, .82),
-      rgba(1, 3, 8, .12) 48%,
-      rgba(1, 3, 8, .58)
+      rgba(1, 3, 8, .62),
+      rgba(1, 3, 8, .08) 48%,
+      rgba(1, 3, 8, .45)
     ),
-    url("deragon-jewel.PNG") center center / cover no-repeat,
-    #010308;
+    url("deragon-jewel.PNG");
 
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #010308;
   border-bottom: 1px solid var(--gold);
 }
 
@@ -187,9 +193,12 @@ a {
   content: "";
   position: absolute;
   inset: 0;
-  z-index: -1;
-  background:
-    radial-gradient(ellipse at 50% 35%, transparent 10%, #0008 100%);
+  z-index: 0;
+  background: radial-gradient(
+    ellipse at 50% 35%,
+    transparent 10%,
+    rgba(0, 0, 0, .45) 100%
+  );
   pointer-events: none;
 }
 
@@ -197,7 +206,7 @@ a {
   content: "";
   position: absolute;
   inset: 18px;
-  z-index: -1;
+  z-index: 0;
   border: 1px solid #d8ad6255;
   pointer-events: none;
 }
@@ -205,18 +214,18 @@ a {
 .palace-light {
   position: absolute;
   inset: 0;
-  z-index: -1;
+  z-index: 0;
   background:
     linear-gradient(
       90deg,
-      #010308 0%,
+      rgba(1, 3, 8, .35),
       transparent 25%,
       transparent 75%,
-      #010308 100%
+      rgba(1, 3, 8, .35)
     ),
     radial-gradient(
       ellipse at 50% 15%,
-      #e7c98722,
+      #e7c98718,
       transparent 48%
     );
   pointer-events: none;
@@ -225,6 +234,7 @@ a {
 .palace-frame {
   position: absolute;
   inset: 30px;
+  z-index: 1;
   border: 1px solid #d8ad6238;
   pointer-events: none;
 }
@@ -240,6 +250,8 @@ a {
 }
 
 .hero-content {
+  position: relative;
+  z-index: 2;
   width: 100%;
   max-width: 700px;
   padding: 35px 20px;
@@ -255,19 +267,8 @@ a {
   letter-spacing: 6px;
 }
 
-.hero-emblem {
-  width: 145px;
-  margin: 28px auto 10px;
-  filter: drop-shadow(0 0 18px #d8ad6299);
-}
-
-.hero-emblem svg {
-  display: block;
-  width: 100%;
-}
-
 .royal-hero h1 {
-  margin: 10px 0;
+  margin: 25px 0 10px;
   color: var(--light-gold);
   font-size: clamp(42px, 7vw, 76px);
   font-weight: 500;
@@ -330,6 +331,7 @@ a {
 
 .hero-bottom-label {
   position: absolute;
+  z-index: 2;
   bottom: 25px;
   left: 0;
   right: 0;
@@ -759,11 +761,6 @@ a {
     letter-spacing: 4px;
   }
 
-  .hero-emblem {
-    width: 112px;
-    margin: 22px auto 8px;
-  }
-
   .royal-hero h1 {
     font-size: 45px;
     letter-spacing: 3px;
@@ -924,7 +921,9 @@ a {
 /* ACCESSIBILITY */
 
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
+  html {
+    scroll-behavior: auto;
+  }
 
   *,
   *::before,
