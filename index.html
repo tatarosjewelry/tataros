@@ -25,27 +25,68 @@
   </div>
 
   <a class="brand" href="#home" aria-label="Tataros Jewelry">
-    <svg class="dragon-logo" viewBox="0 0 180 150" xmlns="http://www.w3.org/2000/svg">
+
+    <svg class="dragon-logo" viewBox="0 0 200 170" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tataros royal dragon emblem">
       <defs>
-        <linearGradient id="dragonGold" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stop-color="#fff0bd"/>
-          <stop offset=".45" stop-color="#d8ad62"/>
-          <stop offset="1" stop-color="#8e612b"/>
+        <linearGradient id="royalGold" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#fff4cf"/>
+          <stop offset=".28" stop-color="#e9c77e"/>
+          <stop offset=".62" stop-color="#c18a3d"/>
+          <stop offset="1" stop-color="#76501f"/>
         </linearGradient>
+        <filter id="goldGlow" x="-30%" y="-30%" width="160%" height="160%">
+          <feGaussianBlur stdDeviation="2.2" result="blur"/>
+          <feMerge>
+            <feMergeNode in="blur"/>
+            <feMergeNode in="SourceGraphic"/>
+          </feMerge>
+        </filter>
       </defs>
-      <g fill="none" stroke="url(#dragonGold)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M65 34 L57 13 L76 25 L90 5 L104 25 L123 13 L115 35 Z"/>
-        <path d="M65 34 H115 M72 41 H108"/>
-        <path d="M55 54 Q45 38 52 27 Q60 38 68 43 Q84 35 103 46 Q125 48 131 67 L151 77 L132 85 Q127 102 108 108 L100 128 L87 116 L72 130 L70 108 Q49 98 48 79 Q37 76 27 84 Q31 66 55 54 Z"/>
-        <path d="M54 55 Q35 46 29 31 Q47 35 61 48"/>
-        <path d="M103 48 Q121 31 137 35 Q130 50 119 57"/>
-        <path d="M78 67 Q90 58 103 68"/>
-        <path d="M111 74 L125 77 L112 81"/>
-        <path d="M75 91 Q91 101 109 91"/>
-        <path d="M88 115 Q105 119 119 108"/>
+
+      <g fill="none" stroke="url(#royalGold)" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" filter="url(#goldGlow)">
+        <!-- Crown -->
+        <path d="M70 35 L58 12 L83 27 L100 5 L117 27 L142 12 L130 35 Z"/>
+        <path d="M70 35 H130 L124 44 H76 Z"/>
+        <path d="M82 43 H118"/>
+        <circle cx="58" cy="11" r="3"/>
+        <circle cx="100" cy="5" r="3"/>
+        <circle cx="142" cy="11" r="3"/>
+
+        <!-- Dragon head and neck -->
+        <path d="M70 61
+          C56 48 49 35 53 25
+          C64 33 72 42 78 49
+          C93 38 113 39 128 49
+          C145 57 151 70 147 83
+          L169 94 L146 101
+          C141 119 126 128 109 128
+          L100 151 L86 135
+          L70 151 L68 128
+          C50 120 42 106 43 91
+          C30 89 21 94 13 104
+          C18 83 36 68 56 65 Z"/>
+
+        <!-- Horns -->
+        <path d="M79 50 C67 37 64 24 68 16"/>
+        <path d="M125 49 C138 35 151 32 160 36 C151 47 143 55 133 59"/>
+
+        <!-- Face details -->
+        <path d="M111 68 Q124 61 136 69"/>
+        <path d="M132 83 L150 91 L133 96"/>
+        <path d="M89 83 Q103 75 116 83"/>
+        <path d="M75 105 Q98 119 124 103"/>
+        <path d="M93 130 Q108 137 123 126"/>
+
+        <!-- Decorative scales -->
+        <path d="M57 73 Q48 83 53 94"/>
+        <path d="M68 63 Q62 72 66 80"/>
+        <path d="M82 57 Q91 51 100 53"/>
       </g>
-      <circle cx="112" cy="65" r="3" fill="#f7dc9d"/>
+
+      <circle cx="126" cy="72" r="3.2" fill="#fff0bd"/>
+      <path d="M91 158 H109" stroke="url(#royalGold)" stroke-width="2"/>
     </svg>
+
     <span class="brand-name">TATAROS</span>
     <span class="brand-subtitle">ROYAL JEWELRY</span>
   </a>
@@ -61,7 +102,6 @@
 
 <main>
 
-  <!-- FULL ROYAL ARTWORK -->
   <section class="hero royal-hero" id="hero">
     <img
       class="hero-artwork"
@@ -71,7 +111,6 @@
     >
   </section>
 
-  <!-- COLLECTION -->
   <section class="collection" id="collection">
 
     <div class="section-heading">
@@ -126,7 +165,6 @@
     </div>
   </section>
 
-  <!-- BENEFITS -->
   <section class="benefits">
 
     <div class="benefit">
@@ -155,7 +193,6 @@
 
   </section>
 
-  <!-- ABOUT -->
   <section class="about" id="about">
     <span class="about-eyebrow">OUR STORY</span>
     <h2>درباره تاتاروس</h2>
@@ -174,7 +211,6 @@
 
 </main>
 
-<!-- FOOTER -->
 <footer class="footer" id="contact">
 
   <div class="footer-flourish">
@@ -185,26 +221,27 @@
 
   <a class="footer-brand" href="#home">
 
-    <svg class="dragon-logo" viewBox="0 0 180 150" xmlns="http://www.w3.org/2000/svg">
+    <svg class="dragon-logo" viewBox="0 0 200 170" xmlns="http://www.w3.org/2000/svg">
       <defs>
-        <linearGradient id="footerDragonGold" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stop-color="#fff0bd"/>
-          <stop offset=".45" stop-color="#d8ad62"/>
-          <stop offset="1" stop-color="#8e612b"/>
+        <linearGradient id="footerRoyalGold" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#fff4cf"/>
+          <stop offset=".35" stop-color="#e9c77e"/>
+          <stop offset=".7" stop-color="#c18a3d"/>
+          <stop offset="1" stop-color="#76501f"/>
         </linearGradient>
       </defs>
-      <g fill="none" stroke="url(#footerDragonGold)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M65 34 L57 13 L76 25 L90 5 L104 25 L123 13 L115 35 Z"/>
-        <path d="M65 34 H115 M72 41 H108"/>
-        <path d="M55 54 Q45 38 52 27 Q60 38 68 43 Q84 35 103 46 Q125 48 131 67 L151 77 L132 85 Q127 102 108 108 L100 128 L87 116 L72 130 L70 108 Q49 98 48 79 Q37 76 27 84 Q31 66 55 54 Z"/>
-        <path d="M54 55 Q35 46 29 31 Q47 35 61 48"/>
-        <path d="M103 48 Q121 31 137 35 Q130 50 119 57"/>
-        <path d="M78 67 Q90 58 103 68"/>
-        <path d="M111 74 L125 77 L112 81"/>
-        <path d="M75 91 Q91 101 109 91"/>
-        <path d="M88 115 Q105 119 119 108"/>
+      <g fill="none" stroke="url(#footerRoyalGold)" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M70 35 L58 12 L83 27 L100 5 L117 27 L142 12 L130 35 Z"/>
+        <path d="M70 35 H130 L124 44 H76 Z"/>
+        <path d="M70 61 C56 48 49 35 53 25 C64 33 72 42 78 49 C93 38 113 39 128 49 C145 57 151 70 147 83 L169 94 L146 101 C141 119 126 128 109 128 L100 151 L86 135 L70 151 L68 128 C50 120 42 106 43 91 C30 89 21 94 13 104 C18 83 36 68 56 65 Z"/>
+        <path d="M79 50 C67 37 64 24 68 16"/>
+        <path d="M125 49 C138 35 151 32 160 36 C151 47 143 55 133 59"/>
+        <path d="M111 68 Q124 61 136 69"/>
+        <path d="M132 83 L150 91 L133 96"/>
+        <path d="M89 83 Q103 75 116 83"/>
+        <path d="M75 105 Q98 119 124 103"/>
       </g>
-      <circle cx="112" cy="65" r="3" fill="#f7dc9d"/>
+      <circle cx="126" cy="72" r="3.2" fill="#fff0bd"/>
     </svg>
 
     <span class="brand-name">TATAROS</span>
