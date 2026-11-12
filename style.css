@@ -356,3 +356,28 @@ body{font-size:15px !important;line-height:2.35 !important}
  .site-header>.socials>a{width:22px !important;height:22px !important}
  .site-header>.socials svg{width:19px;height:19px}
 }
+
+
+/* Instagram reel cards — visible playable media in the collection */
+.collection-grid.reel-grid{
+  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  align-items:start !important;gap:20px !important;
+}
+.reel-card{
+  min-width:0;overflow:hidden;display:flex;flex-direction:column;align-items:stretch;
+  border:1px solid rgba(212,173,98,.78);outline:1px solid rgba(212,173,98,.22);
+  outline-offset:3px;background:linear-gradient(180deg,rgba(8,22,38,.96),rgba(3,10,19,.98));
+  box-shadow:0 12px 30px rgba(0,0,0,.28);
+}
+.reel-frame{width:100%;aspect-ratio:9/16;max-height:480px;overflow:hidden;background:#071321}
+.reel-frame iframe{display:block;width:100%;height:100%;min-height:360px;border:0;background:#071321}
+.reel-caption{display:flex;flex-direction:column;align-items:center;gap:2px;padding:12px 8px 4px;text-align:center}
+.reel-caption b{font-family:"Noto Nastaliq Urdu","Katibeh",serif;color:#f0d69a;font-size:17px;font-weight:400}
+.reel-caption small{font-family:"Cinzel",Georgia,serif;color:#c7b28e;font-size:8px;letter-spacing:.12em}
+.reel-open{align-self:center;color:#e8ca87;font-size:11px;padding:7px 12px 12px}
+.reel-open:hover{color:#fff0c5}
+@media(max-width:760px){
+ .collection-grid.reel-grid{grid-template-columns:repeat(1,minmax(0,1fr)) !important;gap:22px !important;max-width:380px;margin-inline:auto}
+ .reel-frame{max-height:none;aspect-ratio:9/16}
+ .reel-frame iframe{min-height:430px}
+}
