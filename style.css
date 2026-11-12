@@ -277,3 +277,33 @@ body{font-weight:400 !important;line-height:2.15 !important}
   body{line-height:2.05 !important}
   .hero h1{font-size:21px !important;padding:5px 16px 10px !important;margin-inline:auto !important}
 }
+
+
+/* TATAROS — refined small, horizontally elongated Nastaliq */
+body,
+body :is(h1,h2,h3,h4,p,a,button,small,b,strong,li,label,input,textarea,nav,section,footer){
+  font-family:"Noto Nastaliq Urdu","Katibeh",serif !important;
+  font-weight:400 !important;
+  letter-spacing:.012em !important;
+  font-kerning:normal;
+}
+body{font-size:15px !important;line-height:2.35 !important}
+.site-header .main-nav a{font-size:14px !important;line-height:2.1 !important}
+.hero h1{
+  font-family:"Noto Nastaliq Urdu","Katibeh",serif !important;
+  font-size:22px !important;font-weight:400 !important;
+  line-height:2.25 !important;letter-spacing:.025em !important;
+  padding:4px 17px 9px !important;
+}
+.hero-subtitle,.hero-description{font-size:15px !important;line-height:2.35 !important}
+.collection h2,.story h2{font-size:19px !important;font-weight:400 !important;line-height:2.2 !important}
+.collection-card b,.promise-item b{font-size:15px !important;font-weight:400 !important}
+.collection-card small,.eyebrow,.hero-index,footer small{font-family:"Cinzel",Georgia,serif !important;letter-spacing:.12em !important}
+@media(max-width:760px){
+  body{font-size:14px !important;line-height:2.3 !important}
+  .site-header .main-nav a{font-size:13px !important}
+  .hero h1{font-size:19px !important;line-height:2.35 !important;letter-spacing:.02em !important}
+  .hero-subtitle,.hero-description{font-size:14px !important}
+  .collection h2,.story h2{font-size:17px !important}
+  .collection-card b,.promise-item b{font-size:13px !important}
+}
