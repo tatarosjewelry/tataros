@@ -1,150 +1,46 @@
-:root{
-  --navy:#041323;--navy2:#081d32;--navy3:#102b45;
-  --gold:#d8ad62;--gold-light:#f3d99e;--cream:#f6ead2;
-  --muted:#c9b99e;--font:"Vazirmatn",Tahoma,sans-serif
-}
+:root{--ink:#080d18;--navy:#101b2d;--navy2:#18243a;--gold:#c9a568;--pale:#f1dfbd;--muted:#b6aa96;--line:#c9a56855}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:25px}
-body{margin:0;min-width:320px;background:#020a13;color:var(--cream);font-family:var(--font);line-height:1.85}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ink);color:var(--pale);font-family:"Vazirmatn",Tahoma,sans-serif;line-height:1.9}
 a{color:inherit;text-decoration:none}
-.site-header{
-  min-height:250px;position:relative;display:grid;grid-template-columns:1fr 330px 1fr;
-  align-items:start;padding:18px 4.5% 0;direction:ltr;z-index:5;
-  background:
-    radial-gradient(ellipse at 50% 0%,rgba(36,65,91,.75),transparent 58%),
-    linear-gradient(180deg,#071a2c 0%,#03101e 100%);
-  border-bottom:1px solid var(--gold);box-shadow:0 10px 35px #000b
-}
-.site-header:before{content:"";position:absolute;inset:10px 0;border-block:1px solid #d8ad6233;pointer-events:none}
-.brand{grid-column:2;grid-row:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;text-align:center;z-index:2;line-height:1}
-.dragon-logo{display:block;width:260px;height:150px;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 0 12px #d8ad6255)}
-.brand-name{font:600 43px "Cinzel",Georgia,serif;letter-spacing:.2em;color:var(--gold-light);padding-left:.2em;text-shadow:0 2px 15px #d8ad6240}
-.brand-subtitle{font:10px "Cinzel",Georgia,serif;letter-spacing:.36em;color:var(--gold);margin-top:7px}
-.header-social{grid-column:1;grid-row:1;display:flex;align-items:center;gap:20px;padding-top:62px;z-index:3}
-.header-social a{width:32px;height:32px;color:var(--gold-light);transition:.2s}
-.header-social a:hover{color:white;transform:translateY(-2px)}
-.header-social svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.main-nav{grid-column:3;grid-row:1;display:flex;justify-content:flex-end;align-items:center;gap:clamp(18px,2.5vw,38px);direction:rtl;padding-top:61px;z-index:3;white-space:nowrap}
-.main-nav a{font-size:15px;color:var(--gold-light);position:relative;padding:7px 0}
-.main-nav a:after{content:"";position:absolute;bottom:0;right:0;width:100%;height:2px;background:var(--gold);transform:scaleX(0);transition:.25s}
-.main-nav a:hover:after,.main-nav a.active:after{transform:scaleX(1)}
-.header-rule{position:absolute;left:0;right:0;bottom:0;height:1px;display:flex;align-items:center;justify-content:center}
-.header-rule span{height:1px;flex:1;background:linear-gradient(90deg,transparent,var(--gold))}
-.header-rule span:last-child{transform:rotate(180deg)}
-.header-rule b{font-size:25px;color:var(--gold);padding:0 12px;transform:translateY(1px)}
-.hero{position:relative;min-height:430px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:5%;padding:45px clamp(25px,7vw,110px);overflow:hidden;border-bottom:1px solid var(--gold);
-background:radial-gradient(ellipse at 28% 60%,#20364b 0%,transparent 42%),radial-gradient(ellipse at 80% 20%,#152b40 0%,transparent 44%),linear-gradient(110deg,#020b16,#0b1e31 52%,#020a14)}
-.hero:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(125deg,transparent 0 95px,#ffffff05 96px 97px);pointer-events:none}
-.hero-text{grid-column:1;grid-row:1;text-align:center;position:relative;z-index:1}
-.eyebrow{font:11px "Cinzel",Georgia,serif;letter-spacing:.23em;color:var(--gold)}
-.hero h1{font-size:clamp(34px,4.5vw,58px);font-weight:600;color:#e9b96e;margin:8px 0 2px;text-shadow:0 4px 18px #000}
-.hero-text p{font-size:clamp(17px,2vw,24px);color:#f4dfba;margin:0}
-.ornament{display:flex;align-items:center;justify-content:center;gap:13px;max-width:390px;margin:22px auto;color:var(--gold)}
-.ornament i{height:1px;flex:1;background:linear-gradient(90deg,transparent,var(--gold))}
-.ornament i:last-child{transform:rotate(180deg)}
-.ornament b{font-size:24px;font-weight:400}
-.gold-button{display:inline-flex;align-items:center;justify-content:center;gap:25px;min-width:200px;padding:10px 23px;border:1px solid var(--gold);border-radius:14px 3px;color:var(--gold-light);box-shadow:inset 0 0 0 1px #d8ad6225,0 8px 25px #0006;transition:.25s}
-.gold-button:hover{background:var(--gold-light);color:var(--navy)}
-.gold-button span{font-size:24px;line-height:1}
-.hero-image-wrap{grid-column:2;grid-row:1;display:flex;flex-direction:column;align-items:center;gap:12px;position:relative;z-index:1}
-.hero-image-frame{width:min(100%,500px);height:310px;padding:9px;border:1px solid var(--gold);background:linear-gradient(140deg,#d8ad6240,#071525);box-shadow:0 18px 42px #000b,inset 0 0 0 1px #f5dfad44;transform:rotate(-1deg)}
-.hero-image-frame img{width:100%;height:100%;display:block;object-fit:cover}
-.hero-image-caption{font:9px "Cinzel",Georgia,serif;letter-spacing:.3em;color:#d8b475}
-.hero-corner{position:absolute;width:85px;height:85px;border-color:#d8ad6266;pointer-events:none}
-.corner-right{right:15px;top:15px;border-right:1px solid;border-top:1px solid}
-.corner-left{left:15px;bottom:15px;border-left:1px solid;border-bottom:1px solid}
-.collection{padding:36px clamp(15px,5vw,75px) 42px;background:radial-gradient(ellipse at 50% 0%,#172e45 0%,transparent 68%),linear-gradient(#061626,#020a13);position:relative}
-.collection:before{content:"";position:absolute;inset:10px 14px;border:1px solid #d8ad622b;pointer-events:none}
-.section-title{display:flex;align-items:center;justify-content:center;gap:14px;max-width:1150px;margin:0 auto;text-align:center;position:relative}
-.section-title>span{height:1px;flex:1;background:linear-gradient(90deg,transparent,var(--gold))}
-.section-title>span:last-child{transform:rotate(180deg)}
-.section-title>b{font-size:20px;color:var(--gold);font-weight:400}
-.section-title h2{font-size:clamp(16px,2vw,24px);font-weight:600;color:#e9c17f;margin:0}
-.section-subtitle{text-align:center;color:var(--muted);font-size:12px;margin:10px 0 25px}
-.products{max-width:1320px;margin:auto;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;position:relative}
-.product-card{min-width:0;padding:7px;border:1px solid var(--gold);background:linear-gradient(145deg,#1b2b3b,#050e19 75%);box-shadow:0 9px 25px #0009,inset 0 0 0 1px #d8ad6233;position:relative;text-align:center;transition:transform .25s,border-color .25s}
-.product-card:before,.product-card:after{content:"";position:absolute;width:17px;height:17px;border-color:var(--gold-light);border-style:solid;z-index:1}
-.product-card:before{top:2px;right:2px;border-width:1px 1px 0 0}
-.product-card:after{bottom:2px;left:2px;border-width:0 0 1px 1px}
-.product-card:hover{transform:translateY(-5px);border-color:var(--gold-light)}
-.product-photo{height:auto;aspect-ratio:1.2/1;overflow:hidden;background:#0a1928}
-.product-photo img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .4s}
-.product-card:hover img{transform:scale(1.04)}
-.product-card h3{font-size:14px;font-weight:500;color:var(--gold-light);margin:10px 0 1px}
-.product-card p{font-size:11px;color:var(--muted);margin:0 0 9px}
-.product-card>a{display:inline-flex;align-items:center;gap:10px;font-size:10px;color:var(--gold);border-top:1px solid #d8ad6255;padding:7px 10px 1px}
-.benefits{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));padding:22px clamp(15px,5vw,75px);background:linear-gradient(180deg,#071a2b,#020b16);border-block:1px solid var(--gold)}
-.benefit{display:flex;align-items:center;justify-content:center;gap:15px;padding:5px 14px;border-left:1px solid #d8ad6277}
-.benefit:last-child{border-left:0}
-.benefit-icon{font-size:43px;line-height:1;color:#e3b76f}
-.benefit h3{font-size:15px;color:#edc781;margin:0;font-weight:600}
-.benefit p{font-size:11px;color:#cdbb9d;margin:0}
-.about{text-align:center;padding:55px 20px 60px;background:radial-gradient(ellipse at center,#142b40,#030b15 72%)}
-.about h2{font-size:28px;color:var(--gold-light);margin:7px 0}
-.about>p{max-width:650px;margin:0 auto 22px;color:#d7c6a8;font-size:14px}
-.footer{text-align:center;padding:35px 18px 22px;background:#020914;border-top:1px solid var(--gold)}
-.footer-brand{font:600 27px "Cinzel",Georgia,serif;letter-spacing:.2em;color:var(--gold-light)}
-.footer-brand span{display:block;font:9px "Cinzel",Georgia,serif;letter-spacing:.3em;color:var(--gold);margin-top:7px}
-.footer p{font-size:12px;color:var(--muted);margin:18px 0 8px}
-.footer-instagram{color:var(--gold-light);font-size:13px}
-.footer small{display:block;margin-top:25px;color:#927b58;font:9px "Cinzel",Georgia,serif;letter-spacing:.12em}
-@media(max-width:900px){
- .site-header{min-height:220px;grid-template-columns:1fr 250px 1fr;padding-inline:18px}
- .dragon-logo{width:210px;height:125px}
- .brand-name{font-size:36px}
- .header-social{gap:12px;padding-top:55px}
- .main-nav{gap:15px;padding-top:55px}
- .main-nav a{font-size:13px}
- .hero{min-height:390px;padding-inline:28px}
- .hero-image-frame{height:260px}
- .products{gap:12px}
- .benefit{gap:9px;padding-inline:8px}
-}
-@media(max-width:620px){
- .site-header{min-height:190px;display:flex;flex-direction:column;align-items:center;padding:4px 8px 0}
- .brand{order:1;height:132px;width:210px}
- .dragon-logo{width:180px;height:91px}
- .brand-name{font-size:30px}
- .brand-subtitle{font-size:8px;margin-top:5px}
- .header-social{position:absolute;left:10px;top:17px;padding:0;gap:4px}
- .header-social a{width:24px;height:24px}
- .main-nav{position:absolute;right:10px;left:10px;bottom:9px;top:auto;justify-content:center;gap:clamp(13px,4vw,24px);padding:0}
- .main-nav a{font-size:11px;padding:4px 0}
- .header-rule{bottom:0}
- .hero{grid-template-columns:1fr;gap:24px;padding:29px 18px 25px}
- .hero-text{grid-column:1;grid-row:1;padding-top:5px}
- .hero-image-wrap{grid-column:1;grid-row:2}
- .hero h1{font-size:34px}
- .hero-text p{font-size:16px}
- .ornament{margin:14px auto}
- .hero-image-frame{width:min(100%,430px);height:230px;transform:none}
- .hero-image-caption{font-size:8px}
- .collection{padding:27px 14px 30px}
- .section-title{gap:7px}
- .section-title h2{font-size:15px;line-height:1.6}
- .section-title>b{font-size:14px}
- .section-subtitle{font-size:10px;margin:8px 0 17px}
- .products{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
- .product-card{padding:5px}
- .product-photo{aspect-ratio:1/1.05}
- .product-card h3{font-size:12px;margin-top:7px}
- .product-card p{font-size:9px}
- .product-card>a{font-size:9px;padding-top:6px}
- .benefits{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 0;padding:15px 8px}
- .benefit{justify-content:flex-start;padding:7px 8px;gap:9px}
- .benefit:nth-child(2){border-left:0}
- .benefit-icon{font-size:31px}
- .benefit h3{font-size:12px}
- .benefit p{font-size:9px}
- .about{padding:42px 20px}
- .about h2{font-size:24px}
- .about>p{font-size:12px}
-}
-@media(max-width:360px){
- .header-social{left:5px}
- .header-social a{width:21px;height:21px}
- .main-nav{gap:11px}
- .main-nav a{font-size:10px}
- .brand{width:185px}
- .dragon-logo{width:160px}
-}
+.header{min-height:112px;padding:14px 5vw;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:25px;background:linear-gradient(110deg,#080d18,#17243a 52%,#080d18);border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:12px;direction:ltr;justify-self:start}
+.brand img{width:68px;height:68px;object-fit:contain;filter:drop-shadow(0 0 10px #c9a56855)}
+.brand span,.footer-brand{font:600 25px "Cinzel",Georgia,serif;letter-spacing:.2em;color:var(--pale)}
+.brand small{display:block;font:8px "Cinzel",Georgia,serif;letter-spacing:.18em;color:var(--gold);margin-top:3px}
+.brand span{display:block}
+.brand nav{display:flex}
+.header nav{display:flex;align-items:center;gap:clamp(18px,3vw,42px)}
+.header nav a{font-size:13px;color:#e6d5b6;transition:color .2s}
+.header nav a:hover,.instagram:hover{color:white}
+.instagram{justify-self:end;direction:ltr;font:10px "Cinzel",Georgia,serif;letter-spacing:.13em;color:var(--gold)}
+.hero{min-height:650px;position:relative;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:55px 9vw 85px;background:radial-gradient(ellipse at 72% 48%,#29354a 0%,#111c2e 37%,transparent 68%),linear-gradient(115deg,#080d18,#111b2c 65%,#080d18)}
+.hero:before{content:"";position:absolute;inset:18px;border:1px solid #c9a56824;pointer-events:none}
+.hero-copy{grid-column:1;grid-row:1;position:relative;z-index:2;padding:25px 0}
+.kicker{font:10px "Cinzel",Georgia,serif;letter-spacing:.28em;color:var(--gold);margin:0 0 18px}
+.hero h1{font-size:clamp(48px,6vw,82px);font-weight:400;line-height:1.25;margin:0;color:#f4e5ca}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.intro{font-size:16px;line-height:2.2;color:#c9c0b1;margin:24px 0 30px}
+.outline-link{display:inline-flex;align-items:center;gap:28px;border:1px solid var(--gold);padding:10px 20px;color:var(--pale);font-size:13px;transition:.25s}
+.outline-link:hover{background:var(--gold);color:var(--ink)}
+.outline-link b{font-size:20px;font-weight:400}
+.hero-art{grid-column:2;grid-row:1;position:relative;display:flex;align-items:center;justify-content:center;min-height:440px}
+.art-frame{width:min(100%,490px);aspect-ratio:1/1;display:grid;place-items:center;position:relative}
+.art-frame:before,.art-frame:after{content:"";position:absolute;inset:3%;border:1px solid #c9a56855;transform:rotate(45deg)}
+.art-frame:after{inset:12%;border-color:#c9a5682b;transform:rotate(0)}
+.art-frame img{position:relative;z-index:1;width:88%;height:88%;object-fit:contain;filter:drop-shadow(0 14px 32px #000b)}
+.vertical-note{position:absolute;right:-38px;top:50%;writing-mode:vertical-rl;transform:translateY(-50%);font:8px "Cinzel",Georgia,serif;letter-spacing:.22em;color:#b89a68}
+.hero-mark{position:absolute;left:5%;top:7%;font:8px "Cinzel",Georgia,serif;letter-spacing:.2em;color:#8f806a;writing-mode:vertical-rl}
+.hero-bottom{position:absolute;bottom:25px;left:9%;right:9%;display:flex;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;font:8px "Cinzel",Georgia,serif;letter-spacing:.2em;color:#9f927d}
+.story{text-align:center;padding:95px 22px 105px;background:linear-gradient(180deg,#101b2d,#080d18)}
+.story h2{font-size:clamp(26px,4vw,40px);font-weight:400;color:var(--pale);margin:0}
+.rule{display:flex;align-items:center;justify-content:center;gap:14px;max-width:220px;margin:20px auto;color:var(--gold)}
+.rule i{height:1px;flex:1;background:var(--gold)}
+.story>p:last-child{max-width:610px;margin:0 auto;color:#bfb5a5;font-size:14px;line-height:2.3}
+footer{text-align:center;padding:45px 20px 24px;border-top:1px solid var(--line);background:#060a12}
+.footer-brand{display:inline-block;font-size:23px}
+footer p{font-size:12px;color:var(--muted);margin:12px 0}
+footer>a:not(.footer-brand){font:11px "Cinzel",Georgia,serif;letter-spacing:.12em;color:var(--gold)}
+footer small{display:block;margin-top:28px;font:8px "Cinzel",Georgia,serif;letter-spacing:.15em;color:#81745e}
+@media(max-width:760px){.header{grid-template-columns:1fr auto;gap:10px;padding:12px 18px}.brand img{width:52px;height:52px}.brand span{font-size:20px}.brand small{font-size:7px}.header nav{grid-column:1/-1;grid-row:2;justify-content:center;gap:25px;padding:8px 0 2px}.header nav a{font-size:11px}.instagram{grid-column:2;grid-row:1;font-size:8px}.hero{min-height:unset;grid-template-columns:1fr;padding:30px 28px 75px;gap:12px}.hero-art{grid-column:1;grid-row:1;min-height:290px}.art-frame{max-width:320px}.hero-copy{grid-column:1;grid-row:2;text-align:center;padding:10px 0 20px}.hero h1{font-size:48px}.intro{font-size:13px;margin:15px 0 22px}.hero-mark{display:none}.vertical-note{right:-8px;font-size:7px}.hero-bottom{left:7%;right:7%;font-size:7px}.story{padding:65px 24px 75px}.story>p:last-child{font-size:12px}}
+@media(max-width:360px){.header nav{gap:16px}.brand img{width:45px;height:45px}.brand span{font-size:18px}.instagram{font-size:7px}}
