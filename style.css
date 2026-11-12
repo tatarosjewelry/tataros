@@ -332,3 +332,27 @@ body{font-size:15px !important;line-height:2.35 !important}
   .site-header .wordmark span{font-size:31px !important}
   .footer-wordmark{font-size:32px !important}
 }
+
+
+/* Header social brand marks — delicate gold line icons */
+.site-header>.socials{
+  display:flex !important;align-items:center !important;gap:13px !important;
+  direction:ltr !important;font-size:initial !important;
+}
+.site-header>.socials>a{
+  display:grid !important;place-items:center !important;
+  width:25px !important;height:25px !important;
+  color:#e4c47e !important;transition:color .2s ease,transform .2s ease;
+}
+.site-header>.socials>a:hover{color:#fff0c4 !important;transform:translateY(-2px)}
+.site-header>.socials svg{
+  display:block;width:21px;height:21px;fill:none;stroke:currentColor;
+  stroke-width:1.55;stroke-linecap:round;stroke-linejoin:round;
+}
+.site-header>.socials svg .social-dot{fill:currentColor;stroke:none}
+.site-header>.socials>a:nth-child(2) svg{stroke-width:1.35}
+@media(max-width:760px){
+ .site-header>.socials{gap:8px !important}
+ .site-header>.socials>a{width:22px !important;height:22px !important}
+ .site-header>.socials svg{width:19px;height:19px}
+}
