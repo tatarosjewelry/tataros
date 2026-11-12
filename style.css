@@ -175,3 +175,15 @@ footer{background:rgba(3,8,15,.88) !important}
 .wordmark span{font-family:"Cinzel",serif !important;font-size:19px !important;font-weight:500 !important;letter-spacing:.19em !important;line-height:1.15 !important;color:#e4c47e !important;text-shadow:0 1px 8px rgba(212,173,98,.24) !important}
 .wordmark small{font-size:6px !important;letter-spacing:.28em !important}
 @media(max-width:760px){.site-header{grid-template-columns:1fr auto 1fr !important}.wordmark{grid-column:2 !important;grid-row:1 !important;justify-self:center !important}.wordmark span{font-size:16px !important;letter-spacing:.16em !important}.main-nav{grid-column:1/-1 !important;grid-row:2 !important}}
+
+
+/* Keep header social icons clear of the centered TATAROS wordmark */
+.site-header>.wordmark{grid-column:2 !important;grid-row:1 !important}
+.site-header>.main-nav{grid-column:1 !important;grid-row:1 !important}
+.site-header>.socials{grid-column:3 !important;grid-row:1 !important;justify-self:end !important;position:relative !important;z-index:3 !important}
+@media(max-width:760px){
+  .site-header{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr) !important}
+  .site-header>.wordmark{grid-column:2 !important;grid-row:1 !important;justify-self:center !important}
+  .site-header>.socials{grid-column:3 !important;grid-row:1 !important;justify-self:end !important;gap:7px !important;font-size:17px !important}
+  .site-header>.main-nav{grid-column:1/-1 !important;grid-row:2 !important}
+}
