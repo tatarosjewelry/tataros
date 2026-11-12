@@ -50,3 +50,134 @@ footer>a:not(.footer-brand){display:inline-block;font:11px "Cinzel",Georgia,seri
 footer small{display:block;margin-top:30px;padding-top:16px;border-top:1px solid #c9a56825;font:8px "Cinzel",Georgia,serif;letter-spacing:.15em;color:#91836c}
 @media(max-width:760px){.header{grid-template-columns:1fr auto;gap:10px;padding:13px 18px;min-height:unset}.brand span{font-size:21px}.brand small{font-size:7px}.header nav{grid-column:1/-1;grid-row:2;justify-content:center;gap:25px;padding:8px 0 2px}.header nav a{font-size:11px}.instagram{grid-column:2;grid-row:1;font-size:8px;padding:7px 9px}.hero{min-height:unset;grid-template-columns:1fr;padding:34px 28px 78px;gap:8px}.hero-art{grid-column:1;grid-row:1;min-height:300px}.art-frame{max-width:320px}.hero-copy{grid-column:1;grid-row:2;text-align:center;padding:10px 0 22px}.hero h1{font-size:48px}.intro{font-size:13px;margin:15px 0 22px}.hero-mark{display:none}.vertical-note{right:-8px;font-size:7px}.hero-bottom{left:7%;right:7%;font-size:7px}.story{padding:75px 24px 85px}.story:before{background-size:75vw auto}.story>p:last-child{font-size:12px}.story:after{inset:12px}}
 @media(max-width:360px){.header nav{gap:16px}.brand span{font-size:18px}.instagram{font-size:7px}}
+
+
+/* TATAROS — dragon-inspired visual language */
+body{
+  background-color:#070b13;
+  background-image:
+    radial-gradient(ellipse at 50% -12%,#263852 0%,transparent 54%),
+    repeating-radial-gradient(ellipse at 50% 0%,transparent 0 27px,#c9a5680a 28px 29px,transparent 30px 57px),
+    linear-gradient(180deg,#0a1322 0%,#080d17 48%,#05080e 100%);
+}
+body:before{
+  opacity:.24;
+  background:
+    radial-gradient(ellipse 42px 24px at 50% 0%,transparent 65%,#c9a56820 67%,transparent 72%) 0 0/64px 34px,
+    radial-gradient(ellipse 42px 24px at 50% 0%,transparent 65%,#c9a56816 67%,transparent 72%) 32px 17px/64px 34px;
+  mask-image:linear-gradient(180deg,#000,transparent 85%);
+}
+.header{
+  background:
+    radial-gradient(ellipse at 50% 0%,#293a54 0%,transparent 70%),
+    repeating-linear-gradient(135deg,#c9a56808 0 1px,transparent 1px 18px),
+    linear-gradient(100deg,#070b13f7,#17243af5 50%,#070b13f7);
+  border-bottom-color:#d2b47788;
+}
+.header:before{
+  content:"";
+  position:absolute;
+  inset:7px 2.5%;
+  border:1px solid #c9a56820;
+  pointer-events:none;
+}
+.brand span{letter-spacing:.25em}
+.hero{
+  background:
+    radial-gradient(ellipse at 72% 48%,#40516a 0%,#1b2b43 29%,#0d1728 62%,#070b13 100%);
+}
+.hero:after{
+  opacity:.23;
+  background:
+    radial-gradient(ellipse 48px 28px at 50% 0%,transparent 62%,#d1b47770 65%,transparent 70%) 0 0/72px 42px,
+    radial-gradient(ellipse 48px 28px at 50% 0%,transparent 62%,#d1b47755 65%,transparent 70%) 36px 21px/72px 42px;
+  mask-image:linear-gradient(90deg,transparent 0%,#000 22%,#000 78%,transparent 100%);
+}
+.hero:before{
+  inset:20px;
+  border:1px solid #d5b77966;
+  outline:1px solid #c9a56818;
+  outline-offset:6px;
+}
+.hero-copy:before{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  inset:-35px -42px -35px -18px;
+  background:radial-gradient(ellipse at 45% 50%,#070d18a8,transparent 72%);
+}
+.art-frame:before{
+  inset:2%;
+  border:1px solid #e0c18a;
+  box-shadow:0 0 55px #c9a56818,inset 0 0 40px #c9a5680b;
+}
+.art-frame:after{
+  inset:11%;
+  border:1px solid #c9a56866;
+}
+.hero-bottom{
+  border-image:linear-gradient(90deg,transparent,#c9a568aa,transparent) 1;
+}
+.story{
+  background:
+    radial-gradient(ellipse at 50% 50%,#1b2a40 0%,#101b2c 44%,#080d17 100%);
+}
+.story:before{
+  background:
+    radial-gradient(ellipse 58px 34px at 50% 0%,transparent 62%,#c9a56824 65%,transparent 70%) 0 0/86px 50px,
+    radial-gradient(ellipse 58px 34px at 50% 0%,transparent 62%,#c9a5681b 65%,transparent 70%) 43px 25px/86px 50px,
+    radial-gradient(circle at center,#c9a5680b 0 1px,transparent 2px);
+  background-size:86px 50px,86px 50px,100% 100%;
+  opacity:.8;
+  filter:none;
+  mask-image:radial-gradient(ellipse at center,#000 0%,transparent 78%);
+}
+.story:after{
+  inset:24px;
+  border:1px solid #c9a5683b;
+  outline:1px solid #c9a56812;
+  outline-offset:6px;
+}
+.story .kicker{letter-spacing:.34em}
+.story h2{
+  text-shadow:0 0 28px #c9a56820,0 3px 18px #000;
+}
+.rule{max-width:270px}
+.rule b{
+  display:grid;
+  place-items:center;
+  width:30px;height:30px;
+  border:1px solid #c9a56888;
+  transform:rotate(45deg);
+  font-size:14px;
+}
+footer{
+  background:
+    radial-gradient(ellipse at 50% 0%,#1b2b42 0%,#0b1220 48%,#05080e 100%);
+  overflow:hidden;
+}
+footer:after{
+  content:"";
+  position:absolute;
+  inset:10px 2.5%;
+  border:1px solid #c9a56828;
+  pointer-events:none;
+}
+footer:before{
+  content:"✧";
+  width:34px;height:34px;
+  display:grid;place-items:center;
+  border:1px solid #c9a56877;
+  transform:rotate(45deg);
+  margin:0 auto 16px;
+  color:var(--gold);
+}
+footer small{border-top-color:#c9a56840}
+@media(max-width:760px){
+  .header:before{inset:5px 9px}
+  .hero:before{inset:12px}
+  .hero:after{opacity:.16;background-size:58px 34px,58px 34px}
+  .story:after{inset:14px}
+  .story:before{background-size:64px 38px,64px 38px,100% 100%}
+  footer:after{inset:8px}
+}
