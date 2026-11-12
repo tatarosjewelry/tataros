@@ -209,3 +209,20 @@ footer{background:rgba(3,8,15,.88) !important}
 @media(max-width:760px){
   .hero h1{font-size:23px !important;line-height:2.15 !important}
 }
+
+
+/* Elegant geometric Kufic Persian title */
+.hero h1{
+  font-family:"Noto Kufi Arabic",sans-serif !important;
+  font-size:25px !important;
+  font-weight:500 !important;
+  line-height:1.9 !important;
+  letter-spacing:-.035em !important;
+  direction:rtl !important;
+  text-shadow:0 2px 12px rgba(0,0,0,.5) !important;
+  padding:0 0 8px !important;
+}
+.hero h1 em{font-family:inherit !important;font-style:normal !important}
+@media(max-width:760px){
+  .hero h1{font-size:21px !important;line-height:2 !important;letter-spacing:-.04em !important}
+}
