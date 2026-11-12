@@ -3,58 +3,89 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#080d18">
-  <meta name="description" content="تاتاروس جواهری؛ هویتی متمایز با الهام از نشان اژدهای تاتاروس.">
-  <title>تاتاروس | TATAROS JEWELRY</title>
+  <meta name="theme-color" content="#06101e">
+  <meta name="description" content="تاتاروس جواهری؛ مجموعه‌ای از جواهرات، نقره و سنگ‌های طبیعی با انتخابی اصیل و متمایز.">
+  <title>تاتاروس جواهری | TATAROS</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=15">
+  <link rel="stylesheet" href="style.css?v=16">
 </head>
 <body>
-  <header class="header" id="home">
-    <a class="brand" href="#home" aria-label="Tataros">
-      <span>TATAROS</span>
-      <small>JEWELRY · ART · IDENTITY</small>
-    </a>
-    <nav aria-label="منوی اصلی">
-      <a href="#home">خانه</a>
-      <a href="#story">داستان تاتاروس</a>
-      <a href="#contact">ارتباط با ما</a>
+  <header class="site-header" id="home">
+    <a class="wordmark" href="#home" aria-label="Tataros home"><span>TATAROS</span><small>JEWELRY &amp; LUXURY</small></a>
+    <nav class="main-nav" aria-label="منوی اصلی">
+      <a class="active" href="#home">خانه</a><a href="#collection">کالکشن</a><a href="#story">درباره ما</a><a href="#contact">تماس</a>
     </nav>
-    <a class="instagram" href="https://www.instagram.com/tatarosjewelry/" target="_blank" rel="noopener">INSTAGRAM ↗</a>
+    <div class="socials">
+      <a href="https://www.instagram.com/tatarosjewelry/" target="_blank" rel="noopener" aria-label="Instagram">◎</a>
+      <span></span><a href="#contact" aria-label="Telegram">➤</a>
+    </div>
   </header>
 
   <main>
-    <section class="hero">
-      <div class="hero-mark"><span>THE SIGNATURE OF TATAROS</span></div>
-      <div class="hero-copy">
-        <p class="kicker">BEYOND THE ORDINARY</p>
-        <h1>فراتر از یک<br><em>نشان</em></h1>
-        <p class="intro">تاتاروس؛ امضایی از قدرت، اصالت و ظرافت.<br>هویتی که از یک تصویر آغاز می‌شود.</p>
-        <a class="outline-link" href="#story">کشف دنیای تاتاروس <b>←</b></a>
-      </div>
+    <section class="hero" aria-label="معرفی تاتاروس">
+      <div class="hero-atmosphere"></div>
       <div class="hero-art">
-        <div class="art-frame">
-          <img src="deragon-jewel.PNG" alt="نشان اصلی اژدهای تاتاروس">
-        </div>
-        <span class="vertical-note">TATAROS · EST. WITH CHARACTER</span>
+        <div class="hero-art-halo"></div>
+        <img src="deragon-jewel.PNG" alt="نشان اژدهای تاتاروس">
+        <span class="art-caption">THE EMBLEM OF TATAROS</span>
       </div>
-      <div class="hero-bottom"><span>01 — A NEW CHAPTER</span><span>CRAFTED WITH CHARACTER</span></div>
+      <div class="hero-content">
+        <p class="eyebrow">A DISTINCTIVE SIGNATURE</p>
+        <h1>تاتاروس <em>جواهری</em></h1>
+        <p class="hero-subtitle">جواهرات، نقره و سنگ‌های طبیعی</p>
+        <div class="ornament"><i></i><b>✧</b><i></i></div>
+        <p class="hero-description">زیبایی در جزئیات است؛<br>اصالت، در انتخابی که امضای شما می‌شود.</p>
+        <a class="gold-button" href="#collection">مشاهده کالکشن <span>‹</span></a>
+      </div>
+      <div class="hero-index"><span>01</span><i></i><span>THE ART OF DETAIL</span></div>
     </section>
 
-    <section class="story" id="story">
-      <p class="kicker">THE WORLD OF TATAROS</p>
-      <h2>هویت، پیش از هر چیز</h2>
-      <div class="rule"><i></i><b>✧</b><i></i></div>
-      <p>اژدها، نشان قدرت و تمایز تاتاروس است؛ نقطه آغاز دنیایی که در آن اصالت، طراحی و جزئیات در کنار هم معنا پیدا می‌کنند. اینجا شروع روایت تازه تاتاروس است.</p>
+    <section class="collection section-shell" id="collection">
+      <div class="section-heading">
+        <p class="eyebrow">CURATED FOR YOU</p>
+        <h2>کالکشن تاتاروس</h2>
+        <p>انتخابی از زیبایی‌های ماندگار</p>
+      </div>
+      <div class="collection-grid">
+        <a class="collection-card sapphire" href="https://www.instagram.com/tatarosjewelry/" target="_blank" rel="noopener">
+          <div class="gem gem-blue"><span></span></div><b>سنگ‌های طبیعی</b><small>NATURAL STONES</small>
+        </a>
+        <a class="collection-card turquoise" href="https://www.instagram.com/tatarosjewelry/" target="_blank" rel="noopener">
+          <div class="gem gem-turquoise"><span></span></div><b>فیروزه و نقره</b><small>TURQUOISE &amp; SILVER</small>
+        </a>
+        <a class="collection-card ruby" href="https://www.instagram.com/tatarosjewelry/" target="_blank" rel="noopener">
+          <div class="gem gem-ruby"><span></span></div><b>جواهرات خاص</b><small>FINE JEWELRY</small>
+        </a>
+        <a class="collection-card emerald" href="https://www.instagram.com/tatarosjewelry/" target="_blank" rel="noopener">
+          <div class="gem gem-emerald"><span></span></div><b>انتخاب تاتاروس</b><small>THE SIGNATURE EDIT</small>
+        </a>
+      </div>
+      <a class="text-link" href="https://www.instagram.com/tatarosjewelry/" target="_blank" rel="noopener">دیدن محصولات در اینستاگرام <span>↗</span></a>
+    </section>
+
+    <section class="promise">
+      <div class="promise-item"><span class="promise-icon">♢</span><div><b>اصالت در انتخاب</b><small>توجه به جزئیات و کیفیت</small></div></div>
+      <i class="promise-separator"></i>
+      <div class="promise-item"><span class="promise-icon">◇</span><div><b>سنگ‌های طبیعی</b><small>زیبایی با هویت منحصربه‌فرد</small></div></div>
+      <i class="promise-separator"></i>
+      <div class="promise-item"><span class="promise-icon">✧</span><div><b>ظرافت ماندگار</b><small>طراحی فراتر از زمان</small></div></div>
+      <i class="promise-separator"></i>
+      <div class="promise-item"><span class="promise-icon">♛</span><div><b>تجربه تاتاروس</b><small>انتخابی خاص برای خاص‌پسندان</small></div></div>
+    </section>
+
+    <section class="story section-shell" id="story">
+      <p class="eyebrow">THE STORY BEHIND THE SIGN</p>
+      <h2>قدرت در اصالت، زیبایی در جزئیات</h2>
+      <p>اژدها، الهام‌بخش هویت تاتاروس است؛ نشانی از قدرت و تمایز. در دنیای تاتاروس، هر انتخاب با دقت، ظرافت و احترام به زیبایی طبیعی شکل می‌گیرد.</p>
     </section>
   </main>
 
   <footer id="contact">
-    <a class="footer-brand" href="#home">TATAROS</a>
-    <p>برای دنبال‌کردن دنیای تاتاروس با ما همراه باشید.</p>
-    <a href="https://www.instagram.com/tatarosjewelry/" target="_blank" rel="noopener">@tatarosjewelry ↗</a>
+    <a class="footer-wordmark" href="#home">TATAROS</a>
+    <p>برای آشنایی با تازه‌ترین انتخاب‌های تاتاروس همراه ما باشید.</p>
+    <a class="footer-instagram" href="https://www.instagram.com/tatarosjewelry/" target="_blank" rel="noopener">@tatarosjewelry ↗</a>
     <small>© TATAROS JEWELRY — ALL RIGHTS RESERVED</small>
   </footer>
 </body>
