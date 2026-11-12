@@ -1,46 +1,52 @@
-:root{--ink:#080d18;--navy:#101b2d;--navy2:#18243a;--gold:#c9a568;--pale:#f1dfbd;--muted:#b6aa96;--line:#c9a56855}
+:root{--ink:#070b13;--navy:#0d1728;--navy2:#17243a;--gold:#c9a568;--pale:#f1dfbd;--muted:#b6aa96;--line:#c9a56855}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--ink);color:var(--pale);font-family:"Vazirmatn",Tahoma,sans-serif;line-height:1.9}
+html{scroll-behavior:smooth;scroll-padding-top:30px}
+body{margin:0;background:radial-gradient(ellipse at 50% 0%,#1b2a42 0%,#0a111e 42%,#060910 100%);background-attachment:fixed;color:var(--pale);font-family:"Vazirmatn",Tahoma,sans-serif;line-height:1.9}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;opacity:.2;background:repeating-linear-gradient(135deg,transparent 0 70px,#c9a56808 71px,#c9a56808 72px,transparent 73px 145px)}
 a{color:inherit;text-decoration:none}
-.header{min-height:112px;padding:14px 5vw;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:25px;background:linear-gradient(110deg,#080d18,#17243a 52%,#080d18);border-bottom:1px solid var(--line)}
-.brand{display:flex;align-items:center;gap:12px;direction:ltr;justify-self:start}
-.brand img{width:68px;height:68px;object-fit:contain;filter:drop-shadow(0 0 10px #c9a56855)}
-.brand span,.footer-brand{font:600 25px "Cinzel",Georgia,serif;letter-spacing:.2em;color:var(--pale)}
-.brand small{display:block;font:8px "Cinzel",Georgia,serif;letter-spacing:.18em;color:var(--gold);margin-top:3px}
-.brand span{display:block}
-.brand nav{display:flex}
+.header{min-height:104px;padding:15px 6vw;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:25px;background:linear-gradient(100deg,#070b13f5,#17243af2 50%,#070b13f5);border-bottom:1px solid var(--line);box-shadow:0 12px 35px #0005;position:relative;z-index:5}
+.header:after{content:"";position:absolute;bottom:-3px;left:8%;right:8%;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.5}
+.brand{display:flex;flex-direction:column;align-items:flex-start;gap:0;direction:ltr;justify-self:start}
+.brand span,.footer-brand{font:600 27px "Cinzel",Georgia,serif;letter-spacing:.22em;color:var(--pale);text-shadow:0 2px 18px #c9a56822}
+.brand small{display:block;font:8px "Cinzel",Georgia,serif;letter-spacing:.2em;color:var(--gold);margin-top:2px}
 .header nav{display:flex;align-items:center;gap:clamp(18px,3vw,42px)}
-.header nav a{font-size:13px;color:#e6d5b6;transition:color .2s}
-.header nav a:hover,.instagram:hover{color:white}
-.instagram{justify-self:end;direction:ltr;font:10px "Cinzel",Georgia,serif;letter-spacing:.13em;color:var(--gold)}
-.hero{min-height:650px;position:relative;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:55px 9vw 85px;background:radial-gradient(ellipse at 72% 48%,#29354a 0%,#111c2e 37%,transparent 68%),linear-gradient(115deg,#080d18,#111b2c 65%,#080d18)}
-.hero:before{content:"";position:absolute;inset:18px;border:1px solid #c9a56824;pointer-events:none}
+.header nav a{font-size:13px;color:#e6d5b6;transition:color .2s;position:relative;padding:8px 0}
+.header nav a:after{content:"";position:absolute;bottom:0;right:0;width:0;height:1px;background:var(--gold);transition:width .25s}
+.header nav a:hover{color:#fff}
+.header nav a:hover:after{width:100%}
+.instagram{justify-self:end;direction:ltr;font:10px "Cinzel",Georgia,serif;letter-spacing:.13em;color:var(--gold);border:1px solid #c9a56866;padding:9px 13px;transition:.25s}
+.instagram:hover{background:#c9a568;color:#080d18}
+.hero{min-height:700px;position:relative;isolation:isolate;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:60px 9vw 92px;background:radial-gradient(ellipse at 72% 48%,#34435b 0%,#17243a 32%,#0b1423 68%,#070b13 100%)}
+.hero:before{content:"";position:absolute;inset:18px;border:1px solid #c9a56845;pointer-events:none;z-index:-1}
+.hero:after{content:"";position:absolute;inset:0;z-index:-1;opacity:.13;background-image:linear-gradient(45deg,transparent 48%,#c9a568 49%,transparent 50%),linear-gradient(-45deg,transparent 48%,#c9a568 49%,transparent 50%);background-size:90px 90px;mask-image:linear-gradient(90deg,transparent,#000 65%,transparent)}
 .hero-copy{grid-column:1;grid-row:1;position:relative;z-index:2;padding:25px 0}
 .kicker{font:10px "Cinzel",Georgia,serif;letter-spacing:.28em;color:var(--gold);margin:0 0 18px}
-.hero h1{font-size:clamp(48px,6vw,82px);font-weight:400;line-height:1.25;margin:0;color:#f4e5ca}
-.hero h1 em{font-style:normal;color:var(--gold)}
+.hero h1{font-size:clamp(48px,6vw,82px);font-weight:400;line-height:1.25;margin:0;color:#f4e5ca;text-shadow:0 8px 28px #0006}
+.hero h1 em{font-style:normal;color:var(--gold);text-shadow:0 0 30px #c9a56835}
 .intro{font-size:16px;line-height:2.2;color:#c9c0b1;margin:24px 0 30px}
-.outline-link{display:inline-flex;align-items:center;gap:28px;border:1px solid var(--gold);padding:10px 20px;color:var(--pale);font-size:13px;transition:.25s}
-.outline-link:hover{background:var(--gold);color:var(--ink)}
+.outline-link{display:inline-flex;align-items:center;gap:28px;border:1px solid var(--gold);padding:10px 20px;color:var(--pale);font-size:13px;background:#080d1833;transition:.25s}
+.outline-link:hover{background:var(--gold);color:var(--ink);box-shadow:0 0 24px #c9a56833}
 .outline-link b{font-size:20px;font-weight:400}
-.hero-art{grid-column:2;grid-row:1;position:relative;display:flex;align-items:center;justify-content:center;min-height:440px}
+.hero-art{grid-column:2;grid-row:1;position:relative;display:flex;align-items:center;justify-content:center;min-height:470px}
 .art-frame{width:min(100%,490px);aspect-ratio:1/1;display:grid;place-items:center;position:relative}
-.art-frame:before,.art-frame:after{content:"";position:absolute;inset:3%;border:1px solid #c9a56855;transform:rotate(45deg)}
-.art-frame:after{inset:12%;border-color:#c9a5682b;transform:rotate(0)}
+.art-frame:before,.art-frame:after{content:"";position:absolute;inset:3%;border:1px solid #c9a56880;transform:rotate(45deg);box-shadow:0 0 35px #c9a56810}
+.art-frame:after{inset:12%;border-color:#c9a56845;transform:rotate(0)}
 .art-frame img{position:relative;z-index:1;width:88%;height:88%;object-fit:contain;filter:drop-shadow(0 14px 32px #000b)}
 .vertical-note{position:absolute;right:-38px;top:50%;writing-mode:vertical-rl;transform:translateY(-50%);font:8px "Cinzel",Georgia,serif;letter-spacing:.22em;color:#b89a68}
-.hero-mark{position:absolute;left:5%;top:7%;font:8px "Cinzel",Georgia,serif;letter-spacing:.2em;color:#8f806a;writing-mode:vertical-rl}
-.hero-bottom{position:absolute;bottom:25px;left:9%;right:9%;display:flex;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;font:8px "Cinzel",Georgia,serif;letter-spacing:.2em;color:#9f927d}
-.story{text-align:center;padding:95px 22px 105px;background:linear-gradient(180deg,#101b2d,#080d18)}
-.story h2{font-size:clamp(26px,4vw,40px);font-weight:400;color:var(--pale);margin:0}
+.hero-mark{position:absolute;left:5%;top:7%;font:8px "Cinzel",Georgia,serif;letter-spacing:.2em;color:#b29a75;writing-mode:vertical-rl}
+.hero-bottom{position:absolute;bottom:25px;left:9%;right:9%;display:flex;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;font:8px "Cinzel",Georgia,serif;letter-spacing:.2em;color:#b4a080}
+.story{position:relative;isolation:isolate;overflow:hidden;text-align:center;padding:115px 22px 125px;background:linear-gradient(180deg,#111d30f5,#080d18f8);border-top:1px solid #c9a56822;border-bottom:1px solid #c9a56822}
+.story:before{content:"";position:absolute;z-index:-1;inset:0;background:url("deragon-jewel.PNG") center 48%/min(48vw,470px) auto no-repeat;opacity:.055;filter:sepia(.5);pointer-events:none}
+.story:after{content:"";position:absolute;z-index:-1;inset:22px;border:1px solid #c9a56820;pointer-events:none}
+.story h2{font-size:clamp(26px,4vw,40px);font-weight:400;color:var(--pale);margin:0;text-shadow:0 3px 18px #000}
 .rule{display:flex;align-items:center;justify-content:center;gap:14px;max-width:220px;margin:20px auto;color:var(--gold)}
-.rule i{height:1px;flex:1;background:var(--gold)}
-.story>p:last-child{max-width:610px;margin:0 auto;color:#bfb5a5;font-size:14px;line-height:2.3}
-footer{text-align:center;padding:45px 20px 24px;border-top:1px solid var(--line);background:#060a12}
-.footer-brand{display:inline-block;font-size:23px}
+.rule i{height:1px;flex:1;background:linear-gradient(90deg,transparent,var(--gold))}
+.story>p:last-child{max-width:610px;margin:0 auto;color:#d0c3ad;font-size:14px;line-height:2.3}
+footer{text-align:center;padding:55px 20px 26px;border-top:1px solid var(--line);background:radial-gradient(ellipse at 50% 0%,#17243a,#060910 72%);position:relative}
+footer:before{content:"✧";display:block;color:var(--gold);font-size:18px;margin:0 auto 12px}
+.footer-brand{display:inline-block;font-size:24px}
 footer p{font-size:12px;color:var(--muted);margin:12px 0}
-footer>a:not(.footer-brand){font:11px "Cinzel",Georgia,serif;letter-spacing:.12em;color:var(--gold)}
-footer small{display:block;margin-top:28px;font:8px "Cinzel",Georgia,serif;letter-spacing:.15em;color:#81745e}
-@media(max-width:760px){.header{grid-template-columns:1fr auto;gap:10px;padding:12px 18px}.brand img{width:52px;height:52px}.brand span{font-size:20px}.brand small{font-size:7px}.header nav{grid-column:1/-1;grid-row:2;justify-content:center;gap:25px;padding:8px 0 2px}.header nav a{font-size:11px}.instagram{grid-column:2;grid-row:1;font-size:8px}.hero{min-height:unset;grid-template-columns:1fr;padding:30px 28px 75px;gap:12px}.hero-art{grid-column:1;grid-row:1;min-height:290px}.art-frame{max-width:320px}.hero-copy{grid-column:1;grid-row:2;text-align:center;padding:10px 0 20px}.hero h1{font-size:48px}.intro{font-size:13px;margin:15px 0 22px}.hero-mark{display:none}.vertical-note{right:-8px;font-size:7px}.hero-bottom{left:7%;right:7%;font-size:7px}.story{padding:65px 24px 75px}.story>p:last-child{font-size:12px}}
-@media(max-width:360px){.header nav{gap:16px}.brand img{width:45px;height:45px}.brand span{font-size:18px}.instagram{font-size:7px}}
+footer>a:not(.footer-brand){display:inline-block;font:11px "Cinzel",Georgia,serif;letter-spacing:.12em;color:var(--gold);border-bottom:1px solid #c9a56866;padding-bottom:4px}
+footer small{display:block;margin-top:30px;padding-top:16px;border-top:1px solid #c9a56825;font:8px "Cinzel",Georgia,serif;letter-spacing:.15em;color:#91836c}
+@media(max-width:760px){.header{grid-template-columns:1fr auto;gap:10px;padding:13px 18px;min-height:unset}.brand span{font-size:21px}.brand small{font-size:7px}.header nav{grid-column:1/-1;grid-row:2;justify-content:center;gap:25px;padding:8px 0 2px}.header nav a{font-size:11px}.instagram{grid-column:2;grid-row:1;font-size:8px;padding:7px 9px}.hero{min-height:unset;grid-template-columns:1fr;padding:34px 28px 78px;gap:8px}.hero-art{grid-column:1;grid-row:1;min-height:300px}.art-frame{max-width:320px}.hero-copy{grid-column:1;grid-row:2;text-align:center;padding:10px 0 22px}.hero h1{font-size:48px}.intro{font-size:13px;margin:15px 0 22px}.hero-mark{display:none}.vertical-note{right:-8px;font-size:7px}.hero-bottom{left:7%;right:7%;font-size:7px}.story{padding:75px 24px 85px}.story:before{background-size:75vw auto}.story>p:last-child{font-size:12px}.story:after{inset:12px}}
+@media(max-width:360px){.header nav{gap:16px}.brand span{font-size:18px}.instagram{font-size:7px}}
