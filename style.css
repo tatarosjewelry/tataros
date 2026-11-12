@@ -226,3 +226,19 @@ footer{background:rgba(3,8,15,.88) !important}
 @media(max-width:760px){
   .hero h1{font-size:21px !important;line-height:2 !important;letter-spacing:-.04em !important}
 }
+
+
+/* Persian site-wide calligraphic typography: Katibeh, a Thuluth-influenced display face */
+body{font-family:"Katibeh","Vazirmatn",serif !important;font-size:19px !important;line-height:2 !important}
+body :is(h1,h2,h3,h4,p,a,button,small,b,strong,li,label,input,textarea){font-family:"Katibeh","Vazirmatn",serif}
+.site-header .main-nav a{font-size:19px !important}
+.hero h1{font-family:"Katibeh","Vazirmatn",serif !important;font-size:32px !important;font-weight:400 !important;line-height:2 !important}
+.hero-subtitle,.hero-description{font-family:"Katibeh","Vazirmatn",serif !important;font-size:20px !important;line-height:2 !important}
+.collection h2,.story h2,.promise b,.collection-card b{font-family:"Katibeh","Vazirmatn",serif !important;font-weight:400 !important}
+.wordmark,.wordmark span,.wordmark small,.eyebrow,.art-caption,.hero-index,.collection-card small,.footer-instagram,footer small{font-family:"Cinzel",Georgia,serif !important}
+@media(max-width:760px){
+ body{font-size:18px !important;line-height:2 !important}
+ .site-header .main-nav a{font-size:17px !important}
+ .hero h1{font-size:27px !important}
+ .hero-subtitle,.hero-description{font-size:18px !important}
+}
