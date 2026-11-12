@@ -1093,3 +1093,127 @@ a {
     font-size: 21px;
   }
 }
+
+
+/* ===== TATAROS ROYAL HEADER — CLEAN FINAL OVERRIDES ===== */
+.site-header {
+  height: 184px;
+  min-height: 184px;
+  padding: 10px 24px 14px;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 50% -18%, rgba(55, 91, 125, .58), transparent 58%),
+    linear-gradient(180deg, #102b47 0%, #081a2d 54%, #04101e 100%);
+  border-bottom: 1px solid #d8ad62;
+  box-shadow: 0 10px 30px rgba(0,0,0,.48), inset 0 -1px 0 rgba(245,223,173,.16);
+}
+.site-header::before {
+  inset: 8px 14px;
+  border: 1px solid rgba(216,173,98,.38);
+}
+.site-header > .brand {
+  width: 250px;
+  height: 120px;
+  margin-top: 0;
+  gap: 1px;
+}
+.site-header > .brand .dragon-logo {
+  width: 70px;
+  height: 64px;
+  filter: drop-shadow(0 0 13px rgba(216,173,98,.5));
+}
+.site-header > .brand .brand-name {
+  color: #f6e4bd;
+  font-size: 29px;
+  letter-spacing: .19em;
+  text-shadow: 0 2px 16px rgba(216,173,98,.28);
+}
+.site-header > .brand .brand-subtitle {
+  color: #d8ad62;
+  font-size: 9px;
+  letter-spacing: .34em;
+  margin-top: 6px;
+}
+.header-social {
+  left: clamp(22px, 5vw, 76px);
+  top: 42px;
+  gap: 17px;
+}
+.header-social .icon-link {
+  color: #f1d99f;
+  font-size: 24px;
+  transition: color .25s ease, transform .25s ease;
+}
+.header-social .icon-link:hover {
+  color: #fff8e8;
+  transform: translateY(-2px);
+}
+.main-nav {
+  bottom: 13px;
+  gap: clamp(24px, 4vw, 52px);
+}
+.main-nav a {
+  color: #f2dfb5;
+  font-size: 13px;
+  letter-spacing: .01em;
+}
+.main-nav a::after {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #e7c77f, transparent);
+}
+.main-nav a:hover,
+.main-nav a.active {
+  color: #fff4d8;
+}
+@media (max-width: 600px) {
+  .site-header {
+    height: 154px;
+    min-height: 154px;
+    padding: 5px 10px 8px;
+  }
+  .site-header::before {
+    inset: 7px 8px;
+  }
+  .site-header > .brand {
+    width: 150px;
+    height: 98px;
+    margin-top: 0;
+  }
+  .site-header > .brand .dragon-logo {
+    width: 51px;
+    height: 48px;
+  }
+  .site-header > .brand .brand-name {
+    font-size: 20px;
+    letter-spacing: .16em;
+  }
+  .site-header > .brand .brand-subtitle {
+    font-size: 7px;
+    letter-spacing: .25em;
+    margin-top: 4px;
+  }
+  .header-social {
+    left: 17px;
+    top: 25px;
+    gap: 5px;
+  }
+  .header-social .icon-link {
+    width: 25px;
+    height: 27px;
+    font-size: 19px;
+  }
+  .main-nav {
+    bottom: 8px;
+    width: calc(100% - 30px);
+    gap: clamp(16px, 5vw, 27px);
+  }
+  .main-nav a {
+    font-size: 11px;
+    padding: 4px 0;
+  }
+}
+@media (max-width: 360px) {
+  .header-social { left: 12px; gap: 2px; }
+  .main-nav { gap: 13px; }
+  .main-nav a { font-size: 10px; }
+}
