@@ -69,7 +69,7 @@ a{color:inherit;text-decoration:none}
 .promise-item small{font-size:10px;color:#c3b69e}
 .promise-separator{height:44px;width:1px;background:#c7964d88;justify-self:center}
 .story{text-align:center;padding-top:72px;padding-bottom:78px;background:radial-gradient(ellipse at 50% 0%,#12243a,#070d17 75%);position:relative;overflow:hidden}
-.story:before{content:"";position:absolute;inset:0;background:url("deragon-jewel.PNG") center 52%/220px auto no-repeat;opacity:.045;filter:sepia(1);pointer-events:none}
+.story:before{content:"";position:absolute;inset:0;background:url("Qasr.PNG") center 52%/220px auto no-repeat;opacity:.045;filter:sepia(1);pointer-events:none}
 .story .eyebrow,.story h2,.story>p:last-child{position:relative}
 .story h2{margin-bottom:14px}
 .story>p:last-child{max-width:650px;margin:0 auto;color:#cfc2a9;font-size:13px;line-height:2.3}
@@ -121,7 +121,7 @@ body:before{
   pointer-events:none;
   background:
     linear-gradient(180deg,rgba(3,8,16,.58),rgba(3,8,16,.70) 45%,rgba(3,8,16,.78)),
-    url("deragon-jewel.PNG") center center / cover no-repeat;
+    url("Qasr.PNG") center center / cover no-repeat;
   opacity:1;
 }
 body:after{
@@ -157,7 +157,13 @@ footer{background:rgba(3,8,15,.88) !important}
   body:before{
     background:
       linear-gradient(180deg,rgba(3,8,16,.62),rgba(3,8,16,.74) 48%,rgba(3,8,16,.82)),
-      url("deragon-jewel.PNG") center center / auto 100vh no-repeat;
+      url("Qasr.PNG") center center / auto 100vh no-repeat;
   }
   .hero{background:rgba(4,12,23,.34) !important}
 }
+
+
+/* QASR — palace artwork as the continuous full-page backdrop */
+.story:before{background:none !important}
+.hero-art{display:none !important}
+@media(max-width:760px){body:before{background:linear-gradient(180deg,rgba(3,8,16,.58),rgba(3,8,16,.70) 45%,rgba(3,8,16,.78)),url("Qasr.PNG") center center / cover no-repeat !important}}
