@@ -192,3 +192,20 @@ footer{background:rgba(3,8,15,.88) !important}
 /* Persian hero title in elegant Nastaliq */
 .hero h1{font-family:"Noto Nastaliq Urdu",serif !important;font-size:clamp(34px,4vw,48px) !important;font-weight:500 !important;line-height:2.05 !important;letter-spacing:0 !important;padding:0 0 10px !important}
 @media(max-width:760px){.hero h1{font-size:32px !important;line-height:2 !important}}
+
+
+/* Confirmed Nastaliq treatment — smaller and lighter */
+.hero h1{
+  font-family:"Noto Nastaliq Urdu",serif !important;
+  font-size:27px !important;
+  font-weight:400 !important;
+  line-height:2.1 !important;
+  letter-spacing:0 !important;
+  direction:rtl !important;
+  text-shadow:0 3px 14px rgba(0,0,0,.55) !important;
+  padding:0 0 8px !important;
+}
+.hero h1 em{font-family:inherit !important;font-style:normal !important}
+@media(max-width:760px){
+  .hero h1{font-size:23px !important;line-height:2.15 !important}
+}
