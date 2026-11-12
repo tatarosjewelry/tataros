@@ -587,3 +587,46 @@ body{line-height:2.15 !important}
   .collection-card b,.gemstone-card b,.promise-item b{font-size:11px !important}
   .collection:before,.gemstone-section:before,.promise:before,.story:before,footer:before{left:5%;right:5%}
 }
+
+
+/* TATARUS gemstone flipbook */
+.gemstone-book-wrap{width:min(100%,900px);margin:32px auto 12px;padding:0 12px}
+.gemstone-book{position:relative;padding:22px 22px 14px;background:linear-gradient(135deg,#0c2035,#06101d 55%,#10243a);border:1px solid #d9b46d;box-shadow:0 18px 48px #0008,inset 0 0 0 5px #d9b46d12}
+.gemstone-book:before{content:"";position:absolute;inset:8px;border:1px solid #d9b46d55;pointer-events:none}
+.gemstone-book-spread{display:grid;grid-template-columns:1fr 1fr;direction:rtl;min-height:360px;position:relative;perspective:1400px}
+.gemstone-page{position:relative;min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:25px 18px;background:linear-gradient(145deg,#f3e6c9,#d8c49c 70%,#c6ad7c);color:#172338;border:1px solid #b89556;overflow:hidden}
+.gemstone-page-right{border-radius:0 3px 3px 0;box-shadow:inset -8px 0 15px #4b371522}
+.gemstone-page-left{border-radius:3px 0 0 3px;box-shadow:inset 8px 0 15px #4b371522}
+.gemstone-page:before{content:"";position:absolute;inset:10px;border:1px solid #a47c3c99;pointer-events:none}
+.gemstone-page:after{content:"";position:absolute;inset:15px;background:repeating-linear-gradient(0deg,transparent 0 22px,#a47c3c0d 22px 23px);pointer-events:none}
+.gemstone-page-empty{background:linear-gradient(145deg,#e8d9b8,#c9b58d)}
+.gemstone-page .page-number{position:absolute;bottom:17px;font:10px Cinzel,serif;color:#826437;direction:ltr}
+.gemstone-page .stone-art{width:116px;height:116px;display:grid;place-items:center;margin-bottom:14px;position:relative;z-index:1}
+.gemstone-page .stone-art:before{content:"";width:80px;height:96px;clip-path:polygon(50% 0,90% 22%,100% 58%,73% 94%,50% 100%,27% 94%,0 58%,10% 22%);background:linear-gradient(135deg,var(--stone-light),var(--stone) 42%,var(--stone-dark) 78%,var(--stone-light));filter:drop-shadow(0 9px 7px #1c243866);box-shadow:inset 0 0 15px #fff8}
+.gemstone-page h3{position:relative;z-index:1;margin:0;color:#243148;font-size:21px;font-weight:600}
+.gemstone-page .stone-en{position:relative;z-index:1;font:10px Cinzel,serif;letter-spacing:.16em;color:#80643c;margin-top:5px;direction:ltr}
+.gemstone-page .stone-note{position:relative;z-index:1;font-size:11px;color:#5d503b;margin-top:12px}
+.gemstone-page .page-kufic{position:absolute;top:19px;color:#9c793f;font:16px Georgia,serif;letter-spacing:.35em;z-index:1}
+.gemstone-book-controls{display:flex;justify-content:center;align-items:center;gap:24px;margin-top:17px;direction:rtl;position:relative;z-index:2}
+.gemstone-book-controls button{border:1px solid #d9b46d;background:#091a2c;color:#f0d69a;padding:7px 17px;font:12px "Noto Kufi Arabic",sans-serif;cursor:pointer}
+.gemstone-book-controls button:disabled{opacity:.35;cursor:default}
+#gemstonePageCount{font:11px Cinzel,serif;color:#e8ca87;direction:ltr}
+.gemstone-book-hint{text-align:center;color:#c7b28e;font-size:10px;margin:10px 0 0}
+.gemstone-page.turning{animation:gemPageTurn .48s ease both}
+@keyframes gemPageTurn{0%{transform:rotateY(0);opacity:1}45%{transform:rotateY(-75deg);opacity:.45}100%{transform:rotateY(0);opacity:1}}
+@media(max-width:600px){
+ .gemstone-book-wrap{padding:0 3px;margin-top:22px}
+ .gemstone-book{padding:15px 12px 10px}
+ .gemstone-book-spread{min-height:260px}
+ .gemstone-page{padding:19px 8px}
+ .gemstone-page:before{inset:6px}
+ .gemstone-page .stone-art{width:78px;height:78px;margin-bottom:8px}
+ .gemstone-page .stone-art:before{width:56px;height:68px}
+ .gemstone-page h3{font-size:14px}
+ .gemstone-page .stone-en{font-size:7px;letter-spacing:.08em}
+ .gemstone-page .stone-note{font-size:8px;margin-top:7px}
+ .gemstone-page .page-kufic{font-size:11px;top:13px}
+ .gemstone-page .page-number{bottom:10px;font-size:8px}
+ .gemstone-book-controls{gap:12px;margin-top:12px}
+ .gemstone-book-controls button{font-size:10px;padding:6px 10px}
+}
