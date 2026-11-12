@@ -1217,3 +1217,20 @@ a {
   .main-nav { gap: 13px; }
   .main-nav a { font-size: 10px; }
 }
+
+
+/* Real crowned dragon artwork in the Tataros header */
+.site-header > .brand .dragon-logo {
+  display: block;
+  width: 112px;
+  height: 82px;
+  object-fit: contain;
+  object-position: center;
+  filter: drop-shadow(0 0 12px rgba(216,173,98,.58));
+}
+@media (max-width: 600px) {
+  .site-header > .brand .dragon-logo {
+    width: 72px;
+    height: 58px;
+  }
+}
