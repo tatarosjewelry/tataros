@@ -172,6 +172,6 @@ footer{background:rgba(3,8,15,.88) !important}
 /* Refined centered header wordmark */
 .site-header{position:relative;grid-template-columns:1fr auto 1fr !important}
 .wordmark{grid-column:2 !important;grid-row:1 !important;justify-self:center !important;align-self:center !important;position:relative;z-index:2}
-.wordmark span{font-family:"Italianno","Great Vibes",cursive !important;font-size:34px !important;font-weight:400 !important;letter-spacing:.02em !important;line-height:1.05 !important}
+.wordmark span{font-family:"Italianno","Great Vibes",cursive !important;font-size:28px !important;font-weight:400 !important;letter-spacing:.02em !important;line-height:1.05 !important}
 .wordmark small{font-size:7px !important;letter-spacing:.24em !important}
-@media(max-width:760px){.site-header{grid-template-columns:1fr auto 1fr !important}.wordmark{grid-column:2 !important;grid-row:1 !important;justify-self:center !important}.wordmark span{font-size:29px !important}.main-nav{grid-column:1/-1 !important;grid-row:2 !important}}
+@media(max-width:760px){.site-header{grid-template-columns:1fr auto 1fr !important}.wordmark{grid-column:2 !important;grid-row:1 !important;justify-self:center !important}.wordmark span{font-size:24px !important}.main-nav{grid-column:1/-1 !important;grid-row:2 !important}}
