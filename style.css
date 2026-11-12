@@ -423,3 +423,57 @@ body{font-size:15px !important;line-height:2.35 !important}
   .reel-caption small{font-size:6px !important;letter-spacing:.04em !important}
   .reel-open{font-size:8px !important;padding:3px 1px 5px !important}
 }
+
+
+/* TATAROS — neat, compact collection gallery */
+.collection-grid.reel-grid{
+  width:min(100%,820px) !important;
+  margin:0 auto !important;
+  display:grid !important;
+  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  gap:14px !important;
+  align-items:stretch !important;
+}
+.collection-grid.reel-grid .reel-card{
+  border-radius:5px !important;
+  outline:0 !important;
+  overflow:hidden !important;
+  box-shadow:0 6px 18px rgba(0,0,0,.22) !important;
+}
+.collection-grid.reel-grid .reel-frame{
+  width:100% !important;
+  aspect-ratio:4/5 !important;
+  max-height:250px !important;
+  overflow:hidden !important;
+}
+.collection-grid.reel-grid .reel-frame iframe{
+  width:100% !important;height:100% !important;min-height:0 !important;
+}
+.collection-grid.reel-grid .reel-caption{
+  min-height:52px !important;
+  justify-content:center !important;
+  padding:7px 5px 2px !important;
+}
+.collection-grid.reel-grid .reel-caption b{
+  font-size:12px !important;line-height:1.9 !important;
+}
+.collection-grid.reel-grid .reel-caption small{font-size:7px !important}
+.collection-grid.reel-grid .reel-open{
+  font-size:9px !important;padding:3px 4px 8px !important;
+}
+@media(max-width:760px){
+  .collection-grid.reel-grid{
+    width:100% !important;max-width:100% !important;
+    grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+    gap:8px !important;
+  }
+  .collection-grid.reel-grid .reel-frame{
+    aspect-ratio:4/5 !important;max-height:145px !important;
+  }
+  .collection-grid.reel-grid .reel-caption{
+    min-height:48px !important;padding:5px 2px 1px !important;
+  }
+  .collection-grid.reel-grid .reel-caption b{font-size:9px !important;line-height:1.8 !important}
+  .collection-grid.reel-grid .reel-caption small{font-size:5px !important;letter-spacing:.02em !important}
+  .collection-grid.reel-grid .reel-open{font-size:7px !important;padding:2px 1px 6px !important}
+}
