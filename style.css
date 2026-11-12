@@ -104,3 +104,60 @@ footer small{display:block;margin:26px auto 0;padding-top:14px;border-top:1px so
 .story{padding-top:55px;padding-bottom:58px}
 }
 @media(max-width:360px){.main-nav{gap:14px}.main-nav a{font-size:10px}.hero h1{font-size:38px}.collection-card{min-height:155px}}
+
+
+/* FULL-PAGE DRAGON BACKDROP — the original repository artwork anchors the entire page */
+html{background:#050b14}
+body{
+  position:relative;
+  isolation:isolate;
+  background:transparent !important;
+}
+body:before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-2;
+  pointer-events:none;
+  background:
+    linear-gradient(180deg,rgba(3,8,16,.58),rgba(3,8,16,.70) 45%,rgba(3,8,16,.78)),
+    url("deragon-jewel.PNG") center center / cover no-repeat;
+  opacity:1;
+}
+body:after{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+  background:
+    radial-gradient(ellipse at center,transparent 10%,rgba(2,7,14,.38) 100%),
+    linear-gradient(90deg,rgba(4,10,19,.45),transparent 50%,rgba(4,10,19,.45));
+}
+.site-header{
+  background:linear-gradient(90deg,rgba(4,10,19,.82),rgba(8,25,43,.72),rgba(4,10,19,.82)) !important;
+  backdrop-filter:blur(8px);
+}
+.hero{
+  background:linear-gradient(90deg,rgba(4,12,23,.54),rgba(5,16,29,.34),rgba(4,12,23,.54)) !important;
+}
+.hero-atmosphere{background:rgba(3,9,17,.18) !important}
+.collection{
+  background:linear-gradient(180deg,rgba(5,14,25,.78),rgba(7,22,37,.70),rgba(5,14,25,.78)) !important;
+}
+.promise{
+  background:linear-gradient(90deg,rgba(4,10,18,.84),rgba(8,25,42,.74),rgba(4,10,18,.84)) !important;
+}
+.story{
+  background:linear-gradient(180deg,rgba(6,16,29,.78),rgba(3,9,17,.82)) !important;
+}
+.story:before{opacity:.025 !important}
+footer{background:rgba(3,8,15,.88) !important}
+@media(max-width:760px){
+  body:before{
+    background:
+      linear-gradient(180deg,rgba(3,8,16,.62),rgba(3,8,16,.74) 48%,rgba(3,8,16,.82)),
+      url("deragon-jewel.PNG") center center / auto 100vh no-repeat;
+  }
+  .hero{background:rgba(4,12,23,.34) !important}
+}
