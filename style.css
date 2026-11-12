@@ -477,3 +477,38 @@ body{font-size:15px !important;line-height:2.35 !important}
   .collection-grid.reel-grid .reel-caption small{font-size:5px !important;letter-spacing:.02em !important}
   .collection-grid.reel-grid .reel-open{font-size:7px !important;padding:2px 1px 6px !important}
 }
+
+
+/* TATARUS — precious gemstone collection */
+.gemstone-section{
+  padding-top:42px !important;padding-bottom:48px !important;
+  border-top:1px solid rgba(212,173,98,.24);
+}
+.gemstone-grid{
+  width:min(100%,820px);margin:24px auto 18px;
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;
+}
+.gemstone-card{
+  min-height:155px;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:5px;text-decoration:none;text-align:center;color:#f0d69a;
+  border:1px solid rgba(212,173,98,.75);
+  box-shadow:inset 0 0 28px rgba(0,0,0,.28),0 8px 22px rgba(0,0,0,.22);
+  position:relative;overflow:hidden;
+}
+.gemstone-card:before{
+  content:"";position:absolute;inset:7px;border:1px solid rgba(243,217,154,.22);pointer-events:none;
+}
+.gemstone-symbol{font-family:Georgia,serif;font-size:32px;line-height:1.2;color:#f3d99a}
+.gemstone-card b{font-size:17px !important;color:#f3d99a}
+.gemstone-card small{font-family:"Cinzel",Georgia,serif;font-size:8px;letter-spacing:.14em;color:#e4c47e}
+.gemstone-turquoise{background:radial-gradient(ellipse at 50% 35%,#287f83 0%,#0d444b 42%,#061629 100%)}
+.gemstone-agate{background:radial-gradient(ellipse at 50% 35%,#a94c42 0%,#59221f 46%,#061629 100%)}
+.gemstone-sharaf{background:radial-gradient(ellipse at 50% 35%,#b58a42 0%,#61451f 46%,#061629 100%)}
+.gemstone-card:hover{transform:translateY(-3px);transition:transform .2s ease,filter .2s ease;filter:brightness(1.12)}
+@media(max-width:760px){
+  .gemstone-grid{gap:8px;margin:18px auto 14px}
+  .gemstone-card{min-height:112px}
+  .gemstone-symbol{font-size:25px}
+  .gemstone-card b{font-size:12px !important}
+  .gemstone-card small{font-size:6px;letter-spacing:.05em}
+}
