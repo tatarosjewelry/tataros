@@ -381,3 +381,45 @@ body{font-size:15px !important;line-height:2.35 !important}
  .reel-frame{max-height:none;aspect-ratio:9/16}
  .reel-frame iframe{min-height:430px}
 }
+
+
+/* TATAROS — compact side-by-side collection cards */
+.collection-grid.reel-grid{
+  display:grid !important;
+  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  gap:12px !important;
+  align-items:start !important;
+  max-width:100% !important;
+}
+.reel-card{
+  min-width:0 !important;
+  outline-offset:2px !important;
+}
+.reel-frame{
+  aspect-ratio:9/16 !important;
+  max-height:300px !important;
+}
+.reel-frame iframe{
+  width:100% !important;
+  height:100% !important;
+  min-height:0 !important;
+}
+.reel-caption{padding:7px 3px 2px !important;gap:0 !important}
+.reel-caption b{font-size:13px !important;line-height:1.8 !important}
+.reel-caption small{font-size:7px !important}
+.reel-open{font-size:9px !important;padding:4px 3px 7px !important}
+@media(max-width:760px){
+  .collection-grid.reel-grid{
+    grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+    gap:7px !important;
+    width:100% !important;
+    max-width:100% !important;
+  }
+  .reel-card{outline-offset:1px !important}
+  .reel-frame{aspect-ratio:9/16 !important;max-height:190px !important}
+  .reel-frame iframe{min-height:0 !important}
+  .reel-caption{padding:5px 2px 1px !important}
+  .reel-caption b{font-size:10px !important;line-height:1.7 !important}
+  .reel-caption small{font-size:6px !important;letter-spacing:.04em !important}
+  .reel-open{font-size:8px !important;padding:3px 1px 5px !important}
+}
