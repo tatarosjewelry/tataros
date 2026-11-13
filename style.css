@@ -1875,3 +1875,50 @@ body *{
     linear-gradient(18deg,transparent 0 37%,rgba(178,210,171,.06) 42%,rgba(0,0,0,.13) 48%,transparent 56%),
     linear-gradient(165deg,transparent 0 70%,rgba(181,214,174,.06) 76%,rgba(0,0,0,.12) 82%,transparent 90%);
 }
+
+
+/* TASBIH PAGE ONLY — uploaded emerald silk artwork across header, content and footer */
+body.tasbih-site{
+  position:relative !important;
+  isolation:isolate !important;
+  background:transparent !important;
+}
+body.tasbih-site:before{
+  content:"" !important;
+  position:fixed !important;
+  inset:0 !important;
+  z-index:-2 !important;
+  pointer-events:none !important;
+  background:
+    linear-gradient(180deg,rgba(0,20,15,.30),rgba(0,20,15,.42) 48%,rgba(0,15,12,.50)),
+    url("IMG_3907.jpeg") center center / cover no-repeat !important;
+  opacity:1 !important;
+}
+body.tasbih-site:after{
+  content:"" !important;
+  position:fixed !important;
+  inset:0 !important;
+  z-index:-1 !important;
+  pointer-events:none !important;
+  background:linear-gradient(90deg,rgba(0,15,12,.12),transparent 48%,rgba(0,15,12,.12)) !important;
+}
+body.tasbih-site .site-header{
+  background:rgba(0,24,18,.48) !important;
+  backdrop-filter:blur(3px) !important;
+}
+body.tasbih-site .tasbih-page{
+  background:transparent !important;
+  background-color:transparent !important;
+  background-image:none !important;
+}
+body.tasbih-site .tasbih-page > .catalog-intro,
+body.tasbih-site .tasbih-page > .tasbih-section,
+body.tasbih-site .tasbih-page > .tasbih-souvenir-section{
+  background:transparent !important;
+  background-color:transparent !important;
+  background-image:none !important;
+}
+body.tasbih-site footer{
+  background:rgba(0,19,14,.48) !important;
+  backdrop-filter:blur(3px) !important;
+}
