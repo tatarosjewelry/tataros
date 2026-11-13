@@ -27,6 +27,11 @@ content:
             type: string
             required: true
 
+          - name: category
+            label: دسته محصول (rings / gemstones / tasbih)
+            type: string
+            required: true
+
           - name: price
             label: قیمت به تومان
             type: number
