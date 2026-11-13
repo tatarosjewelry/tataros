@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
           const card = document.createElement("article");
           card.className = product.category === "tasbih" ? "tasbih-placeholder tasbih-product" : "gemstone-card gemstone-card-refined managed-product";
           const image = document.createElement("img");
-          image.className = "gemstone-photo";
+          image.className = product.category === "tasbih" ? "tasbih-photo gemstone-photo" : "gemstone-photo";
           image.loading = "lazy";
           image.alt = product.name || "محصول تاتاروس";
           let imagePath = product.image || "";
