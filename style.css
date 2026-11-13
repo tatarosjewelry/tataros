@@ -2015,3 +2015,46 @@ body.gemstones-site footer{
   .catalog-page .gemstone-card small,
   .catalog-page .reel-caption small{font-size:5px !important}
 }
+
+
+/* RINGS PAGE ONLY — IMG_3912 charcoal and silver luxury frame */
+body.rings-site{
+  position:relative !important;
+  isolation:isolate !important;
+  background:transparent !important;
+}
+body.rings-site:before{
+  content:"" !important;
+  position:fixed !important;
+  inset:0 !important;
+  z-index:-2 !important;
+  pointer-events:none !important;
+  background:
+    linear-gradient(180deg,rgba(9,10,15,.30),rgba(9,10,15,.38) 50%,rgba(5,7,11,.48)),
+    url("IMG_3912.jpeg") center center / cover no-repeat !important;
+  opacity:1 !important;
+}
+body.rings-site:after{
+  content:"" !important;
+  position:fixed !important;
+  inset:0 !important;
+  z-index:-1 !important;
+  pointer-events:none !important;
+  background:linear-gradient(90deg,rgba(5,7,11,.12),transparent 50%,rgba(5,7,11,.12)) !important;
+}
+body.rings-site .site-header{
+  background:rgba(12,13,19,.48) !important;
+  backdrop-filter:blur(3px) !important;
+}
+body.rings-site .catalog-page,
+body.rings-site .catalog-intro,
+body.rings-site .rings-section{
+  background:transparent !important;
+  background-color:transparent !important;
+  background-image:none !important;
+  box-shadow:none !important;
+}
+body.rings-site footer{
+  background:rgba(8,9,14,.52) !important;
+  backdrop-filter:blur(3px) !important;
+}
