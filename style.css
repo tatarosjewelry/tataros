@@ -1717,3 +1717,22 @@ body .footer-contact-links a{
   .category-door b{font-size:32px !important}
   .category-door i{font-size:18px !important}
 }
+
+/* TATAROS HOME — flowing, elongated Nastaliq calligraphy for collection names */
+.collection .category-door>b{
+  font-family:"Noto Nastaliq Urdu","Katibeh",serif !important;
+  font-size:36px !important;
+  font-weight:400 !important;
+  line-height:2.25 !important;
+  letter-spacing:0 !important;
+  padding:0 4px 8px !important;
+  color:#f5dca6 !important;
+  text-shadow:0 3px 16px rgba(0,0,0,.82),0 0 18px rgba(212,173,98,.16) !important;
+}
+@media(max-width:760px){
+  .collection .category-door>b{
+    font-size:34px !important;
+    line-height:2.2 !important;
+    padding-bottom:7px !important;
+  }
+}
