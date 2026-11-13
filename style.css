@@ -1293,3 +1293,15 @@ body:before{
   filter:blur(6px) !important;
   transform:scale(1.055);
 }
+
+
+/* PALACE PHOTO CLEARLY VISIBLE WITHIN EACH COLLECTION DOOR */
+.category-door{
+  background:
+    linear-gradient(180deg,rgba(3,10,18,.02) 0%,rgba(3,10,18,.08) 48%,rgba(3,10,18,.38) 100%),
+    url("Qasr.PNG") center 42% / cover no-repeat !important;
+  background-blend-mode:normal !important;
+}
+.category-door:before{
+  background:linear-gradient(180deg,rgba(5,15,25,.015),rgba(4,12,22,.06)) !important;
+}
