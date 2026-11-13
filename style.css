@@ -1545,3 +1545,34 @@ body:after{
   .collection .category-door>small{font-size:7px !important;letter-spacing:.12em !important}
   .collection .category-door>i{margin-top:10px !important;font-size:9px !important}
 }
+
+
+/* TATAROS — one continuous royal background across every collection page */
+.catalog-page{
+  background:transparent !important;
+  background-color:transparent !important;
+}
+.catalog-page .catalog-intro,
+.catalog-page .gemstone-section,
+.catalog-page .tasbih-section,
+.catalog-page .gemstone-matte-section,
+.catalog-page .tasbih-souvenir-section,
+.catalog-page .catalog-pager{
+  background:transparent !important;
+  background-color:transparent !important;
+}
+.catalog-page .catalog-intro{
+  position:relative;
+}
+.catalog-page .gemstone-section,
+.catalog-page .tasbih-section{
+  border-top:1px solid rgba(212,173,98,.20) !important;
+  background-image:linear-gradient(180deg,rgba(4,13,24,.10),rgba(4,13,24,.10)) !important;
+}
+.catalog-page .gemstone-matte-section,
+.catalog-page .tasbih-souvenir-section{
+  background-image:linear-gradient(180deg,rgba(4,13,24,.10),rgba(4,13,24,.10)) !important;
+}
+.catalog-page .catalog-pager{
+  border-top:1px solid rgba(212,173,98,.18);
+}
