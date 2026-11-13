@@ -1601,3 +1601,18 @@ body:after{
 .catalog-page .section-heading{
   background:transparent !important;
 }
+
+
+/* TATAROS — show the palace backdrop inside the rings collection */
+.catalog-page > .collection{
+  position:relative !important;
+  isolation:isolate !important;
+  background:
+    linear-gradient(180deg,rgba(3,12,23,.68),rgba(3,12,23,.78)),
+    url("Qasr.PNG") center 46% / cover no-repeat !important;
+  background-attachment:scroll !important;
+}
+.catalog-page > .collection > *{
+  position:relative;
+  z-index:1;
+}
