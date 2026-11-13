@@ -1696,3 +1696,24 @@ body footer p,
 body .footer-contact-links a{
   font-family:"Noto Kufi Arabic","Vazirmatn",Tahoma,sans-serif !important;
 }
+
+
+/* TATAROS HOME — calligraphic Thuluth-inspired lettering for collection names */
+.category-door b{
+  font-family:"Katibeh","Noto Nastaliq Urdu",serif !important;
+  font-size:34px !important;
+  font-weight:400 !important;
+  line-height:1.65 !important;
+  letter-spacing:0 !important;
+  text-shadow:0 2px 14px rgba(0,0,0,.72) !important;
+}
+.category-door i{
+  font-family:"Katibeh","Noto Nastaliq Urdu",serif !important;
+  font-size:19px !important;
+  font-weight:400 !important;
+  line-height:1.8 !important;
+}
+@media(max-width:760px){
+  .category-door b{font-size:32px !important}
+  .category-door i{font-size:18px !important}
+}
