@@ -1106,3 +1106,113 @@ body.lightbox-open{overflow:hidden}
  .category-door b{font-size:23px}
  .category-door small{font-size:9px}
 }
+
+
+/* TATAROS ROYAL ENTRANCE — refined lighting, depth and responsive polish */
+.collection{
+  background:
+    radial-gradient(ellipse at 50% 28%,rgba(28,57,82,.58),transparent 58%),
+    linear-gradient(180deg,rgba(3,10,19,.82),rgba(7,22,37,.76) 48%,rgba(3,10,19,.86)) !important;
+  overflow:hidden;
+}
+.collection:before{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.22;
+  background:
+    radial-gradient(ellipse at 50% 0%,rgba(232,196,126,.22),transparent 48%),
+    linear-gradient(90deg,transparent 8%,rgba(212,173,98,.08) 50%,transparent 92%);
+}
+.section-heading{position:relative;z-index:1;margin-bottom:42px}
+.section-heading .eyebrow{font-size:9px;letter-spacing:.34em;color:#d9b875}
+.section-heading h2{
+  font-size:clamp(25px,3.2vw,36px) !important;
+  text-shadow:0 3px 22px rgba(0,0,0,.65);
+}
+.section-heading>p:last-child{font-size:13px !important;color:#e1d1b2}
+.category-doors{
+  position:relative;z-index:1;
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:clamp(14px,2.2vw,30px);max-width:1120px;margin:0 auto;
+}
+.category-door{
+  min-height:390px;position:relative;isolation:isolate;overflow:hidden;
+  display:flex;flex-direction:column;align-items:center;justify-content:flex-end;
+  padding:30px 18px 35px;border:1px solid rgba(222,184,112,.86);
+  border-radius:190px 190px 8px 8px;
+  background:
+    radial-gradient(ellipse at 50% 30%,rgba(42,76,103,.72),transparent 55%),
+    linear-gradient(180deg,rgba(11,31,50,.88),rgba(3,11,21,.97));
+  box-shadow:0 18px 48px rgba(0,0,0,.42),inset 0 0 36px rgba(212,173,98,.08);
+  transition:transform .45s ease,box-shadow .45s ease,border-color .45s ease;
+}
+.category-door:before{
+  content:"";position:absolute;inset:8px;border:1px solid rgba(222,184,112,.48);
+  border-radius:180px 180px 3px 3px;z-index:-1;pointer-events:none;
+}
+.category-door:after{
+  content:"";position:absolute;inset:0;z-index:-2;opacity:.85;
+  background:
+    linear-gradient(180deg,rgba(231,195,127,.12),transparent 36%,rgba(0,0,0,.25)),
+    repeating-linear-gradient(90deg,transparent 0 24%,rgba(212,173,98,.045) 24.2% 24.5%,transparent 24.8% 49.5%);
+  transition:opacity .45s ease;
+}
+.category-door:hover{
+  transform:translateY(-9px);
+  border-color:#f4d99b;
+  box-shadow:0 25px 58px rgba(0,0,0,.56),0 0 34px rgba(212,173,98,.15),inset 0 0 42px rgba(212,173,98,.12);
+}
+.category-door:hover:after{opacity:1}
+.door-number{
+  position:absolute;top:28px;left:50%;transform:translateX(-50%);
+  color:rgba(239,211,157,.78);font:10px "Cinzel",Georgia,serif;letter-spacing:.24em;
+}
+.door-symbol{
+  width:88px;height:88px;display:grid;place-items:center;margin:0 auto 23px;
+  border:1px solid rgba(231,195,127,.68);border-radius:50%;
+  outline:1px solid rgba(231,195,127,.22);outline-offset:7px;
+  color:#f0d69a;font:42px Georgia,serif;
+  text-shadow:0 0 24px rgba(231,195,127,.45);
+  box-shadow:0 0 38px rgba(212,173,98,.13),inset 0 0 22px rgba(212,173,98,.1);
+  transition:transform .45s ease,box-shadow .45s ease;
+}
+.category-door:hover .door-symbol{transform:scale(1.07);box-shadow:0 0 48px rgba(212,173,98,.24),inset 0 0 24px rgba(212,173,98,.16)}
+.category-door>b{font-size:23px !important;color:#f2d99f !important;font-weight:500 !important}
+.category-door>small{margin-top:7px;color:#d0b47e;font:9px "Cinzel",Georgia,serif !important;letter-spacing:.19em;direction:ltr}
+.category-door>i{
+  margin-top:24px;padding:8px 19px;border:1px solid rgba(212,173,98,.58);
+  color:#f1d69b;font-style:normal;font-size:12px;
+  transition:background .3s ease,color .3s ease;
+}
+.category-door:hover>i{background:#d4ad62;color:#091525}
+.hero{
+  min-height:620px;
+  background:
+    radial-gradient(ellipse at 18% 48%,rgba(22,62,91,.8),transparent 46%),
+    linear-gradient(100deg,rgba(3,10,19,.48),rgba(4,15,28,.82)) !important;
+}
+.hero:before{inset:18px;border-color:rgba(222,184,112,.55);box-shadow:inset 0 0 60px rgba(212,173,98,.035)}
+.hero:after{
+  opacity:.42;
+  background:
+    radial-gradient(ellipse at 18% 45%,rgba(94,144,171,.18),transparent 42%),
+    repeating-linear-gradient(115deg,transparent 0 95px,rgba(212,173,98,.035) 96px 97px,transparent 98px 190px),
+    linear-gradient(90deg,transparent,rgba(1,7,14,.42));
+}
+.hero-content{max-width:590px}
+.hero .eyebrow{letter-spacing:.32em}
+.hero-subtitle{color:#f0cf8b}
+.hero-description{color:#e8dcc6}
+.gold-button{box-shadow:0 7px 26px rgba(0,0,0,.25),inset 0 0 15px rgba(212,173,98,.08)}
+.gold-button:hover{box-shadow:0 0 28px rgba(212,173,98,.25)}
+@media(max-width:760px){
+  .hero{min-height:540px;padding:44px 25px 72px}
+  .collection{padding-top:52px;padding-bottom:55px}
+  .section-heading{margin-bottom:32px}
+  .category-doors{grid-template-columns:1fr;gap:22px;max-width:360px}
+  .category-door{min-height:320px;border-radius:170px 170px 7px 7px;padding-bottom:27px}
+  .door-symbol{width:72px;height:72px;font-size:35px;margin-bottom:17px}
+  .category-door>b{font-size:21px !important}
+  .category-door>i{margin-top:17px}
+}
+@media(prefers-reduced-motion:reduce){
+  .category-door,.door-symbol,.category-door:after{transition:none !important}
+}
