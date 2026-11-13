@@ -1237,3 +1237,28 @@ body.lightbox-open{overflow:hidden}
     url("Qasr.PNG") center 42% / cover no-repeat !important;
   backdrop-filter:blur(1px);
 }
+
+
+/* HERO — bring the palace artwork forward behind the Tatarus title */
+.hero{
+  background:
+    linear-gradient(90deg,rgba(2,9,17,.24),rgba(2,9,17,.12) 48%,rgba(2,9,17,.30)),
+    url("Qasr.PNG") center 46% / cover no-repeat !important;
+}
+.hero:after{
+  opacity:.14 !important;
+  background:linear-gradient(90deg,rgba(2,8,15,.10),rgba(2,8,15,.20) 65%,rgba(2,8,15,.30)) !important;
+}
+.hero-atmosphere{
+  background:radial-gradient(ellipse at 50% 42%,rgba(2,7,15,.04) 8%,rgba(2,7,15,.28) 100%) !important;
+}
+.hero h1{
+  color:#ffe3a6 !important;
+  text-shadow:0 2px 5px rgba(0,0,0,.95),0 0 22px rgba(0,0,0,.9) !important;
+}
+.hero-subtitle,.hero-description{
+  text-shadow:0 2px 8px rgba(0,0,0,.95);
+}
+@media(max-width:760px){
+  .hero{background-position:center center !important;}
+}
