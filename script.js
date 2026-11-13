@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
           image.loading = "lazy";
           image.alt = product.name || "محصول تاتاروس";
           let imagePath = product.image || "";
-          if (imagePath && !/^https?:\\/\\//i.test(imagePath) && !imagePath.startsWith("/")) imagePath = "/tataros/" + imagePath.replace(/^\\.\\//, "");
+          if (imagePath && !imagePath.startsWith("http") && !imagePath.startsWith("/")) imagePath = "/tataros/" + imagePath;
           image.src = imagePath;
           card.appendChild(image);
           const name = document.createElement("b");
