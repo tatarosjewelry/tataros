@@ -2061,16 +2061,12 @@ body.rings-site footer{
 
 
 /* TATAROS — discreet gold Desert Oud music control */
-.tataros-music-toggle{
-  position:fixed;left:18px;bottom:20px;z-index:9999;
-  display:flex;align-items:center;gap:8px;
-  padding:10px 15px;border:1px solid rgba(225,190,119,.72);
-  border-radius:999px;color:#f3d9a2;
-  background:linear-gradient(145deg,rgba(16,34,49,.94),rgba(4,13,23,.96));
-  box-shadow:0 5px 22px rgba(0,0,0,.32),inset 0 1px 0 rgba(255,255,255,.12);
-  font:500 11px/1.5 "Noto Kufi Arabic","Vazirmatn",sans-serif;
-  cursor:pointer;backdrop-filter:blur(8px);
+.socials .tataros-music-toggle{
+  position:static;display:inline-flex;align-items:center;justify-content:center;
+  width:28px;height:28px;padding:0;margin:0;border:0;border-radius:0;
+  color:inherit;background:transparent;box-shadow:none;
+  cursor:pointer;backdrop-filter:none;vertical-align:middle;
 }
-.tataros-music-toggle .music-icon{font-size:18px;line-height:1}
-.tataros-music-toggle.is-playing{border-color:#f1d18e;box-shadow:0 0 18px rgba(212,173,98,.22),0 5px 22px rgba(0,0,0,.32)}
-@media(max-width:760px){.tataros-music-toggle{left:12px;bottom:14px;padding:9px 12px;font-size:10px}}
+.socials .tataros-music-toggle .music-icon{display:block;width:23px;height:23px;fill:none;stroke:currentColor;stroke-width:1.8}
+.socials .tataros-music-toggle.is-playing{color:var(--gold-light);border:0;box-shadow:none}
+@media(max-width:760px){.socials .tataros-music-toggle{width:25px;height:25px;padding:0}.socials .tataros-music-toggle .music-icon{width:21px;height:21px}}
