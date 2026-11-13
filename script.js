@@ -178,7 +178,7 @@ async function navigateTataros(href, push = true) {
     if (currentHeader && nextHeader) currentHeader.replaceWith(nextHeader);
     const musicButton = document.getElementById("tataros-music-toggle");
     const nextSocials = document.querySelector(".socials");
-    if (musicButton && nextSocials) nextSocials.appendChild(musicButton);
+    if (musicButton && nextHeader) nextHeader.appendChild(musicButton);
     currentMain.replaceWith(nextMain);
     if (currentFooter && nextFooter) currentFooter.replaceWith(nextFooter);
     document.body.className = nextDoc.body.className;
@@ -221,8 +221,8 @@ function initTatarosMusic() {
   button.className = "tataros-music-toggle";
   button.setAttribute("aria-label", "پخش موسیقی");
   button.innerHTML = '<svg class="music-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V5l12-2v13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6" cy="18" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="18" cy="16" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>';
-  const socialBar = document.querySelector(".socials");
-  (socialBar || document.body).appendChild(button);
+  const header = document.querySelector(".site-header");
+  (header || document.body).appendChild(button);
 
   button.addEventListener("click", async function () {
     if (audio.paused) {
