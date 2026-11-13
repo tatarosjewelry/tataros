@@ -999,3 +999,21 @@ body.lightbox-open{overflow:hidden}
 }
 .tasbih-code{font-size:10px;color:#d9b46d}
 @media(max-width:760px){.tasbih-photo{height:88px;width:min(100%,150px)}.tasbih-code{font-size:9px}}
+
+/* Three independent luxury catalog pages */
+.catalog-page{min-height:70vh;padding-bottom:70px;background:radial-gradient(ellipse at 50% 0%,#102744 0%,#06101e 55%,#030912 100%)}
+.catalog-intro{text-align:center;padding:85px 20px 45px}
+.catalog-intro h1{color:var(--gold,#d4ad62);font-size:clamp(30px,5vw,52px);margin:12px 0}
+.catalog-intro>p:last-of-type{color:#d4d0c7}
+.category-doors{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;max-width:1120px;margin:35px auto 0}
+.category-door{min-height:330px;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:30px 18px;text-decoration:none;color:#f5ead2;border:1px solid rgba(212,173,98,.58);background:linear-gradient(155deg,rgba(19,45,72,.94),rgba(3,12,24,.98));box-shadow:0 18px 45px #0006;overflow:hidden;transition:transform .35s,border-color .35s}
+.category-door:before{content:"";position:absolute;inset:9px;border:1px solid rgba(212,173,98,.2);pointer-events:none}
+.category-door:hover{transform:translateY(-7px);border-color:#f3d99a}
+.category-door .door-number{position:absolute;top:22px;left:24px;color:#b99a62;font:13px Cinzel,serif;letter-spacing:3px}
+.door-symbol{font-size:55px;color:#d4ad62;line-height:1}
+.category-door b{font-size:27px;font-weight:500}
+.category-door small{font:12px Cinzel,serif;letter-spacing:2px;color:#c9b17e;direction:ltr}
+.category-door i{font-style:normal;color:#e3c783;margin-top:15px;font-size:13px}
+.catalog-pager{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;padding:35px 15px}
+.catalog-pager a{color:#e4c783;border:1px solid #9f8049;padding:10px 18px;text-decoration:none;font-size:13px}
+@media(max-width:700px){.category-doors{grid-template-columns:1fr;max-width:440px;margin:25px auto}.category-door{min-height:205px}.catalog-intro{padding-top:55px}.catalog-pager a{padding:9px 12px}}
