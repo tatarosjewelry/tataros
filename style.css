@@ -630,3 +630,49 @@ body{line-height:2.15 !important}
  .gemstone-book-controls{gap:12px;margin-top:12px}
  .gemstone-book-controls button{font-size:10px;padding:6px 10px}
 }
+
+
+/* TATARUS — royal header background */
+.site-header{
+  isolation:isolate;
+  overflow:hidden;
+  background:
+    radial-gradient(ellipse at 50% 48%,rgba(31,69,96,.58) 0%,rgba(10,31,51,.35) 34%,transparent 68%),
+    radial-gradient(ellipse at 50% -35%,rgba(216,177,103,.18),transparent 58%),
+    repeating-linear-gradient(135deg,rgba(226,190,124,.025) 0 1px,transparent 1px 9px),
+    linear-gradient(105deg,#020914 0%,#0a2035 24%,#102b43 50%,#0a2035 76%,#020914 100%) !important;
+  border-bottom:1px solid #d9b46d !important;
+  box-shadow:0 10px 38px #000b,inset 0 1px 0 #f0d69a33,inset 0 -10px 24px #0005 !important;
+}
+.site-header:before,.site-header:after{
+  top:50% !important;
+  bottom:auto !important;
+  width:auto !important;
+  height:auto !important;
+  transform:translateY(-50%) !important;
+  background:none !important;
+  opacity:.17 !important;
+  color:#e5c27d !important;
+  pointer-events:none;
+  z-index:0;
+  text-shadow:0 0 24px #d9b46d55;
+}
+.site-header:before{
+  content:"♛" !important;
+  right:4.2% !important;
+  font:48px Georgia,serif !important;
+}
+.site-header:after{
+  content:"اژدها" !important;
+  left:4.2% !important;
+  font:26px "Noto Nastaliq Urdu",serif !important;
+  letter-spacing:2px;
+}
+.site-header .wordmark,.site-header .main-nav,.site-header .socials{
+  position:relative;
+  z-index:1;
+}
+@media(max-width:760px){
+  .site-header:before{right:2% !important;font-size:29px !important;opacity:.12 !important}
+  .site-header:after{left:2% !important;font-size:16px !important;opacity:.12 !important}
+}
