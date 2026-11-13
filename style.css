@@ -1851,3 +1851,27 @@ body *{
   border-color:rgba(220,185,112,.48) !important;
   box-shadow:0 12px 34px rgba(0,0,0,.32),inset 0 1px 0 rgba(255,255,255,.08) !important;
 }
+
+/* TATAROS TASBIH — flowing emerald silk, soft folds and luminous satin sheen */
+.tasbih-page{
+  background-color:#062a20 !important;
+  background-image:
+    radial-gradient(ellipse 70% 22% at 48% 12%,rgba(130,190,143,.22),transparent 72%),
+    linear-gradient(112deg,transparent 0%,rgba(173,211,169,.08) 12%,transparent 25%,rgba(0,0,0,.18) 39%,rgba(143,190,151,.13) 52%,transparent 66%,rgba(0,0,0,.20) 82%,transparent 100%),
+    linear-gradient(172deg,rgba(3,24,19,.15) 0%,rgba(70,130,91,.20) 18%,rgba(2,25,19,.38) 32%,rgba(90,151,108,.13) 47%,rgba(2,23,18,.40) 63%,rgba(73,132,92,.16) 80%,rgba(1,17,14,.30) 100%),
+    repeating-linear-gradient(92deg,rgba(255,255,255,.012) 0 1px,rgba(0,0,0,.018) 1px 3px,transparent 3px 6px),
+    radial-gradient(ellipse at 50% 45%,#104632 0%,#06291f 62%,#031812 100%) !important;
+  background-attachment:scroll !important;
+}
+.tasbih-page:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+  opacity:.72;
+  background:
+    linear-gradient(158deg,transparent 0 16%,rgba(181,214,174,.07) 19%,rgba(0,0,0,.12) 24%,transparent 31%),
+    linear-gradient(18deg,transparent 0 37%,rgba(178,210,171,.06) 42%,rgba(0,0,0,.13) 48%,transparent 56%),
+    linear-gradient(165deg,transparent 0 70%,rgba(181,214,174,.06) 76%,rgba(0,0,0,.12) 82%,transparent 90%);
+}
