@@ -54,6 +54,52 @@ document.addEventListener("DOMContentLoaded", function () {
   renderStones("gemstoneGrid", preciousStones);
   renderStones("matteGemstoneGrid", matteStones);
 
+  // Load products maintained through Pages CMS and render them in their collections.
+  function renderManagedProducts() {
+    const targets = {
+      rings: document.getElementById("managedRings"),
+      gemstones: document.getElementById("managedGemstones"),
+      tasbih: document.getElementById("managedTasbih")
+    };
+    if (!Object.values(targets).some(Boolean)) return;
+    fetch("data/products.json?v=" + Date.now())
+      .then(response => { if (!response.ok) throw new Error("catalog unavailable"); return response.json(); })
+      .then(payload => {
+        (payload.products || []).forEach(product => {
+          const target = targets[product.category];
+          if (!target) return;
+          const card = document.createElement("article");
+          card.className = product.category === "tasbih" ? "tasbih-placeholder tasbih-product" : "gemstone-card gemstone-card-refined managed-product";
+          const image = document.createElement("img");
+          image.className = "gemstone-photo";
+          image.loading = "lazy";
+          image.alt = product.name || "محصول تاتاروس";
+          let imagePath = product.image || "";
+          if (imagePath && !/^https?:\\/\\//i.test(imagePath) && !imagePath.startsWith("/")) imagePath = "/tataros/" + imagePath.replace(/^\\.\\//, "");
+          image.src = imagePath;
+          card.appendChild(image);
+          const name = document.createElement("b");
+          name.textContent = product.name || "";
+          card.appendChild(name);
+          if (product.description) {
+            const description = document.createElement("p");
+            description.className = "managed-product-description";
+            description.textContent = product.description;
+            card.appendChild(description);
+          }
+          if (product.price) {
+            const price = document.createElement("small");
+            price.className = "managed-product-price";
+            price.textContent = Number(product.price).toLocaleString("fa-IR") + " تومان";
+            card.appendChild(price);
+          }
+          target.appendChild(card);
+        });
+      })
+      .catch(error => console.warn("Tataros catalog could not be loaded:", error));
+  }
+  renderManagedProducts();
+
   // Open product photos in an on-site lightbox instead of navigating away.
   const lightbox = document.createElement("div");
   lightbox.className = "gemstone-lightbox";
