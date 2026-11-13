@@ -772,3 +772,17 @@ body{line-height:2.15 !important}
   .gemstone-card-refined b{font-size:11px !important}
   .gemstone-card-refined small{font-size:6px !important}
 }
+
+
+/* Restore palace atmosphere in the header; remove decorative text and crown */
+.site-header{
+  background:
+    linear-gradient(90deg,rgba(3,10,20,.82),rgba(5,17,31,.66) 50%,rgba(3,10,20,.82)),
+    url("Qasr.PNG") center 48%/cover no-repeat !important;
+  border-bottom:1px solid var(--gold) !important;
+  box-shadow:0 8px 35px #0009 !important;
+}
+.site-header:before,.site-header:after{
+  content:none !important;
+  display:none !important;
+}
