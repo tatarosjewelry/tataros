@@ -1966,3 +1966,52 @@ body.gemstones-site footer{
   background:rgba(3,9,25,.52) !important;
   backdrop-filter:blur(3px) !important;
 }
+
+
+/* CATALOG PAGES — refined smaller typography for a cleaner luxury layout */
+.catalog-page .catalog-intro h1{
+  font-size:clamp(20px,2.4vw,27px) !important;
+  line-height:1.9 !important;
+  font-weight:500 !important;
+  margin:4px 0 6px !important;
+}
+.catalog-page .catalog-intro > p:not(.eyebrow){
+  font-size:11px !important;
+  line-height:1.9 !important;
+}
+.catalog-page .section-heading h2{
+  font-size:17px !important;
+  line-height:1.9 !important;
+  font-weight:500 !important;
+}
+.catalog-page .section-heading > p:not(.eyebrow){
+  font-size:10px !important;
+  line-height:1.9 !important;
+}
+.catalog-page .gemstone-card b,
+.catalog-page .reel-caption b,
+.catalog-page .tasbih-placeholder b{
+  font-size:11px !important;
+  line-height:1.8 !important;
+  font-weight:500 !important;
+}
+.catalog-page .gemstone-card small,
+.catalog-page .reel-caption small{
+  font-size:6px !important;
+  letter-spacing:.06em !important;
+}
+.catalog-page .reel-open,
+.catalog-page .gemstone-card .text-link{
+  font-size:8px !important;
+}
+@media(max-width:760px){
+  .catalog-page .catalog-intro h1{font-size:19px !important;line-height:2 !important}
+  .catalog-page .catalog-intro > p:not(.eyebrow){font-size:10px !important}
+  .catalog-page .section-heading h2{font-size:14px !important;line-height:2 !important}
+  .catalog-page .section-heading > p:not(.eyebrow){font-size:9px !important}
+  .catalog-page .gemstone-card b,
+  .catalog-page .reel-caption b,
+  .catalog-page .tasbih-placeholder b{font-size:9px !important}
+  .catalog-page .gemstone-card small,
+  .catalog-page .reel-caption small{font-size:5px !important}
+}
