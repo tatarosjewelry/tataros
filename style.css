@@ -1652,3 +1652,19 @@ body:after{
 @media(min-width:761px){
   .catalog-page{background-attachment:fixed !important;}
 }
+
+
+/* TATAROS — palace backdrop specifically behind the rings collection heading */
+.catalog-page > .catalog-intro{
+  position:relative !important;
+  isolation:isolate !important;
+  background:
+    linear-gradient(180deg,rgba(3,11,21,.48),rgba(3,11,21,.60)),
+    url("Qasr.PNG") center 44% / cover no-repeat !important;
+  background-color:transparent !important;
+  box-shadow:none !important;
+}
+.catalog-page > .catalog-intro > *{
+  position:relative;
+  z-index:1;
+}
