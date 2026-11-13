@@ -1,68 +1,56 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#061629">
-<title>پنل مدیریت | TATAROS</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#061629">
+<title>مدیریت تاتاروس | TATAROS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#061629;--deep:#020b16;--gold:#d4ad62;--pale:#f3d99a;--cream:#eee5d4}
-*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% 0%,#17324b 0%,var(--navy) 48%,var(--deep) 100%);color:var(--cream);font-family:Vazirmatn,sans-serif}
-header{padding:24px 20px;text-align:center;border-bottom:1px solid #b78e4b55;background:#020b16aa}
-.brand{font:600 25px Cinzel,serif;letter-spacing:.2em;color:var(--pale)}.brand small{display:block;font:10px Cinzel,serif;letter-spacing:.28em;color:var(--gold);margin-top:5px}
-main{width:min(760px,calc(100% - 28px));margin:34px auto 60px}.eyebrow{text-align:center;color:var(--gold);font:11px Cinzel,serif;letter-spacing:.24em}
-h1{text-align:center;color:var(--pale);font-size:25px;font-weight:500;margin:10px 0 8px}.intro{text-align:center;color:#c9bea9;font-size:13px;margin:0 0 28px}
-.panel{border:1px solid #d4ad6255;border-radius:18px;background:linear-gradient(145deg,#10243aee,#061322f5);padding:24px;box-shadow:0 22px 60px #0008}
-label{display:block;color:var(--pale);font-size:13px;margin:17px 0 8px}input,select{width:100%;border:1px solid #d4ad6266;border-radius:10px;background:#030e1b;color:#fff;padding:13px;font:14px Vazirmatn,sans-serif;outline:none}input:focus,select:focus{border-color:var(--gold)}
-.upload{display:grid;place-items:center;min-height:150px;border:1px dashed #d4ad62aa;border-radius:13px;background:#020b1680;text-align:center;padding:18px;cursor:pointer}.upload strong{color:var(--pale);font-size:14px}.upload span{color:#b8aa91;font-size:11px;margin-top:6px}.upload input{display:none}
-.preview{display:none;margin-top:14px;text-align:center}.preview img{max-width:100%;max-height:300px;object-fit:contain;border-radius:10px;border:1px solid #d4ad6266}.preview p{font-size:12px;color:#d9c9a8}
-button{width:100%;margin-top:22px;padding:14px;border:1px solid #f3d99a;border-radius:10px;background:linear-gradient(120deg,#b88b43,#f0d28b,#b88b43);color:#091522;font:700 14px Vazirmatn,sans-serif}
-.note{margin-top:18px;padding:13px;border-right:3px solid var(--gold);background:#020b1677;color:#c9bea9;font-size:12px;line-height:2}.status{display:none;margin-top:14px;padding:12px;border:1px solid #d4ad6266;border-radius:10px;color:var(--pale);font-size:12px;line-height:1.9}
-.cms-link{display:block;margin-top:14px;padding:15px;text-align:center;border:1px solid #f3d99a;border-radius:10px;background:linear-gradient(120deg,#b88b43,#f0d28b,#b88b43);color:#091522;text-decoration:none;font-weight:700;font-size:14px}.back{display:block;text-align:center;margin:22px;color:var(--gold);text-decoration:none;font-size:12px}
-@media(max-width:520px){main{margin-top:24px}.panel{padding:18px}h1{font-size:22px}}
-</style>
-</head>
+:root{--navy:#061629;--deep:#020b16;--gold:#d4ad62;--pale:#f3d99a;--cream:#eee5d4}*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% 0%,#17324b,var(--navy) 48%,var(--deep));color:var(--cream);font-family:Vazirmatn,sans-serif}
+header{padding:22px;text-align:center;border-bottom:1px solid #b78e4b55;background:#020b16aa}.brand{font:600 24px Cinzel,serif;letter-spacing:.2em;color:var(--pale)}.brand small{display:block;font:10px Cinzel,serif;letter-spacing:.28em;color:var(--gold);margin-top:5px}
+main{width:min(900px,calc(100% - 28px));margin:28px auto 60px}.eyebrow{text-align:center;color:var(--gold);font:10px Cinzel,serif;letter-spacing:.24em}h1{text-align:center;color:var(--pale);font-size:24px;font-weight:500;margin:8px 0}.intro{text-align:center;color:#c9bea9;font-size:13px;margin:0 0 24px}
+.panel{border:1px solid #d4ad6255;border-radius:18px;background:linear-gradient(145deg,#10243aee,#061322f5);padding:22px;box-shadow:0 22px 60px #0008;margin-bottom:20px}
+h2{font-size:17px;color:var(--pale);font-weight:500;margin:0 0 15px}label{display:block;color:var(--pale);font-size:13px;margin:13px 0 7px}
+input,select,textarea{width:100%;border:1px solid #d4ad6266;border-radius:10px;background:#030e1b;color:#fff;padding:12px;font:14px Vazirmatn,sans-serif;outline:none}textarea{min-height:75px;resize:vertical}input:focus,select:focus,textarea:focus{border-color:var(--gold)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}.upload{display:grid;place-items:center;min-height:115px;border:1px dashed #d4ad62aa;border-radius:13px;background:#020b1680;text-align:center;padding:15px;cursor:pointer}.upload strong{color:var(--pale);font-size:14px}.upload span{color:#b8aa91;font-size:11px;margin-top:5px}.upload input{display:none}
+.preview{display:none;margin-top:12px;text-align:center}.preview img{max-width:100%;max-height:230px;object-fit:contain;border-radius:10px;border:1px solid #d4ad6266}
+button{border:1px solid #f3d99a;border-radius:10px;padding:11px 16px;background:linear-gradient(120deg,#b88b43,#f0d28b,#b88b43);color:#091522;font:700 13px Vazirmatn,sans-serif;cursor:pointer}.primary{width:100%;margin-top:18px;padding:14px}.secondary{background:#10243a;color:var(--pale);border-color:#d4ad6277}.danger{background:#351c20;color:#ffd9d9;border-color:#a85b5b}.actions{display:flex;gap:8px;margin-top:12px}.actions button{flex:1}
+.status{display:none;margin-top:14px;padding:12px;border:1px solid #d4ad6266;border-radius:10px;color:var(--pale);font-size:12px;line-height:1.9;white-space:pre-wrap}.products{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.product{border:1px solid #d4ad6255;border-radius:13px;padding:12px;background:#020b1677;min-width:0}.product img{width:100%;height:150px;object-fit:contain;background:#030e1b;border-radius:8px}.product b{display:block;color:var(--pale);margin-top:8px}.product small{color:#c9bea9}.empty{text-align:center;color:#b8aa91;font-size:13px;padding:20px}.note{color:#c9bea9;font-size:12px;line-height:2;margin-top:14px}.back{display:block;text-align:center;margin:22px;color:var(--gold);text-decoration:none;font-size:12px}
+@media(max-width:560px){main{margin-top:20px}.panel{padding:16px}.grid,.products{grid-template-columns:1fr}h1{font-size:21px}.product img{height:190px}}
+</style></head>
 <body>
 <header><div class="brand">TATAROS<small>PRIVATE COLLECTION MANAGER</small></div></header>
-<main>
-<p class="eyebrow">THE HOUSE OF TATAROS</p>
-<h1>پنل مدیریت محصولات</h1>
-<p class="intro">افزودن و آماده‌سازی تصاویر کالکشن تاتاروس</p>
-<section class="panel">
+<main><p class="eyebrow">THE HOUSE OF TATAROS</p><h1>مدیریت محصولات</h1><p class="intro">ثبت، ویرایش و حذف محصولات کالکشن تاتاروس</p>
+<section class="panel"><h2 id="formTitle">＋ افزودن محصول جدید</h2>
 <form id="productForm">
-<label for="productName">نام محصول</label>
-<input id="productName" name="productName" placeholder="مثلاً تسبیح زمرد" required>
-<label for="category">انتخاب کالکشن</label>
-<select id="category" name="category" required>
-<option value="">انتخاب کنید</option><option value="rings">انگشترها</option><option value="gemstones">سنگ‌های طبیعی</option><option value="tasbih">تسبیح‌ها</option>
-</select>
-<label>تصویر محصول</label>
-<label class="upload" for="photo"><strong>＋ انتخاب عکس از گالری</strong><span>فرمت‌های JPG، JPEG و PNG</span><input id="photo" type="file" accept="image/jpeg,image/png,image/webp" required></label>
-<div class="preview" id="preview"><img id="previewImage" alt="پیش‌نمایش محصول"><p id="fileName"></p></div>
-<button type="submit">آماده‌سازی محصول</button>
-<div class="status" id="status" role="status"></div>
-</form>
-<div class="note">برای ذخیره دائمی محصول و آپلود عکس در مخزن سایت، از دکمه زیر وارد بخش امن مدیریت تاتاروس شو. بعد از ذخیره در آن بخش، تغییرات از طریق GitHub روی سایت منتشر می‌شوند.</div><a class="cms-link" href="https://app.pagescms.org/" target="_blank" rel="noopener">ورود به مدیریت و ثبت واقعی محصول ←</a>
+<div class="grid"><div><label for="name">نام محصول</label><input id="name" required placeholder="مثلاً تسبیح سندروس"></div>
+<div><label for="category">کالکشن</label><select id="category" required><option value="rings">انگشترها</option><option value="gemstones">سنگ‌های طبیعی</option><option value="tasbih">تسبیح‌ها</option></select></div>
+<div><label for="price">قیمت (تومان) — اختیاری</label><input id="price" inputmode="numeric" placeholder="مثلاً 2500000"></div>
+<div><label for="description">توضیح کوتاه — اختیاری</label><input id="description" placeholder="جنس، ویژگی یا توضیح محصول"></div></div>
+<label>عکس محصول</label><label class="upload" for="photo"><strong>＋ انتخاب عکس از گالری</strong><span>JPG، PNG یا WEBP · حداکثر ۸ مگابایت</span><input id="photo" type="file" accept="image/jpeg,image/png,image/webp"></label>
+<div class="preview" id="preview"><img id="previewImage" alt="پیش‌نمایش محصول"></div>
+<button class="primary" id="saveButton" type="submit">ذخیره محصول</button><div class="actions"><button class="secondary" type="button" id="cancelEdit" hidden>لغو ویرایش</button></div>
+<div class="status" id="status" role="status"></div></form>
+<p class="note">پس از فعال شدن اتصال امن Cloudflare، این فرم محصولات را مستقیماً در مخزن سایت ذخیره می‌کند. تا آن زمان، ثبت و ویرایش آنلاین غیرفعال است.</p>
 </section>
-<a class="back" href="index.html">بازگشت به سایت تاتاروس ←</a>
-</main>
+<section class="panel"><h2>محصولات ثبت‌شده</h2><div id="products" class="products"><p class="empty">برای نمایش محصولات، اتصال امن باید فعال شود.</p></div><button class="secondary" id="refresh" type="button" style="width:100%;margin-top:14px">بارگذاری دوباره محصولات</button></section>
+<a class="back" href="index.html">بازگشت به سایت تاتاروس ←</a></main>
 <script>
-const photo=document.getElementById('photo'),preview=document.getElementById('preview'),image=document.getElementById('previewImage'),fileName=document.getElementById('fileName'),status=document.getElementById('status');
-let localUrl='';
-photo.addEventListener('change',()=>{
- const file=photo.files&&photo.files[0]; if(!file)return;
- if(localUrl)URL.revokeObjectURL(localUrl);
- localUrl=URL.createObjectURL(file);image.src=localUrl;fileName.textContent=file.name+' · '+Math.round(file.size/1024)+' KB';preview.style.display='block';status.style.display='none';
-});
-document.getElementById('productForm').addEventListener('submit',e=>{
- e.preventDefault();
- if(!photo.files.length)return;
- const name=document.getElementById('productName').value.trim();
- const category=document.getElementById('category').selectedOptions[0].textContent;
- status.textContent='پیش‌نمایش «'+name+'» در دستهٔ «'+category+'» آماده شد. انتشار نهایی پس از اتصال امن ذخیره‌سازی فعال می‌شود.';
- status.style.display='block';
-});
-</script>
-</body></html>
+const API="https://ancient-resonance-6fa3.tatarosjewelry.workers.dev";
+const form=document.getElementById("productForm"),photo=document.getElementById("photo"),preview=document.getElementById("preview"),previewImage=document.getElementById("previewImage"),statusBox=document.getElementById("status"),productsBox=document.getElementById("products");
+let imageUrl="",editingIndex=null,products=[];
+function status(message){statusBox.textContent=message;statusBox.style.display="block"}
+function hideStatus(){statusBox.style.display="none"}
+photo.addEventListener("change",()=>{const f=photo.files[0];if(!f)return;if(f.size>8*1024*1024){photo.value="";status("حجم عکس بیشتر از ۸ مگابایت است.");return}if(imageUrl)URL.revokeObjectURL(imageUrl);imageUrl=URL.createObjectURL(f);previewImage.src=imageUrl;preview.style.display="block";hideStatus()});
+function fileToBase64(file){return new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(String(reader.result).split(",")[1]);reader.onerror=reject;reader.readAsDataURL(file)})}
+async function api(path,options={}){const response=await fetch(API+path,{...options,headers:{"Content-Type":"application/json",...(options.headers||{})}});const data=await response.json().catch(()=>({}));if(!response.ok)throw new Error(data.error||"ارتباط با سرور برقرار نشد");return data}
+async function loadProducts(){productsBox.innerHTML='<p class="empty">در حال دریافت محصولات…</p>';try{const data=await api("/products");products=Array.isArray(data.products)?data.products:[];renderProducts()}catch(e){productsBox.innerHTML='<p class="empty">اتصال امن هنوز آماده نیست. پس از انتشار Worker، محصولات اینجا نمایش داده می‌شوند.</p>';status("اتصال هنوز فعال نیست: "+e.message)}}
+function renderProducts(){if(!products.length){productsBox.innerHTML='<p class="empty">هنوز محصولی ثبت نشده است.</p>';return}productsBox.innerHTML="";products.forEach((p,i)=>{const card=document.createElement("article");card.className="product";const img=document.createElement("img");img.src=p.image||"";img.alt=p.name||"محصول";img.loading="lazy";card.appendChild(img);const name=document.createElement("b");name.textContent=p.name||"بدون نام";card.appendChild(name);const meta=document.createElement("small");meta.textContent=({rings:"انگشترها",gemstones:"سنگ‌های طبیعی",tasbih:"تسبیح‌ها"})[p.category]||p.category;card.appendChild(meta);if(p.price){const price=document.createElement("small");price.style.display="block";price.textContent=Number(p.price).toLocaleString("fa-IR")+" تومان";card.appendChild(price)}const actions=document.createElement("div");actions.className="actions";const edit=document.createElement("button");edit.className="secondary";edit.type="button";edit.textContent="ویرایش";edit.onclick=()=>editProduct(i);const del=document.createElement("button");del.className="danger";del.type="button";del.textContent="حذف";del.onclick=()=>deleteProduct(i);actions.append(edit,del);card.appendChild(actions);productsBox.appendChild(card)})}
+function editProduct(i){const p=products[i];editingIndex=i;document.getElementById("formTitle").textContent="ویرایش محصول";document.getElementById("name").value=p.name||"";document.getElementById("category").value=p.category||"rings";document.getElementById("price").value=p.price||"";document.getElementById("description").value=p.description||"";photo.required=false;document.getElementById("saveButton").textContent="ذخیره تغییرات";document.getElementById("cancelEdit").hidden=false;form.scrollIntoView({behavior:"smooth"})}
+function resetForm(){editingIndex=null;form.reset();photo.required=false;preview.style.display="none";document.getElementById("formTitle").textContent="＋ افزودن محصول جدید";document.getElementById("saveButton").textContent="ذخیره محصول";document.getElementById("cancelEdit").hidden=true;hideStatus()}
+document.getElementById("cancelEdit").onclick=resetForm;
+form.addEventListener("submit",async e=>{e.preventDefault();const file=photo.files[0];if(editingIndex===null&&!file){status("لطفاً عکس محصول را انتخاب کن.");return}if(file&&file.size>8*1024*1024){status("حجم عکس باید کمتر از ۸ مگابایت باشد.");return}const payload={name:document.getElementById("name").value.trim(),category:document.getElementById("category").value,price:document.getElementById("price").value.trim(),description:document.getElementById("description").value.trim()};try{if(file){payload.imageBase64=await fileToBase64(file);payload.extension=file.type==="image/png"?"png":file.type==="image/webp"?"webp":"jpeg"}const path=editingIndex===null?"/products":"/products?index="+editingIndex;await api(path,{method:editingIndex===null?"POST":"PUT",body:JSON.stringify(payload)});status("محصول با موفقیت ذخیره شد.");resetForm();await loadProducts()}catch(err){status("ذخیره انجام نشد: "+err.message)}});
+async function deleteProduct(i){if(!confirm("این محصول حذف شود؟"))return;try{await api("/products?index="+i,{method:"DELETE"});status("محصول حذف شد.");await loadProducts()}catch(e){status("حذف انجام نشد: "+e.message)}}
+document.getElementById("refresh").onclick=loadProducts;
+loadProducts();
+</script></body></html>
