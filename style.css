@@ -1216,3 +1216,24 @@ body.lightbox-open{overflow:hidden}
 @media(prefers-reduced-motion:reduce){
   .category-door,.door-symbol,.category-door:after{transition:none !important}
 }
+
+
+/* RESTORE THE PALACE ENTRANCE ARTWORK BEHIND THE COLLECTION DOORS */
+.collection{
+  background:
+    linear-gradient(180deg,rgba(3,9,17,.40),rgba(3,10,19,.54) 48%,rgba(3,9,17,.66)),
+    url("Qasr.PNG") center 48% / cover no-repeat !important;
+  background-attachment:scroll !important;
+}
+.collection:before{
+  background:
+    radial-gradient(ellipse at 50% 18%,rgba(231,195,127,.18),transparent 48%),
+    linear-gradient(90deg,rgba(3,9,17,.22),transparent 50%,rgba(3,9,17,.22)) !important;
+  opacity:1 !important;
+}
+.category-door{
+  background:
+    linear-gradient(180deg,rgba(5,17,30,.52),rgba(3,10,19,.76)),
+    url("Qasr.PNG") center 42% / cover no-repeat !important;
+  backdrop-filter:blur(1px);
+}
