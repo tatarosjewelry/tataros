@@ -8,6 +8,7 @@ media:
       - jpeg
       - png
       - webp
+    rename: false
 
 content:
   - name: catalog
@@ -24,15 +25,24 @@ content:
           - name: name
             label: نام محصول
             type: string
+            required: true
 
           - name: price
             label: قیمت به تومان
             type: number
 
           - name: image
-            label: مسیر عکس محصول
-            type: string
+            label: تصویر محصول
+            type: image
+            options:
+              media: images
+              extensions:
+                - jpg
+                - jpeg
+                - png
+                - webp
+              rename: false
 
           - name: description
             label: توضیحات
-            type: string
+            type: text
