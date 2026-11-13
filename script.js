@@ -8,8 +8,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  const book = document.getElementById("gemstoneBook");
-  if (!book) return;
+  const grid = document.getElementById("gemstoneGrid");
+  if (!grid) return;
   const stones = [
     ["فیروزه","TURQUOISE","#8de7dc","#138b91","#07505c"],
     ["عقیق","AGATE","#f2a08b","#a94335","#4d171e"],
@@ -26,42 +26,10 @@ document.addEventListener("DOMContentLoaded", function () {
     ["سیترین","CITRINE","#ffe49a","#d69a24","#87501a"],
     ["کوارتز صورتی","ROSE QUARTZ","#ffe0e8","#dc91a8","#8f526b"]
   ];
-  const right = document.getElementById("gemstonePageRight");
-  const left = document.getElementById("gemstonePageLeft");
-  const count = document.getElementById("gemstonePageCount");
-  const prev = document.getElementById("gemstonePrev");
-  const next = document.getElementById("gemstoneNext");
-  let spread = 0, touchX = null;
-  const fa = n => new Intl.NumberFormat("fa-IR").format(n);
-  function page(stone,index){
-    if(!stone) return '<div class="gemstone-page gemstone-page-empty"><span class="page-kufic">✧ تاتاروس ✧</span><span class="page-number">'+fa(index+1)+'</span></div>';
-    return '<span class="page-kufic">✧ TATARUS ✧</span><div class="stone-art" style="--stone-light:'+stone[2]+';--stone:'+stone[3]+';--stone-dark:'+stone[4]+'"></div><h3>'+stone[0]+'</h3><span class="stone-en">'+stone[1]+'</span><p class="stone-note">گزیده‌ای از زیبایی‌های طبیعی</p><span class="page-number">'+fa(index+1)+'</span>';
-  }
-  function render(direction){
-    const a=stones[spread], b=stones[spread+1];
-    right.innerHTML=page(a,spread);
-    left.innerHTML=page(b,spread+1);
-    right.classList.toggle("turning",!!direction);
-    left.classList.toggle("turning",!!direction);
-    count.textContent=fa(Math.floor(spread/2)+1)+" / "+fa(Math.ceil(stones.length/2));
-    prev.disabled=spread===0;
-    next.disabled=spread+2>=stones.length;
-  }
-  function turn(step){
-    const target=Math.max(0,Math.min(stones.length-1,spread+step*2));
-    if(target===spread)return;
-    spread=target;render(true);
-  }
-  prev.addEventListener("click",()=>turn(-1));
-  next.addEventListener("click",()=>turn(1));
-  book.addEventListener("touchstart",e=>{touchX=e.changedTouches[0].screenX},{passive:true});
-  book.addEventListener("touchend",e=>{
-    if(touchX===null)return;
-    const dx=e.changedTouches[0].screenX-touchX;
-    if(Math.abs(dx)>45)turn(dx<0?1:-1);
-    touchX=null;
-  },{passive:true});
-  book.addEventListener("keydown",e=>{if(e.key==="ArrowLeft")turn(1);if(e.key==="ArrowRight")turn(-1)});
-  book.tabIndex=0;
-  render(false);
+  grid.innerHTML = stones.map(stone =>
+    '<article class="gemstone-card gemstone-card-refined" style="--stone-light:'+stone[2]+';--stone:'+stone[3]+';--stone-dark:'+stone[4]+'">' +
+      '<span class="gemstone-crystal" aria-hidden="true"></span>' +
+      '<b>'+stone[0]+'</b><small>'+stone[1]+'</small>' +
+    '</article>'
+  ).join("");
 });
