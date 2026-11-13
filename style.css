@@ -676,3 +676,36 @@ body{line-height:2.15 !important}
   .site-header:before{right:2% !important;font-size:29px !important;opacity:.12 !important}
   .site-header:after{left:2% !important;font-size:16px !important;opacity:.12 !important}
 }
+
+
+/* Stronger, clearly visible royal header treatment */
+.site-header{
+  background:
+    radial-gradient(ellipse at 50% 50%,rgba(42,83,112,.82) 0%,rgba(15,43,67,.68) 42%,transparent 72%),
+    radial-gradient(ellipse at 50% 0%,rgba(226,187,112,.28),transparent 62%),
+    repeating-linear-gradient(135deg,rgba(230,196,132,.07) 0 1px,transparent 1px 7px),
+    linear-gradient(105deg,#020812 0%,#0b2943 22%,#153b59 50%,#0b2943 78%,#020812 100%) !important;
+  border-top:2px solid #c99b52 !important;
+  border-bottom:2px solid #e2bd78 !important;
+  box-shadow:0 12px 42px #000d,inset 0 0 32px #d9b46d20,inset 0 2px 0 #f7dda755 !important;
+}
+.site-header:before{
+  content:"♛" !important;
+  right:4% !important;
+  font:68px Georgia,serif !important;
+  opacity:.52 !important;
+  color:#f0cf8b !important;
+  text-shadow:0 0 12px #d9b46d88,0 0 30px #d9b46d66 !important;
+}
+.site-header:after{
+  content:"اژدها" !important;
+  left:4% !important;
+  font:38px "Noto Nastaliq Urdu",serif !important;
+  opacity:.48 !important;
+  color:#f0cf8b !important;
+  text-shadow:0 0 12px #d9b46d88,0 0 28px #d9b46d55 !important;
+}
+@media(max-width:760px){
+  .site-header:before{right:2% !important;font-size:40px !important;opacity:.42 !important}
+  .site-header:after{left:2% !important;font-size:23px !important;opacity:.4 !important}
+}
