@@ -1305,3 +1305,20 @@ body:before{
 .category-door:before{
   background:linear-gradient(180deg,rgba(5,15,25,.015),rgba(4,12,22,.06)) !important;
 }
+
+
+/* DARKER, SOFTER PAGE BACKDROP — KEEP THE COLLECTION DOORS LUMINOUS */
+body:before{
+  filter:blur(9px) brightness(.72) !important;
+  transform:scale(1.075);
+}
+body:after{
+  background:
+    radial-gradient(ellipse at center,rgba(2,7,14,.24) 0%,rgba(2,7,14,.66) 100%),
+    linear-gradient(90deg,rgba(2,7,14,.46),rgba(2,7,14,.20) 50%,rgba(2,7,14,.46)) !important;
+}
+.category-door{
+  filter:brightness(1.18) !important;
+  box-shadow:0 22px 52px rgba(0,0,0,.68),0 0 26px rgba(212,173,98,.16),inset 0 0 0 1px rgba(244,217,155,.22) !important;
+}
+.category-door:hover{filter:brightness(1.26) !important}
