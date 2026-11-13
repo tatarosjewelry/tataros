@@ -9,9 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   const preciousStones = [
-    ["فیروزه","TURQUOISE","#8de7dc","#138b91","#07505c"],
-    ["عقیق","AGATE","#f2a08b","#a94335","#4d171e"],
-    ["شرف‌الشمس","SHARAF AL-SHAMSE","#f4d58c","#b58a42","#60451f"],
     ["الماس","DIAMOND","#ffffff","#a9c8dc","#55718a"],
     ["زمرد","EMERALD","#a7f1bd","#14804d","#06402d"],
     ["یاقوت","RUBY","#ff9b9b","#a51e3b","#4c071a"],
@@ -28,6 +25,9 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const matteStones = [
+    ["فیروزه","TURQUOISE","#8de7dc","#138b91","#07505c"],
+    ["عقیق","AGATE","#f2a08b","#a94335","#4d171e"],
+    ["شرف‌الشمس","SHARAF AL-SHAMSE","#f4d58c","#b58a42","#60451f"],
     ["عقیق مات","MATTE AGATE","#d9b49a","#87624e","#392a26"],
     ["حدید","HEMATITE","#b7bdc7","#555d68","#202630"],
     ["یشم","JADE","#c6d9a7","#78945b","#34482e"],
