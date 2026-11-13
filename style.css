@@ -1768,3 +1768,12 @@ body *{
 .logo-wordmark{
   font-family:"Cinzel",serif !important;
 }
+
+/* TATAROS HOME — stronger English collection labels */
+.collection .category-door > small{
+  font-weight:800 !important;
+  color:#f4d28a !important;
+  opacity:1 !important;
+  text-shadow:0 1px 5px rgba(0,0,0,.95),0 0 8px rgba(212,173,98,.28) !important;
+  letter-spacing:1.8px !important;
+}
