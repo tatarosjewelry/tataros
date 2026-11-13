@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
     ["آمتیست","AMETHYST","#dcb8ff","#8452b5","#3d245f"],
     ["توپاز طلایی","GOLDEN TOPAZ","#ffe6a1","#d39a32","#79501c"],
     ["توپاز سوئیس","SWISS TOPAZ","#b8f0ff","#28a9dc","#07517c"],
+    ["توپاز بلو","BLUE TOPAZ","#b8f0ff","#28a9dc","#07517c","IMG_3879.jpeg"],
     ["توپاز لندن","LONDON BLUE TOPAZ","#9ac8ef","#245a91","#102d52"],
     ["سیترین","CITRINE","#ffe49a","#d69a24","#87501a"],
     ["کوارتز صورتی","ROSE QUARTZ","#ffe0e8","#dc91a8","#8f526b"],
