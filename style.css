@@ -1817,3 +1817,37 @@ body *{
   .site-header .socials a{width:30px !important;height:30px !important}
   .site-header .socials svg{width:16px !important;height:16px !important}
 }
+
+/* TATAROS TASBIH — deep emerald velvet with restrained gold arabesque atmosphere */
+.tasbih-page{
+  position:relative !important;
+  isolation:isolate !important;
+  background-color:#062b22 !important;
+  background-image:
+    radial-gradient(ellipse at 50% 8%,rgba(31,105,72,.42),transparent 48%),
+    radial-gradient(ellipse at 8% 52%,rgba(7,74,53,.30),transparent 42%),
+    radial-gradient(ellipse at 92% 78%,rgba(2,18,16,.48),transparent 48%),
+    repeating-linear-gradient(135deg,rgba(221,190,120,.025) 0 1px,transparent 1px 13px),
+    repeating-linear-gradient(45deg,rgba(0,0,0,.10) 0 2px,transparent 2px 15px),
+    linear-gradient(145deg,#0b3b2d 0%,#06291f 48%,#031b17 100%) !important;
+  background-attachment:scroll !important;
+}
+.tasbih-page > .catalog-intro,
+.tasbih-page > .tasbih-section,
+.tasbih-page > .tasbih-souvenir-section{
+  background:transparent !important;
+  background-color:transparent !important;
+  background-image:none !important;
+  box-shadow:none !important;
+}
+.tasbih-page > .catalog-intro{
+  border-bottom:1px solid rgba(218,184,112,.24) !important;
+}
+.tasbih-page .section-heading h2,
+.tasbih-page .catalog-intro h1{
+  text-shadow:0 2px 16px rgba(0,0,0,.52) !important;
+}
+.tasbih-page .tasbih-placeholder{
+  border-color:rgba(220,185,112,.48) !important;
+  box-shadow:0 12px 34px rgba(0,0,0,.32),inset 0 1px 0 rgba(255,255,255,.08) !important;
+}
