@@ -52,4 +52,37 @@ document.addEventListener("DOMContentLoaded", function () {
 
   renderStones("gemstoneGrid", preciousStones);
   renderStones("matteGemstoneGrid", matteStones);
+
+  // Open product photos in an on-site lightbox instead of navigating away.
+  const lightbox = document.createElement("div");
+  lightbox.className = "gemstone-lightbox";
+  lightbox.setAttribute("role", "dialog");
+  lightbox.setAttribute("aria-modal", "true");
+  lightbox.setAttribute("aria-label", "نمایش بزرگ عکس سنگ");
+  lightbox.innerHTML = '<button class="gemstone-lightbox-close" type="button" aria-label="بستن">×</button><img alt=""><p></p>';
+  document.body.appendChild(lightbox);
+
+  function closeLightbox() {
+    lightbox.classList.remove("is-open");
+    document.body.classList.remove("lightbox-open");
+  }
+
+  document.addEventListener("click", function(event) {
+    const photo = event.target.closest(".gemstone-photo");
+    if (photo) {
+      event.preventDefault();
+      const largeImage = lightbox.querySelector("img");
+      largeImage.src = photo.src;
+      largeImage.alt = photo.alt;
+      lightbox.querySelector("p").textContent = photo.alt;
+      lightbox.classList.add("is-open");
+      document.body.classList.add("lightbox-open");
+      return;
+    }
+    if (event.target === lightbox || event.target.closest(".gemstone-lightbox-close")) closeLightbox();
+  });
+
+  document.addEventListener("keydown", function(event) {
+    if (event.key === "Escape") closeLightbox();
+  });
 });
