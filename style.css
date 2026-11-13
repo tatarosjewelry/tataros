@@ -869,3 +869,38 @@ body{line-height:2.15 !important}
 .gemstone-matte-section .gemstone-card-refined{
   background:linear-gradient(145deg,rgba(24,37,54,.72),rgba(10,20,32,.68)) !important;
 }
+
+
+/* Real gemstone photos: compact image above the Persian and English names */
+.gemstone-card-refined:has(.gemstone-photo) .gemstone-crystal{
+  display:none !important;
+}
+.gemstone-card-refined .gemstone-photo{
+  display:block !important;
+  width:48px !important;
+  height:36px !important;
+  max-width:100% !important;
+  object-fit:contain !important;
+  object-position:center !important;
+  margin:0 auto 3px !important;
+  border-radius:3px !important;
+  filter:drop-shadow(0 2px 4px #0008);
+}
+.gemstone-card-refined:has(.gemstone-photo){
+  justify-content:center !important;
+  gap:2px !important;
+}
+@media(max-width:760px){
+  .gemstone-card-refined .gemstone-photo{
+    width:39px !important;
+    height:31px !important;
+    margin-bottom:2px !important;
+  }
+  .gemstone-card-refined:has(.gemstone-photo) b{
+    font-size:8px !important;
+    line-height:1.35 !important;
+  }
+  .gemstone-card-refined:has(.gemstone-photo) small{
+    font-size:5px !important;
+  }
+}
