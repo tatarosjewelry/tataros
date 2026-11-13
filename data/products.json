@@ -4,43 +4,50 @@
       "name": "انگشتر صدفی فلاور",
       "price": 4400000,
       "image": "/tataros/IMG_2967.jpeg",
-      "description": "ظرافتی چشم‌نواز با جلوه‌ای صدفی؛ زیباییِ آرام و ماندگار برای سلیقه‌های خاص."
+      "description": "ظرافتی چشم‌نواز با جلوه‌ای صدفی؛ زیباییِ آرام و ماندگار برای سلیقه‌های خاص.",
+      "category": "rings"
     },
     {
       "name": "شمش نقره",
       "price": 495000000,
       "image": "/tataros/IMG_2985.jpeg",
-      "description": "قیمت شمش ها بسته به نوسانات ارزی متغیر میباشد"
+      "description": "قیمت شمش ها بسته به نوسانات ارزی متغیر میباشد",
+      "category": "rings"
     },
     {
       "name": "شمش یک کیلویی",
       "price": 495000000,
       "image": "/tataros/IMG_2986.jpeg",
-      "description": "قیمت شمش ها بسته به نوسانات ارزی متغیر میباشد"
+      "description": "قیمت شمش ها بسته به نوسانات ارزی متغیر میباشد",
+      "category": "rings"
     },
     {
       "name": "شاچمه نقره",
       "price": 489000000,
       "image": "/tataros/IMG_2987.jpeg",
-      "description": "سرمایه ای امن و بدون اجرت "
+      "description": "سرمایه ای امن و بدون اجرت ",
+      "category": "rings"
     },
     {
       "name": "سنگ فیروزه نیشابوری",
       "price": 13000000,
       "image": "/tataros/IMG_3143.jpeg",
-      "description": "رنگی اصیل با جلوه‌ای خاص"
+      "description": "رنگی اصیل با جلوه‌ای خاص",
+      "category": "gemstones"
     },
     {
       "name": " الماس موزانایت زنانه گرین ",
       "price": 9000000,
       "image": "/tataros/IMG_3324.jpeg",
-      "description": "انگشتری فوق اغواکننده"
+      "description": "انگشتری فوق اغواکننده",
+      "category": "rings"
     },
     {
       "name": "پرنس ظریف مینیمال",
       "price": 3650000,
       "image": "/tataros/IMG_3143.jpeg",
-      "description": " طراحی ظریف نیم‌ هلال با ردیفی از نگین‌های سفید و درخشان؛ جلوه‌ای مینیمال و ماندگار با امضای تاتاروس.  Add an item"
+      "description": " طراحی ظریف نیم‌ هلال با ردیفی از نگین‌های سفید و درخشان؛ جلوه‌ای مینیمال و ماندگار با امضای تاتاروس.  Add an item",
+      "category": "rings"
     }
   ]
 }
