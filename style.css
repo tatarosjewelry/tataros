@@ -1262,3 +1262,19 @@ body.lightbox-open{overflow:hidden}
 @media(max-width:760px){
   .hero{background-position:center center !important;}
 }
+
+
+/* RESTORE THE ORIGINAL PALACE PHOTO INSIDE EACH ARCHED DOOR */
+.category-door{
+  background:
+    linear-gradient(180deg,rgba(3,10,18,.08) 0%,rgba(3,10,18,.20) 42%,rgba(3,10,18,.62) 100%),
+    url("Qasr.PNG") center 42% / cover no-repeat !important;
+  backdrop-filter:none !important;
+  -webkit-backdrop-filter:none !important;
+}
+.category-door:before{
+  background:linear-gradient(180deg,rgba(5,15,25,.04),rgba(4,12,22,.16)) !important;
+}
+.category-door:after{
+  opacity:.38 !important;
+}
