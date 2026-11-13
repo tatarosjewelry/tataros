@@ -2017,7 +2017,7 @@ body.gemstones-site footer{
 }
 
 
-/* RINGS PAGE ONLY — IMG_3912 charcoal and silver luxury frame */
+/* RINGS PAGE ONLY — IMG_3911 warm bronze and gold luxury frame */
 body.rings-site{
   position:relative !important;
   isolation:isolate !important;
@@ -2031,7 +2031,7 @@ body.rings-site:before{
   pointer-events:none !important;
   background:
     linear-gradient(180deg,rgba(9,10,15,.30),rgba(9,10,15,.38) 50%,rgba(5,7,11,.48)),
-    url("IMG_3912.jpeg") center center / cover no-repeat !important;
+    url("IMG_3911.jpeg") center center / cover no-repeat !important;
   opacity:1 !important;
 }
 body.rings-site:after{
