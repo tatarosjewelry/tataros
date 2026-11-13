@@ -147,7 +147,7 @@ function initTatarosGlobalUI() {
     const link = event.target.closest('a[href]');
     if (!link) return;
     const url = new URL(link.href, window.location.href);
-    const pageNames = ["index.html", "rings.html", "gemstones.html", "tasbih.html"];
+    const pageNames = ["index.html", "rings.html", "gemstones.html", "tasbih.html", "nimset.html", "silver-sets.html"];
     if (url.origin !== window.location.origin || !pageNames.includes(url.pathname.split("/").pop())) return;
     if (link.target || link.hasAttribute("download") || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
     if (url.hash && url.pathname === window.location.pathname) return;
