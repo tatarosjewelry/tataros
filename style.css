@@ -859,3 +859,13 @@ body{line-height:2.15 !important}
 @media(max-width:760px){
   .gemstone-matte-section{padding-top:34px !important;padding-bottom:38px !important}
 }
+
+
+/* Let the palace backdrop show through the matte and religious gemstone collection */
+.gemstone-matte-section{
+  background:linear-gradient(180deg,rgba(5,13,23,.48),rgba(10,27,43,.40)) !important;
+  backdrop-filter:blur(1px);
+}
+.gemstone-matte-section .gemstone-card-refined{
+  background:linear-gradient(145deg,rgba(24,37,54,.72),rgba(10,20,32,.68)) !important;
+}
