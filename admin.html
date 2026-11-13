@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#061629">
+<title>پنل مدیریت | TATAROS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#061629;--deep:#020b16;--gold:#d4ad62;--pale:#f3d99a;--cream:#eee5d4}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% 0%,#17324b 0%,var(--navy) 48%,var(--deep) 100%);color:var(--cream);font-family:Vazirmatn,sans-serif}
+header{padding:24px 20px;text-align:center;border-bottom:1px solid #b78e4b55;background:#020b16aa}
+.brand{font:600 25px Cinzel,serif;letter-spacing:.2em;color:var(--pale)}.brand small{display:block;font:10px Cinzel,serif;letter-spacing:.28em;color:var(--gold);margin-top:5px}
+main{width:min(760px,calc(100% - 28px));margin:34px auto 60px}.eyebrow{text-align:center;color:var(--gold);font:11px Cinzel,serif;letter-spacing:.24em}
+h1{text-align:center;color:var(--pale);font-size:25px;font-weight:500;margin:10px 0 8px}.intro{text-align:center;color:#c9bea9;font-size:13px;margin:0 0 28px}
+.panel{border:1px solid #d4ad6255;border-radius:18px;background:linear-gradient(145deg,#10243aee,#061322f5);padding:24px;box-shadow:0 22px 60px #0008}
+label{display:block;color:var(--pale);font-size:13px;margin:17px 0 8px}input,select{width:100%;border:1px solid #d4ad6266;border-radius:10px;background:#030e1b;color:#fff;padding:13px;font:14px Vazirmatn,sans-serif;outline:none}input:focus,select:focus{border-color:var(--gold)}
+.upload{display:grid;place-items:center;min-height:150px;border:1px dashed #d4ad62aa;border-radius:13px;background:#020b1680;text-align:center;padding:18px;cursor:pointer}.upload strong{color:var(--pale);font-size:14px}.upload span{color:#b8aa91;font-size:11px;margin-top:6px}.upload input{display:none}
+.preview{display:none;margin-top:14px;text-align:center}.preview img{max-width:100%;max-height:300px;object-fit:contain;border-radius:10px;border:1px solid #d4ad6266}.preview p{font-size:12px;color:#d9c9a8}
+button{width:100%;margin-top:22px;padding:14px;border:1px solid #f3d99a;border-radius:10px;background:linear-gradient(120deg,#b88b43,#f0d28b,#b88b43);color:#091522;font:700 14px Vazirmatn,sans-serif}
+.note{margin-top:18px;padding:13px;border-right:3px solid var(--gold);background:#020b1677;color:#c9bea9;font-size:12px;line-height:2}.status{display:none;margin-top:14px;padding:12px;border:1px solid #d4ad6266;border-radius:10px;color:var(--pale);font-size:12px;line-height:1.9}
+.back{display:block;text-align:center;margin:22px;color:var(--gold);text-decoration:none;font-size:12px}
+@media(max-width:520px){main{margin-top:24px}.panel{padding:18px}h1{font-size:22px}}
+</style>
+</head>
+<body>
+<header><div class="brand">TATAROS<small>PRIVATE COLLECTION MANAGER</small></div></header>
+<main>
+<p class="eyebrow">THE HOUSE OF TATAROS</p>
+<h1>پنل مدیریت محصولات</h1>
+<p class="intro">افزودن و آماده‌سازی تصاویر کالکشن تاتاروس</p>
+<section class="panel">
+<form id="productForm">
+<label for="productName">نام محصول</label>
+<input id="productName" name="productName" placeholder="مثلاً تسبیح زمرد" required>
+<label for="category">انتخاب کالکشن</label>
+<select id="category" name="category" required>
+<option value="">انتخاب کنید</option><option value="rings">انگشترها</option><option value="gemstones">سنگ‌های طبیعی</option><option value="tasbih">تسبیح‌ها</option>
+</select>
+<label>تصویر محصول</label>
+<label class="upload" for="photo"><strong>＋ انتخاب عکس از گالری</strong><span>فرمت‌های JPG، JPEG و PNG</span><input id="photo" type="file" accept="image/jpeg,image/png,image/webp" required></label>
+<div class="preview" id="preview"><img id="previewImage" alt="پیش‌نمایش محصول"><p id="fileName"></p></div>
+<button type="submit">آماده‌سازی محصول</button>
+<div class="status" id="status" role="status"></div>
+</form>
+<div class="note">این نسخه فعلاً عکس را برای پیش‌نمایش آماده می‌کند. برای انتشار دائمی عکس و ثبت محصول روی سایت، باید بعداً اتصال امن ذخیره‌سازی را فعال کنیم؛ بنابراین چیزی بدون اجازه یا اتصال امن روی سایت منتشر نمی‌شود.</div>
+</section>
+<a class="back" href="index.html">بازگشت به سایت تاتاروس ←</a>
+</main>
+<script>
+const photo=document.getElementById('photo'),preview=document.getElementById('preview'),image=document.getElementById('previewImage'),fileName=document.getElementById('fileName'),status=document.getElementById('status');
+let localUrl='';
+photo.addEventListener('change',()=>{
+ const file=photo.files&&photo.files[0]; if(!file)return;
+ if(localUrl)URL.revokeObjectURL(localUrl);
+ localUrl=URL.createObjectURL(file);image.src=localUrl;fileName.textContent=file.name+' · '+Math.round(file.size/1024)+' KB';preview.style.display='block';status.style.display='none';
+});
+document.getElementById('productForm').addEventListener('submit',e=>{
+ e.preventDefault();
+ if(!photo.files.length)return;
+ const name=document.getElementById('productName').value.trim();
+ const category=document.getElementById('category').selectedOptions[0].textContent;
+ status.textContent='پیش‌نمایش «'+name+'» در دستهٔ «'+category+'» آماده شد. انتشار نهایی پس از اتصال امن ذخیره‌سازی فعال می‌شود.';
+ status.style.display='block';
+});
+</script>
+</body></html>
