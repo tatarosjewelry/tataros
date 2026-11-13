@@ -709,3 +709,66 @@ body{line-height:2.15 !important}
   .site-header:before{right:2% !important;font-size:40px !important;opacity:.42 !important}
   .site-header:after{left:2% !important;font-size:23px !important;opacity:.4 !important}
 }
+
+
+/* TATARUS — compact four-column gemstone collection */
+.gemstone-grid{
+  width:min(100%,980px) !important;
+  margin:22px auto 16px !important;
+  display:grid !important;
+  grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+  gap:11px !important;
+}
+.gemstone-card-refined{
+  min-height:116px !important;
+  padding:13px 8px 10px !important;
+  gap:4px !important;
+  border:1px solid rgba(222,184,112,.58) !important;
+  outline:1px solid rgba(222,184,112,.12) !important;
+  outline-offset:2px !important;
+  background:
+    radial-gradient(ellipse at 50% 22%,color-mix(in srgb,var(--stone) 36%,#17304a) 0%,transparent 68%),
+    linear-gradient(145deg,#10283e,#071525 78%) !important;
+  box-shadow:inset 0 1px 0 rgba(255,238,198,.12),0 5px 15px #0005 !important;
+  transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease !important;
+}
+.gemstone-card-refined:before{
+  inset:5px !important;
+  border:1px solid rgba(232,199,139,.22) !important;
+}
+.gemstone-card-refined:hover{
+  transform:translateY(-3px) !important;
+  border-color:#f0d69a !important;
+  box-shadow:inset 0 1px 0 #fff3,0 9px 20px #0007 !important;
+}
+.gemstone-crystal{
+  display:block;
+  width:33px;height:39px;
+  margin:0 auto 5px;
+  clip-path:polygon(50% 0,88% 23%,100% 61%,72% 94%,50% 100%,28% 94%,0 61%,12% 23%);
+  background:linear-gradient(135deg,var(--stone-light) 0%,var(--stone) 45%,var(--stone-dark) 78%,var(--stone-light) 100%);
+  box-shadow:inset 0 0 8px #fff8;
+  filter:drop-shadow(0 4px 5px #0009);
+  position:relative;
+}
+.gemstone-card-refined b{
+  font-size:12px !important;
+  line-height:1.7 !important;
+  color:#f2d69b !important;
+}
+.gemstone-card-refined small{
+  font-size:6px !important;
+  letter-spacing:.1em !important;
+  color:#c9ad78 !important;
+}
+@media(max-width:760px){
+  .gemstone-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    gap:9px !important;
+    margin:18px auto 14px !important;
+  }
+  .gemstone-card-refined{min-height:105px !important;padding:10px 6px 8px !important}
+  .gemstone-crystal{width:29px;height:34px}
+  .gemstone-card-refined b{font-size:11px !important}
+  .gemstone-card-refined small{font-size:6px !important}
+}
