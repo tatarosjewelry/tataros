@@ -176,6 +176,9 @@ async function navigateTataros(href, push = true) {
     if (!currentMain || !nextMain) throw new Error("Page structure unavailable");
 
     if (currentHeader && nextHeader) currentHeader.replaceWith(nextHeader);
+    const musicButton = document.getElementById("tataros-music-toggle");
+    const nextSocials = document.querySelector(".socials");
+    if (musicButton && nextSocials) nextSocials.appendChild(musicButton);
     currentMain.replaceWith(nextMain);
     if (currentFooter && nextFooter) currentFooter.replaceWith(nextFooter);
     document.body.className = nextDoc.body.className;
@@ -217,8 +220,9 @@ function initTatarosMusic() {
   button.type = "button";
   button.className = "tataros-music-toggle";
   button.setAttribute("aria-label", "پخش موسیقی");
-  button.innerHTML = '<span class="music-icon" aria-hidden="true">♫</span><span class="music-label">پخش موسیقی</span>';
-  document.body.appendChild(button);
+  button.innerHTML = '<svg class="music-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V5l12-2v13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6" cy="18" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="18" cy="16" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>';
+  const socialBar = document.querySelector(".socials");
+  (socialBar || document.body).appendChild(button);
 
   button.addEventListener("click", async function () {
     if (audio.paused) {
@@ -228,7 +232,7 @@ function initTatarosMusic() {
         button.setAttribute("aria-label", "توقف موسیقی");
         button.querySelector(".music-label").textContent = "توقف موسیقی";
       } catch (error) {
-        button.querySelector(".music-label").textContent = "دوباره تلاش کنید";
+        button.setAttribute("aria-label", "پخش موسیقی");
       }
     } else {
       audio.pause();
