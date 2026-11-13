@@ -1,4 +1,6 @@
-document.addEventListener("DOMContentLoaded", function () {
+// TATAROS page initialization — safe to run after seamless collection navigation
+function initTatarosPage() {
+
   document.querySelectorAll('a[href^="#"]').forEach(function (link) {
     link.addEventListener("click", function (event) {
       const targetId = link.getAttribute("href");
@@ -132,10 +134,72 @@ document.addEventListener("DOMContentLoaded", function () {
   document.addEventListener("keydown", function(event) {
     if (event.key === "Escape") closeLightbox();
   });
+}
+
+// One-time delegated interactions remain active while page sections are swapped.
+function initTatarosGlobalUI() {
+  if (window.__tatarosGlobalUIReady) return;
+  window.__tatarosGlobalUIReady = true;
+
+  document.addEventListener("click", function(event) {
+    const link = event.target.closest('a[href]');
+    if (!link) return;
+    const url = new URL(link.href, window.location.href);
+    const pageNames = ["index.html", "rings.html", "gemstones.html", "tasbih.html"];
+    if (url.origin !== window.location.origin || !pageNames.includes(url.pathname.split("/").pop())) return;
+    if (link.target || link.hasAttribute("download") || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    if (url.hash && url.pathname === window.location.pathname) return;
+    event.preventDefault();
+    navigateTataros(url.href);
+  });
+
+  window.addEventListener("popstate", function() {
+    navigateTataros(window.location.href, false);
+  });
+}
+
+async function navigateTataros(href, push = true) {
+  const url = new URL(href, window.location.href);
+  try {
+    const response = await fetch(url.href, { headers: { "X-Tataros-Navigation": "1" } });
+    if (!response.ok) throw new Error("Page request failed");
+    const html = await response.text();
+    const nextDoc = new DOMParser().parseFromString(html, "text/html");
+    const currentMain = document.querySelector("main");
+    const nextMain = nextDoc.querySelector("main");
+    const currentHeader = document.querySelector(".site-header, .royal-header");
+    const nextHeader = nextDoc.querySelector(".site-header, .royal-header");
+    const currentFooter = document.querySelector("footer");
+    const nextFooter = nextDoc.querySelector("footer");
+    if (!currentMain || !nextMain) throw new Error("Page structure unavailable");
+
+    if (currentHeader && nextHeader) currentHeader.replaceWith(nextHeader);
+    currentMain.replaceWith(nextMain);
+    if (currentFooter && nextFooter) currentFooter.replaceWith(nextFooter);
+    document.body.className = nextDoc.body.className;
+    document.title = nextDoc.title;
+    document.querySelectorAll('link[rel="canonical"]').forEach(el => el.remove());
+    const canonical = nextDoc.querySelector('link[rel="canonical"]');
+    if (canonical) document.head.appendChild(canonical.cloneNode(true));
+    if (push) history.pushState({}, "", url.href);
+    initTatarosPage();
+    if (url.hash) {
+      requestAnimationFrame(() => document.getElementById(decodeURIComponent(url.hash.slice(1)))?.scrollIntoView({behavior:"smooth"}));
+    } else {
+      window.scrollTo({top:0,behavior:"instant"});
+    }
+  } catch (error) {
+    window.location.href = url.href;
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  initTatarosPage();
+  initTatarosGlobalUI();
 });
 
 // TATAROS — shared Desert Oud ambience player
-document.addEventListener("DOMContentLoaded", function () {
+function initTatarosMusic() {
   if (document.getElementById("tataros-music-toggle")) return;
   const audio = document.createElement("audio");
   audio.id = "tataros-background-music";
@@ -171,4 +235,6 @@ document.addEventListener("DOMContentLoaded", function () {
       button.querySelector(".music-label").textContent = "پخش موسیقی";
     }
   });
-});
+}
+
+document.addEventListener("DOMContentLoaded", initTatarosMusic);
