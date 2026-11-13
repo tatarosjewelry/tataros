@@ -1616,3 +1616,39 @@ body:after{
   position:relative;
   z-index:1;
 }
+
+
+/* TATAROS — palace atmosphere continuously from top to bottom of every collection */
+.catalog-page{
+  position:relative !important;
+  isolation:isolate !important;
+  background:
+    linear-gradient(180deg,rgba(3,11,21,.60),rgba(3,11,21,.68) 45%,rgba(3,11,21,.74)),
+    url("Qasr.PNG") center center / cover no-repeat !important;
+  background-attachment:scroll !important;
+}
+.catalog-page > .catalog-intro,
+.catalog-page > .collection,
+.catalog-page > .gemstone-section,
+.catalog-page > .tasbih-section,
+.catalog-page > .gemstone-matte-section,
+.catalog-page > .tasbih-souvenir-section,
+.catalog-page > .catalog-pager{
+  background:transparent !important;
+  background-color:transparent !important;
+  background-image:none !important;
+  box-shadow:none !important;
+}
+.catalog-page > .collection{
+  position:relative !important;
+  isolation:auto !important;
+}
+.catalog-page > .gemstone-section,
+.catalog-page > .tasbih-section,
+.catalog-page > .gemstone-matte-section,
+.catalog-page > .tasbih-souvenir-section{
+  border-top:1px solid rgba(212,173,98,.22) !important;
+}
+@media(min-width:761px){
+  .catalog-page{background-attachment:fixed !important;}
+}
