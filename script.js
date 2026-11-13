@@ -103,6 +103,8 @@ function initTatarosPage() {
   renderManagedProducts();
 
   // Open product photos in an on-site lightbox instead of navigating away.
+  if (window.__tatarosLightboxReady) return;
+  window.__tatarosLightboxReady = true;
   const lightbox = document.createElement("div");
   lightbox.className = "gemstone-lightbox";
   lightbox.setAttribute("role", "dialog");
