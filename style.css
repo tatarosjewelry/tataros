@@ -1922,3 +1922,47 @@ body.tasbih-site footer{
   background:rgba(0,19,14,.48) !important;
   backdrop-filter:blur(3px) !important;
 }
+
+
+/* GEMSTONES PAGE ONLY — IMG_3909 full-page gemstone backdrop */
+body.gemstones-site{
+  position:relative !important;
+  isolation:isolate !important;
+  background:transparent !important;
+}
+body.gemstones-site:before{
+  content:"" !important;
+  position:fixed !important;
+  inset:0 !important;
+  z-index:-2 !important;
+  pointer-events:none !important;
+  background:
+    linear-gradient(180deg,rgba(3,10,28,.34),rgba(3,10,28,.46) 50%,rgba(2,8,23,.54)),
+    url("IMG_3909.jpeg") center center / cover no-repeat !important;
+  opacity:1 !important;
+}
+body.gemstones-site:after{
+  content:"" !important;
+  position:fixed !important;
+  inset:0 !important;
+  z-index:-1 !important;
+  pointer-events:none !important;
+  background:linear-gradient(90deg,rgba(2,8,23,.13),transparent 50%,rgba(2,8,23,.13)) !important;
+}
+body.gemstones-site .site-header{
+  background:rgba(4,13,32,.48) !important;
+  backdrop-filter:blur(3px) !important;
+}
+body.gemstones-site .catalog-page,
+body.gemstones-site .catalog-intro,
+body.gemstones-site .gemstone-section,
+body.gemstones-site .gemstone-matte-section{
+  background:transparent !important;
+  background-color:transparent !important;
+  background-image:none !important;
+  box-shadow:none !important;
+}
+body.gemstones-site footer{
+  background:rgba(3,9,25,.52) !important;
+  backdrop-filter:blur(3px) !important;
+}
