@@ -1576,3 +1576,28 @@ body:after{
 .catalog-page .catalog-pager{
   border-top:1px solid rgba(212,173,98,.18);
 }
+
+
+/* TATAROS — consistent interior atmosphere inside all collection pages */
+.catalog-page{
+  background:
+    radial-gradient(ellipse at 50% 8%,rgba(20,48,75,.66),transparent 54%),
+    linear-gradient(180deg,rgba(5,17,30,.90),rgba(4,14,26,.94) 48%,rgba(3,11,21,.96)) !important;
+}
+.catalog-page > .catalog-intro,
+.catalog-page > .gemstone-section,
+.catalog-page > .tasbih-section,
+.catalog-page > .gemstone-matte-section{
+  background:transparent !important;
+  background-color:transparent !important;
+  background-image:none !important;
+  box-shadow:none !important;
+}
+.catalog-page > .gemstone-section,
+.catalog-page > .tasbih-section,
+.catalog-page > .gemstone-matte-section{
+  border-top:1px solid rgba(212,173,98,.22) !important;
+}
+.catalog-page .section-heading{
+  background:transparent !important;
+}
