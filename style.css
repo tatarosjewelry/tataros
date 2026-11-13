@@ -1668,3 +1668,31 @@ body:after{
   position:relative;
   z-index:1;
 }
+
+
+/* TATAROS — Arabic Kufi typography for all Persian website copy */
+body,
+body p,
+body h1,
+body h2,
+body h3,
+body h4,
+body li,
+body label,
+body button,
+body input,
+body textarea,
+body select,
+body .main-nav a,
+body .catalog-intro h1,
+body .catalog-intro > p,
+body .section-heading h2,
+body .section-heading > p,
+body .reel-caption b,
+body .reel-open,
+body .gemstone-card b,
+body .catalog-pager a,
+body footer p,
+body .footer-contact-links a{
+  font-family:"Noto Kufi Arabic","Vazirmatn",Tahoma,sans-serif !important;
+}
