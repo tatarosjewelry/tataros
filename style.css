@@ -846,3 +846,16 @@ body{line-height:2.15 !important}
   .gemstone-card-refined b{font-size:9px !important}
   .gemstone-card-refined small{font-size:4px !important;letter-spacing:0 !important}
 }
+
+
+/* TATARUS — two distinct gemstone collections */
+.gemstone-matte-section{
+  background:linear-gradient(180deg,rgba(5,13,23,.96),rgba(10,27,43,.94));
+  border-top:1px solid rgba(217,180,109,.25);
+}
+.gemstone-matte-section .gemstone-card-refined{
+  background:linear-gradient(145deg,#182536,#0a1420 78%) !important;
+}
+@media(max-width:760px){
+  .gemstone-matte-section{padding-top:34px !important;padding-bottom:38px !important}
+}
