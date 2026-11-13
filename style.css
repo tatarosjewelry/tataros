@@ -1736,3 +1736,22 @@ body .footer-contact-links a{
     padding-bottom:7px !important;
   }
 }
+
+/* TATAROS HOME — finer, smaller Nastaliq collection lettering */
+.collection .category-door>b{
+  font-family:"Noto Nastaliq Urdu","Katibeh",serif !important;
+  font-size:29px !important;
+  font-weight:400 !important;
+  line-height:2.05 !important;
+  letter-spacing:0 !important;
+  padding:0 3px 5px !important;
+  color:#f3dcae !important;
+  text-shadow:0 2px 10px rgba(0,0,0,.76),0 0 12px rgba(212,173,98,.12) !important;
+}
+@media(max-width:760px){
+  .collection .category-door>b{
+    font-size:27px !important;
+    line-height:2.05 !important;
+    padding-bottom:4px !important;
+  }
+}
