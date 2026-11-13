@@ -133,3 +133,42 @@ document.addEventListener("DOMContentLoaded", function () {
     if (event.key === "Escape") closeLightbox();
   });
 });
+
+// TATAROS — shared Desert Oud ambience player
+document.addEventListener("DOMContentLoaded", function () {
+  if (document.getElementById("tataros-music-toggle")) return;
+  const audio = document.createElement("audio");
+  audio.id = "tataros-background-music";
+  audio.loop = true;
+  audio.preload = "none";
+  audio.src = encodeURI("Mazagan Oud Chill – Desert Oud عود الصحراء.m4a");
+  audio.volume = 0.22;
+  audio.setAttribute("aria-label", "Desert Oud background music");
+  document.body.appendChild(audio);
+
+  const button = document.createElement("button");
+  button.id = "tataros-music-toggle";
+  button.type = "button";
+  button.className = "tataros-music-toggle";
+  button.setAttribute("aria-label", "پخش موسیقی");
+  button.innerHTML = '<span class="music-icon" aria-hidden="true">♫</span><span class="music-label">پخش موسیقی</span>';
+  document.body.appendChild(button);
+
+  button.addEventListener("click", async function () {
+    if (audio.paused) {
+      try {
+        await audio.play();
+        button.classList.add("is-playing");
+        button.setAttribute("aria-label", "توقف موسیقی");
+        button.querySelector(".music-label").textContent = "توقف موسیقی";
+      } catch (error) {
+        button.querySelector(".music-label").textContent = "دوباره تلاش کنید";
+      }
+    } else {
+      audio.pause();
+      button.classList.remove("is-playing");
+      button.setAttribute("aria-label", "پخش موسیقی");
+      button.querySelector(".music-label").textContent = "پخش موسیقی";
+    }
+  });
+});
