@@ -1278,3 +1278,11 @@ body.lightbox-open{overflow:hidden}
 .category-door:after{
   opacity:.38 !important;
 }
+
+
+/* SOFTEN THE FULL-PAGE PALACE BACKDROP WITHOUT BLURRING CONTENT */
+body:before{
+  filter:blur(3px) !important;
+  transform:scale(1.025);
+  transform-origin:center;
+}
