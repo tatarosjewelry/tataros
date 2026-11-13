@@ -989,3 +989,13 @@ body.lightbox-open{overflow:hidden}
   .tasbih-placeholder b{font-size:11px}
   .tasbih-placeholder small{font-size:7px}
 }
+
+/* Tasbih product photography */
+.tasbih-product{gap:7px}
+.tasbih-photo{
+ display:block;width:min(100%,190px);height:105px;object-fit:contain;
+ margin:0 auto 3px;padding:5px;border:1px solid rgba(222,184,112,.42);
+ background:rgba(3,12,22,.42);border-radius:3px;cursor:zoom-in;
+}
+.tasbih-code{font-size:10px;color:#d9b46d}
+@media(max-width:760px){.tasbih-photo{height:88px;width:min(100%,150px)}.tasbih-code{font-size:9px}}
