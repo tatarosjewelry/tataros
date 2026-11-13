@@ -8,9 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  const grid = document.getElementById("gemstoneGrid");
-  if (!grid) return;
-  const stones = [
+  const preciousStones = [
     ["فیروزه","TURQUOISE","#8de7dc","#138b91","#07505c"],
     ["عقیق","AGATE","#f2a08b","#a94335","#4d171e"],
     ["شرف‌الشمس","SHARAF AL-SHAMSE","#f4d58c","#b58a42","#60451f"],
@@ -24,12 +22,33 @@ document.addEventListener("DOMContentLoaded", function () {
     ["توپاز سوئیس","SWISS TOPAZ","#b8f0ff","#28a9dc","#07517c"],
     ["توپاز لندن","LONDON BLUE TOPAZ","#9ac8ef","#245a91","#102d52"],
     ["سیترین","CITRINE","#ffe49a","#d69a24","#87501a"],
-    ["کوارتز صورتی","ROSE QUARTZ","#ffe0e8","#dc91a8","#8f526b"]
+    ["کوارتز صورتی","ROSE QUARTZ","#ffe0e8","#dc91a8","#8f526b"],
+    ["لاجورد","LAPIS LAZULI","#9bb9f5","#244b9b","#101d4c"],
+    ["گارنت","GARNET","#f39a9c","#9b203b","#4b0d22"]
   ];
-  grid.innerHTML = stones.map(stone =>
-    '<article class="gemstone-card gemstone-card-refined" style="--stone-light:'+stone[2]+';--stone:'+stone[3]+';--stone-dark:'+stone[4]+'">' +
-      '<span class="gemstone-crystal" aria-hidden="true"></span>' +
-      '<b>'+stone[0]+'</b><small>'+stone[1]+'</small>' +
-    '</article>'
-  ).join("");
+
+  const matteStones = [
+    ["عقیق مات","MATTE AGATE","#d9b49a","#87624e","#392a26"],
+    ["حدید","HEMATITE","#b7bdc7","#555d68","#202630"],
+    ["یشم","JADE","#c6d9a7","#78945b","#34482e"],
+    ["اونیکس","ONYX","#92969d","#292d35","#080b10"],
+    ["چشم‌ببر","TIGER'S EYE","#e6bd78","#9b652d","#432b19"],
+    ["شاه‌مقصود","SHAH-MAQSOOD","#b8c9a0","#71865a","#35432d"],
+    ["سنگ لاوا","LAVA STONE","#929292","#3e4145","#17191d"],
+    ["عقیق سیاه","BLACK AGATE","#8b929b","#333a45","#10151d"]
+  ];
+
+  function renderStones(gridId, stones) {
+    const grid = document.getElementById(gridId);
+    if (!grid) return;
+    grid.innerHTML = stones.map(stone =>
+      '<article class="gemstone-card gemstone-card-refined" style="--stone-light:'+stone[2]+';--stone:'+stone[3]+';--stone-dark:'+stone[4]+'">' +
+        '<span class="gemstone-crystal" aria-hidden="true"></span>' +
+        '<b>'+stone[0]+'</b><small>'+stone[1]+'</small>' +
+      '</article>'
+    ).join("");
+  }
+
+  renderStones("gemstoneGrid", preciousStones);
+  renderStones("matteGemstoneGrid", matteStones);
 });
