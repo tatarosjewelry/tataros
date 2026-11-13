@@ -32,12 +32,13 @@ content:
             type: select
             required: true
             options:
-              - label: انگشترها
-                value: rings
-              - label: سنگ‌های طبیعی
-                value: gemstones
-              - label: تسبیح‌ها
-                value: tasbih
+              values:
+                - name: rings
+                  label: انگشترها
+                - name: gemstones
+                  label: سنگ‌های طبیعی
+                - name: tasbih
+                  label: تسبیح‌ها
 
           - name: price
             label: قیمت به تومان
