@@ -1017,3 +1017,92 @@ body.lightbox-open{overflow:hidden}
 .catalog-pager{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;padding:35px 15px}
 .catalog-pager a{color:#e4c783;border:1px solid #9f8049;padding:10px 18px;text-decoration:none;font-size:13px}
 @media(max-width:700px){.category-doors{grid-template-columns:1fr;max-width:440px;margin:25px auto}.category-door{min-height:205px}.catalog-intro{padding-top:55px}.catalog-pager a{padding:9px 12px}}
+
+
+/* TATARUS — royal palace entrance doors for the three collections */
+.collection{
+  position:relative;
+  isolation:isolate;
+  padding:76px 24px 100px;
+  background:
+    linear-gradient(180deg,rgba(3,10,19,.78),rgba(3,10,19,.94)),
+    url("Qasr.PNG") center 52%/cover fixed;
+}
+.collection:before{
+  content:"";position:absolute;inset:0;z-index:-1;
+  background:radial-gradient(ellipse at 50% 18%,rgba(204,166,94,.16),transparent 58%);
+}
+.category-doors{
+  width:min(1120px,100%);
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+  align-items:end;gap:clamp(14px,2.4vw,30px);
+  margin:48px auto 0;
+}
+.category-door{
+  isolation:isolate;position:relative;min-height:430px;
+  padding:38px 18px 34px;gap:15px;justify-content:flex-end;
+  overflow:hidden;text-align:center;
+  border:1px solid rgba(222,185,112,.82);
+  border-radius:48% 48% 4px 4px / 22% 22% 4px 4px;
+  background:
+    linear-gradient(180deg,rgba(4,13,24,.18) 0%,rgba(3,11,21,.48) 42%,rgba(2,8,16,.96) 100%),
+    url("Qasr.PNG") center/cover no-repeat;
+  box-shadow:0 22px 48px #0009,inset 0 0 0 7px rgba(7,17,29,.8),inset 0 0 0 8px rgba(219,181,105,.58),inset 0 0 45px #000b;
+  transition:transform .45s ease,filter .45s ease,box-shadow .45s ease;
+}
+.category-door:before{
+  content:"";position:absolute;z-index:-1;inset:16px 13px 13px;
+  border:1px solid rgba(238,205,139,.72);
+  border-radius:48% 48% 2px 2px / 22% 22% 2px 2px;
+  box-shadow:inset 0 0 0 5px rgba(5,15,26,.45),inset 0 0 0 6px rgba(220,183,112,.28);
+  background:linear-gradient(180deg,rgba(7,23,39,.12),rgba(4,13,24,.58));
+  pointer-events:none;
+}
+.category-door:after{
+  content:"";position:absolute;z-index:-1;top:23%;bottom:18px;left:50%;
+  width:1px;background:linear-gradient(transparent,rgba(225,190,122,.45),transparent);
+  box-shadow:-72px 0 0 rgba(225,190,122,.12),72px 0 0 rgba(225,190,122,.12);
+  pointer-events:none;
+}
+.category-door:hover{
+  transform:translateY(-10px) scale(1.015);filter:brightness(1.15);
+  border-color:#ffe5a8;
+  box-shadow:0 30px 60px #000b,inset 0 0 0 7px rgba(7,17,29,.8),inset 0 0 0 8px #e7c47d,inset 0 0 55px #000b;
+}
+.category-door .door-number{
+  top:54px;left:50%;transform:translateX(-50%);
+  color:#f1d69b;font:12px Cinzel,serif;letter-spacing:4px;
+  text-shadow:0 2px 8px #000;
+}
+.door-symbol{
+  width:76px;height:76px;display:grid;place-items:center;
+  border:1px solid rgba(232,197,128,.8);border-radius:50%;
+  outline:1px solid rgba(232,197,128,.3);outline-offset:5px;
+  color:#f1d18c;font-size:42px;
+  background:radial-gradient(circle,rgba(196,153,77,.25),rgba(3,12,22,.7) 72%);
+  text-shadow:0 2px 12px #000;
+}
+.category-door b{
+  color:#fff0cf;font-size:clamp(20px,2.3vw,28px);
+  text-shadow:0 3px 12px #000;font-weight:500;
+}
+.category-door small{
+  color:#e4c783;font-size:10px;letter-spacing:2.4px;
+  text-shadow:0 2px 8px #000;
+}
+.category-door i{
+  margin-top:8px;padding:10px 18px;
+  border:1px solid rgba(225,190,122,.62);
+  color:#f3d99a;background:rgba(3,12,22,.62);
+  font-size:12px;letter-spacing:.3px;
+}
+.category-door i:after{content:"";position:absolute}
+@media(max-width:760px){
+ .collection{padding:52px 17px 68px;background-attachment:scroll}
+ .category-doors{grid-template-columns:1fr;max-width:390px;gap:24px;margin:34px auto 0}
+ .category-door{min-height:350px;padding-bottom:28px}
+ .category-door .door-number{top:43px}
+ .door-symbol{width:66px;height:66px;font-size:36px}
+ .category-door b{font-size:23px}
+ .category-door small{font-size:9px}
+}
