@@ -1755,3 +1755,16 @@ body .footer-contact-links a{
     padding-bottom:4px !important;
   }
 }
+
+/* TATAROS — unified geometric Kufi Mu'aqqali-inspired typography across the entire site */
+body,
+body *{
+  font-family:"Noto Kufi Arabic","Vazirmatn",Tahoma,sans-serif !important;
+}
+/* Preserve the Latin wordmark's original luxury lettering */
+.brand-name,
+.royal-logo .brand-name,
+.logo-text,
+.logo-wordmark{
+  font-family:"Cinzel",serif !important;
+}
