@@ -1322,3 +1322,91 @@ body:after{
   box-shadow:0 22px 52px rgba(0,0,0,.68),0 0 26px rgba(212,173,98,.16),inset 0 0 0 1px rgba(244,217,155,.22) !important;
 }
 .category-door:hover{filter:brightness(1.26) !important}
+
+
+/* TATAROS — disciplined typography for the collection entrance */
+.collection .section-heading{
+  text-align:center !important;
+  margin:0 auto 34px !important;
+}
+.collection .section-heading .eyebrow{
+  margin:0 0 7px !important;
+  font-family:"Cinzel",Georgia,serif !important;
+  font-size:8px !important;
+  line-height:1.5 !important;
+  letter-spacing:.24em !important;
+  color:#d9b875 !important;
+}
+.collection .section-heading h2{
+  margin:0 !important;
+  font-family:"Noto Kufi Arabic","Vazirmatn",sans-serif !important;
+  font-size:22px !important;
+  line-height:1.8 !important;
+  font-weight:500 !important;
+  letter-spacing:0 !important;
+}
+.collection .section-heading>p:last-child{
+  margin:5px 0 0 !important;
+  font-family:"Noto Kufi Arabic","Vazirmatn",sans-serif !important;
+  font-size:12px !important;
+  line-height:1.9 !important;
+  font-weight:400 !important;
+  letter-spacing:0 !important;
+  color:#d7c9ad !important;
+}
+.collection .category-door{
+  gap:0 !important;
+  text-align:center !important;
+}
+.collection .category-door .door-number{
+  font-size:9px !important;
+  line-height:1 !important;
+  letter-spacing:.2em !important;
+}
+.collection .category-door .door-symbol{
+  flex:0 0 auto !important;
+  margin:0 auto 17px !important;
+  font-size:36px !important;
+  line-height:1 !important;
+}
+.collection .category-door>b{
+  display:block !important;
+  margin:0 !important;
+  font-family:"Noto Kufi Arabic","Vazirmatn",sans-serif !important;
+  font-size:18px !important;
+  line-height:1.8 !important;
+  font-weight:500 !important;
+  letter-spacing:0 !important;
+  white-space:normal !important;
+}
+.collection .category-door>small{
+  display:block !important;
+  margin:5px 0 0 !important;
+  font-family:"Cinzel",Georgia,serif !important;
+  font-size:8px !important;
+  line-height:1.5 !important;
+  font-weight:400 !important;
+  letter-spacing:.16em !important;
+  white-space:nowrap !important;
+}
+.collection .category-door>i{
+  display:inline-block !important;
+  margin:17px 0 0 !important;
+  padding:7px 15px !important;
+  font-family:"Noto Kufi Arabic","Vazirmatn",sans-serif !important;
+  font-size:11px !important;
+  line-height:1.7 !important;
+  font-weight:400 !important;
+  letter-spacing:0 !important;
+  white-space:nowrap !important;
+}
+@media(max-width:760px){
+  .collection .section-heading{margin-bottom:26px !important}
+  .collection .section-heading h2{font-size:19px !important}
+  .collection .section-heading>p:last-child{font-size:11px !important}
+  .collection .category-door{min-height:320px !important;padding:28px 16px 26px !important}
+  .collection .category-door .door-symbol{width:64px !important;height:64px !important;font-size:31px !important;margin-bottom:14px !important}
+  .collection .category-door>b{font-size:17px !important;line-height:1.8 !important}
+  .collection .category-door>small{font-size:7px !important;letter-spacing:.14em !important}
+  .collection .category-door>i{margin-top:14px !important;font-size:10px !important;padding:6px 13px !important}
+}
