@@ -2058,3 +2058,19 @@ body.rings-site footer{
   background:rgba(8,9,14,.52) !important;
   backdrop-filter:blur(3px) !important;
 }
+
+
+/* TATAROS — discreet gold Desert Oud music control */
+.tataros-music-toggle{
+  position:fixed;left:18px;bottom:20px;z-index:9999;
+  display:flex;align-items:center;gap:8px;
+  padding:10px 15px;border:1px solid rgba(225,190,119,.72);
+  border-radius:999px;color:#f3d9a2;
+  background:linear-gradient(145deg,rgba(16,34,49,.94),rgba(4,13,23,.96));
+  box-shadow:0 5px 22px rgba(0,0,0,.32),inset 0 1px 0 rgba(255,255,255,.12);
+  font:500 11px/1.5 "Noto Kufi Arabic","Vazirmatn",sans-serif;
+  cursor:pointer;backdrop-filter:blur(8px);
+}
+.tataros-music-toggle .music-icon{font-size:18px;line-height:1}
+.tataros-music-toggle.is-playing{border-color:#f1d18e;box-shadow:0 0 18px rgba(212,173,98,.22),0 5px 22px rgba(0,0,0,.32)}
+@media(max-width:760px){.tataros-music-toggle{left:12px;bottom:14px;padding:9px 12px;font-size:10px}}
