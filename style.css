@@ -1777,3 +1777,10 @@ body *{
   text-shadow:0 1px 5px rgba(0,0,0,.95),0 0 8px rgba(212,173,98,.28) !important;
   letter-spacing:1.8px !important;
 }
+
+/* TATAROS — refined gold social icons in the header */
+.site-header .socials{gap:13px !important;}
+.site-header .socials a{display:inline-flex !important;align-items:center;justify-content:center;width:27px;height:27px;color:#e3bd78 !important;transition:color .2s ease,transform .2s ease;}
+.site-header .socials a:hover{color:#fff0c9 !important;transform:translateY(-2px);}
+.site-header .socials svg{display:block;width:21px;height:21px;fill:currentColor;}
+@media(max-width:760px){.site-header .socials{gap:9px !important}.site-header .socials a{width:23px;height:23px}.site-header .socials svg{width:19px;height:19px}}
