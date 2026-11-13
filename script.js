@@ -10,10 +10,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const preciousStones = [
     ["الماس","DIAMOND","#ffffff","#a9c8dc","#55718a"],
-    ["زمرد","EMERALD","#a7f1bd","#14804d","#06402d"],
+    ["زمرد","EMERALD","#a7f1bd","#14804d","#06402d","IMG_3859.jpeg"],
     ["یاقوت","RUBY","#ff9b9b","#a51e3b","#4c071a"],
     ["زبرجد","PERIDOT","#e6f79b","#88a92e","#40551a"],
-    ["اپال","OPAL","#f7d7f2","#9bb9d8","#6b6b9a"],
+    ["اپال","OPAL","#f7d7f2","#9bb9d8","#6b6b9a","IMG_3860.jpeg"],
     ["آمتیست","AMETHYST","#dcb8ff","#8452b5","#3d245f"],
     ["توپاز طلایی","GOLDEN TOPAZ","#ffe6a1","#d39a32","#79501c"],
     ["توپاز سوئیس","SWISS TOPAZ","#b8f0ff","#28a9dc","#07517c"],
@@ -44,6 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
     grid.innerHTML = stones.map(stone =>
       '<article class="gemstone-card gemstone-card-refined" style="--stone-light:'+stone[2]+';--stone:'+stone[3]+';--stone-dark:'+stone[4]+'">' +
         '<span class="gemstone-crystal" aria-hidden="true"></span>' +
+        (stone[5] ? '<img class="gemstone-photo" src="'+stone[5]+'" alt="'+stone[0]+'" loading="lazy">' : '') +
         '<b>'+stone[0]+'</b><small>'+stone[1]+'</small>' +
       '</article>'
     ).join("");
