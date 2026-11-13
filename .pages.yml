@@ -1,8 +1,8 @@
 media:
   - name: images
     label: عکس‌های تاتاروس
-    input: .
-    output: /tataros
+    input: images
+    output: /tataros/images
     extensions:
       - jpg
       - jpeg
@@ -28,9 +28,16 @@ content:
             required: true
 
           - name: category
-            label: دسته محصول (rings / gemstones / tasbih)
-            type: string
+            label: دسته محصول
+            type: select
             required: true
+            options:
+              - label: انگشترها
+                value: rings
+              - label: سنگ‌های طبیعی
+                value: gemstones
+              - label: تسبیح‌ها
+                value: tasbih
 
           - name: price
             label: قیمت به تومان
@@ -41,6 +48,7 @@ content:
             type: image
             options:
               media: images
+              path: images
               extensions:
                 - jpg
                 - jpeg
@@ -51,3 +59,7 @@ content:
           - name: description
             label: توضیحات
             type: text
+
+settings:
+  content:
+    merge: true
