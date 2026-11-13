@@ -1924,7 +1924,7 @@ body.tasbih-site footer{
 }
 
 
-/* GEMSTONES PAGE ONLY — IMG_3909 full-page gemstone backdrop */
+/* GEMSTONES PAGE ONLY — IMG_3908 full-page gemstone backdrop */
 body.gemstones-site{
   position:relative !important;
   isolation:isolate !important;
@@ -1938,7 +1938,7 @@ body.gemstones-site:before{
   pointer-events:none !important;
   background:
     linear-gradient(180deg,rgba(3,10,28,.34),rgba(3,10,28,.46) 50%,rgba(2,8,23,.54)),
-    url("IMG_3909.jpeg") center center / cover no-repeat !important;
+    url("IMG_3908.jpeg") center center / cover no-repeat !important;
   opacity:1 !important;
 }
 body.gemstones-site:after{
