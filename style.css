@@ -2076,3 +2076,96 @@ body.rings-site footer{
 .site-header .tataros-music-toggle .music-icon{display:block;width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.8}
 .site-header .tataros-music-toggle.is-playing{color:#fff3d5 !important;border-color:#f2d49a !important;box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 5px 16px rgba(0,0,0,.35),0 0 14px rgba(212,173,98,.22) !important}
 @media(max-width:760px){.site-header .tataros-music-toggle{left:4% !important;width:30px !important;height:30px !important}.site-header .tataros-music-toggle .music-icon{width:16px;height:16px}}
+
+/* GEMSTONES COLLECTION — final responsive and navy/gold refinement */
+body.gemstones-site:before{
+  background:
+    radial-gradient(ellipse at 50% 16%,rgba(212,173,98,.08),transparent 54%),
+    linear-gradient(180deg,rgba(3,10,28,.70),rgba(3,10,28,.79) 48%,rgba(2,8,23,.86)),
+    url("IMG_3908.jpeg") center center / cover no-repeat !important;
+}
+body.gemstones-site .gemstone-grid{
+  width:min(100%,1040px) !important;
+  margin:24px auto 20px !important;
+  display:grid !important;
+  grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+  gap:15px !important;
+}
+body.gemstones-site .gemstone-card-refined{
+  width:100% !important;
+  height:auto !important;
+  min-height:148px !important;
+  padding:16px 12px 14px !important;
+  gap:5px !important;
+  border:1px solid rgba(222,184,112,.62) !important;
+  border-radius:3px !important;
+  background:
+    radial-gradient(ellipse at 50% 20%,color-mix(in srgb,var(--stone) 24%,transparent),transparent 72%),
+    linear-gradient(145deg,rgba(13,31,49,.97),rgba(4,13,24,.97)) !important;
+  box-shadow:inset 0 1px 0 rgba(255,238,198,.12),0 7px 18px rgba(0,0,0,.42) !important;
+}
+body.gemstones-site .gemstone-card-refined:before{
+  inset:6px !important;
+  border:1px solid rgba(243,217,154,.25) !important;
+}
+body.gemstones-site .gemstone-card-refined b{
+  color:#f3d99a !important;
+  font-size:13px !important;
+  line-height:1.75 !important;
+  white-space:normal !important;
+}
+body.gemstones-site .gemstone-card-refined small{
+  color:#d7b979 !important;
+  font-size:7px !important;
+  line-height:1.5 !important;
+  letter-spacing:.08em !important;
+}
+body.gemstones-site .gemstone-crystal{
+  width:32px !important;
+  height:37px !important;
+  margin:0 auto 4px !important;
+}
+body.gemstones-site .gemstone-note{
+  position:relative;
+  z-index:1;
+  max-width:29ch;
+  margin:3px 0 0;
+  color:#d8cbb3;
+  font-size:10px;
+  font-weight:300;
+  line-height:1.95;
+  text-align:center;
+}
+@media(min-width:761px) and (max-width:1050px){
+  body.gemstones-site .gemstone-grid{
+    grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+    gap:12px !important;
+  }
+}
+@media(max-width:760px){
+  body.gemstones-site .gemstone-grid{
+    width:min(100%,540px) !important;
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    gap:10px !important;
+    margin:18px auto 16px !important;
+  }
+  body.gemstones-site .gemstone-card-refined{
+    min-height:142px !important;
+    padding:13px 8px 12px !important;
+  }
+  body.gemstones-site .gemstone-card-refined b{
+    font-size:11px !important;
+  }
+  body.gemstones-site .gemstone-card-refined small{
+    font-size:6px !important;
+  }
+  body.gemstones-site .gemstone-crystal{
+    width:27px !important;
+    height:31px !important;
+  }
+  body.gemstones-site .gemstone-note{
+    max-width:25ch;
+    font-size:9px;
+    line-height:1.85;
+  }
+}
