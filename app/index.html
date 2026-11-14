@@ -2,8 +2,8 @@
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#071321"><meta name="description" content="اپلیکیشن رسمی تاتاروس جواهری؛ دنیایی از جواهرات خاص، نقره و سنگ‌های طبیعی">
-<link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="app.css">
+<meta name="theme-color" content="#071321"><meta name="description" content="اپلیکیشن فروشگاهی تاتاروس جواهری">
+<link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="app.css?v=2">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <title>TATAROS | Fine Jewelry</title>
 </head>
@@ -11,32 +11,17 @@
 <div class="app-shell">
 <header class="topbar">
 <button class="round-action" id="search" aria-label="جستجو">⌕</button>
-<a class="brand" href="#"><span class="brand-crown">♛</span><span class="brand-name">TATAROS</span><span class="brand-sub">F I N E&nbsp; J E W E L R Y</span></a>
-<button class="round-action bag-action" aria-label="سبد خرید">♧<i id="bag-count">0</i></button>
+<button class="brand" data-page="home"><span class="brand-crown">♛</span><span class="brand-name">TATAROS</span><span class="brand-sub">F I N E&nbsp; J E W E L R Y</span></button>
+<button class="round-action bag-action" data-page="cart" aria-label="سبد خرید">♧<i id="bag-count">0</i></button>
 </header>
-<main>
-<section class="hero">
-<img class="hero-image" src="../IMG_3911.jpeg" alt="انگشتر منتخب تاتاروس">
-<div class="hero-vignette"></div><div class="hero-frame"></div>
-<div class="hero-content"><span class="kicker">THE ART OF ELEGANCE</span><h1>زیبایی،<br><em>ماندگار است.</em></h1><p>درخشش هر لحظه، با انتخابی از تاتاروس</p><a class="gold-cta" href="#collections">کشف کالکشن <span>←</span></a></div>
-<div class="hero-index"><b>01</b><span></span> 05</div>
-</section>
-<section class="intro section-pad"><div class="ornament">✧</div><span class="kicker">A WORLD OF DISTINCTION</span><h2>امضای خاصِ سلیقهٔ شما</h2><p>از میان مجموعه‌ای منتخب از جواهرات، نقره و سنگ‌های طبیعی، انتخابی ماندگار داشته باشید.</p></section>
-<section class="collections section-pad" id="collections">
-<div class="section-heading"><div><span class="kicker">CURATED COLLECTIONS</span><h2>کالکشن‌های تاتاروس</h2></div><span class="heading-mark">✧</span></div>
-<div class="collection-grid">
-<a class="collection-card card-large" href="../rings.html"><img src="../IMG_3911.jpeg" alt="انگشتر"><span class="card-number">01 / 05</span><div class="card-caption"><small>THE RING COLLECTION</small><strong>انگشترها</strong><b>ورود به کالکشن <i>←</i></b></div></a>
-<a class="collection-card" href="../gemstones.html"><img src="../IMG_3908.jpeg" alt="سنگ‌های طبیعی"><div class="card-caption"><small>FINE GEMSTONES</small><strong>سنگ‌های طبیعی</strong><b>ورود به کالکشن <i>←</i></b></div></a>
-<a class="collection-card" href="../tasbih.html"><img src="../IMG_3907.jpeg" alt="تسبیح"><div class="card-caption"><small>THE ART OF TASBIH</small><strong>تسبیح</strong><b>ورود به کالکشن <i>←</i></b></div></a>
-<a class="collection-card" href="../nimset.html"><img src="../IMG_3864.jpeg" alt="نیم‌ست"><div class="card-caption"><small>THE PARURE COLLECTION</small><strong>نیم‌ست</strong><b>ورود به کالکشن <i>←</i></b></div></a>
-<a class="collection-card" href="../silver-sets.html"><img src="../IMG_3865.jpeg" alt="سرویس نقره"><div class="card-caption"><small>FINE SILVER SETS</small><strong>سرویس نقره</strong><b>ورود به کالکشن <i>←</i></b></div></a>
-</div></section>
-<section class="signature"><span class="kicker">TATAROS SIGNATURE</span><p>زیبایی در جزئیات نهفته است.</p><span class="signature-line"></span><strong>TATAROS</strong></section>
-<section class="service-strip"><div><span>✧</span><b>انتخابی ماندگار</b><small>کیفیت و ظرافت</small></div><div><span>◇</span><b>خرید مطمئن</b><small>تجربه‌ای امن</small></div><div><span>♧</span><b>همراه شما</b><small>پشتیبانی تاتاروس</small></div></section>
-</main>
+<main id="app-main" aria-live="polite"></main>
 <nav class="bottom-nav" aria-label="منوی اصلی">
-<a class="active" href="#"><span>⌂</span><small>خانه</small></a><a href="#collections"><span>◈</span><small>کالکشن</small></a><a href="#" id="favorites"><span>♡</span><small>علاقه‌مندی</small></a><a href="#" class="bag-link"><span>♧</span><small>سبد خرید</small></a><a href="#" id="account"><span>♙</span><small>حساب من</small></a>
+<button class="active" data-page="home"><span>⌂</span><small>خانه</small></button>
+<button data-page="collections"><span>◈</span><small>کالکشن‌ها</small></button>
+<button data-page="favorites"><span>♡</span><small>علاقه‌مندی</small></button>
+<button data-page="cart"><span>♧</span><small>سبد خرید</small></button>
+<button data-page="account"><span>♙</span><small>حساب من</small></button>
 </nav>
 </div>
-<script src="app.js"></script>
+<script src="app.js?v=2"></script>
 </body></html>
