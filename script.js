@@ -28,9 +28,9 @@ function initTatarosPage() {
   ];
 
   const matteStones = [
-    ["فیروزه","TURQUOISE","#8de7dc","#138b91","#07505c"],
-    ["عقیق","AGATE","#f2a08b","#a94335","#4d171e"],
-    ["شرف‌الشمس","SHARAF AL-SHAMSE","#f4d58c","#b58a42","#60451f"],
+    ["فیروزه","TURQUOISE","#8de7dc","#138b91","#07505c",null,"طیفی از آبی تا سبز؛ با جلایی معمولاً مات تا نیمه‌شفاف."],
+    ["عقیق","AGATE","#f2a08b","#a94335","#4d171e",null,"گونه‌ای از کلسدونی با نوارها و نقش‌های طبیعی در رنگ‌ها و الگوهای گوناگون."],
+    ["شرف‌الشمس","SHARAF AL-SHAMS","#f4d58c","#b58a42","#60451f",null,"عنوانی رایج برای نگین عقیق زردِ حکاکی‌شده؛ نامِ خودِ کانی نیست."],
     ["عقیق مات","MATTE AGATE","#d9b49a","#87624e","#392a26"],
     ["حدید","HEMATITE","#b7bdc7","#555d68","#202630"],
     ["یشم","JADE","#c6d9a7","#78945b","#34482e"],
@@ -45,10 +45,11 @@ function initTatarosPage() {
     const grid = document.getElementById(gridId);
     if (!grid) return;
     grid.innerHTML = stones.map(stone =>
-      '<article class="gemstone-card gemstone-card-refined" style="--stone-light:'+stone[2]+';--stone:'+stone[3]+';--stone-dark:'+stone[4]+'">' +
+      '<article class="gemstone-card gemstone-card-refined'+(stone[6] ? ' has-note' : '')+'" style="--stone-light:'+stone[2]+';--stone:'+stone[3]+';--stone-dark:'+stone[4]+'">' +
         '<span class="gemstone-crystal" aria-hidden="true"></span>' +
         (stone[5] ? '<img class="gemstone-photo" src="'+stone[5]+'" alt="'+stone[0]+'" loading="lazy">' : '') +
         '<b>'+stone[0]+'</b><small>'+stone[1]+'</small>' +
+        (stone[6] ? '<p class="gemstone-note">'+stone[6]+'</p>' : '') +
       '</article>'
     ).join("");
   }
