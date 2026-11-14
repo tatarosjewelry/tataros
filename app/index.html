@@ -3,30 +3,39 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#061629">
-<meta name="description" content="TATAROS Jewelry — جواهرات، نقره و سنگ‌های طبیعی">
-<link rel="manifest" href="./manifest.webmanifest">
-<link rel="stylesheet" href="./app.css?v=5">
+<meta name="theme-color" content="#030b17">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="stylesheet" href="./app.css?v=6">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<title>TATAROS | Fine Jewelry</title>
-<meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"></head>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<title>TATAROS Jewelry App</title>
+</head>
 <body>
-<div class="app-shell">
-<header class="topbar">
-<button class="icon-button" id="search" aria-label="جستجو">⌕</button>
-<button class="brand" data-page="home" aria-label="صفحه اصلی تاتاروس"><span class="crown">♛</span><span class="brand-name">TATAROS</span><span class="brand-sub">F I N E&nbsp; J E W E L R Y</span></button>
-<button class="icon-button bag-button" data-page="cart" aria-label="سبد خرید">♧<i id="bag-count">۰</i></button>
-</header>
-<main id="app-main" aria-live="polite"></main>
-<nav class="bottom-nav" aria-label="منوی اصلی">
-<button class="active" data-page="home"><span>⌂</span><small>خانه</small></button>
-<button data-page="collections"><span>◈</span><small>کالکشن‌ها</small></button>
-<button data-page="favorites"><span>♡</span><small>علاقه‌مندی</small></button>
-<button data-page="cart"><span>♧</span><small>سبد خرید</small></button>
-<button data-page="account"><span>♙</span><small>حساب من</small></button>
-</nav>
+<div id="splash" class="splash-screen">
+  <div class="splash-glow"></div><div class="splash-crown">♛</div>
+  <div class="splash-word">TATAROS</div><div class="splash-sub">J E W E L R Y</div>
+  <div class="splash-tagline">Timeless Beauty<br>Forever Yours</div>
+  <img class="splash-ring" src="../IMG_3911.jpeg" alt="انگشتر تاتاروس">
+  <div class="splash-persian"><strong>تاتاروس جواهری</strong><span>زیبایی ماندگار، انتخابی خاص</span></div>
+  <button id="enter-app" class="splash-enter">ورود به دنیای تاتاروس <b>›</b></button>
+  <div class="splash-mark">◇ ───────── ◇</div>
 </div>
-<script src="./app.js?v=5"></script>
+<div class="app-shell" id="app-shell" hidden>
+  <header class="topbar">
+    <button class="top-icon" data-page="cart" aria-label="سبد خرید">♧</button>
+    <button class="brand" data-page="home"><span class="brand-crown">♛</span><span class="brand-name">TATAROS</span><span class="brand-sub">J E W E L R Y</span></button>
+    <button class="top-icon" id="search" aria-label="جستجو">⌕</button>
+  </header>
+  <main id="app-main"></main>
+  <nav class="bottom-nav">
+    <button class="active" data-page="home"><span>⌂</span><small>خانه</small></button>
+    <button data-page="collections"><span>▦</span><small>کالکشن</small></button>
+    <button data-page="favorites"><span>♡</span><small>علاقه‌مندی‌ها</small></button>
+    <button data-page="cart"><span>♧</span><small>سبد خرید</small></button>
+    <button data-page="account"><span>♙</span><small>حساب</small></button>
+  </nav>
+</div>
+<script src="./app.js?v=6"></script>
 </body></html>
