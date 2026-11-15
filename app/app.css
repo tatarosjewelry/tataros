@@ -5,3 +5,49 @@
 .page-title{text-align:center;padding:22px 18px 18px}.page-title h1{font-size:20px;font-weight:500;color:var(--gold-hi);margin:0 0 5px}.page-title span{font:9px Cinzel,serif;letter-spacing:2px;color:var(--gold)}.list-categories{display:flex;flex-direction:column;gap:10px;padding:0 14px 22px}.list-card{height:103px;position:relative;overflow:hidden;border:1px solid var(--gold);border-radius:3px;background:#0b1b2d;padding:0;text-align:right}.list-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.68)}.list-card:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#03091420,#030914d9 62%,#030914f2)}.list-text{position:absolute;z-index:1;right:16px;top:50%;transform:translateY(-50%)}.list-text strong{display:block;font-size:15px;color:#f3e4c4;font-weight:500}.list-text small{font-size:10px;color:#d3b77e}.list-card i{position:absolute;z-index:2;left:13px;top:calc(50% - 13px);width:26px;height:26px;border:1px solid var(--gold);border-radius:50%;font-style:normal;text-align:center;line-height:23px;color:var(--gold-hi);font-size:20px}
 .detail-photo{width:100%;height:350px;object-fit:cover;display:block;border-bottom:1px solid var(--gold)}.detail-info{padding:17px 20px 28px}.detail-info>span{font:9px Cinzel,serif;letter-spacing:2px;color:var(--gold)}.detail-info h1{font-size:20px;font-weight:500;color:var(--gold-hi);margin:8px 0}.detail-info p{font-size:12px;line-height:2;color:var(--muted)}.price{font:18px Cinzel,serif;color:var(--gold-hi);margin:12px 0}.stars{color:var(--gold);letter-spacing:3px}.outline-btn{border:1px solid var(--gold);background:transparent;color:var(--gold-hi);border-radius:24px;padding:9px 17px;font-size:12px}.wide{width:100%;margin-top:10px}
 .empty-state{text-align:center;padding:52px 20px;color:var(--muted)}.empty-state b{display:block;font-size:38px;color:var(--gold);margin-bottom:10px}.empty-state h2{font-size:17px;font-weight:500;color:var(--gold-hi)}.empty-state p{font-size:12px;line-height:2}.cart-item{display:grid;grid-template-columns:78px 1fr auto;gap:12px;align-items:center;padding:13px 15px;border-bottom:1px solid #b18a4b44}.cart-item img{width:78px;height:82px;object-fit:cover;border:1px solid #a98245}.cart-item strong{font-size:13px}.cart-item small{display:block;color:var(--muted);font-size:10px;margin-top:5px}.quantity{display:flex;align-items:center;gap:7px;color:var(--gold-hi);font-size:12px}.quantity button{width:23px;height:23px;background:#0d2034;border:1px solid var(--gold);color:var(--gold-hi)}.cart-summary{padding:18px}.cart-summary div{display:flex;justify-content:space-between;color:var(--gold-hi);font-size:13px;margin-bottom:12px}.account-card{margin:14px;padding:18px 17px;border:1px solid var(--gold);background:linear-gradient(145deg,#0d2034,#061120);text-align:center}.account-emblem{width:65px;height:65px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;font-size:31px;color:var(--gold);margin:0 auto 10px}.account-card h2{font:17px Cinzel,serif;letter-spacing:1px;color:var(--gold-hi);margin:5px}.account-card p{font-size:11px;color:var(--muted)}.account-row{display:flex;justify-content:space-between;padding:13px 4px;border-top:1px solid #b18a4b44;font-size:12px;color:#e8d6b0}.bottom-nav{position:fixed;z-index:20;bottom:0;left:50%;transform:translateX(-50%);width:min(430px,100%);height:calc(66px + env(safe-area-inset-bottom));padding:7px 5px calc(7px + env(safe-area-inset-bottom));display:flex;justify-content:space-around;background:#030b17f7;border-top:1px solid #b18a4b88;backdrop-filter:blur(14px)}.bottom-nav button{min-width:54px;display:flex;flex-direction:column;align-items:center;gap:4px;border:0;background:none;color:#a99470}.bottom-nav svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round}.bottom-nav small{font-size:9px}.bottom-nav button.active{color:var(--gold-hi)}[hidden]{display:none!important}@media(min-width:700px){body{background:#01050b}.app-shell,.splash{box-shadow:0 0 55px #000}}
+
+
+/* Reference-match refinement: compact iPhone proportions and restrained royal finish */
+:root{--night:#030914;--navy:#071629;--navy2:#0d2035;--gold:#cda45d;--gold-hi:#f1d99d;--cream:#f5e8ca;--line:#b18a4b}
+.splash,.app-shell{background:radial-gradient(ellipse at 50% 43%,#102b43 0,#07182b 48%,#020812 100%)}
+.splash{padding-top:8vh;padding-bottom:max(22px,env(safe-area-inset-bottom))}
+.splash-frame{inset:10px;border-color:#c49a5a88;border-radius:24px}
+.splash-brand{margin-top:1vh}
+.splash-jewel{height:35vh;margin-top:2vh}
+.splash-jewel img{object-fit:contain;transform:scale(1.08)}
+.splash-bottom button{min-height:49px;letter-spacing:.1px}
+.app-shell{padding-bottom:calc(62px + env(safe-area-inset-bottom))}
+.app-header{height:64px;padding:0 13px;background:linear-gradient(180deg,#061322f7,#071629f2);border-bottom-color:#bd955555}
+.app-logo b{font-size:19px;letter-spacing:2.3px}
+.hero{height:260px}
+.hero-image{object-position:center 43%;filter:brightness(.72) saturate(.88)}
+.hero-copy{top:35%;right:6%;max-width:68%}
+.hero-copy h1{font-size:21px}
+.hero-copy p{font-size:11px}
+.gold-btn{padding:9px 19px;font-size:11px}
+.section-title{padding:15px 16px 11px;font-size:14px}
+.home-grid{gap:8px;padding:0 12px 15px}
+.category-card{height:105px;border-radius:9px}
+.category-card img{filter:brightness(.72) saturate(.88)}
+.category-card strong{font-size:12px;bottom:8px}
+.category-card i{width:21px;height:21px;line-height:18px;font-size:17px}
+.signature{padding:12px 10px 14px}
+.benefits{padding:12px 2px 15px}
+.benefits svg{width:21px;height:21px}
+.benefits small{font-size:8px}
+.page-title{padding:18px 16px 14px}
+.page-title h1{font-size:18px}
+.list-categories{gap:8px;padding:0 12px 18px}
+.list-card{height:91px;border-radius:9px}
+.list-text{right:13px}
+.list-text strong{font-size:14px}
+.list-text small{font-size:9px}
+.detail-photo{height:300px;object-fit:cover}
+.detail-info{padding:15px 17px 24px}
+.bottom-nav{height:calc(62px + env(safe-area-inset-bottom));padding:6px 4px calc(6px + env(safe-area-inset-bottom))}
+.bottom-nav button{gap:3px;min-width:50px}
+.bottom-nav svg{width:19px;height:19px}
+.bottom-nav small{font-size:8px}
+.account-card{margin:12px;border-radius:8px}
+@media(min-width:700px){.app-shell,.splash{border-left:1px solid #a9824555;border-right:1px solid #a9824555}}
+@media(max-height:740px){.splash{min-height:620px;padding-top:6vh}.splash-jewel{height:31vh}.splash-motto{margin-top:14px}.splash-bottom button{margin-top:12px}}
