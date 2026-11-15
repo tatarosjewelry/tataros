@@ -51,3 +51,37 @@
 .account-card{margin:12px;border-radius:8px}
 @media(min-width:700px){.app-shell,.splash{border-left:1px solid #a9824555;border-right:1px solid #a9824555}}
 @media(max-height:740px){.splash{min-height:620px;padding-top:6vh}.splash-jewel{height:31vh}.splash-motto{margin-top:14px}.splash-bottom button{margin-top:12px}}
+
+/* Full-screen mobile app composition based on IMG_3924 */
+.app-shell{min-height:100svh;padding-bottom:calc(62px + env(safe-area-inset-bottom));background:linear-gradient(180deg,#071526 0%,#030a14 100%)}
+.hero{height:245px}
+.hero-image{object-position:center 42%}
+.hero-copy{right:6%;top:35%;max-width:65%}
+.hero-copy h1{font-size:20px}
+.hero-copy p{font-size:11px}
+.gold-btn span{font-size:21px;vertical-align:-2px;margin-right:4px}
+.home-grid{gap:8px}
+.category-card{height:112px;border-radius:9px}
+.category-card img,.list-card img{filter:brightness(.7) saturate(.9)}
+.list-card{height:88px;border-radius:10px}
+.list-card:after{background:linear-gradient(90deg,#03091412,#030914d9 62%,#030914f5)}
+.list-text strong{font-size:14px}
+.list-text small{font-size:9px}
+.product-strip,.product-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;padding:0 12px 18px}
+.product-card{display:flex;flex-direction:column;position:relative;overflow:hidden;padding:0;text-align:right;border:1px solid #b18a4b;border-radius:9px;background:#08182a;min-width:0}
+.product-card img{width:100%;height:142px;object-fit:cover;display:block;filter:brightness(.86)}
+.product-card-copy{display:flex;flex-direction:column;gap:4px;padding:9px 8px 10px}
+.product-card-copy b{font-size:11px;font-weight:500;color:#f1dfb9}
+.product-card-copy small{font:8px Cinzel,serif;letter-spacing:.7px;color:#bfa36e}
+.product-card-copy em{font-style:normal;font-size:9px;color:#e9c879;margin-top:3px}
+.back-link{display:block;margin:12px 15px 0;border:0;background:none;color:#d7b876;font-size:11px;text-align:right}
+.detail-photo{height:310px;object-fit:cover;object-position:center}
+.detail-info h1{font-size:19px}
+.detail-info .stars small{font-size:10px;color:#d5c19b}
+.detail-info .gold-btn svg{width:17px;height:17px;vertical-align:middle;stroke:currentColor;fill:none}
+.remove-link{border:0;background:none;color:#d5b475;font-size:10px;padding:5px 0}
+.account-row{width:100%;border-left:0;border-right:0;border-bottom:0;background:transparent;text-align:right;cursor:pointer}
+.benefit-icon{font-size:21px;color:#d7ad60;line-height:1}
+.benefits small{font-size:8px}
+.bottom-nav{width:min(430px,100%);background:#030b17f7}
+@media(max-height:720px){.hero{height:215px}.category-card{height:96px}.product-card img{height:120px}}
