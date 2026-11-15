@@ -4,16 +4,10 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#050d19"><meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<link rel="stylesheet" href="./app.css?v=10">
+<link rel="stylesheet" href="./app.css?v=11">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <title>TATAROS Jewelry</title></head><body>
-<div id="splash" class="splash" hidden>
- <div class="splash-frame"></div><div class="splash-brand"><div class="ornament">♛</div><div class="wordmark">TATAROS</div><div class="jewelry">J E W E L R Y</div></div>
- <div class="splash-motto">Timeless Beauty<br>Forever Yours</div>
- <div class="splash-jewel"><img src="../IMG_3911.jpeg" alt="Tataros turquoise ring"></div>
- <div class="splash-bottom"><strong>تاتاروس جواهری</strong><span>زیبایی ماندگار، انتخابی خاص</span><button id="enter-app">ورود به دنیای تاتاروس <i>‹</i></button><small>◇ ───────── ◇</small></div>
-</div>
 <div id="app-shell" class="app-shell">
  <header class="app-header"><button class="header-action" data-page="cart" aria-label="سبد خرید"><svg viewBox="0 0 24 24"><path d="M3 4h2l2.2 11.2a2 2 0 0 0 2 1.6h8.9a2 2 0 0 0 1.9-1.4L22 8H6"/><circle cx="10" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg></button><button class="app-logo" data-page="home"><span class="mini-crown">♛</span><b>TATAROS</b><small>J E W E L R Y</small></button><button class="header-action" id="search" aria-label="جستجو"><svg viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg></button></header>
  <main id="app-main"></main>
@@ -24,4 +18,4 @@
   <button data-page="cart"><svg viewBox="0 0 24 24"><path d="M3 4h2l2.2 11.2a2 2 0 0 0 2 1.6h8.9a2 2 0 0 0 1.9-1.4L22 8H6"/><circle cx="10" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg><small>سبد خرید</small></button>
   <button data-page="account"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><small>حساب من</small></button>
  </nav>
-</div><script src="./app.js?v=10"></script></body></html>
+</div><script src="./app.js?v=11"></script><script>if("serviceWorker" in navigator){navigator.serviceWorker.getRegistrations().then(rs=>rs.forEach(r=>r.unregister()));}if("caches" in window){caches.keys().then(keys=>keys.filter(k=>k.startsWith("tataros-app-")).forEach(k=>caches.delete(k)));}</script></body></html>
