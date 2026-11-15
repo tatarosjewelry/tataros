@@ -85,3 +85,17 @@
 .benefits small{font-size:8px}
 .bottom-nav{width:min(430px,100%);background:#030b17f7}
 @media(max-height:720px){.hero{height:215px}.category-card{height:96px}.product-card img{height:120px}}
+
+/* Final app layout — splash screen removed; home is the launch screen */
+#splash{display:none!important}
+.app-shell{display:block!important;width:100%;max-width:430px;min-height:100svh;margin:0 auto;padding-bottom:calc(66px + env(safe-area-inset-bottom));}
+body{padding:0;background:#020711}
+.hero{height:245px}
+.hero-image{object-fit:cover;object-position:center 42%;filter:brightness(.72) saturate(.92)}
+.hero-copy{top:35%;right:6%;max-width:68%}
+.home-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;padding:0 12px 16px}
+.category-card{height:112px;border-radius:10px}
+.product-strip{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;padding:0 12px 16px}
+.product-card img{height:130px;object-fit:cover}
+.signature{margin-top:4px}
+.bottom-nav{width:100%;max-width:430px}
