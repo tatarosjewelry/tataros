@@ -2224,3 +2224,23 @@ body{font-size:13px !important;line-height:2.05 !important}
   .catalog-page .gemstone-card b,.catalog-page .reel-caption b,
   .catalog-page .tasbih-placeholder b,.gemstone-card-refined b{font-size:10px !important}
 }
+
+/* CATEGORY DOOR CTA — crisp decorative geometric Kufic */
+.category-door i,
+.category-door .door-cta,
+.category-door [class*="enter"],
+.category-door [class*="link"]{
+  font-family:"Noto Kufi Arabic","Vazirmatn",sans-serif !important;
+  font-size:10px !important;
+  font-weight:400 !important;
+  font-style:normal !important;
+  letter-spacing:-.045em !important;
+  line-height:2 !important;
+  color:#f0d39b !important;
+}
+@media(max-width:760px){
+  .category-door i,
+  .category-door .door-cta,
+  .category-door [class*="enter"],
+  .category-door [class*="link"]{font-size:9px !important}
+}
