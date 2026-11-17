@@ -1,13 +1,13 @@
 {
-  "name": "TATAROS Jewelry",
-  "short_name": "TATAROS",
-  "lang": "fa",
-  "dir": "rtl",
-  "start_url": "./index.html?v=3",
-  "scope": "./",
-  "display": "standalone",
-  "background_color": "#020914",
-  "theme_color": "#061629",
-  "description": "اپلیکیشن رسمی جواهری تاتاروس",
-  "icons": []
+  "name":"TATAROS Jewelry",
+  "short_name":"TATAROS",
+  "lang":"fa",
+  "dir":"rtl",
+  "start_url":"./index.html",
+  "scope":"./",
+  "display":"standalone",
+  "background_color":"#030a15",
+  "theme_color":"#061426",
+  "description":"اپلیکیشن جواهری تاتاروس",
+  "icons":[{"src":"./icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
 }
