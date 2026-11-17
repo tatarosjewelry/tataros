@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 300">
+<defs><linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff0b4"/><stop offset=".22" stop-color="#b87929"/><stop offset=".48" stop-color="#ffe5a0"/><stop offset=".72" stop-color="#a66a22"/><stop offset="1" stop-color="#f8d889"/></linearGradient><filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+<g fill="none" stroke="url(#gold)" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)">
+<path stroke-width="5" d="M48 185 Q210 244 372 185 L350 235 Q210 270 70 235Z"/>
+<path stroke-width="5" d="M48 185 Q20 157 31 125 Q53 139 75 157 Q62 115 87 91 Q112 112 123 148 Q126 91 166 66 Q188 94 191 139 Q210 91 229 139 Q232 94 254 66 Q294 91 297 148 Q308 112 333 91 Q358 115 345 157 Q367 139 389 125 Q400 157 372 185"/>
+<path stroke-width="3" d="M70 178 Q100 194 130 181 Q150 173 166 147 Q183 174 210 177 Q237 174 254 147 Q270 173 290 181 Q320 194 350 178"/>
+<path stroke-width="3" d="M87 91 Q112 105 123 148 M166 66 Q188 94 191 139 M254 66 Q232 94 229 139 M333 91 Q308 105 297 148"/>
+<path stroke-width="4" d="M191 139 Q210 118 229 139 M210 118 V28 M198 48 Q210 33 222 48 M202 64 Q210 53 218 64"/>
+<path stroke-width="2" d="M48 185 Q210 222 372 185 M70 235 Q210 265 350 235 M85 250 Q210 280 335 250"/>
+<path stroke-width="2" d="M110 169 Q105 145 119 130 Q137 144 130 166 M166 147 Q151 120 166 98 Q188 116 181 145 M254 147 Q269 120 254 98 Q232 116 239 145 M290 169 Q295 145 281 130 Q263 144 270 166"/>
+</g>
+<g fill="#102e48" stroke="url(#gold)" stroke-width="3"><path d="M210 39l9 12-9 13-9-13z"/><path d="M166 83l8 10-8 12-8-12z"/><path d="M254 83l8 10-8 12-8-12z"/><path d="M87 105l7 9-7 10-7-10z"/><path d="M333 105l7 9-7 10-7-10z"/><path d="M210 183l12 12-12 14-12-14z"/></g>
+<g fill="#f8e5b1"><circle cx="31" cy="125" r="4"/><circle cx="389" cy="125" r="4"/><circle cx="87" cy="91" r="4"/><circle cx="333" cy="91" r="4"/><circle cx="166" cy="66" r="4"/><circle cx="254" cy="66" r="4"/><circle cx="210" cy="28" r="4"/></g>
+</svg>
