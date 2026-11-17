@@ -39,3 +39,19 @@ button{font:inherit;color:inherit;cursor:pointer}.device{width:min(100%,430px);m
 @media(max-height:700px){.intro-content{min-height:0;padding:18px}.intro-crown{height:105px;width:150px}.intro-ring{width:82px;height:82px}.intro-tagline{font-size:19px;margin:2px 0 7px}.intro-content h1{font-size:20px}.intro-rule{margin:10px 0}.intro-ornament{margin-top:13px}}
 
 .intro-screen{transition:opacity .35s ease}.intro-screen.intro-leaving{opacity:0;pointer-events:none}
+
+
+/* Compact, aligned splash layout for iPhone screens */
+.intro-screen{position:fixed;inset:0;width:100%;height:100svh;min-height:100svh;box-sizing:border-box;overflow:hidden;padding:16px 14px;display:flex;align-items:center;justify-content:center}
+.intro-content{width:min(100%,390px);height:calc(100svh - 32px);min-height:0;max-height:820px;box-sizing:border-box;padding:18px 18px 16px;border-radius:30px;display:flex;flex-direction:column;align-items:center;justify-content:space-evenly;gap:0;overflow:hidden}
+.intro-crown{display:block;width:clamp(118px,39vw,176px);height:clamp(88px,24vw,116px);flex:0 0 auto;object-fit:contain;margin:0}
+.intro-wordmark{font-size:clamp(36px,10vw,48px);line-height:1;letter-spacing:4px;white-space:nowrap;margin:0}
+.intro-jewelry{font-size:10px;letter-spacing:6px;margin:5px 0 0}
+.intro-rule{flex:0 0 auto;width:150px;margin:5px 0}
+.intro-tagline{font-size:clamp(17px,5vw,21px);line-height:1.22;margin:0}
+.intro-ring{width:clamp(76px,23vw,96px);height:clamp(76px,23vw,96px);flex:0 0 auto;margin:0}
+.intro-content h1{font-size:clamp(19px,5.5vw,22px);line-height:1.35;margin:0}
+.intro-sub{font-size:11px;line-height:1.6;margin:0}
+.intro-enter{flex:0 0 auto;width:min(100%,270px);padding:11px 15px;font-size:14px;line-height:1.5;margin:0}
+.intro-ornament{font-size:11px;margin:0;line-height:1}
+@media(max-height:760px){.intro-screen{padding:8px}.intro-content{height:calc(100svh - 16px);padding:10px 16px}.intro-crown{height:75px;width:125px}.intro-ring{width:64px;height:64px}.intro-tagline{font-size:17px}.intro-wordmark{font-size:36px}.intro-rule{margin:2px 0}.intro-enter{padding:8px 12px}.intro-ornament{display:none}}
