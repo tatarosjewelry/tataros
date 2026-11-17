@@ -37,3 +37,5 @@ button{font:inherit;color:inherit;cursor:pointer}.device{width:min(100%,430px);m
 .header-crown{width:48px;height:34px;object-fit:contain;filter:drop-shadow(0 0 5px #d5a65355)}
 .brand b{font-size:18px}
 @media(max-height:700px){.intro-content{min-height:0;padding:18px}.intro-crown{height:105px;width:150px}.intro-ring{width:82px;height:82px}.intro-tagline{font-size:19px;margin:2px 0 7px}.intro-content h1{font-size:20px}.intro-rule{margin:10px 0}.intro-ornament{margin-top:13px}}
+
+.intro-screen{transition:opacity .35s ease}.intro-screen.intro-leaving{opacity:0;pointer-events:none}
