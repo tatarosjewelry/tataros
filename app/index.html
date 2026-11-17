@@ -1,21 +1,37 @@
 <!doctype html>
 <html lang="fa" dir="rtl">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#050d19"><meta name="apple-mobile-web-app-capable" content="yes">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#061326">
+<meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<link rel="stylesheet" href="./app.css?v=11">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<meta name="apple-mobile-web-app-title" content="TATAROS">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" href="./icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="./icon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<title>TATAROS Jewelry</title></head><body>
-<div id="app-shell" class="app-shell">
- <header class="app-header"><button class="header-action" data-page="cart" aria-label="سبد خرید"><svg viewBox="0 0 24 24"><path d="M3 4h2l2.2 11.2a2 2 0 0 0 2 1.6h8.9a2 2 0 0 0 1.9-1.4L22 8H6"/><circle cx="10" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg></button><button class="app-logo" data-page="home"><span class="mini-crown">♛</span><b>TATAROS</b><small>J E W E L R Y</small></button><button class="header-action" id="search" aria-label="جستجو"><svg viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg></button></header>
- <main id="app-main"></main>
- <nav class="bottom-nav">
-  <button data-page="home" class="active"><svg viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10H5V10m6 10v-6h4v6"/></svg><small>خانه</small></button>
-  <button data-page="collections"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="14" y="3" width="7" height="8" rx="1"/><rect x="3" y="14" width="8" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg><small>کالکشن</small></button>
-  <button data-page="favorites"><svg viewBox="0 0 24 24"><path d="M20.8 8.8c0 5.2-8.8 11-8.8 11s-8.8-5.8-8.8-11A4.6 4.6 0 0 1 12 6a4.6 4.6 0 0 1 8.8 2.8Z"/></svg><small>علاقه‌مندی</small></button>
-  <button data-page="cart"><svg viewBox="0 0 24 24"><path d="M3 4h2l2.2 11.2a2 2 0 0 0 2 1.6h8.9a2 2 0 0 0 1.9-1.4L22 8H6"/><circle cx="10" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg><small>سبد خرید</small></button>
-  <button data-page="account"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><small>حساب من</small></button>
- </nav>
-</div><script src="./app.js?v=11"></script><script>if("serviceWorker" in navigator){navigator.serviceWorker.getRegistrations().then(rs=>rs.forEach(r=>r.unregister()));}if("caches" in window){caches.keys().then(keys=>keys.filter(k=>k.startsWith("tataros-app-")).forEach(k=>caches.delete(k)));}</script></body></html>
+<link rel="stylesheet" href="./app.css?v=20">
+<title>TATAROS Jewelry</title>
+</head>
+<body>
+<div class="device">
+<header class="topbar">
+<button class="top-icon" data-go="cart" aria-label="سبد خرید"><svg viewBox="0 0 24 24"><path d="M4 8h16l-1 13H5L4 8Z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></svg><i id="cart-count"></i></button>
+<button class="brand" data-go="home"><span class="crown">♛</span><b>TATAROS</b><small>J E W E L R Y</small></button>
+<button class="top-icon" id="search-btn" aria-label="جستجو"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></button>
+</header>
+<main id="screen"></main>
+<nav class="tabbar">
+<button data-go="home" class="selected"><svg viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10H5V10m6 10v-6h4v6"/></svg><small>خانه</small></button>
+<button data-go="collections"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="14" y="3" width="7" height="8" rx="1"/><rect x="3" y="14" width="8" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg><small>کالکشن</small></button>
+<button data-go="favorites"><svg viewBox="0 0 24 24"><path d="M20.8 8.8c0 5.2-8.8 11-8.8 11s-8.8-5.8-8.8-11A4.6 4.6 0 0 1 12 6a4.6 4.6 0 0 1 8.8 2.8Z"/></svg><small>علاقه‌مندی</small></button>
+<button data-go="cart"><svg viewBox="0 0 24 24"><path d="M4 8h16l-1 13H5L4 8Z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></svg><small>سبد خرید</small></button>
+<button data-go="account"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><small>حساب</small></button>
+</nav>
+</div>
+<script src="./app.js?v=20"></script>
+<script>if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));}</script>
+</body></html>
