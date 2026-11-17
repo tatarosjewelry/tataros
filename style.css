@@ -2244,3 +2244,21 @@ body{font-size:13px !important;line-height:2.05 !important}
   .category-door [class*="enter"],
   .category-door [class*="link"]{font-size:9px !important}
 }
+
+
+/* MAIN COLLECTION NAMES: Rings / Stones / Half-sets / Tasbih — geometric Kufic */
+.category-door b,
+.category-door .category-title,
+.category-door .door-title{
+  font-family:"Noto Kufi Arabic","Vazirmatn",sans-serif !important;
+  font-size:12px !important;
+  font-weight:400 !important;
+  font-style:normal !important;
+  letter-spacing:-.055em !important;
+  line-height:1.9 !important;
+}
+@media(max-width:760px){
+  .category-door b,
+  .category-door .category-title,
+  .category-door .door-title{font-size:10px !important}
+}
