@@ -109,3 +109,11 @@ linear-gradient(145deg,#020713,#0a1b2e 48%,#020713)}
 
 /* Move the hero collection button lower without shifting the headline */
 .hero-copy .gold-btn{margin-top:30px;transform:translateY(12px);min-width:160px;padding:11px 32px}
+
+
+/* IMG_4039: full-frame background for the Eternal Shine hero */
+.hero{position:relative;overflow:hidden;background:#020916}
+.hero .velvet{position:absolute;inset:0;background-image:linear-gradient(90deg,rgba(2,9,22,.18),rgba(2,9,22,.42)),url('../IMG_4039.jpeg');background-size:cover;background-position:center;background-repeat:no-repeat}
+.hero:after{z-index:1;background:linear-gradient(90deg,rgba(2,9,22,.12) 0%,rgba(2,9,22,.28) 48%,rgba(2,9,22,.62) 100%),linear-gradient(0deg,rgba(3,10,21,.28) 0%,transparent 52%,rgba(3,10,21,.12) 100%)}
+.hero .hero-jewel{display:none}
+.hero-copy{position:relative;z-index:2}
