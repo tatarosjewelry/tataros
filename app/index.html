@@ -13,11 +13,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./app.css?v=25">
+<link rel="stylesheet" href="./app.css?v=26">
 <title>TATAROS Jewelry</title>
 </head>
 <body>
-<section class="intro-screen" id="intro-screen"><div class="intro-velvet"></div><div class="intro-content"><img class="intro-crown" src="./crown.svg" alt="تاج طلایی تاتاروس"><div class="intro-wordmark">TATAROS</div><div class="intro-jewelry">J E W E L R Y</div><div class="intro-rule"></div><p class="intro-tagline">Timeless Beauty<br>Forever Yours</p><div class="intro-ring" aria-hidden="true">💍</div><h1>تاتاروس جواهری</h1><p class="intro-sub">زیبایی ماندگار، انتخابی خاص</p><button class="intro-enter" id="intro-enter">ورود به دنیای تاتاروس <span>›</span></button><div class="intro-ornament">─── ◇ ───</div></div></section>
+<section id="intro-screen" style="position:fixed;inset:0;z-index:9999;background:#020916;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:0"><button id="intro-enter" aria-label="ورود به دنیای تاتاروس" style="display:block;border:0;padding:0;margin:0;width:100%;height:100%;background:transparent;cursor:pointer"><img src="../entry-screen.jpg.PNG" alt="TATAROS Jewelry" style="display:block;width:100%;height:100%;object-fit:contain"></button></section>
 <div class="device">
 <header class="topbar">
 <button class="top-icon" data-go="cart" aria-label="سبد خرید"><svg viewBox="0 0 24 24"><path d="M4 8h16l-1 13H5L4 8Z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></svg><i id="cart-count"></i></button>
@@ -33,6 +33,6 @@
 <button data-go="account"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><small>حساب</small></button>
 </nav>
 </div>
-<script src="./app.js?v=25"></script>
+<script src="./app.js?v=26"></script>
 <script>if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));}</script>
 </body></html>
