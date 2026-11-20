@@ -23,6 +23,6 @@ const intro=document.getElementById('intro-screen');
 const enter=document.getElementById('intro-enter');
 const welcome=document.getElementById('welcome-screen');
 const continueBtn=document.getElementById('welcome-continue');
-if(enter&&intro){enter.addEventListener('click',()=>{intro.remove();if(welcome)welcome.style.display='flex';});}
+if(enter&&intro){enter.addEventListener('click',()=>{intro.remove();if(welcome)welcome.remove();});}
 if(continueBtn&&welcome){continueBtn.addEventListener('click',()=>{welcome.remove();});}
 })();
