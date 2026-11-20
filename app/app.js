@@ -21,5 +21,8 @@ $('#search-btn').addEventListener('click',()=>{let q=prompt('نام محصول �
 render();
 const intro=document.getElementById('intro-screen');
 const enter=document.getElementById('intro-enter');
-if(enter&&intro){enter.addEventListener('click',()=>{intro.classList.add('intro-leaving');setTimeout(()=>intro.remove(),350);});}
+const welcome=document.getElementById('welcome-screen');
+const continueBtn=document.getElementById('welcome-continue');
+if(enter&&intro){enter.addEventListener('click',()=>{intro.remove();if(welcome)welcome.style.display='flex';});}
+if(continueBtn&&welcome){continueBtn.addEventListener('click',()=>{welcome.remove();});}
 })();
